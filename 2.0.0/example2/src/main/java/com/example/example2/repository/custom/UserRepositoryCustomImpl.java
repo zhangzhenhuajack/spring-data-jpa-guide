@@ -30,5 +30,6 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
                 "WHERE u.name LIKE ?", User.class);
         query.setParameter(1, firstName + "%");
         return query.getResultList();
+
     }
 }

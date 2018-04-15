@@ -4,6 +4,7 @@ import com.example.example2.entity.User;
 import com.example.example2.repository.UserCrudRepository;
 import com.example.example2.repository.UserPagingAndSortingRepository;
 import com.example.example2.repository.UserRepository;
+import com.example.example2.repository.custom.MySpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -79,4 +80,7 @@ public class UserController {
         return userRepository.customerMethodNamesLike("jack");
     }
 
+	public void MySpecificationTest() {
+//		Page pageData = userDao.findAll(, pr);
+	}
 }
