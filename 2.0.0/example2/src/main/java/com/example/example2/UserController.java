@@ -3,6 +3,7 @@ package com.example.example2;
 import com.example.example2.entity.User;
 import com.example.example2.repository.UserCrudRepository;
 import com.example.example2.repository.UserPagingAndSortingRepository;
+import com.example.example2.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,8 +19,10 @@ import java.util.Optional;
 @Controller
 @RequestMapping(path = "/demo")
 public class UserController {
-	@Autowired
-	private UserCrudRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private UserCrudRepository userCrudRepository;
 	@Autowired
 	private UserPagingAndSortingRepository userPagingAndSortingRepository;
 	@GetMapping(path = "/add")
@@ -27,21 +30,21 @@ public class UserController {
 		User n = new User();
 		n.setName(name);
 		n.setEmail(email);
-		userRepository.save(n);
+        userCrudRepository.save(n);
 	}
 	@GetMapping(path = "/all")
 	@ResponseBody
 	public Iterable<User> getAllUsers() {
-		return userRepository.findAll();
+		return userCrudRepository.findAll();
 	}
 	@GetMapping(path = "/info")
 	@ResponseBody
 	public Optional<User> findOne(@RequestParam Long id){
-		return userRepository.findById(1L);
+		return userCrudRepository.findById(1L);
 	}
 	@GetMapping(path = "/delete")
 	public void delete(@RequestParam Long id){
-		userRepository.delete(id);
+        userCrudRepository.deleteById(id);
 	}
 
 	/**
@@ -55,14 +58,25 @@ public class UserController {
 				new PageRequest(1, 20,new Sort(new Sort.Order(Sort.Direction.ASC,"name"))));
 	}
 
-	/**
-	 * 排序查询方法
-	 * @return
-	 */
-	@GetMapping(path = "/sort")
-	@ResponseBody
-	public Iterable<User> getAllUsersWithSort() {
-		return userPagingAndSortingRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC,"name")));
-	}
+    /**
+     * 排序查询方法
+     * @return
+     */
+    @GetMapping(path = "/sort")
+    @ResponseBody
+    public Iterable<User> getAllUsersWithSort() {
+        return userPagingAndSortingRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC,"name")));
+    }
+
+    /**
+     * 调用我们自定义的实现方法
+     *
+     * @return
+     */
+    @GetMapping(path = "/customer")
+    @ResponseBody
+    public Iterable<User> findCustomerMethodNamesLike() {
+        return userRepository.customerMethodNamesLike("jack");
+    }
 
 }

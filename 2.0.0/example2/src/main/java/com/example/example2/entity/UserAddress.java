@@ -1,9 +1,11 @@
 package com.example.example2.entity;
 
+import org.hibernate.annotations.GeneratorType;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user_address", schema = "sys", catalog = "")
+@Table(name = "user_address")
 public class UserAddress {
 	private int id;
 	private Integer userId;
@@ -12,6 +14,7 @@ public class UserAddress {
 
 	@Id
 	@Column(name = "id", nullable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
@@ -21,7 +24,7 @@ public class UserAddress {
 	}
 
 	@Basic
-	@Column(name = "user_id", nullable = true)
+	@Column(name = "user_id")
 	public Integer getUserId() {
 		return userId;
 	}
@@ -68,7 +71,7 @@ public class UserAddress {
 	}
 
 	@ManyToOne
-	@JoinColumn(name = "user_id", referencedColumnName = "id")
+	@JoinColumn(name = "user_id", referencedColumnName = "id",insertable=false, updatable = false)
 	public User getUserByUserId() {
 		return userByUserId;
 	}
