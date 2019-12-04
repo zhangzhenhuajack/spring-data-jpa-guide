@@ -1,10 +1,24 @@
 # spring-data-jpa-guide
 > spring-data-jpa-guide example
 
-## Spring Data Jpa 实战					- [01：整体认识JPA](./《SpringDataJpa实战》书/01.md)					- [02：Jpa基础查询方法JpaRepository详解		](./《SpringDataJpa实战》书/02.md)							- [03：定义查询方法(Defining Query Methods	](./《SpringDataJpa实战》书/03.md)									- [04：注解式查询方法	](./《SpringDataJpa实战》书/04.md)									- [05：@Entity实例里面常用注解详解			](./《SpringDataJpa实战》书/05.md)							- [06：JpaRepository扩展之QueryByExampleExecutor](./《SpringDataJpa实战》书/06.md)										- [07：JpaRepository扩展之JpaSpecificationExecutor](./《SpringDataJpa实战》书/07.md)										- [08 :  JpaRepository扩展之自定义Repositor	](./《SpringDataJpa实战》书/08.md)									- [09：Auditing与@version					](./《SpringDataJpa实战》书/09.md)					- [10：对MvcWeb的支持分页和排序的支持			](./《SpringDataJpa实战》书/10.md)						- [11：Spring Data Jpa的配置之SpringBoot2.0加载详解](./《SpringDataJpa实战》书/11.md)										- [12：DataSource的配置与事务详解、多数据源		](./《SpringDataJpa实战》书/12.md)								- [13：Spring Data Jpa之QueryDSL支持	](./《SpringDataJpa实战》书/13.md)				
+## Spring Data Jpa 实战					
+- [01：整体认识JPA](./《SpringDataJpa实战》书/01.md)					
+- [02：Jpa基础查询方法JpaRepository详解		](./《SpringDataJpa实战》书/02.md)							
+- [03：定义查询方法(Defining Query Methods	](./《SpringDataJpa实战》书/03.md)									
+- [04：注解式查询方法	](./《SpringDataJpa实战》书/04.md)									
+- [05：@Entity实例里面常用注解详解			](./《SpringDataJpa实战》书/05.md)							
+- [06：JpaRepository扩展之QueryByExampleExecutor](./《SpringDataJpa实战》书/06.md)										
+- [07：JpaRepository扩展之JpaSpecificationExecutor](./《SpringDataJpa实战》书/07.md)										
+- [08 :  JpaRepository扩展之自定义Repositor	](./《SpringDataJpa实战》书/08.md)									
+- [09：Auditing与@version					](./《SpringDataJpa实战》书/09.md)					
+- [10：对MvcWeb的支持分页和排序的支持			](./《SpringDataJpa实战》书/10.md)						
+- [11：Spring Data Jpa的配置之SpringBoot2.0加载详解](./《SpringDataJpa实战》书/11.md)										
+- [12：DataSource的配置与事务详解、多数据源		](./《SpringDataJpa实战》书/12.md)								
+- [13：Spring Data Jpa之QueryDSL支持	](./《SpringDataJpa实战》书/13.md)				
 
 ## Spring DATA JPA 扩展阅读
 [Spring Data JPA 晋级提升篇：复杂场景实战用法与优化](./SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md)
+[Session与CompletableFuture的使用遇到的一些坑](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%81%87%E5%88%B0%E7%9A%84Session%E7%9A%84%E6%9B%B4%E6%96%B0%E7%9A%84%E5%9D%91%EF%BC%8CCompletableFuture%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9D%91)
 ## 源码说明：
 > 源码太分散不利于大家查找，所以就给大家放在一起了，可以根据需要自取。
 
