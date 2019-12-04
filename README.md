@@ -17,8 +17,9 @@
 - [13：Spring Data Jpa之QueryDSL支持	](./《SpringDataJpa实战》书/13.md)				
 
 ## Spring DATA JPA 扩展阅读
-[Spring Data JPA 晋级提升篇：复杂场景实战用法与优化](./SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md)
-[Session与CompletableFuture的使用遇到的一些坑](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%81%87%E5%88%B0%E7%9A%84Session%E7%9A%84%E6%9B%B4%E6%96%B0%E7%9A%84%E5%9D%91%EF%BC%8CCompletableFuture%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9D%91)
+1. [Spring Data JPA 晋级提升篇：复杂场景实战用法与优化](./SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md)  
+
+2. [Session与CompletableFuture的使用遇到的一些坑](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%81%87%E5%88%B0%E7%9A%84Session%E7%9A%84%E6%9B%B4%E6%96%B0%E7%9A%84%E5%9D%91%EF%BC%8CCompletableFuture%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9D%91)  
 ## 源码说明：
 > 源码太分散不利于大家查找，所以就给大家放在一起了，可以根据需要自取。
 
