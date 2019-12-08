@@ -20,6 +20,9 @@
 1. [Spring Data JPA 晋级提升篇：复杂场景实战用法与优化](./SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md)  
 
 2. [Session与CompletableFuture的使用遇到的一些坑](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%81%87%E5%88%B0%E7%9A%84Session%E7%9A%84%E6%9B%B4%E6%96%B0%E7%9A%84%E5%9D%91%EF%BC%8CCompletableFuture%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9D%91)  
+3. [SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
+](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/SpringDataJpa%E4%B9%8BHibernate5.0%E7%9A%84Entity%E5%88%A4%E6%96%ADDirty%E7%9A%84%E8%BF%87%E7%A8%8B)
+4. [SpringDataJPA之Hibernate加载过程](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/SpringDataJPA%E4%B9%8BHibernate%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B)
 ## 源码说明：
 > 源码太分散不利于大家查找，所以就给大家放在一起了，可以根据需要自取。
 
@@ -36,3 +39,4 @@
 3. https://www.docs4dev.com/docs/zh/hibernate-orm/5.4/reference/hibernate_user_guide.html
 4. https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/doc/High-Performance.Java.Persistence.pdf
 5. https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/doc/JavaPersistence2.2.0.pdf 
+6. https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/doc/SpringDataJPA%E5%85%A8%E9%9D%A2%E8%AE%A4%E8%AF%86.key
