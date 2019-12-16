@@ -34,6 +34,7 @@
 1. 提issue或者mr都可以
 2. 同时注意issue和wiki的更新
 ## 推荐查阅文档
+1. https://github.com/eclipse-ee4j/jpa-api
 1. https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa
 1. https://docs.spring.io/spring-data/data-jpa/docs/ 
 2. https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#architecture-overview 
