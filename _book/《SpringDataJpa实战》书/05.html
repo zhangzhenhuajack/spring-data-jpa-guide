@@ -1,0 +1,1217 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>05：@Entity实例里面常用注解详解             · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06.html" />
+    
+    
+    <link rel="prev" href="04.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    《Spring Data JPA实战》
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    01：整体认识JPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    02：Jpa基础查询方法JpaRepository详解        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    03：定义查询方法(Defining Query Methods    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    04：注解式查询方法    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    05：@Entity实例里面常用注解详解            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    06：JpaRepository扩展之QueryByExampleExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    07：JpaRepository扩展之JpaSpecificationExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    08 :  JpaRepository扩展之自定义Repositor    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="09.html">
+            
+                <a href="09.html">
+            
+                    
+                    09：Auditing与@version                    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10：对MvcWeb的支持分页和排序的支持            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    11：Spring Data Jpa的配置之SpringBoot2.0加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    12：DataSource的配置与事务详解、多数据源        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    13：Spring Data Jpa之QueryDSL支持    
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Spring DATA JPA 扩展阅读
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.html">
+            
+                    
+                    Spring Data JPA 晋级提升篇：复杂场景实战用法与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.html">
+            
+                    
+                    SpringDataJPA之Hibernate加载过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.html">
+            
+                <a href="../SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.html">
+            
+                    
+                    implement-equals,-hashCode-why,when?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.html">
+            
+                <a href="../SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.html">
+            
+                    
+                    JPA中lazy-loading-doesn’t-work
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                    
+                    SpringDataJPA之Entity关联关系Lazy过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                    
+                    SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                <a href="../SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                    
+                    多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >05：@Entity实例里面常用注解详解            </a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7B2C;05&#x8BFE;&#xFF1A;entity-&#x5B9E;&#x4F8B;&#x91CC;&#x9762;&#x5E38;&#x7528;&#x6CE8;&#x89E3;&#x8BE6;&#x89E3;">&#x7B2C;05&#x8BFE;&#xFF1A;@Entity &#x5B9E;&#x4F8B;&#x91CC;&#x9762;&#x5E38;&#x7528;&#x6CE8;&#x89E3;&#x8BE6;&#x89E3;</h2>
+<p>&#x672C;&#x7BC7;&#x5185;&#x5BB9;&#x5C06;&#x4F1A;&#x5E26;&#x9886;&#x8BFB;&#x8005;&#x8BE6;&#x7EC6;&#x4E86;&#x89E3;&#x4E00;&#x4E0B; javax.persistence &#x4E0B;&#x9762;&#x7684; Entity &#x91CC;&#x9762;&#x5E38;&#x7528;&#x6CE8;&#x89E3;&#x6709;&#x54EA;&#x4E9B;&#xFF0C;&#x800C;&#x5B66;&#x4E60;&#x7684;&#x57FA;&#x672C;&#x6761;&#x4EF6;&#x662F;&#x8981;&#x5BF9; Java &#x7684;&#x6CE8;&#x89E3;&#x6709;&#x57FA;&#x672C;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x524D;&#x63D0;&#x8981;&#x660E;&#x767D;&#x6CE8;&#x89E3;&#x662F;&#x5E72;&#x4EC0;&#x4E48;&#x7528;&#x7684;&#x3002;</p>
+<h3 id="javaxpersistence-&#x6982;&#x51B5;&#x4ECB;&#x7ECD;">javax.persistence &#x6982;&#x51B5;&#x4ECB;&#x7ECD;</h3>
+<p>&#x867D;&#x7136; Spring Data JPA &#x5DF2;&#x7ECF;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x64CD;&#x4F5C;&#x5C01;&#x88C5;&#x7684;&#x5F88;&#x597D;&#x4E86;&#xFF0C;&#x7EA6;&#x5B9A;&#x5927;&#x4E8E;&#x914D;&#x7F6E;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x5E2E;&#x6211;&#x4EEC;&#x9ED8;&#x8BA4;&#x4E86;&#x5F88;&#x591A;&#x4E1C;&#x897F;&#x3002;JPA&#xFF08;Java &#x6301;&#x4E45;&#x6027; API&#xFF09;&#x662F;&#x5B58;&#x50A8;&#x4E1A;&#x52A1;&#x5B9E;&#x4F53;&#x5173;&#x8054;&#x7684;&#x5B9E;&#x4F53;&#x7684;&#x6765;&#x6E90;&#xFF0C;&#x5B83;&#x663E;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x9762;&#x5411;&#x666E;&#x901A; Java &#x5BF9;&#x8C61;&#xFF08;POJO&#xFF09;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x4E0E;&#x7BA1;&#x7406;&#x5173;&#x7CFB;&#x5B9E;&#x4F53;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x6807;&#x51C6;&#x3002;&#x56E0;&#x6B64;&#xFF0C;javax.persistence &#x4E0B;&#x9762;&#x7684;&#x6709;&#x4E9B;&#x6CE8;&#x89E3;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x5FC5;&#x987B;&#x8981;&#x53BB;&#x4E86;&#x89E3;&#x7684;&#xFF0C;&#x4FBF;&#x4E8E;&#x66F4;&#x597D;&#x7684;&#x63D0;&#x9AD8;&#x5DE5;&#x4F5C;&#x6548;&#x7387;&#x3002; </p>
+<p>&#xFF08;1&#xFF09;javax.persistence &#x6211;&#x4EEC;&#x6253;&#x5F00;&#x6E90;&#x7801;&#x4F4D;&#x4E8E; hibernate-jpa-**.jar &#x5305;&#x91CC;&#x9762;&#x3002;</p>
+<p>&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x901A;&#x8FC7; Intellij Idea &#x7684; Maven &#x63D2;&#x4EF6;&#x76F4;&#x63A5;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x5176;&#x4F9D;&#x8D56;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;<code>$ mvn dependency:tree</code>&#x5206;&#x6790;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:2.0.0.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:5.0.4.RELEASE:compile
+[INFO] |  +- org.hibernate:hibernate-core:jar:5.2.14.Final:compile
+[INFO] |  |  +- org.javassist:javassist:jar:3.22.0-GA:compile
+</code></pre><p>&#xFF08;2&#xFF09;&#x6211;&#x4EEC;&#x4E5F;&#x901A;&#x8FC7;&#x524D;&#x9762;&#x8BF4;&#x5230;&#x7684; Intellij Idea &#x7684; Diagram &#x6765;&#x770B;&#x4E00;&#x4E0B;&#x6B64;&#x6A21;&#x5757;&#x7684;&#x7C7B;&#x7684;&#x5173;&#x952E;&#x5173;&#x7CFB;&#x3002;</p>
+<p><img src="http://images.gitbook.cn/06ad1540-2de4-11e8-bac9-75682f7e85a6" alt="enter image description here"></p>
+<p>&#xFF08;3&#xFF09;&#x4E0B;&#x56FE;&#x663E;&#x793A;&#x4E86; JPA &#x7684;&#x7C7B;&#x7684;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#xFF0C;&#x5B83;&#x663E;&#x793A;&#x6838;&#x5FC3;&#x7C7B;&#x548C; JPA &#x63A5;&#x53E3;&#x3002;</p>
+<p><img src="http://images.gitbook.cn/8b0145f0-2de4-11e8-bc9e-6f65679a3102" alt="enter image description here"></p>
+<p>&#xFF08;4&#xFF09;&#x4E0B;&#x8868;&#x63CF;&#x8FF0;&#x4E86;&#x6BCF;&#x4E2A;&#x5728;&#x4E0A;&#x8FF0;&#x67B6;&#x6784;&#x7684;&#x663E;&#x793A;&#x5355;&#x5143;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5355;&#x5143;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EntityManagerFactory</td>
+<td>&#x8FD9;&#x662F;&#x4E00;&#x4E2A; EntityManager &#x7684;&#x5DE5;&#x5382;&#x7C7B;&#xFF0C;&#x5B83;&#x521B;&#x5EFA;&#x5E76;&#x7BA1;&#x7406;&#x591A;&#x4E2A; EntityManager &#x5B9E;&#x4F8B;</td>
+</tr>
+<tr>
+<td>EntityManager</td>
+<td>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5B83;&#x7BA1;&#x7406;&#x7684;&#x6301;&#x4E45;&#x5316;&#x64CD;&#x4F5C;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x7C7B;&#x4F3C;&#x5DE5;&#x5382;&#x7684;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td>&#x5B9E;&#x4F53;&#x662F;&#x6301;&#x4E45;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x5B58;&#x50A8;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td>EntityTransaction</td>
+<td>&#x5B83;&#x4E0E; EntityManager &#x662F;&#x4E00;&#x5BF9;&#x4E00;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A; EntityManager&#xFF0C;&#x64CD;&#x4F5C;&#x662F;&#x7531; EntityTransaction &#x7C7B;&#x7EF4;&#x62A4;</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>&#x8FD9;&#x4E2A;&#x7C7B;&#x5305;&#x542B;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6; EntityManagerFactory &#x5B9E;&#x4F8B;</td>
+</tr>
+<tr>
+<td>Query</td>
+<td>&#x8BE5;&#x63A5;&#x53E3;&#x7531;&#x6BCF;&#x4E2A; JPA &#x4F9B;&#x5E94;&#x5546;&#xFF0C;&#x80FD;&#x591F;&#x83B7;&#x5F97;&#x7B26;&#x5408;&#x6807;&#x51C6;&#x7684;&#x5173;&#x7CFB;&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x4E0A;&#x8FF0;&#x7684;&#x7C7B;&#x548C;&#x63A5;&#x53E3;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5B9E;&#x4F53;&#x5230;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#xFF0C;&#x5E2E;&#x52A9;&#x7A0B;&#x5E8F;&#x5458;&#x901A;&#x8FC7;&#x51CF;&#x5C11;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x6765;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x4F7F;&#x4ED6;&#x4EEC;&#x80FD;&#x591F;&#x4E13;&#x6CE8;&#x4E8E;&#x66F4;&#x91CD;&#x8981;&#x7684;&#x4E1A;&#x52A1;&#x6D3B;&#x52A8;&#x4EE3;&#x7801;&#xFF0C;&#x5982;&#x6570;&#x636E;&#x5E93;&#x8868;&#x6620;&#x5C04;&#x7684;&#x7C7B;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#xFF0C;&#x5728; Entity &#x91CC;&#x9762;&#x5E38;&#x7528;&#x7684;&#x6CE8;&#x89E3;&#x6709;&#x54EA;&#x4E9B;&#xFF0C;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x6CA1;&#x6709;&#x4ECB;&#x7ECD;&#x5230;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5230;&#x5305;&#x7684;&#x6E90;&#x7801;&#x91CC;&#x9762;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#x548C;&#x5206;&#x6790;&#x3002;</p>
+<h3 id="&#x57FA;&#x672C;&#x6CE8;&#x89E3;-entity&#x3001;table&#x3001;id&#x3001;generatedvalue&#x3001;basic&#x3001;column&#x3001;transient&#x3001;lob&#x3001;temporal">&#x57FA;&#x672C;&#x6CE8;&#x89E3; @Entity&#x3001;@Table&#x3001;@Id&#x3001;@GeneratedValue&#x3001;@Basic&#x3001;@Column&#x3001;@Transient&#x3001;@Lob&#x3001;@Temporal</h3>
+<p>&#x5148;&#x770B;&#x4E00;&#x4E2A; Blog &#x7684;&#x6848;&#x4F8B;&#x5176;&#x4E2D;&#x5B9E;&#x4F53;&#x7684;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>@Entity
+@Table(name = &quot;user_blog&quot;, schema = &quot;test&quot;)
+public class UserBlogEntity {
+   @Id
+   @Column(name = &quot;id&quot;, nullable = false)
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Integer id;
+   @Column(name = &quot;title&quot;, nullable = true, length = 200)
+   private String title;
+   @Basic
+   @Column(name = &quot;create_user_id&quot;, nullable = true)
+   private Integer createUserId;
+   @Basic
+   @Column(name = &quot;blog_content&quot;, nullable = true, length = -1)
+   @Lob
+   private String blogContent;
+   @Basic(fetch = FetchType.LAZY)
+   @Column(name = &quot;image&quot;, nullable = true)
+   @Lob
+   private byte[] image;
+   @Basic
+   @Column(name = &quot;create_time&quot;, nullable = true)
+   @Temporal(TemporalType.TIMESTAMP)
+   private Date createTime;
+   @Basic
+   @Column(name = &quot;create_date&quot;, nullable = true)
+   @Temporal(TemporalType.DATE)
+   private Date createDate;
+   @Transient
+   private String transientSimple;
+......
+}
+</code></pre><p>&#x4E0B;&#x9762;&#x5BF9;&#x4E0A;&#x9762;&#x7C7B;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x6CE8;&#x89E3;&#x6765;&#x4E00;&#x4E00;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#x3002;</p>
+<p>&#xFF08;1&#xFF09;@Entity &#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x5C06;&#x4F1A;&#x6210;&#x4E3A;&#x88AB; JPA &#x7BA1;&#x7406;&#x7684;&#x5B9E;&#x4F53;&#xFF0C;&#x5C06;&#x5B57;&#x6BB5;&#x6620;&#x5C04;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#xFF0C;&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>public @interface Entity {
+   //&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x6B21;&#x5B9E;&#x4F53;&#x7C7B;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x3002;
+   String name() default &quot;&quot;;
+}
+</code></pre><p>&#xFF08;2&#xFF09;@Table &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8868;&#x540D;&#xFF1A;</p>
+<pre><code>public @interface Table {
+   //&#x8868;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x53EF;&#x9009;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x586B;&#x5199;&#xFF0C;&#x7CFB;&#x7EDF;&#x8BA4;&#x4E3A;&#x597D;&#x5B9E;&#x4F53;&#x7684;&#x540D;&#x5B57;&#x4E00;&#x6837;&#x4E3A;&#x8868;&#x540D;&#x3002;
+   String name() default &quot;&quot;;
+   //&#x6B64;&#x8868;&#x7684;catalog&#xFF0C;&#x53EF;&#x9009;
+   String catalog() default &quot;&quot;;
+   //&#x6B64;&#x8868;&#x6240;&#x5728;schema&#xFF0C;&#x53EF;&#x9009;
+   String schema() default &quot;&quot;;
+   //&#x552F;&#x4E00;&#x6027;&#x7EA6;&#x675F;&#xFF0C;&#x53EA;&#x6709;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x65F6;&#x5019;&#x6709;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x9700;&#x8981;&#x3002;
+   UniqueConstraint[] uniqueConstraints() default { };
+   //&#x7D22;&#x5F15;&#xFF0C;&#x53EA;&#x6709;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x9700;&#x8981;&#x3002;
+   Index[] indexes() default {};
+}
+</code></pre><p>&#xFF08;3&#xFF09;@Id &#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4E3B;&#x952E;&#xFF0C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x91CC;&#x9762;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x548C; @GeneratedValue &#x914D;&#x5408;&#x4F7F;&#x7528;&#x548C;&#x6210;&#x5BF9;&#x51FA;&#x73B0;&#x3002;</p>
+<p>&#xFF08;4&#xFF09;@IdClass &#x5229;&#x7528;&#x5916;&#x90E8;&#x7C7B;&#x7684;&#x8054;&#x5408;&#x4E3B;&#x952E;&#xFF0C;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code>public @interface IdClass {
+//&#x8054;&#x5408;&#x4E3B;&#x952E;&#x7684;&#x7C7B;
+    Class value();
+}
+</code></pre><p>&#x4F5C;&#x4E3A;&#x7B26;&#x5408;&#x4E3B;&#x952E;&#x7C7B;&#xFF0C;&#x8981;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#x8981;&#x6C42;&#x3002;</p>
+<ul>
+<li>&#x5FC5;&#x987B;&#x5B9E;&#x73B0; Serializable &#x63A5;&#x53E3;&#x3002;</li>
+<li>&#x5FC5;&#x987B;&#x6709;&#x9ED8;&#x8BA4;&#x7684; public &#x65E0;&#x53C2;&#x6570;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x5FC5;&#x987B;&#x8986;&#x76D6; equals &#x548C; hashCode &#x65B9;&#x6CD5;&#x3002;equals &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x76F8;&#x540C;&#xFF0C;EntityManger &#x901A;&#x8FC7; find &#x65B9;&#x6CD5;&#x6765;&#x67E5;&#x627E; Entity &#x65F6;&#xFF0C;&#x662F;&#x6839;&#x636E; equals &#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6765;&#x5224;&#x65AD;&#x7684;&#x3002;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x5BF9;&#x8C61;&#x7684; name &#x548C; email &#x503C;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x65F6;&#x6216;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x65F6;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false&#x3002;hashCode &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;&#x54C8;&#x5E0C;&#x7801;&#xFF0C;&#x751F;&#x6210; hashCode &#x76F8;&#x540C;&#x7684;&#x6982;&#x7387;&#x8D8A;&#x5C0F;&#x8D8A;&#x597D;&#xFF0C;&#x7B97;&#x6CD5;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x3002;</li>
+</ul>
+<p>&#xFF08;5&#xFF09;@IdClass &#x7528;&#x6CD5;</p>
+<p>1&#xFF09;&#x5047;&#x8BBE; UserBlog &#x7684;&#x8054;&#x5408;&#x4E3B;&#x952E;&#x662F; createUserId &#x548C; title&#xFF0C;&#x65B0;&#x589E;&#x4E00;&#x4E2A; UserBlogKey &#x7684;&#x7C7B;&#x3002;</p>
+<p>UserBlogKey.class</p>
+<pre><code>import java.io.Serializable;
+public class UserBlogKey implements Serializable {
+   private String title;
+   private Integer createUserId;
+   public UserBlogKey() {
+   }
+   public UserBlogKey(String title, Integer createUserId) {
+      this.title = title;
+      this.createUserId = createUserId;
+   }
+.....//get set &#x65B9;&#x6CD5;&#x6211;&#x4EEC;&#x7565;&#x8FC7;
+}
+</code></pre><p>2&#xFF09;UserBlogEntity.java &#x7A0D;&#x52A0;&#x6539;&#x52A8;&#xFF0C;&#x5B9E;&#x4F53;&#x7C7B;&#x4E0A;&#x9700;&#x8981;&#x52A0; @IdClass &#x6CE8;&#x89E3;&#x548C;&#x4E24;&#x4E2A;&#x4E3B;&#x952E;&#x4E0A;&#x90FD;&#x5F97;&#x52A0; @Id &#x6CE8;&#x89E3;&#xFF0C;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code>@Entity
+@Table(name = &quot;user_blog&quot;, schema = &quot;test&quot;)
+@IdClass(value = UserBlogKey.class)
+public class UserBlogEntity {
+   @Column(name = &quot;id&quot;, nullable = false)
+   private Integer id;
+   @Id
+   @Column(name = &quot;title&quot;, nullable = true, length = 200)
+   private String title;
+   @Id
+   @Column(name = &quot;create_user_id&quot;, nullable = true)
+   private Integer createUserId;
+......//&#x4E0D;&#x53D8;&#x7684;&#x90E8;&#x5206;&#x6211;&#x4EEC;&#x7701;&#x7565;
+}
+</code></pre><p>3&#xFF09;UserBlogRepository &#x6211;&#x4EEC;&#x505A;&#x7684;&#x6539;&#x52A8;&#xFF1A;</p>
+<pre><code>public interface UserBlogRepository extends JpaRepository&lt;UserBlogEntity,UserBlogKey&gt;{
+}
+</code></pre><p>4&#xFF09;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF1A;</p>
+<pre><code>@RequestMapping(path = &quot;/blog/{title}/{createUserId}&quot;)
+@ResponseBody
+public Optional&lt;UserBlogEntity&gt; showBlogs(@PathVariable(value = &quot;createUserId&quot;) Integer createUserId,@PathVariable(&quot;title&quot;) String title) {
+   return userBlogRepository.findById(new UserBlogKey(title,createUserId));
+}
+</code></pre><p>&#xFF08;6&#xFF09;@GeneratedValue &#x4E3B;&#x952E;&#x751F;&#x6210;&#x7B56;&#x7565;&#xFF1A;</p>
+<pre><code>public @interface GeneratedValue {
+    //Id&#x7684;&#x751F;&#x6210;&#x7B56;&#x7565;
+    GenerationType strategy() default AUTO;
+    //&#x901A;&#x8FC7;Sequences&#x751F;&#x6210;Id,&#x5E38;&#x89C1;&#x7684;&#x662F;Orcale&#x6570;&#x636E;&#x5E93;ID&#x751F;&#x6210;&#x89C4;&#x5219;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x9700;&#x8981;&#x914D;&#x5408;@SequenceGenerator&#x4F7F;&#x7528;
+    String generator() default &quot;&quot;;
+}
+</code></pre><p>GenerationType &#x4E00;&#x5171;&#x6709;&#x4EE5;&#x4E0B;&#x56DB;&#x4E2A;&#x503C;&#xFF1A;</p>
+<pre><code>public enum GenerationType {
+    //&#x901A;&#x8FC7;&#x8868;&#x4EA7;&#x751F;&#x4E3B;&#x952E;&#xFF0C;&#x6846;&#x67B6;&#x501F;&#x7531;&#x8868;&#x6A21;&#x62DF;&#x5E8F;&#x5217;&#x4EA7;&#x751F;&#x4E3B;&#x952E;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x7B56;&#x7565;&#x53EF;&#x4EE5;&#x4F7F;&#x5E94;&#x7528;&#x66F4;&#x6613;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x79FB;&#x690D;&#x3002;
+    TABLE,
+    //&#x901A;&#x8FC7;&#x5E8F;&#x5217;&#x4EA7;&#x751F;&#x4E3B;&#x952E;&#xFF0C;&#x901A;&#x8FC7; @SequenceGenerator &#x6CE8;&#x89E3;&#x6307;&#x5B9A;&#x5E8F;&#x5217;&#x540D;&#xFF0C; MySql &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF1B;
+    SEQUENCE,
+    //&#x91C7;&#x7528;&#x6570;&#x636E;&#x5E93;ID&#x81EA;&#x589E;&#x957F;&#xFF0C; &#x4E00;&#x822C;&#x7528;&#x4E8E;mysql&#x6570;&#x636E;&#x5E93;
+    IDENTITY,
+//JPA &#x81EA;&#x52A8;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x662F;&#x9ED8;&#x8BA4;&#x9009;&#x9879;&#xFF1B;
+    AUTO
+}
+</code></pre><p>&#xFF08;7&#xFF09;@Basic &#x8868;&#x793A;&#x5C5E;&#x6027;&#x662F;&#x5230;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#x7684;&#x6620;&#x5C04;&#x3002;&#x5982;&#x679C;&#x5B9E;&#x4F53;&#x7684;&#x5B57;&#x6BB5;&#x4E0A;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6CE8;&#x89E3;&#xFF0C;&#x9ED8;&#x8BA4;&#x5373;&#x4E3A; @Basic&#x3002;</p>
+<pre><code>public @interface Basic {
+    //&#x53EF;&#x9009;&#xFF0C;EAGER&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;&#xFF1A;&#x7ACB;&#x5373;&#x52A0;&#x8F7D;&#xFF1B;LAZY&#xFF1A;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x3002;&#xFF08;LAZY&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x5728;&#x5927;&#x5B57;&#x6BB5;&#x4E0A;&#x9762;&#xFF09;
+    FetchType fetch() default EAGER;
+    //&#x53EF;&#x9009;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4E3A;null&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;true&#x3002;
+    boolean optional() default true;
+}
+</code></pre><p>&#xFF08;8&#xFF09;@Transient &#x8868;&#x793A;&#x8BE5;&#x5C5E;&#x6027;&#x5E76;&#x975E;&#x4E00;&#x4E2A;&#x5230;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x8868;&#x793A;&#x975E;&#x6301;&#x4E45;&#x5316;&#x5C5E;&#x6027;&#x3002;JPA &#x6620;&#x5C04;&#x6570;&#x636E;&#x5E93;&#x7684;&#x65F6;&#x5019;&#x5FFD;&#x7565;&#x5B83;&#xFF0C;&#x4E0E; @Basic &#x76F8;&#x53CD;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#xFF08;9&#xFF09;@Column &#x5B9A;&#x4E49;&#x8BE5;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5217;&#x540D;&#x3002;</p>
+<pre><code>public @interface Column {
+    //&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#x7684;&#x5217;&#x540D;&#xFF1B;&#x53EF;&#x9009;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x586B;&#x5199;&#x8BA4;&#x4E3A;&#x5B57;&#x6BB5;&#x540D;&#x548C;&#x5B9E;&#x4F53;&#x5C5E;&#x6027;&#x540D;&#x4E00;&#x6837;&#x3002;
+    String name() default &quot;&quot;;
+    //&#x662F;&#x5426;&#x552F;&#x4E00;&#x3002;&#x9ED8;&#x8BA4;flase&#xFF0C;&#x53EF;&#x9009;&#x3002;
+    boolean unique() default false;
+    //&#x6570;&#x636E;&#x5B57;&#x6BB5;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x7A7A;&#x3002;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;true&#x3002;
+    boolean nullable() default true;
+    //&#x6267;&#x884C;insert&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#x662F;&#x5426;&#x5305;&#x542B;&#x6B64;&#x5B57;&#x6BB5;&#xFF0C;&#x9ED8;&#x8BA4;&#xFF0C;true&#xFF0C;&#x53EF;&#x9009;&#x3002;
+    boolean insertable() default true;
+    //&#x6267;&#x884C;update&#x7684;&#x65F6;&#x5019;&#x662F;&#x5426;&#x5305;&#x542B;&#x6B64;&#x5B57;&#x6BB5;&#xFF0C;&#x9ED8;&#x8BA4;&#xFF0C;true&#xFF0C;&#x53EF;&#x9009;&#x3002;
+    boolean updatable() default true;
+    //&#x8868;&#x793A;&#x8BE5;&#x5B57;&#x6BB5;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5B9E;&#x9645;&#x7C7B;&#x578B;&#x3002;
+    String columnDefinition() default &quot;&quot;;
+   //&#x6570;&#x636E;&#x5E93;&#x5B57;&#x6BB5;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;255
+    int length() default 255;
+}
+</code></pre><p>&#xFF08;10&#xFF09;@Temporal &#x7528;&#x6765;&#x8BBE;&#x7F6E; Date &#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x6620;&#x5C04;&#x5230;&#x5BF9;&#x5E94;&#x7CBE;&#x5EA6;&#x7684;&#x5B57;&#x6BB5;&#x3002;  </p>
+<ul>
+<li>@Temporal(TemporalType.DATE)&#x6620;&#x5C04;&#x4E3A;&#x65E5;&#x671F; // date &#xFF08;&#x53EA;&#x6709;&#x65E5;&#x671F;&#xFF09;    </li>
+<li>@Temporal(TemporalType.TIME)&#x6620;&#x5C04;&#x4E3A;&#x65E5;&#x671F; // time &#xFF08;&#x662F;&#x6709;&#x65F6;&#x95F4;&#xFF09;   </li>
+<li>@Temporal(TemporalType.TIMESTAMP)&#x6620;&#x5C04;&#x4E3A;&#x65E5;&#x671F; // date time &#xFF08;&#x65E5;&#x671F;+&#x65F6;&#x95F4;&#xFF09;   </li>
+</ul>
+<p>&#xFF08;11&#xFF09;@Enumerated &#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#x5F88;&#x597D;&#x7528;&#xFF0C;&#x76F4;&#x63A5;&#x6620;&#x5C04; enum &#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<p>1&#xFF09;&#x770B;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code>public @interface Enumerated {
+//&#x679A;&#x4E3E;&#x6620;&#x5C04;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;ORDINAL&#xFF08;&#x5373;&#x679A;&#x4E3E;&#x5B57;&#x6BB5;&#x7684;&#x4E0B;&#x6807;&#xFF09;&#x3002;
+    EnumType value() default ORDINAL;
+}
+public enum EnumType {
+    //&#x6620;&#x5C04;&#x679A;&#x4E3E;&#x5B57;&#x6BB5;&#x7684;&#x4E0B;&#x6807;
+    ORDINAL,
+    //&#x6620;&#x5C04;&#x679A;&#x4E3E;&#x7684;Name
+    STRING
+}
+</code></pre><p>2&#xFF09;&#x770B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>//&#x6709;&#x4E00;&#x4E2A;&#x679A;&#x4E3E;&#x7C7B;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x6027;&#x522B;
+public enum Gender {
+    MAIL(&quot;&#x7537;&#x6027;&quot;), FMAIL(&quot;&#x5973;&#x6027;&quot;);
+    private String value;
+    private Gender(String value) {
+        this.value = value;
+    }
+}
+//&#x5B9E;&#x4F53;&#x7C7B;@Enumerated&#x7684;&#x5199;&#x6CD5;&#x5982;&#x4E0B;
+@Entity
+@Table(name = &quot;tb_user&quot;)
+public class User implements Serializable {
+    @Enumerated(EnumType.STRING)
+    @Column(name = &quot;user_gender&quot;)
+    private Gender gender;
+    .......................
+}
+</code></pre><p>&#x8FD9;&#x65F6;&#x5019;&#x63D2;&#x5165;&#x4E24;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x9762;&#x7684;&#x503C;&#x662F; MAIL/FMAIL&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x201C;&#x7537;&#x6027;&#x201D;/&#x5973;&#x6027;&#x3002;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7528; @Enumerated(EnumType.ORDINAL)&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x9762;&#x7684;&#x503C;&#x662F; 0&#xFF0C;1&#x3002;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x7528;&#x6570;&#x5B57;&#x4E0B;&#x6807;&#xFF0C;&#x56E0;&#x4E3A;&#x679A;&#x4E3E;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x4F1A;&#x4E0D;&#x65AD;&#x65B0;&#x589E;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#xFF0C;&#x4F4D;&#x7F6E;&#x53D8;&#x5316;&#x4E86;&#x5C31;&#x60E8;&#x4E86;&#x3002;</p>
+</blockquote>
+<p>&#xFF08;12&#xFF09;@Lob &#x5C06;&#x5C5E;&#x6027;&#x6620;&#x5C04;&#x6210;&#x6570;&#x636E;&#x5E93;&#x652F;&#x6301;&#x7684;&#x5927;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x6570;&#x636E;&#x5E93;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<ul>
+<li>Clob&#xFF08;Character Large Ojects&#xFF09;&#x7C7B;&#x578B;&#x662F;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF0C;java.sql.Clob&#x3001;Character[]&#x3001;char[] &#x548C; String &#x5C06;&#x88AB;&#x6620;&#x5C04;&#x4E3A; Clob &#x7C7B;&#x578B;&#x3002;</li>
+<li>Blob&#xFF08;Binary Large Objects&#xFF09;&#x7C7B;&#x578B;&#x662F;&#x5B57;&#x8282;&#x7C7B;&#x578B;&#xFF0C;java.sql.Blob&#x3001;Byte[]&#x3001;byte[]&#x548C;&#x5B9E;&#x73B0;&#x4E86; Serializable &#x63A5;&#x53E3;&#x7684;&#x7C7B;&#x578B;&#x5C06;&#x88AB;&#x6620;&#x5C04;&#x4E3A; Blob &#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x7531;&#x4E8E; Clob&#xFF0C;Blob &#x5360;&#x7528;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x8F83;&#x5927;&#x4E00;&#x822C;&#x914D;&#x5408; @Basic(fetch=FetchType.LAZY) &#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x3002;</li>
+</ul>
+<p>&#xFF08;13&#xFF09;@SqlResultSetMapping&#x3001;@EntityResult&#x3001;@ColumnResult &#x914D;&#x5408; @NamedNativeQuery &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x6837;&#x914D;&#x7F6E;&#xFF0C;&#x56E0;&#x4E3A;&#x5FC5;&#x8981;&#x6027;&#x6BD4;&#x8F83;&#x5C11;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x79CD;&#x914D;&#x7F6E;&#x591A;&#x4E86;&#x4F1A;&#x628A; @entity &#x7528;&#x914D;&#x7F6E; XML &#x601D;&#x8DEF;&#x3002;&#x770B;&#x4E00;&#x4E2A;&#x6848;&#x4F8B;&#x7B80;&#x5355;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code>@NamedNativeQueries({
+        @NamedNativeQuery(name = &quot;getUsers&quot;,
+        query = &quot;select id,username,usertype from t_xfw_operator order by id desc&quot;,
+        resultSetMapping = &quot;usersMap&quot;)
+})
+@SqlResultSetMappings({
+        @SqlResultSetMapping(name = &quot;usersMap&quot;,
+        entities = {},
+        columns = {
+                @ColumnResult(name = &quot;id&quot;),
+                @ColumnResult(name=&quot;username&quot;),
+                @ColumnResult(name=&quot;usertype&quot;)
+        })
+})
+@Entity
+@Table(name = &quot;operator&quot;)
+public class Operator {
+......
+}
+</code></pre><h3 id="&#x5173;&#x8054;&#x5173;&#x7CFB;&#x6CE8;&#x89E3;-onetoone&#x3001;joincolumn&#x3001;manytoone&#x3001;manytomany&#x3001;jointable&#x3001;orderby">&#x5173;&#x8054;&#x5173;&#x7CFB;&#x6CE8;&#x89E3; @OneToOne&#x3001;@JoinColumn&#x3001;@ManyToOne&#x3001;@ManyToMany&#x3001;@JoinTable&#x3001;@OrderBy</h3>
+<h4 id="joincolumn-&#x5B9A;&#x4E49;&#x5916;&#x952E;&#x5173;&#x8054;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x79F0;">@JoinColumn &#x5B9A;&#x4E49;&#x5916;&#x952E;&#x5173;&#x8054;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x79F0;</h4>
+<p>&#xFF08;1&#xFF09;&#x6E90;&#x7801;&#x8BED;&#x6CD5;</p>
+<pre><code>public @interface JoinColumn {
+    //&#x76EE;&#x6807;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#x540D;,&#x5FC5;&#x586B;
+    String name() default &quot;&quot;;
+    //&#x672C;&#x5B9E;&#x4F53;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x975E;&#x5FC5;&#x586B;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x672C;&#x8868;ID
+    String referencedColumnName() default &quot;&quot;;
+    //&#x5916;&#x952E;&#x5B57;&#x6BB5;&#x662F;&#x5426;&#x552F;&#x4E00;
+    boolean unique() default false;
+    //&#x5916;&#x952E;&#x5B57;&#x6BB5;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x4E3A;&#x7A7A;
+    boolean nullable() default true;
+    //&#x662F;&#x5426;&#x8DDF;&#x968F;&#x4E00;&#x8D77;&#x65B0;&#x589E;
+    boolean insertable() default true;
+    //&#x662F;&#x5426;&#x8DDF;&#x968F;&#x4E00;&#x8D77;&#x66F4;&#x65B0;
+    boolean updatable() default true;
+}
+</code></pre><p>&#xFF08;2&#xFF09;&#x7528;&#x6CD5;&#xFF1A;@JoinColumn &#x4E3B;&#x8981;&#x914D;&#x5408; @OneToOne&#x3001;@ManyToOne&#x3001;@OneToMany &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x3002; </p>
+<p>&#xFF08;3&#xFF09;@JoinColumns &#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x3002;</p>
+<h4 id="onetoone-&#x4E00;&#x5BF9;&#x4E00;&#x5173;&#x8054;&#x5173;&#x7CFB;">@OneToOne &#x4E00;&#x5BF9;&#x4E00;&#x5173;&#x8054;&#x5173;&#x7CFB;</h4>
+<p>&#xFF08;1&#xFF09;&#x6E90;&#x7801;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>public @interface OneToOne {
+    //&#x5173;&#x7CFB;&#x76EE;&#x6807;&#x5B9E;&#x4F53;&#xFF0C;&#x975E;&#x5FC5;&#x586B;&#xFF0C;&#x9ED8;&#x8BA4;&#x8BE5;&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;&#x3002;
+    Class targetEntity() default void.class;
+    //cascade &#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B56;&#x7565;
+  1. CascadeType.PERSIST &#x7EA7;&#x8054;&#x65B0;&#x5EFA;
+  2. CascadeType.REMOVE &#x7EA7;&#x8054;&#x5220;&#x9664;
+  3. CascadeType.REFRESH &#x7EA7;&#x8054;&#x5237;&#x65B0;
+  4. CascadeType.MERGE &#x7EA7;&#x8054;&#x66F4;&#x65B0;
+  5. CascadeType.ALL &#x56DB;&#x9879;&#x5168;&#x9009;
+  6. &#x9ED8;&#x8BA4;&#xFF0C;&#x5173;&#x7CFB;&#x8868;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;
+    CascadeType[] cascade() default {};
+    //&#x6570;&#x636E;&#x83B7;&#x53D6;&#x65B9;&#x5F0F;EAGER(&#x7ACB;&#x5373;&#x52A0;&#x8F7D;)/LAZY(&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;)
+    FetchType fetch() default EAGER;
+    //&#x662F;&#x5426;&#x5141;&#x8BB8;&#x4E3A;&#x7A7A;
+    boolean optional() default true;
+    //&#x5173;&#x8054;&#x5173;&#x7CFB;&#x88AB;&#x8C01;&#x7EF4;&#x62A4;&#x7684;&#x3002; &#x975E;&#x5FC5;&#x586B;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;&#x7279;&#x522B;&#x6307;&#x5B9A;&#x3002;   
+//&#x6CE8;&#x610F;&#xFF1A;&#x53EA;&#x6709;&#x5173;&#x7CFB;&#x7EF4;&#x62A4;&#x65B9;&#x624D;&#x80FD;&#x64CD;&#x4F5C;&#x4E24;&#x8005;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x88AB;&#x7EF4;&#x62A4;&#x65B9;&#x5373;&#x4F7F;&#x8BBE;&#x7F6E;&#x4E86;&#x7EF4;&#x62A4;&#x65B9;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x4E5F;&#x4E0D;&#x4F1A;&#x66F4;&#x65B0;&#x5916;&#x952E;&#x5173;&#x8054;&#x3002;1&#xFF09;mappedBy&#x4E0D;&#x80FD;&#x4E0E;@JoinColumn&#x6216;&#x8005;@JoinTable&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x3002;2&#xFF09;mappedBy&#x7684;&#x503C;&#x662F;&#x6307;&#x53E6;&#x4E00;&#x65B9;&#x7684;&#x5B9E;&#x4F53;&#x91CC;&#x9762;&#x5C5E;&#x6027;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6570;&#x636E;&#x5E93;&#x5B57;&#x6BB5;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x5B9E;&#x4F53;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x540D;&#x5B57;&#x3002;&#x65E2;&#x662F;&#x53E6;&#x4E00;&#x65B9;&#x914D;&#x7F6E;&#x4E86;@JoinColumn&#x6216;&#x8005;@JoinTable&#x6CE8;&#x89E3;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x3002;
+    String mappedBy() default &quot;&quot;;
+    //&#x662F;&#x5426;&#x7EA7;&#x8054;&#x5220;&#x9664;&#x3002;&#x548C;CascadeType.REMOVE&#x7684;&#x6548;&#x679C;&#x4E00;&#x6837;&#x3002;&#x4E24;&#x79CD;&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x7EA7;&#x8054;&#x5220;&#x9664;
+    boolean orphanRemoval() default false;
+}
+</code></pre><p>&#xFF08;2&#xFF09;&#x7528;&#x6CD5; @OneToOne &#x9700;&#x8981;&#x914D;&#x5408; @JoinColumn &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x53EF;&#x4EE5;&#x53CC;&#x5411;&#x5173;&#x8054;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53EA;&#x914D;&#x7F6E;&#x4E00;&#x65B9;&#xFF0C;&#x770B;&#x5B9E;&#x9645;&#x9700;&#x6C42;&#x3002; </p>
+<p>&#x6848;&#x4F8B;&#xFF1A;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x90E8;&#x95E8;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5458;&#x5DE5;&#xFF0C;Department &#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;     </p>
+<pre><code>@OneToOne
+@JoinColumn(name=&quot;employee_id&quot;,referencedColumnName=&quot;id&quot;)
+private Employee employeeAttribute = new Employee();
+</code></pre><blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;<code>employee_id</code>&#x6307;&#x7684;&#x662F; Department &#x91CC;&#x9762;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x800C; referencedColumnName=&quot;id&quot; &#x6307;&#x7684;&#x662F; Employee &#x8868;&#x91CC;&#x9762;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x53CC;&#x5411;&#x5173;&#x8054;&#xFF0C;Employee &#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>@OneToOne(mappedBy=&quot;employeeAttribute&quot;)
+private Department department;
+</code></pre><p>&#x5F53;&#x7136;&#x4E86;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x9009;&#x7528; mappedBy &#x548C;&#x4E0B;&#x9762;&#x6548;&#x679C;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code>@OneToOne
+@JoinColumn(name=&quot;id&quot;,referencedColumnName=&quot;employee_id&quot;)
+private Department department;
+</code></pre><h4 id="onetomany-&#x4E00;&#x5BF9;&#x591A;--manytoone-&#x591A;&#x5BF9;&#x4E00;">@OneToMany &#x4E00;&#x5BF9;&#x591A; &amp; @ManyToOne &#x591A;&#x5BF9;&#x4E00;</h4>
+<p>@OneToMany &amp; @ManyToOne &#x53EF;&#x4EE5;&#x76F8;&#x5BF9;&#x5B58;&#x5728;&#xFF0C;&#x4E5F;&#x53EF;&#x53EA;&#x5B58;&#x5728;&#x4E00;&#x65B9;&#x3002;</p>
+<p>&#xFF08;1&#xFF09;@OneToMany &#x6E90;&#x7801;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>public @interface OneToMany {
+    Class targetEntity() default void.class;
+ //cascade &#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B56;&#x7565;&#xFF1A;(CascadeType.PERSIST&#x3001;CascadeType.REMOVE&#x3001;CascadeType.REFRESH&#x3001;CascadeType.MERGE&#x3001;CascadeType.ALL)
+&#x5982;&#x679C;&#x4E0D;&#x586B;&#xFF0C;&#x9ED8;&#x8BA4;&#x5173;&#x7CFB;&#x8868;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x3002;
+    CascadeType[] cascade() default {};
+//&#x6570;&#x636E;&#x83B7;&#x53D6;&#x65B9;&#x5F0F;EAGER(&#x7ACB;&#x5373;&#x52A0;&#x8F7D;)/LAZY(&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;)
+    FetchType fetch() default LAZY;
+    //&#x5173;&#x7CFB;&#x88AB;&#x8C01;&#x7EF4;&#x62A4;&#xFF0C;&#x5355;&#x9879;&#x7684;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x53EA;&#x6709;&#x5173;&#x7CFB;&#x7EF4;&#x62A4;&#x65B9;&#x624D;&#x80FD;&#x64CD;&#x4F5C;&#x4E24;&#x8005;&#x7684;&#x5173;&#x7CFB;&#x3002;
+    String mappedBy() default &quot;&quot;;
+//&#x662F;&#x5426;&#x7EA7;&#x8054;&#x5220;&#x9664;&#x3002;&#x548C;CascadeType.REMOVE&#x7684;&#x6548;&#x679C;&#x4E00;&#x6837;&#x3002;&#x4E24;&#x79CD;&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x7EA7;&#x8054;&#x5220;&#x9664;
+    boolean orphanRemoval() default false;
+}
+public @interface ManyToOne {
+    Class targetEntity() default void.class;
+    CascadeType[] cascade() default {};
+    FetchType fetch() default EAGER;
+    boolean optional() default true;
+}
+</code></pre><p>@ManyToOne &#x4E0E; OneToMany &#x7684;&#x6E90;&#x7801;&#x7A0D;&#x6709;&#x533A;&#x522B;&#x4ED4;&#x7EC6;&#x4F53;&#x4F1A;&#x3002;</p>
+<p>&#xFF08;2&#xFF09;&#x4F7F;&#x7528;&#x6848;&#x4F8B;&#xFF0C;&#x4E5F;&#x662F;&#x5FC5;&#x987B;&#x8981;&#x548C; @JoinColumn &#x914D;&#x5408;&#x4F7F;&#x7528;&#x624D;&#x6709;&#x6548;&#x3002;</p>
+<pre><code>@Entity
+@Table(name=&quot;user&quot;)
+public class User implements Serializable{
+@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy=&quot;user&quot;)
+    private Set&lt;role&gt; setRole; 
+......}
+@Entity
+@Table(name=&quot;role&quot;)
+public class Role {
+@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+    @JoinColumn(name=&quot;user_id&quot;)//user_id&#x5B57;&#x6BB5;&#x4F5C;&#x4E3A;&#x5916;&#x952E;
+    private User user;
+......}
+</code></pre><h4 id="orderby-&#x5173;&#x8054;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x5019;&#x7684;&#x6392;&#x5E8F;">@OrderBy &#x5173;&#x8054;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x5019;&#x7684;&#x6392;&#x5E8F;</h4>
+<p>&#x4E00;&#x822C;&#x548C; @OneToMany &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#xFF08;1&#xFF09;&#x6E90;&#x7801;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>@Target({METHOD, FIELD})
+@Retention(RUNTIME)
+public @interface OrderBy {
+   /**
+    * &#x8981;&#x6392;&#x5E8F;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;
+    *    orderby_list::= orderby_item [,orderby_item]*
+    *    orderby_item::= [property_or_field_name] [ASC | DESC]
+    * &#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x662F;&#x5B9E;&#x4F53;&#x5C5E;&#x6027;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6570;&#x636E;&#x5B57;&#x6BB5;&#xFF0C;&#x9ED8;&#x8BA4;ASC&#x3002;
+    */
+    String value() default &quot;&quot;;
+}
+</code></pre><p>&#xFF08;2&#xFF09;&#x7528;&#x6CD5;&#x6848;&#x4F8B;&#xFF1A;</p>
+<pre><code>@Entity
+@Table(name=&quot;user&quot;)
+public class User implements Serializable{
+@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy=&quot;user&quot;)
+@OrderBy(&quot;role_name DESC&quot;)
+    private Set&lt;role&gt; setRole; 
+......}
+</code></pre><h4 id="jointable-&#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;">@JoinTable &#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;</h4>
+<p>@JoinTable &#x662F;&#x6307;&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x4E0E;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x6709;&#x4E2A;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#xFF0C;&#x4E00;&#x822C;&#x548C; @ManyToMany &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#xFF08;1&#xFF09;&#x6E90;&#x7801;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>public @interface JoinTable {
+    //&#x4E2D;&#x95F4;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;&#x660E;
+    String name() default &quot;&quot;;
+    //&#x8868;&#x7684;catalog
+    String catalog() default &quot;&quot;;
+    //&#x8868;&#x7684;schema
+    String schema() default &quot;&quot;;
+    //&#x4E3B;&#x94FE;&#x63A5;&#x8868;&#x7684;&#x5B57;&#x6BB5;
+    JoinColumn[] joinColumns() default {};
+    //&#x88AB;&#x8054;&#x673A;&#x7684;&#x8868;&#x5916;&#x952E;&#x5B57;&#x6BB5;
+    JoinColumn[] inverseJoinColumns() default {};
+......
+}
+</code></pre><p>&#xFF08;2&#xFF09;&#x5047;&#x8BBE; Blog &#x548C; Tag &#x662F;&#x591A;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x6709;&#x4E2A;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;<code>blog_tag_relation</code>&#xFF0C;&#x8868;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;<code>blog_id</code>&#x548C;<code>tag_id</code>&#xFF0C;&#x90A3;&#x4E48; Blog &#x5B9E;&#x4F53;&#x91CC;&#x9762;&#x7684;&#x5199;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>@Entity
+public class Blog{
+    @ManyToMany
+    @JoinTable(
+        name=&quot;blog_tag_relation&quot;,
+        joinColumns=@JoinColumn(name=&quot;blog_id&quot;,referencedColumnName=&quot;id&quot;),
+        inverseJoinColumn=@JoinColumn(name=&quot;tag_id&quot;,referencedColumnName=&quot;id&quot;)
+        private List&lt;Tag&gt; tags = new ArrayList&lt;Tag&gt;();
+    )
+}
+</code></pre><h4 id="manytomany-&#x591A;&#x5BF9;&#x591A;">@ManyToMany &#x591A;&#x5BF9;&#x591A;</h4>
+<p>&#xFF08;1&#xFF09;&#x6E90;&#x7801;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>public @interface ManyToMany {
+    Class targetEntity() default void.class;
+    CascadeType[] cascade() default {};
+    FetchType fetch() default LAZY;
+    String mappedBy() default &quot;&quot;;
+}
+</code></pre><blockquote>
+<p>@ManyToMany &#x8868;&#x793A;&#x591A;&#x5BF9;&#x591A;&#xFF0C;&#x548C; @OneToOne&#x3001;@ManyToOne &#x4E00;&#x6837;&#x4E5F;&#x6709;&#x5355;&#x5411;&#x53CC;&#x5411;&#x4E4B;&#x5206;&#xFF0C;&#x5355;&#x9879;&#x53CC;&#x5411;&#x548C;&#x6CE8;&#x89E3;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#xFF0C;&#x53EA;&#x770B;&#x5B9E;&#x4F53;&#x7C7B;&#x4E4B;&#x95F4;&#x662F;&#x5426;&#x76F8;&#x4E92;&#x5F15;&#x7528;&#x3002;
+&#x4E3B;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5F53;&#x7528;&#x5230; @ManyToMany &#x7684;&#x65F6;&#x5019;&#x4E00;&#x5B9A;&#x662F;&#x4E09;&#x5F20;&#x8868;&#xFF0C;&#x4E0D;&#x8981;&#x60F3;&#x7740;&#x5077;&#x61D2;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x53D1;&#x73B0;&#x6709;&#x5F88;&#x591A;&#x9EBB;&#x70E6;&#x3002;</p>
+</blockquote>
+<p>&#xFF08;2&#xFF09;&#x6848;&#x4F8B;&#xFF1A;&#x4E00;&#x4E2A;&#x535A;&#x5BA2;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x591A;&#x4E2A;&#x6807;&#x7B7E;&#xFF0C;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5728;&#x591A;&#x4E2A;&#x535A;&#x5BA2;&#x4E0A;&#xFF0C;Blog &#x548C; Tag &#x5C31;&#x662F;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x3002;</p>
+<pre><code>//&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;&#x5355;&#x5411;&#x591A;&#x5BF9;&#x591A;
+@Entity
+public class Blog{
+    @Id
+    @Column(name = &quot;id&quot;)
+    private Integer id;
+    @ManyToMany(cascade=CascadeType.ALL) 
+    @JoinTable(
+        name=&quot;blog_tag_relation&quot;,
+joinColumns=@JoinColumn(name=&quot;blog_id&quot;,referencedColumnName=&quot;id&quot;),      inverseJoinColumn=@JoinColumn(name=&quot;tag_id&quot;,referencedColumnName=&quot;id&quot;)
+    private List&lt;Tag&gt; tags = new ArrayList&lt;Tag&gt;();
+......}
+//&#x591A;&#x5BF9;&#x591A;&#x4E2D;&#x95F4;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;
+@Entity
+public class BlogTagRelation{
+   @Column(name = &quot;blog_id&quot;)
+private Integer blogId;
+   @Column(name = &quot;tag_id&quot;)
+private Integer tagId;
+......}
+//&#x6807;&#x7B7E;&#x8868;
+@Entity
+public class Tag{
+    @Id
+    @Column(name = &quot;id&quot;)
+private Integer id;
+......}
+</code></pre><pre><code>//&#x7B2C;&#x4E8C;&#x79CD;&#xFF1A;&#x53CC;&#x5411;&#x591A;&#x5BF9;&#x591A;
+@Entity
+public class Blog{
+    @ManyToMany(cascade=CascadeType.ALL)
+    @JoinTable(
+        name=&quot;blog_tag_relation&quot;,       joinColumns=@JoinColumn(name=&quot;blog_id&quot;,referencedColumnName=&quot;id&quot;),
+inverseJoinColumn=@JoinColumn(name=&quot;tag_id&quot;,referencedColumnName=&quot;id&quot;)
+    private List&lt;Tag&gt; tags = new ArrayList&lt;Tag&gt;();
+}
+@Entity
+public class Tag{
+    @ManyToMany(mappedBy=&quot;BlogTagRelation&quot;)
+    private List&lt;Blog&gt; blogs = new ArrayList&lt;Blog&gt;();
+}
+</code></pre><blockquote>
+<p>&#x8BF4;&#x660E;&#xFF1A;BlogTagRelation &#x4E3A;&#x4E2D;&#x95F4;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;<code>blog_tag_relation</code>&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x4F53;&#x3002;</p>
+</blockquote>
+<h3 id="left-join&#x3001;inner-join-&#x4E0E;-entitygraph">Left join&#x3001;Inner join &#x4E0E; @EntityGraph</h3>
+<h4 id="left-join--inner-join-&#x95EE;&#x9898;">Left join &amp; Inner join &#x95EE;&#x9898;</h4>
+<p>&#x5F53;&#x4F7F;&#x7528; @ManyToMany&#x3001;@ManyToOne&#x3001;@OneToMany&#x3001;@OneToOne &#x5173;&#x8054;&#x5173;&#x7CFB;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53; FetchType &#x600E;&#x4E48;&#x914D;&#x7F6E; LAZY &#x6216;&#x8005; EAGER&#xFF0C;SQL &#x771F;&#x6B63;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x662F;&#x6709;&#x4E00;&#x6761;&#x4E3B;&#x8868;&#x67E5;&#x8BE2;&#x548C; N &#x6761;&#x5B50;&#x8868;&#x67E5;&#x8BE2;&#x7EC4;&#x6210;&#x7684;&#x3002;&#x8FD9;&#x79CD;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#x4E00;&#x822C;&#x6BD4;&#x8F83;&#x4F4E;&#x4E0B;&#xFF0C;&#x5B50;&#x5BF9;&#x8C61;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5C31;&#x4F1A;&#x6267;&#x884C; N+1 &#x6761; SQL&#x3002;</p>
+<p>&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230; Left Join &#x6216;&#x8005; Inner Join &#x6765;&#x67E5;&#x8BE2;&#x6765;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7; @Query &#x7684; JQPL &#x8BED;&#x6CD5;&#x53BB;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD8;&#x6709;&#x540E;&#x9762;&#x5C06;&#x4ECB;&#x7ECD;&#x7684; Criteria API &#x53EF;&#x4EE5;&#x505A;&#x5230;&#x3002;Spring Data JPA &#x4E3A;&#x4E86;&#x7B80;&#x5355;&#x7684;&#x63D0;&#x9AD8;&#x67E5;&#x8BE2;&#x7387;&#xFF0C;&#x5F15;&#x5165;&#x4E86; EntityGraph &#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3; N+1 &#x6761; SQL &#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h4 id="entitygraph">@EntityGraph</h4>
+<p>JPA 2.1 &#x63A8;&#x51FA;&#x6765;&#x7684; @EntityGraph&#x3001; @NamedEntityGraph &#x7528;&#x6765;&#x63D0;&#x9AD8;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#xFF0C;&#x5F88;&#x597D;&#x7684;&#x89E3;&#x51B3;&#x4E86; N+1 &#x6761; SQL &#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E24;&#x8005;&#x9700;&#x8981;&#x914D;&#x5408;&#x8D77;&#x6765;&#x4F7F;&#x7528;&#xFF0C;&#x7F3A;&#x4E00;&#x4E0D;&#x53EF;&#x3002;@NamedEntityGraph &#x914D;&#x7F6E;&#x5728; @Entity &#x4E0A;&#x9762;&#xFF0C;&#x800C; @EntityGraph &#x914D;&#x7F6E;&#x5728; Repository &#x7684;&#x67E5;&#x8BE2;&#x65B9;&#x6CD5;&#x4E0A;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x5B9E;&#x4F8B;&#x3002;</p>
+<p>&#xFF08;1&#xFF09;&#x5148;&#x5728; Entity &#x91CC;&#x9762;&#x5B9A;&#x4E49; @NamedEntityGraph&#xFF0C;&#x5176;&#x4ED6;&#x90FD;&#x4E0D;&#x53D8;&#xFF0C;&#x5176;&#x4E2D; @NamedAttributeNode &#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x4E00;&#x4E2A;&#x3002;</p>
+<pre><code>@NamedEntityGraph(name = &quot;UserInfoEntity.addressEntityList&quot;, attributeNodes = {
+      @NamedAttributeNode(&quot;addressEntityList&quot;),
+      @NamedAttributeNode(&quot;userBlogEntityList&quot;)})
+@Entity(name = &quot;UserInfoEntity&quot;)
+@Table(name = &quot;user_info&quot;, schema = &quot;test&quot;)
+public class UserInfoEntity  implements Serializable {
+   @Id
+   @Column(name = &quot;id&quot;, nullable = false)
+   private Integer id;
+   @OneToOne(optional = false)
+   @JoinColumn(referencedColumnName = &quot;id&quot;,name = &quot;address_id&quot;,nullable = false)
+   private UserReceivingAddressEntity addressEntityList;
+   @OneToMany
+   @JoinColumn(name = &quot;create_user_id&quot;,referencedColumnName = &quot;id&quot;)
+   private List&lt;UserBlogEntity&gt; userBlogEntityList;
+......
+}
+</code></pre><p>&#xFF08;2&#xFF09;&#x53EA;&#x9700;&#x8981;&#x5728;&#x67E5;&#x8BE2;&#x65B9;&#x6CD5;&#x4E0A;&#x52A0; @EntityGraph &#x6CE8;&#x89E3;&#x5373;&#x53EF;&#xFF0C;&#x5176;&#x4E2D; value &#x5C31;&#x662F; @NamedEntityGraph &#x4E2D;&#x7684; Name&#xFF0C;&#x5728;&#x5B9E;&#x4F8B;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>public interface UserRepository extends JpaRepository&lt;UserInfoEntity, Integer&gt;{
+   @Override
+   @EntityGraph(value = &quot;UserInfoEntity.addressEntityList&quot;)
+   List&lt;UserInfoEntity&gt; findAll();
+}
+</code></pre><h3 id="&#x5DE5;&#x4F5C;&#x4E2D;&#x5173;&#x4E8E;&#x5173;&#x7CFB;&#x67E5;&#x8BE2;&#x8E29;&#x8FC7;&#x7684;&#x90A3;&#x4E9B;&#x5751;">&#x5DE5;&#x4F5C;&#x4E2D;&#x5173;&#x4E8E;&#x5173;&#x7CFB;&#x67E5;&#x8BE2;&#x8E29;&#x8FC7;&#x7684;&#x90A3;&#x4E9B;&#x5751;</h3>
+<h4 id="&#x5B9E;&#x4F53;&#x91CC;&#x9762;&#x7684;&#x6CE8;&#x89E3;&#x8981;&#x4E48;&#x5728;-get-&#x65B9;&#x6CD5;&#x4E0A;&#xFF0C;&#x8981;&#x4E48;&#x5168;&#x5728;&#x5B57;&#x6BB5;&#x4E0A;&#x9762;">&#x5B9E;&#x4F53;&#x91CC;&#x9762;&#x7684;&#x6CE8;&#x89E3;&#x8981;&#x4E48;&#x5728; get &#x65B9;&#x6CD5;&#x4E0A;&#xFF0C;&#x8981;&#x4E48;&#x5168;&#x5728;&#x5B57;&#x6BB5;&#x4E0A;&#x9762;</h4>
+<p>&#x6240;&#x6709;&#x7684;&#x6CE8;&#x89E3;&#x8981;&#x4E48;&#x5168;&#x914D;&#x7F6E;&#x5728;&#x5B57;&#x6BB5;&#x4E0A;&#xFF0C;&#x8981;&#x4E48;&#x5168;&#x914D;&#x7F6E;&#x5728; get &#x65B9;&#x6CD5;&#x4E0A;&#xFF0C;&#x4E0D;&#x80FD;&#x6DF7;&#x7528;&#xFF0C;&#x6DF7;&#x7528;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x542F;&#x52A8;&#x4E0D;&#x8D77;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;&#x5F88;&#x96BE;&#x627E;&#x5230;&#x539F;&#x56E0;&#xFF0C;&#x4F46;&#x662F;&#x770B;&#x8BED;&#x6CD5;&#x4E0A;&#x9762;&#x8FD9;&#x6837;&#x914D;&#x7F6E;&#x53C8;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x3002;&#x800C;&#x4F5C;&#x8005;&#x559C;&#x6B22;&#x628A;&#x6CE8;&#x89E3;&#x90FD;&#x653E;&#x5728; get &#x65B9;&#x6CD5;&#x4E0A;&#x9762;&#xFF0C;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x56E0;&#x4E3A; Intellij IDEA &#x5DE5;&#x5177;&#x751F;&#x6210;&#x7684; Entity &#x7C7B;&#xFF0C;&#x76F8;&#x5173;&#x7684;&#x6CE8;&#x89E3;&#x90FD;&#x5728; get &#x65B9;&#x6CD5;&#x4E0A;&#x9762;&#xFF0C;&#x8FD9;&#x6837;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x51FA;&#x4EFB;&#x4F55;&#x8C03;&#x6574;&#xFF0C;&#x6848;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>/**
+ * &#x770B;&#x4E00;&#x4E0B;&#x4F5C;&#x8005;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x53D1;&#x77ED;&#x4FE1;&#x7684;Entity&#x5982;&#x4E0B;&#xFF1A;
+ */
+@Entity
+@Table(name = &quot;message_request&quot;)
+@Include(rootLevel = true, type = &quot;messageRequest&quot;)
+@Setter
+@ToString
+public class MessageRequest extends DefaultSimpleAuditable {
+    public MessageRequest(String uuid) {
+        this.uuid = uuid;
+    }
+    public MessageRequest() {
+    }
+    /**
+     * &#x4E0B;&#x9762;&#x6709;&#x54EA;&#x4E9B;&#x624B;&#x673A;&#x53F7;
+     */
+    private List&lt;MessageRequestTelephone&gt; messageRequestTelephone = Lists.newArrayList();
+    /**
+     * uuid&#xFF08;&#x81EA;&#x52A8;&#x4EA7;&#x751F;&#xFF09; &#x6D41;&#x6C34;&#x53F7;
+     */
+    private String uuid;
+    /**
+     * &#x77ED;&#x4FE1;&#x5185;&#x5BB9;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x7B7E;&#x540D;&#xFF0C;&#x8D70;&#x6A21;&#x677F;&#xFF0C;&#x4E0D;&#x7528;&#x8FD9;&#x4E2A;&#x4E86;
+     */
+    @Deprecated
+    private String content;
+    /**
+     * &#x54EA;&#x4E2A;&#x4F9B;&#x5E94;&#x5546;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x6309;&#x7167;&#x7CFB;&#x7EDF;&#x987A;&#x5E8F;&#x53D1;&#x653E;
+     */
+    private String messageVendorCode;
+    /**
+     * &#x81EA;&#x5DF1;&#x7684;&#x6A21;&#x677F;code
+     */
+    private String templateCode;
+    /**
+     * abc,def,5&#x6A21;&#x677F;&#x53C2;&#x6570;&#xFF0C;&#x5206;&#x5272;
+     */
+    private String templateParams;
+    /**
+     * &#x91CD;&#x8BD5;&#x6B21;&#x6570;
+     */
+    private Integer retryTimes;
+    /**
+     * &#x3010;&#x7231;&#x4E2D;&#x56FD;&#x3011;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4F20;&#x9012;&#x7684;
+     */
+    private List&lt;MessageRequestSign&gt; messageRequestSigns;
+    /**
+     * &#x72B6;&#x6001;&#x679A;&#x4E3E;
+     */
+    private MessageRequestStatus status;
+    /**
+     * &#x72B6;&#x6001;&#x6700;&#x540E;&#x7684;&#x5F02;&#x5E38;
+     */
+    private String statusRemark;
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(referencedColumnName = &quot;id&quot;, name = &quot;message_request_id&quot;)
+    @JsonManagedReference
+    public List&lt;MessageRequestSign&gt; getMessageRequestSigns() {
+        return messageRequestSigns;
+    }
+    @Transient
+    @Exclude
+    @JsonIgnore
+    public String getDomesticSign() {
+        if (messageRequestSigns == null) {
+            return null;
+        }
+        List&lt;MessageRequestSign&gt; list = messageRequestSigns.stream().filter(s -&gt; s.getNationCode().isDomestic()).collect(Collectors.toList());
+        if (list == null || list.isEmpty()) {
+            return null;
+        }
+        return list.stream().findFirst().get().getSign();
+    }
+    @Transient
+    @Exclude
+    @JsonIgnore
+    public String getAbroadSign() {
+        if (messageRequestSigns == null) {
+            return null;
+        }
+        List&lt;MessageRequestSign&gt; list = messageRequestSigns.stream().filter(s -&gt; s.getNationCode().isAbroad()).collect(Collectors.toList());
+        if (list == null || list.isEmpty()) {
+            return null;
+        }
+        return list.stream().findFirst().get().getSign();
+    }
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(referencedColumnName = &quot;id&quot;, name = &quot;message_request_id&quot;)
+    @JsonManagedReference
+    public List&lt;MessageRequestTelephone&gt; getMessageRequestTelephone(){
+        return messageRequestTelephone;
+    }
+    @Basic
+    @Column(name = &quot;uuid&quot;)
+    public String getUuid() {
+        return uuid;
+    }
+    @Basic
+    @Column(name = &quot;content&quot;)
+    public String getContent() {
+        return content;
+    }
+    @Basic
+    @Column(name = &quot;message_vendor_code&quot;)
+    public String getMessageVendorCode() {
+        return messageVendorCode;
+    }
+    @Basic
+    @Column(name = &quot;template_code&quot;)
+    public String getTemplateCode() {
+        return templateCode;
+    }
+    @Basic
+    @Column(name = &quot;template_params&quot;)
+    public String getTemplateParams() {
+        return templateParams;
+    }
+    //&#x4E0D;&#x52A0;@Column&#x6CE8;&#x89E3;&#xFF0C;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x5B57;&#x5339;&#x914D;&#x89C4;&#x5219;
+    public Integer getRetryTimes() {
+        return retryTimes;
+    }
+    @Enumerated(value = EnumType.STRING)
+    public MessageRequestStatus getStatus() {
+        return status;
+    }
+    public String getStatusRemark() {
+        return statusRemark;
+    }
+    @PostLoad
+    public void postLoadDefaultValue() {
+        if (status == null) {
+            status = MessageRequestStatus.WAITING;
+        }
+    }
+}
+</code></pre><h4 id="&#x53CC;&#x5411;&#x5173;&#x8054;&#x6B7B;&#x5FAA;&#x73AF;&#x95EE;&#x9898;">&#x53CC;&#x5411;&#x5173;&#x8054;&#x6B7B;&#x5FAA;&#x73AF;&#x95EE;&#x9898;</h4>
+<p>&#xFF08;1&#xFF09;JSON &#x5E8F;&#x5217;&#x5316;&#x7684;&#x53CC;&#x5411;&#x5173;&#x8054;&#x4F1A;&#x6B7B;&#x5FAA;&#x73AF;&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x5229;&#x7528; @JsonIgnore &#x5728;&#x53E6;&#x5916;&#x4E00;&#x65B9;&#x5FFD;&#x7565;&#x6389;&#xFF08;&#x6700;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x63A8;&#x8350;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x6539;&#x53D8;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#xFF09;&#x3002;</li>
+<li>&#x5229;&#x7528; @JsonManagedReference &#x548C; @JsonBackReference &#x6CE8;&#x89E3;&#x6765;&#x8868;&#x660E; back &#x5173;&#x7CFB;&#xFF0C;&#x6765;&#x89E3;&#x51B3; Jack Son &#x5E8F;&#x5217;&#x5316;&#x7684;&#x65F6;&#x5019;&#x6240;&#x4EA7;&#x751F;&#x7684;&#x53CC;&#x5411;&#x5173;&#x8054;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;</li>
+</ul>
+<p>@JsonBackReference &#x548C; @JsonManagedReference&#xFF1A;&#x8FD9;&#x4E24;&#x4E2A;&#x6807;&#x6CE8;&#x901A;&#x5E38;&#x914D;&#x5BF9;&#x4F7F;&#x7528;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x5728;&#x7236;&#x5B50;&#x5173;&#x7CFB;&#x4E2D;&#x3002;@JsonBackReference &#x6807;&#x6CE8;&#x7684;&#x5C5E;&#x6027;&#x5728;&#x5E8F;&#x5217;&#x5316;&#xFF08;serialization&#xFF0C;&#x5373;&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A; JSON &#x6570;&#x636E;&#xFF09;&#x65F6;&#xFF0C;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#xFF08;&#x5373;&#x7ED3;&#x679C;&#x4E2D;&#x7684; JSON &#x6570;&#x636E;&#x4E0D;&#x5305;&#x542B;&#x8BE5;&#x5C5E;&#x6027;&#x7684;&#x5185;&#x5BB9;&#xFF09;&#x3002;@JsonManagedReference &#x6807;&#x6CE8;&#x7684;&#x5C5E;&#x6027;&#x5219;&#x4F1A;&#x88AB;&#x5E8F;&#x5217;&#x5316;&#x3002;&#x5728;&#x5E8F;&#x5217;&#x5316;&#x65F6;&#xFF0C;@JsonBackReference &#x7684;&#x4F5C;&#x7528;&#x76F8;&#x5F53;&#x4E8E; @JsonIgnore&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x6CA1;&#x6709; @JsonManagedReference&#xFF0C;&#x4F46;&#x5728;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF08;deserialization&#xFF0C;&#x5373; JSON &#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x8C61;&#xFF09;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709; @JsonManagedReference&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x6CE8;&#x5165; @JsonBackReference &#x6807;&#x6CE8;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x88AB;&#x5FFD;&#x7565;&#x7684;&#x7236;&#x6216;&#x5B50;&#xFF09;&#xFF1B;&#x5982;&#x679C;&#x6709; @JsonManagedReference&#xFF0C;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x6CE8;&#x5165;&#x81EA;&#x52A8;&#x6CE8;&#x5165; @JsonBackReference &#x6807;&#x6CE8;&#x7684;&#x5C5E;&#x6027;&#x3002;  </p>
+<p>&#x6B63;&#x5982;&#x4E0A;&#x9762;&#x7684; MessageRequest &#x7C7B;&#x4E2D;&#x63CF;&#x8FF0;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x5F00;&#x770B;&#x4E00;&#x4E0B; MessageRequestTelephone &#x7684;&#x5173;&#x952E;&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>@Entity
+@Table(name = &quot;message_request_telephone&quot;)
+@ToString(exclude = &quot;messageRequest&quot;)
+public class MessageRequestTelephone extends DefaultSimpleAuditable implements Serializable {
+    /**
+     * &#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528;messageRequestId&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;@JoinColumn&#x8981;&#x6CE8;&#x610F;&#x914D;&#x7F6E;insertable = false, updatable = false
+     */
+    private Long messageRequestId;
+    @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = &quot;message_request_id&quot;, referencedColumnName = &quot;id&quot;, nullable = false, insertable = false, updatable = false)
+    public MessageRequest getMessageRequest() {
+        return messageRequest;
+    }
+......
+}
+</code></pre><p>&#xFF08;2&#xFF09;&#x540C;&#x6837;&#x7684;&#x5F53;&#x8986;&#x76D6; toString() &#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x4E0B;&#xFF0C;&#x4E5F;&#x4F1A;&#x6709;&#x53CC;&#x5411;&#x5173;&#x8054;&#x6B7B;&#x5FAA;&#x73AF;&#x7684;&#x95EE;&#x9898;&#x3002;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x4E00;&#x6837;&#x7684;&#xFF0C;toString &#x7684;&#x65F6;&#x5019;&#x5728;&#x4E00;&#x65B9;&#x6392;&#x9664;&#x6389;&#x5373;&#x53EF;&#x3002;</p>
+<h4 id="&#x5916;&#x952E;&#x4E0E;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x6CE8;&#x89E3;&#x7684;&#x95EE;&#x9898;">&#x5916;&#x952E;&#x4E0E;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x6CE8;&#x89E3;&#x7684;&#x95EE;&#x9898;</h4>
+<p>&#xFF08;1&#xFF09;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5173;&#x8054;&#x67E5;&#x8BE2;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;&#xFF0C;&#x8868;&#x4E0A;&#x4E00;&#x822C;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x5916;&#x952E;&#x7EA6;&#x675F;&#x7684;&#xFF0C;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x64CD;&#x4F5C;&#x6548;&#x7387;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x4E2A;&#x5916;&#x952E;&#x7684;&#x5B57;&#x6BB5;&#x4E0A;&#x90FD;&#x4F1A;&#x52A0;&#x4E0A;&#x4E00;&#x822C;&#x7D22;&#x5F15;&#x3002;   </p>
+<p>&#xFF08;2&#xFF09;&#x4E0D;&#x540C;&#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x7684;&#x914D;&#x7F6E;&#xFF0C;@JoinClumn &#x91CC;&#x9762;&#x7684;&#xFF08;name&#x3001;referencedColumnName&#xFF09;&#x4EE3;&#x8868;&#x7684;&#x610F;&#x601D;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x5F04;&#x6DF7;&#x3002;&#x6211;&#x4EEC;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x5E94;&#x5BF9;&#xFF1A;</p>
+<ul>
+<li>&#x6253;&#x5370;&#x51FA; SQL&#xFF0C;&#x6211;&#x4EEC;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#x770B;&#x4E00;&#x4E0B; SQL &#x6B63;&#x786E;&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x4E00;&#x822C;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF0C;key &#x5728; spring &#x91CC;&#x9762;&#xFF0C;&#x5C06; SQL &#x53C2;&#x6570;&#x90FD;&#x6253;&#x5370;&#x51FA;&#x6765;&#x89C2;&#x5BDF;&#x4ED4;&#x7EC6;&#x3002;</li>
+</ul>
+<pre><code>spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.use_sql_comments=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.type=trace
+logging.level.org.hibernate.type.descriptor.sql=trace
+</code></pre><ul>
+<li>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x8868;&#x4E0A;&#x5EFA;&#x7ACB;&#x5916;&#x952E;&#x7EA6;&#x675F;&#xFF0C;&#x7136;&#x540E;&#x5229;&#x7528; Intellij IDEA &#x81EA;&#x52A8;&#x751F;&#x6210;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x6CE8;&#x89E3;&#xFF0C;&#x5F53;&#x751F;&#x6210;&#x5B8C;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#x518D;&#x628A;&#x8868;&#x4E0A;&#x7684;&#x5916;&#x952E;&#x7EA6;&#x675F;&#x5220;&#x9664;&#x6389;&#xFF0C;&#x64CD;&#x4F5C;&#x754C;&#x9762;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<p><img src="http://images.gitbook.cn/d06bf5d0-2def-11e8-bc9e-6f65679a3102" alt="enter image description here"></p>
+<p>&#x800C;&#x66F4;&#x8FC7;&#x7684;&#x5173;&#x4E8E; IDEA &#x4F7F;&#x7528;&#x7684;&#x8BF7;&#x770B;&#x4F5C;&#x8005;&#x7684;&#x5176;&#x4ED6;&#x7AE0;&#x8282;&#x5185;&#x5BB9;&#x3002;</p>
+<h4 id="&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7684;&#x4F7F;&#x7528;&#x9700;&#x8981;&#x6CE8;&#x610F;">&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7684;&#x4F7F;&#x7528;&#x9700;&#x8981;&#x6CE8;&#x610F;</h4>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5173;&#x8054;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6; cascade = CascadeType.PERSIST &#x914D;&#x7F6E;&#x6210;&#x8FD9;&#x4E2A;&#xFF0C;&#x8FD9;&#x6837; insert &#x7684;&#x65F6;&#x5019;&#x80FD;&#x5E2E;&#x6211;&#x4EEC;&#x4E0D;&#x5C11;&#x5FD9;&#xFF0C;&#x5B83;&#x7684;&#x539F;&#x7406;&#x662F;&#x4E24;&#x6761;&#x90FD;&#x5148; insert&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6765;&#x4E2A; update &#x628A;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x66F4;&#x65B0;&#x4E0A;&#x53BB;&#xFF0C;&#x8BFB;&#x8005;&#x81EA;&#x5DF1;&#x6253;&#x5370;&#x51FA; SQL&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5F97;&#x51FA;&#x6765;&#x3002;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(referencedColumnName = &quot;id&quot;, name = &quot;message_request_id&quot;)
+    @JsonManagedReference
+    public List&lt;MessageRequestTelephone&gt; getMessageRequestTelephone() {
+        return messageRequestTelephone;
+    }
+</code></pre><p>&#x7EA7;&#x8054;&#x66F4;&#x65B0;&#x3001;&#x7EA7;&#x8054;&#x5220;&#x9664;&#x7684;&#x65F6;&#x5019;&#x6BD4;&#x8F83;&#x5371;&#x9669;&#xFF0C;&#x5EFA;&#x8BAE;&#x8003;&#x8651;&#x6E05;&#x695A;&#xFF0C;&#x6216;&#x8005;&#x5B8C;&#x5168;&#x638C;&#x63E1;&#x7684;&#x65F6;&#x5019;&#x518D;&#x53BB;&#x4F7F;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x751F;&#x4EA7;&#x4EA7;&#x751F;&#x4E8B;&#x6545;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x7CDF;&#x7CD5;&#x7684;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04.html" class="navigation navigation-prev " aria-label="Previous page: 04：注解式查询方法    ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06.html" class="navigation navigation-next " aria-label="Next page: 06：JpaRepository扩展之QueryByExampleExecutor">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05：@Entity实例里面常用注解详解            ","level":"1.2.5","depth":2,"next":{"title":"06：JpaRepository扩展之QueryByExampleExecutor","level":"1.2.6","depth":2,"path":"《SpringDataJpa实战》书/06.md","ref":"./《SpringDataJpa实战》书/06.md","articles":[]},"previous":{"title":"04：注解式查询方法    ","level":"1.2.4","depth":2,"path":"《SpringDataJpa实战》书/04.md","ref":"./《SpringDataJpa实战》书/04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"《SpringDataJpa实战》书/05.md","mtime":"2018-03-27T02:30:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-17T06:04:38.403Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

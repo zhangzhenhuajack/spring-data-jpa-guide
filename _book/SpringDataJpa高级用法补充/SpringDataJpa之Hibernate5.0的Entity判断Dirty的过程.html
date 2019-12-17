@@ -1,0 +1,540 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html" />
+    
+    
+    <link rel="prev" href="SpringDataJPA之Entity关联关系Lazy过程.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    《Spring Data JPA实战》
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../《SpringDataJpa实战》书/01.html">
+            
+                <a href="../《SpringDataJpa实战》书/01.html">
+            
+                    
+                    01：整体认识JPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../《SpringDataJpa实战》书/02.html">
+            
+                <a href="../《SpringDataJpa实战》书/02.html">
+            
+                    
+                    02：Jpa基础查询方法JpaRepository详解        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../《SpringDataJpa实战》书/03.html">
+            
+                <a href="../《SpringDataJpa实战》书/03.html">
+            
+                    
+                    03：定义查询方法(Defining Query Methods    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../《SpringDataJpa实战》书/04.html">
+            
+                <a href="../《SpringDataJpa实战》书/04.html">
+            
+                    
+                    04：注解式查询方法    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../《SpringDataJpa实战》书/05.html">
+            
+                <a href="../《SpringDataJpa实战》书/05.html">
+            
+                    
+                    05：@Entity实例里面常用注解详解            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../《SpringDataJpa实战》书/06.html">
+            
+                <a href="../《SpringDataJpa实战》书/06.html">
+            
+                    
+                    06：JpaRepository扩展之QueryByExampleExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../《SpringDataJpa实战》书/07.html">
+            
+                <a href="../《SpringDataJpa实战》书/07.html">
+            
+                    
+                    07：JpaRepository扩展之JpaSpecificationExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../《SpringDataJpa实战》书/08.html">
+            
+                <a href="../《SpringDataJpa实战》书/08.html">
+            
+                    
+                    08 :  JpaRepository扩展之自定义Repositor    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../《SpringDataJpa实战》书/09.html">
+            
+                <a href="../《SpringDataJpa实战》书/09.html">
+            
+                    
+                    09：Auditing与@version                    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../《SpringDataJpa实战》书/10.html">
+            
+                <a href="../《SpringDataJpa实战》书/10.html">
+            
+                    
+                    10：对MvcWeb的支持分页和排序的支持            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../《SpringDataJpa实战》书/11.html">
+            
+                <a href="../《SpringDataJpa实战》书/11.html">
+            
+                    
+                    11：Spring Data Jpa的配置之SpringBoot2.0加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../《SpringDataJpa实战》书/12.html">
+            
+                <a href="../《SpringDataJpa实战》书/12.html">
+            
+                    
+                    12：DataSource的配置与事务详解、多数据源        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../《SpringDataJpa实战》书/13.html">
+            
+                <a href="../《SpringDataJpa实战》书/13.html">
+            
+                    
+                    13：Spring Data Jpa之QueryDSL支持    
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Spring DATA JPA 扩展阅读
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="SpringDataJPA的一些高级用法扩展.html">
+            
+                <a href="SpringDataJPA的一些高级用法扩展.html">
+            
+                    
+                    Spring Data JPA 晋级提升篇：复杂场景实战用法与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="SpringDataJPA之Hibernate加载过程.html">
+            
+                <a href="SpringDataJPA之Hibernate加载过程.html">
+            
+                    
+                    SpringDataJPA之Hibernate加载过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="implement-equals-hashCode-why-when.html">
+            
+                <a href="implement-equals-hashCode-why-when.html">
+            
+                    
+                    implement-equals,-hashCode-why,when?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="JPA中lazy-loading-doesn’t-work.html">
+            
+                <a href="JPA中lazy-loading-doesn’t-work.html">
+            
+                    
+                    JPA中lazy-loading-doesn’t-work
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                <a href="SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                    
+                    SpringDataJPA之Entity关联关系Lazy过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                <a href="SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                    
+                    SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                <a href="多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                    
+                    多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h5 id="1&#x5F53;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x89E6;&#x53D1;&#x7684;flush&#x4F1A;&#xFF0C;&#x56DE;&#x6765;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x810F;&#x6570;&#x636E;&#xFF1B;">1)&#x5F53;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x89E6;&#x53D1;&#x7684;flush&#x4F1A;&#xFF0C;&#x56DE;&#x6765;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x810F;&#x6570;&#x636E;&#xFF1B;</h5>
+<p><img src="https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/images/entity_dirty/1.png" alt="">
+<img src="https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/images/entity_dirty/2.png" alt="">
+<img src="https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/images/entity_dirty/3.png" alt="">
+<img src="https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/images/entity_dirty/4.png" alt="">
+<img src="https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/images/entity_dirty/5.png" alt=""></p>
+<h5 id="&#x65E2;&#xFF1A;&#x5F97;&#x51FA;&#x4E00;&#x4E2A;&#x7ED3;&#x8BBA;&#xFF0C;&#x518D;flush&#x7684;&#x65F6;&#x5019;hibernate&#x4F1A;&#x4E00;&#x4E2A;&#x4E2A;&#x5224;&#x65AD;&#x54EA;&#x4E2A;&#x5C5E;&#x6027;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x5219;&#x4E0D;&#x4EA7;&#x751F;update&#x7684;sql&#x8BED;&#x53E5;&#x3002;&#x53EA;&#x6709;&#x53D8;&#x5316;&#x624D;&#x4F1A;&#x624D;&#x751F;-update-sql-&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x91CC;&#x9762;&#x7684;&#x591A;&#x6B21;update&#x5408;&#x5E76;&#x3002;">&#x65E2;&#xFF1A;&#x5F97;&#x51FA;&#x4E00;&#x4E2A;&#x7ED3;&#x8BBA;&#xFF0C;&#x518D;flush&#x7684;&#x65F6;&#x5019;hibernate&#x4F1A;&#x4E00;&#x4E2A;&#x4E2A;&#x5224;&#x65AD;&#x54EA;&#x4E2A;&#x5C5E;&#x6027;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x5219;&#x4E0D;&#x4EA7;&#x751F;update&#x7684;sql&#x8BED;&#x53E5;&#x3002;&#x53EA;&#x6709;&#x53D8;&#x5316;&#x624D;&#x4F1A;&#x624D;&#x751F; update sql ,&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x91CC;&#x9762;&#x7684;&#x591A;&#x6B21;update&#x5408;&#x5E76;&#x3002;</h5>
+<h5 id="&#x4E00;&#x6B21;save&#x64CD;&#x4F5C;&#x6808;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF1A;">&#x4E00;&#x6B21;save&#x64CD;&#x4F5C;&#x6808;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF1A;</h5>
+<p><img src="https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/images/entity_dirty/6.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="SpringDataJPA之Entity关联关系Lazy过程.html" class="navigation navigation-prev " aria-label="Previous page: SpringDataJPA之Entity关联关系Lazy过程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html" class="navigation navigation-next " aria-label="Next page: 多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程","level":"1.3.6","depth":2,"next":{"title":"多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑","level":"1.3.7","depth":2,"path":"SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.md","ref":"./SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.md","articles":[]},"previous":{"title":"SpringDataJPA之Entity关联关系Lazy过程","level":"1.3.5","depth":2,"path":"SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.md","ref":"./SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.md","mtime":"2019-12-17T06:00:37.559Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-17T06:04:38.403Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

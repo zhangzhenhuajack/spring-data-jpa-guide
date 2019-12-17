@@ -23,6 +23,7 @@
 3. [SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
 ](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/SpringDataJpa%E4%B9%8BHibernate5.0%E7%9A%84Entity%E5%88%A4%E6%96%ADDirty%E7%9A%84%E8%BF%87%E7%A8%8B)
 4. [SpringDataJPA之Hibernate加载过程](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/SpringDataJPA%E4%B9%8BHibernate%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B)
+
 ## 源码说明：
 > 源码太分散不利于大家查找，所以就给大家放在一起了，可以根据需要自取。
 
@@ -31,8 +32,9 @@
 3. Java并发编程入门到精通是《Java并发编程入门到精通》书上对应的源码
 
 ## 欢迎大家一起修改和提交
-1. 提issue或者mr都可以
-2. 同时注意issue和wiki的更新
+1. 提issue或者mr都可以 [https://github.com/zhangzhenhuajack/spring-data-jpa-guide](https://github.com/zhangzhenhuajack/spring-data-jpa-guide)
+2. 同时注意issue和wiki的更新 [https://github.com/zhangzhenhuajack/spring-data-jpa-guide](https://github.com/zhangzhenhuajack/spring-data-jpa-guide)
+
 ## 推荐查阅文档
 1. https://github.com/eclipse-ee4j/jpa-api
 1. https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa

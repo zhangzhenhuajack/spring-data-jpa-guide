@@ -1,0 +1,6 @@
+Thread-0-1
+Thread-4-2
+Thread-3-3
+Thread-2-4
+Thread-1-5
+5个人干完活:最后的值5

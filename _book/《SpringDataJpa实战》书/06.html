@@ -1,0 +1,819 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>06：JpaRepository扩展之QueryByExampleExecutor · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07.html" />
+    
+    
+    <link rel="prev" href="05.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    《Spring Data JPA实战》
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    01：整体认识JPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    02：Jpa基础查询方法JpaRepository详解        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    03：定义查询方法(Defining Query Methods    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    04：注解式查询方法    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    05：@Entity实例里面常用注解详解            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    06：JpaRepository扩展之QueryByExampleExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    07：JpaRepository扩展之JpaSpecificationExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    08 :  JpaRepository扩展之自定义Repositor    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="09.html">
+            
+                <a href="09.html">
+            
+                    
+                    09：Auditing与@version                    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10：对MvcWeb的支持分页和排序的支持            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    11：Spring Data Jpa的配置之SpringBoot2.0加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    12：DataSource的配置与事务详解、多数据源        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    13：Spring Data Jpa之QueryDSL支持    
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Spring DATA JPA 扩展阅读
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.html">
+            
+                    
+                    Spring Data JPA 晋级提升篇：复杂场景实战用法与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.html">
+            
+                    
+                    SpringDataJPA之Hibernate加载过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.html">
+            
+                <a href="../SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.html">
+            
+                    
+                    implement-equals,-hashCode-why,when?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.html">
+            
+                <a href="../SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.html">
+            
+                    
+                    JPA中lazy-loading-doesn’t-work
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                    
+                    SpringDataJPA之Entity关联关系Lazy过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                    
+                    SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                <a href="../SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                    
+                    多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >06：JpaRepository扩展之QueryByExampleExecutor</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7B2C;06&#x8BFE;&#xFF1A;jparepository-&#x6269;&#x5C55;&#x4E4B;-querybyexampleexecutor">&#x7B2C;06&#x8BFE;&#xFF1A;JpaRepository &#x6269;&#x5C55;&#x4E4B; QueryByExampleExecutor</h2>
+<p>&#x4ECE;&#x672C;&#x7AE0;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x8FDB;&#x5165;&#x5230; JPA &#x7684;&#x6838;&#x5FC3;&#x90E8;&#x5206;&#xFF0C;&#x5148;&#x6765;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B; QueryByExampleExecutor &#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="jparepository-&#x4ECB;&#x7ECD;">JpaRepository &#x4ECB;&#x7ECD;</h3>
+<p>&#x4ECE; JpaRepository &#x5F00;&#x59CB;&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x90FD;&#x662F; Spring Data &#x9879;&#x76EE;&#x5BF9; JPA &#x5B9E;&#x73B0;&#x7684;&#x5C01;&#x88C5;&#x4E0E;&#x6269;&#x5C55;&#x3002;JpaRepository &#x672C;&#x8EAB;&#x7EE7;&#x627F; PagingAndSortingRepository &#x63A5;&#x53E3;&#xFF0C;&#x662F;&#x9488;&#x5BF9; JPA &#x6280;&#x672F;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x63D0;&#x4F9B; flush()&#x3001;saveAndFlush()&#x3001;deleteInBatch()&#x3001;deleteAllInBatch() &#x7B49;&#x65B9;&#x6CD5;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B; UML &#x6765;&#x5BF9; JpaRespository &#x6709;&#x4E2A;&#x6574;&#x4F53;&#x7684;&#x8BA4;&#x8BC6;&#x3002;</p>
+<p><img src="http://images.gitbook.cn/af50bef0-2eab-11e8-8e27-3f3d79ceb212" alt="enter image description here">  </p>
+<ul>
+<li>&#x4ECE;&#x56FE;&#x4E2D;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;JPA &#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x6700;&#x5173;&#x952E;&#x662F;&#xFF1A;SimpleJpaRepository&#xFF0C;&#x6211;&#x4EEC;&#x591A;&#x6B21;&#x63D0;&#x5230;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x6700;&#x5173;&#x952E;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x662F; QuerydslJpaRepository&#xFF0C;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x7EE7;&#x7EED;&#x4ECB;&#x7ECD;&#x3002;</li>
+<li>&#x4ECE;&#x56FE;&#x4E2D;&#x8FD8;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6765;&#xFF0C;&#x6700;&#x5173;&#x952E;&#x7684;&#x51E0;&#x4E2A;&#x63A5;&#x53E3; QueryByExampleExecutor&#x3001;JpaSpecificationExecutor&#x3002;</li>
+<li>&#x4ECE;&#x56FE;&#x4E2D;&#x8FD8;&#x53EF;&#x4EE5;&#x597D;&#x597D;&#x4F53;&#x4F1A;&#x4E00;&#x4E9B;&#x63A5;&#x53E3;&#x7684;&#x7528;&#x610F;&#xFF08;&#x66B4;&#x9732;&#x90A3;&#x4E9B;&#x8BE5;&#x66B4;&#x9732;&#x7684;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x80A1;&#x8111;&#x7684;&#x628A;&#x6240;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x66B4;&#x9732;&#x7ED9;&#x4F7F;&#x7528;&#x7684;&#x4EBA;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x662F;&#x6BCF;&#x4E2A;&#x573A;&#x666F;&#x4E0B;&#x9762;&#x90FD;&#x4F1A;&#x7528;&#x5230;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x3002;&#x4F5C;&#x8005;&#x611F;&#x609F;&#xFF1A;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x53BB;&#x8BBE;&#x8BA1;&#x516C;&#x5171;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x67B6;&#x6784;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x5145;&#x5206;&#x8003;&#x8651;&#x6E05;&#x695A;&#x62BD;&#x8C61;&#x7C7B;&#x548C;&#x63A5;&#x53E3;&#x7684;&#x533A;&#x522B;&#x53CA;&#x5176;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;&#xFF09;</li>
+</ul>
+<h3 id="querybyexampleexecutor-&#x7684;&#x4F7F;&#x7528;">QueryByExampleExecutor &#x7684;&#x4F7F;&#x7528;</h3>
+<p>&#x6309;&#x793A;&#x4F8B;&#x67E5;&#x8BE2;&#xFF08;QBE&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x7528;&#x6237;&#x53CB;&#x597D;&#x7684;&#x67E5;&#x8BE2;&#x6280;&#x672F;&#xFF0C;&#x5177;&#x6709;&#x7B80;&#x5355;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x52A8;&#x6001;&#x67E5;&#x8BE2;&#x521B;&#x5EFA;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x9700;&#x8981;&#x7F16;&#x5199;&#x5305;&#x542B;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x7684;&#x67E5;&#x8BE2;&#x3002;&#x4ECE; UML &#x56FE;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x7EE7;&#x627F; JpaRepository &#x63A5;&#x53E3;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x62E5;&#x6709;&#x4E86;&#x6309;&#x201C;&#x5B9E;&#x4F8B;&#x201D;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x7684;&#x8BF8;&#x591A;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x89C1; Spring Data &#x7684;&#x56E2;&#x961F;&#x5DF2;&#x7ECF;&#x8BA4;&#x4E3A;&#x4E86; QBE &#x662F; Spring JPA &#x7684;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x4E86;&#xFF0C;&#x7EE7;&#x627F; QueryByExampleExecutor &#x548C;&#x7EE7;&#x627F; JpaRepository &#x90FD;&#x4F1A;&#x6709;&#x8FD9;&#x4E9B;&#x57FA;&#x672C;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5; QueryByExampleExecutor &#x4F4D;&#x4E8E; Spring Data Common &#x4E2D;&#xFF0C;&#x800C; JpaRepository &#x4F4D;&#x4E8E; Spring Data JPA &#x4E2D;&#x3002;</p>
+<h3 id="querybyexampleexecutor-&#x8BE6;&#x7EC6;&#x914D;&#x7F6E;">QueryByExampleExecutor &#x8BE6;&#x7EC6;&#x914D;&#x7F6E;</h3>
+<p>&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B; QueryByExampleExecutor &#x7684;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code>public interface QueryByExampleExecutor&lt;T&gt; { 
+ //&#x6839;&#x636E;&#x201C;&#x5B9E;&#x4F8B;&#x201D;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;
+&lt;S extends T&gt; S findOne(Example&lt;S&gt; example);
+//&#x6839;&#x636E;&#x201C;&#x5B9E;&#x4F8B;&#x201D;&#x67E5;&#x627E;&#x4E00;&#x6279;&#x5BF9;&#x8C61;
+&lt;S extends T&gt; Iterable&lt;S&gt; findAll(Example&lt;S&gt; example); 
+//&#x6839;&#x636E;&#x201C;&#x5B9E;&#x4F8B;&#x201D;&#x67E5;&#x627E;&#x4E00;&#x6279;&#x5BF9;&#x8C61;&#xFF0C;&#x4E14;&#x6392;&#x5E8F;
+&lt;S extends T&gt; Iterable&lt;S&gt; findAll(Example&lt;S&gt; example, Sort sort);
+ //&#x6839;&#x636E;&#x201C;&#x5B9E;&#x4F8B;&#x201D;&#x67E5;&#x627E;&#x4E00;&#x6279;&#x5BF9;&#x8C61;&#xFF0C;&#x4E14;&#x6392;&#x5E8F;&#x548C;&#x5206;&#x9875; 
+&lt;S extends T&gt; Page&lt;S&gt; findAll(Example&lt;S&gt; example, Pageable pageable);
+//&#x6839;&#x636E;&#x201C;&#x5B9E;&#x4F8B;&#x201D;&#x67E5;&#x627E;&#xFF0C;&#x8FD4;&#x56DE;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#x4E2A;&#x6570;
+&lt;S extends T&gt; long count(Example&lt;S&gt; example); 
+//&#x6839;&#x636E;&#x201C;&#x5B9E;&#x4F8B;&#x201D;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;
+&lt;S extends T&gt; boolean exists(Example&lt;S&gt; example); 
+}
+</code></pre><p>&#x4ECE;&#x6E90;&#x7801;&#x4E0A;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x53EA;&#x8981;&#x4E86;&#x89E3; Example &#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x53EF;&#x4EE5;&#x638C;&#x63E1;&#x5B83;&#x7684;&#x7528;&#x6CD5;&#x548C; API &#x4E86;&#x3002;</p>
+<pre><code>public class Example&lt;T&gt; {
+    @NonNull
+    private final T probe;
+    @NonNull
+    private final ExampleMatcher matcher;
+public static &lt;T&gt; Example&lt;T&gt; of(T probe) {
+    return new Example(probe, ExampleMatcher.matching());
+}
+public static &lt;T&gt; Example&lt;T&gt; of(T probe, ExampleMatcher matcher) {
+    return new Example(probe, matcher);
+}
+......
+}
+</code></pre><p>&#x6211;&#x4EEC;&#x4ECE;&#x6E90;&#x7801;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x51FA; Example &#x4E3B;&#x8981;&#x5305;&#x542B;&#x4E09;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x3002;</p>
+<ul>
+<li>Probe&#xFF1A;&#x8FD9;&#x662F;&#x5177;&#x6709;&#x586B;&#x5145;&#x5B57;&#x6BB5;&#x7684;&#x57DF;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x9645;&#x5B9E;&#x4F53;&#x7C7B;&#xFF0C;&#x5373;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x7684;&#x5C01;&#x88C5;&#x7C7B;&#xFF08;&#x53C8;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#xFF1A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5FC5;&#x586B;&#x3002;</li>
+<li>ExampleMatcher&#xFF1A;ExampleMatcher &#x6709;&#x5173;&#x4E8E;&#x5982;&#x4F55;&#x5339;&#x914D;&#x7279;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x5728;&#x591A;&#x4E2A;&#x793A;&#x4F8B;&#xFF0C;&#x5FC5;&#x586B;&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x586B;&#xFF0C;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#xFF08;&#x53C8;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x53C2;&#x6570;&#x7684;&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF09;&#x3002;</li>
+<li>Example&#xFF1A;Example &#x7531; Probe &#x63A2;&#x9488;&#x548C; ExampleMatcher &#x7EC4;&#x6210;&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#xFF0C;&#x5373;&#x7EC4;&#x5408;&#x67E5;&#x8BE2;&#x53C2;&#x6570;&#x548C;&#x53C2;&#x6570;&#x7684;&#x5339;&#x914D;&#x89C4;&#x5219;&#x3002;</li>
+</ul>
+<h3 id="querybyexampleexecutor-&#x7684;&#x4F7F;&#x7528;&#x6848;&#x4F8B;">QueryByExampleExecutor &#x7684;&#x4F7F;&#x7528;&#x6848;&#x4F8B;</h3>
+<pre><code>//&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x6570;&#x636E;&#x5BF9;&#x8C61;
+Customer customer = new Customer();
+customer.setName(&quot;Jack&quot;);
+customer.setAddress(&quot;&#x4E0A;&#x6D77;&quot;);
+//&#x521B;&#x5EFA;&#x5339;&#x914D;&#x5668;&#xFF0C;&#x5373;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+ExampleMatcher matcher = ExampleMatcher.matching() //&#x6784;&#x5EFA;&#x5BF9;&#x8C61;
+        .withMatcher(&quot;name&quot;, GenericPropertyMatchers.startsWith()) //&#x59D3;&#x540D;&#x91C7;&#x7528;&#x201C;&#x5F00;&#x59CB;&#x5339;&#x914D;&#x201D;&#x7684;&#x65B9;&#x5F0F;&#x67E5;&#x8BE2;
+        .withIgnorePaths(&quot;focus&quot;);  //&#x5FFD;&#x7565;&#x5C5E;&#x6027;&#xFF1A;&#x662F;&#x5426;&#x5173;&#x6CE8;&#x3002;&#x56E0;&#x4E3A;&#x662F;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF0C;&#x9700;&#x8981;&#x5FFD;&#x7565;&#x6389;
+//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;
+Example&lt;Customer&gt; ex = Example.of(customer, matcher); 
+//&#x67E5;&#x8BE2;
+List&lt;Customer&gt; ls = dao.findAll(ex);
+//&#x8F93;&#x51FA;&#x7ED3;&#x679C;
+for (Customer bo:ls)
+{
+    System.out.println(bo.getName());
+}
+</code></pre><p>&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x662F;&#x8FD9;&#x6837;&#x521B;&#x5EFA;&#x201C;&#x5B9E;&#x4F8B;&#x201D;&#x7684;&#xFF1A;<code>Example&lt;Customer&gt; ex = Example.of(customer, matcher);</code>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;Example &#x5BF9;&#x8C61;&#x7531; customer &#x548C; matcher &#x5171;&#x540C;&#x521B;&#x5EFA;&#xFF0C;&#x4E3A;&#x8BB2;&#x89E3;&#x65B9;&#x4FBF;&#xFF0C;&#x518D;&#x6765;&#x7ED3;&#x5408;&#x6848;&#x4F8B;&#x5148;&#x6765;&#x660E;&#x786E;&#x4E00;&#x4E9B;&#x5B9A;&#x4E49;&#x3002;</p>
+<ul>
+<li>A&#x3001;Probe&#xFF1A;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x6301;&#x4E45;&#x5316;&#x6846;&#x67B6;&#x4E2D;&#x4E0E; Table &#x5BF9;&#x5E94;&#x7684;&#x57DF;&#x5BF9;&#x8C61;&#xFF0C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4EE3;&#x8868;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x7684;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x5982;&#x4E0A;&#x4F8B;&#x4E2D; Customer &#x5BF9;&#x8C61;&#x3002;&#x5728;&#x6784;&#x5EFA;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4E2D;&#x7684;&#x201C;&#x6570;&#x503C;&#x201D;&#x90E8;&#x5206;&#xFF0C;&#x5982;&#x8981;&#x67E5;&#x8BE2;&#x59D3;&#x201C;Jack&#x201D;&#x7684;&#x5BA2;&#x6237;&#xFF0C;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x53EA;&#x80FD;&#x5B58;&#x50A8;&#x6761;&#x4EF6;&#x503C;&#x201C;Jack&#x201D;&#x3002;</li>
+<li>B&#x3001;ExampleMatcher&#xFF1A;&#x5339;&#x914D;&#x5668;&#xFF0C;&#x5B83;&#x662F;&#x5339;&#x914D;&#x201C;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x201D;&#x7684;&#xFF0C;&#x8868;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x201C;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x201D;&#x4E2D;&#x7684;&#x201C;&#x503C;&#x201D;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x5B83;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x201C;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#x201D;&#xFF0C;&#x89E3;&#x91CA;&#x4E86;&#x5982;&#x4F55;&#x53BB;&#x67E5;&#x7684;&#x95EE;&#x9898;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x67E5;&#x8BE2;&#x59D3;&#x201C;&#x5218;&#x201D;&#x7684;&#x5BA2;&#x6237;&#xFF0C;&#x5373;&#x59D3;&#x540D;&#x4EE5;&#x201C;&#x5218;&#x201D;&#x5F00;&#x5934;&#x7684;&#x5BA2;&#x6237;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x5C31;&#x8868;&#x793A;&#x4E86;&#x201C;&#x4EE5;&#x67D0;&#x67D0;&#x5F00;&#x5934;&#x7684;&#x201D;&#x8FD9;&#x4E2A;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x4E0A;&#x4F8B;&#x4E2D; withMatcher(&quot;name&quot;, GenericPropertyMatchers.startsWith())&#x3002;</li>
+<li>C&#x3001;Example&#xFF1A;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x3002;&#x7531;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#xFF08;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x503C;&#xFF09;&#x548C;&#x5339;&#x914D;&#x5668;&#xFF08;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#xFF09;&#x5171;&#x540C;&#x521B;&#x5EFA;&#x3002;</li>
+</ul>
+<p>&#x518D;&#x6765;&#x7406;&#x89E3;&#x201C;&#x5B9E;&#x4F8B;&#x67E5;&#x8BE2;&#x201D;&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x67E5;&#x8BE2;&#xFF0C;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x662F; Customer &#x5BF9;&#x8C61;&#xFF0C;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4E5F;&#x662F;&#x4E00;&#x4E2A; Customer &#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x73B0;&#x6709;&#x7684;&#x5BA2;&#x6237;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;&#xFF0C;&#x67E5;&#x8BE2;&#x548C;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x76F8;&#x5339;&#x914D;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="querybyexampleexecutor-&#x7684;&#x7279;&#x70B9;&#x53CA;&#x7EA6;&#x675F;">QueryByExampleExecutor &#x7684;&#x7279;&#x70B9;&#x53CA;&#x7EA6;&#x675F;</h3>
+<ul>
+<li>&#x652F;&#x6301;&#x52A8;&#x6001;&#x67E5;&#x8BE2;&#xFF1A;&#x5373;&#x652F;&#x6301;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4E2A;&#x6570;&#x4E0D;&#x56FA;&#x5B9A;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x5BA2;&#x6237;&#x5217;&#x8868;&#x4E2D;&#x6709;&#x591A;&#x4E2A;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#xFF0C;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x65F6;&#x5728;&#x201C;&#x5730;&#x5740;&#x201D;&#x67E5;&#x8BE2;&#x6846;&#x4E2D;&#x8F93;&#x5165;&#x4E86;&#x503C;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x6309;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8F93;&#x5165;&#x503C;&#xFF0C;&#x5C31;&#x5FFD;&#x7565;&#x8FD9;&#x4E2A;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x3002;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#xFF0C;&#x5728;&#x6784;&#x5EFA;&#x67E5;&#x8BE2;&#x6761;&#x4EF6; Customer &#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5C06; address &#x5C5E;&#x6027;&#x503C;&#x7F6E;&#x5177;&#x4F53;&#x7684;&#x6761;&#x4EF6;&#x503C;&#x6216;&#x7F6E;&#x4E3A; null&#x3002;</li>
+<li>&#x4E0D;&#x652F;&#x6301;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x5206;&#x7EC4;&#xFF1A;&#x5373;&#x4E0D;&#x652F;&#x6301;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x7528; or&#xFF08;&#x6216;&#xFF09;&#x6765;&#x8FDE;&#x63A5;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8FC7;&#x6EE4;&#x67E5;&#x4EF6;&#xFF0C;&#x90FD;&#x662F;&#x7B80;&#x5355;&#x4E00;&#x5C42;&#x7684;&#x7528; and&#xFF08;&#x5E76;&#x4E14;&#xFF09;&#x8FDE;&#x63A5;&#xFF0C;&#x5982; firstname = ?0 or (firstname = ?1 and lastname = ?2)&#x3002;</li>
+<li>&#x4EC5;&#x652F;&#x6301;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x59CB;/&#x5305;&#x542B;/&#x7ED3;&#x675F;/&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x548C;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#x7684;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x3002;&#x67E5;&#x8BE2;&#x65F6;&#xFF0C;&#x5BF9;&#x4E00;&#x4E2A;&#x8981;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x5982;&#xFF1A;&#x59D3;&#x540D; name&#xFF09;&#xFF0C;&#x53EA;&#x80FD;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x503C;&#xFF0C;&#x5982;&#x4EE5; Customer &#x4E3A;&#x4F8B;&#xFF0C;&#x8981;&#x67E5;&#x8BE2;&#x59D3;&#x201C;&#x5218;&#x201D;&#x7684;&#x5BA2;&#x6237;&#xFF0C;&#x201C;&#x5218;&#x201D;&#x8FD9;&#x4E2A;&#x6761;&#x4EF6;&#x503C;&#x5C31;&#x5B58;&#x50A8;&#x5728;&#x8868;&#x793A;&#x6761;&#x4EF6;&#x5BF9;&#x8C61;&#x7684; Customer &#x5BF9;&#x8C61;&#x7684; name &#x5C5E;&#x6027;&#x4E2D;&#xFF0C;&#x9488;&#x5BF9;&#x4E8E;&#x201C;&#x59D3;&#x540D;&#x201D;&#x7684;&#x8FC7;&#x6EE4;&#x4E5F;&#x53EA;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x8FC7;&#x6EE4;&#x503C;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6CA1;&#x529E;&#x6CD5;&#x540C;&#x65F6;&#x4F20;&#x5165;&#x4E24;&#x4E2A;&#x8FC7;&#x6EE4;&#x503C;&#x3002;&#x6B63;&#x662F;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x9650;&#x5236;&#xFF0C;&#x6709;&#x4E9B;&#x67E5;&#x8BE2;&#x662F;&#x6CA1;&#x529E;&#x6CD5;&#x652F;&#x6301;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x8981;&#x67E5;&#x8BE2;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x6BB5;&#x5185;&#x6DFB;&#x52A0;&#x7684;&#x5BA2;&#x6237;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x662F; addTime&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x5165;&#x201C;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x201D;&#x548C;&#x201C;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#x201D;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#x503C;&#xFF0C;&#x800C;&#x8FD9;&#x79CD;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#x6CA1;&#x6709;&#x5B58;&#x4E24;&#x4E2A;&#x503C;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x6CA1;&#x529E;&#x6CD5;&#x5B8C;&#x6210;&#x8FD9;&#x6837;&#x7684;&#x67E5;&#x8BE2;&#x3002;</li>
+</ul>
+<h3 id="examplematcher-&#x6E90;&#x7801;&#x89E3;&#x8BFB;">ExampleMatcher &#x6E90;&#x7801;&#x89E3;&#x8BFB;</h3>
+<p>&#xFF08;1&#xFF09;&#x6E90;&#x7801;&#x89E3;&#x8BFB;</p>
+<pre><code>public class ExampleMatcher {
+NullHandler nullHandler; 
+StringMatcher defaultStringMatcher; //&#x9ED8;&#x8BA4;
+boolean defaultIgnoreCase; //&#x9ED8;&#x8BA4;&#x5927;&#x5C0F;&#x5199;&#x5FFD;&#x7565;&#x65B9;&#x5F0F;
+PropertySpecifiers propertySpecifiers; //&#x5404;&#x5C5E;&#x6027;&#x7279;&#x5B9A;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;
+Set&lt;String&gt; ignoredPaths; //&#x5FFD;&#x7565;&#x5C5E;&#x6027;&#x5217;&#x8868;
+//Null&#x503C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x9ED8;&#x8BA4;&#x5FFD;&#x7565;
+   NullHandler nullHandler;
+   //&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65B9;&#x5F0F;,&#x901A;&#x8FC7;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x9ED8;&#x8BA4;&#x662F;DEFAULT&#xFF08;&#x9ED8;&#x8BA4;&#xFF0C;&#x6548;&#x679C;&#x540C;EXACT&#xFF09;,EXACT&#xFF08;&#x76F8;&#x7B49;&#xFF09;
+   StringMatcher defaultStringMatcher;
+   //&#x5404;&#x5C5E;&#x6027;&#x7279;&#x5B9A;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x65E0;&#x7279;&#x6B8A;&#x6307;&#x5B9A;&#x7684;&#x3002;
+   PropertySpecifiers propertySpecifiers;
+   //&#x5FFD;&#x7565;&#x5C5E;&#x6027;&#x5217;&#x8868;&#xFF0C;&#x9ED8;&#x8BA4;&#x65E0;&#x3002;
+   Set&lt;String&gt; ignoredPaths;
+   //&#x5927;&#x5C0F;&#x5199;&#x5FFD;&#x7565;&#x65B9;&#x5F0F;,&#x9ED8;&#x8BA4;&#x4E0D;&#x5FFD;&#x7565;&#x3002;
+   boolean defaultIgnoreCase;
+   @Wither(AccessLevel.PRIVATE) MatchMode mode;
+//&#x901A;&#x7528;&#x3001;&#x5185;&#x90E8;&#x3001;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x3002;
+   private ExampleMatcher() {
+      this(NullHandler.IGNORE, StringMatcher.DEFAULT, new PropertySpecifiers(), Collections.&lt;String&gt;emptySet(), false,
+            MatchMode.ALL);
+   }
+   //Example&#x7684;&#x9ED8;&#x8BA4;&#x5339;&#x914D;&#x65B9;&#x5F0F;
+   public static ExampleMatcher matching() {
+      return matchingAll();
+   }
+public static ExampleMatcher matchingAll() {
+   return new ExampleMatcher().withMode(MatchMode.ALL);
+}
+......
+}
+</code></pre><p>&#xFF08;2&#xFF09;&#x5173;&#x952E;&#x5C5E;&#x6027;&#x5206;&#x6790;</p>
+<ul>
+<li>nullHandler&#xFF1A;Null &#x503C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF0C;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x53EF;&#x9009;&#x503C;&#xFF0C;INCLUDE&#xFF08;&#x5305;&#x62EC;&#xFF09;&#x3001;IGNORE&#xFF08;&#x5FFD;&#x7565;&#xFF09;&#x3002;<pre><code>- &#x6807;&#x8BC6;&#x4F5C;&#x4E3A;&#x6761;&#x4EF6;&#x7684;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#xFF08;&#x6761;&#x4EF6;&#x503C;&#xFF09;&#x4E3A; Null &#x65F6;&#xFF0C;&#x662F;&#x5426;&#x53C2;&#x4E0E;&#x8FC7;&#x6EE4;&#xFF1B;
+- &#x5F53;&#x8BE5;&#x9009;&#x9879;&#x503C;&#x662F; INCLUDE &#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4ECD;&#x53C2;&#x4E0E;&#x8FC7;&#x6EE4;&#xFF0C;&#x4F1A;&#x5339;&#x914D;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x8BE5;&#x5B57;&#x6BB5;&#x503C;&#x662F; Null &#x7684;&#x8BB0;&#x5F55;&#xFF1B;
+- &#x82E5;&#x4E3A; IGNORE &#x503C;&#xFF0C;&#x8868;&#x793A;&#x4E0D;&#x53C2;&#x4E0E;&#x8FC7;&#x6EE4;&#x3002;
+</code></pre></li>
+<li>defaultStringMatcher&#xFF1A;&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65B9;&#x5F0F;&#xFF0C;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF0C;&#x6709; 6 &#x4E2A;&#x53EF;&#x9009;&#x503C;&#xFF0C;DEFAULT&#xFF08;&#x9ED8;&#x8BA4;&#xFF0C;&#x6548;&#x679C;&#x540C; EXACT&#xFF09;&#x3001;EXACT&#xFF08;&#x76F8;&#x7B49;&#xFF09;&#x3001;STARTING&#xFF08;&#x5F00;&#x59CB;&#x5339;&#x914D;&#xFF09;&#x3001;ENDING&#xFF08;&#x7ED3;&#x675F;&#x5339;&#x914D;&#xFF09;&#x3001;CONTAINING&#xFF08;&#x5305;&#x542B;&#xFF0C;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#xFF09;&#x3001;REGEX&#xFF08;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF09;&#x3002;<pre><code>- &#x8BE5;&#x914D;&#x7F6E;&#x5BF9;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x5C5E;&#x6027;&#x8FC7;&#x6EE4;&#x6709;&#x6548;&#xFF0C;&#x9664;&#x975E;&#x8BE5;&#x5C5E;&#x6027;&#x5728; propertySpecifiers &#x4E2D;&#x5355;&#x72EC;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x5339;&#x914D;&#x65B9;&#x5F0F;&#x3002;
+</code></pre></li>
+<li>defaultIgnoreCase&#xFF1A;&#x9ED8;&#x8BA4;&#x5927;&#x5C0F;&#x5199;&#x5FFD;&#x7565;&#x65B9;&#x5F0F;&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#xFF0C;&#x5F53;&#x503C;&#x4E3A; false &#x65F6;&#xFF0C;&#x5373;&#x4E0D;&#x5FFD;&#x7565;&#xFF0C;&#x5927;&#x5C0F;&#x4E0D;&#x76F8;&#x7B49;&#x3002;<pre><code>- &#x8BE5;&#x914D;&#x7F6E;&#x5BF9;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x5C5E;&#x6027;&#x8FC7;&#x6EE4;&#x6709;&#x6548;&#xFF0C;&#x9664;&#x975E;&#x8BE5;&#x5C5E;&#x6027;&#x5728; propertySpecifiers &#x4E2D;&#x5355;&#x72EC;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#x65B9;&#x5F0F;&#x3002;
+</code></pre></li>
+<li>propertySpecifiers&#xFF1A;&#x5404;&#x5C5E;&#x6027;&#x7279;&#x5B9A;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#xFF0C;&#x63CF;&#x8FF0;&#x4E86;&#x5404;&#x4E2A;&#x5C5E;&#x6027;&#x5355;&#x72EC;&#x5B9A;&#x4E49;&#x7684;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#xFF0C;&#x6BCF;&#x4E2A;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#x4E2D;&#x5305;&#x542B;4&#x4E2A;&#x5143;&#x7D20;&#xFF1A;&#x5C5E;&#x6027;&#x540D;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65B9;&#x5F0F;&#x3001;&#x5927;&#x5C0F;&#x5199;&#x5FFD;&#x7565;&#x65B9;&#x5F0F;&#x3001;&#x5C5E;&#x6027;&#x8F6C;&#x6362;&#x5668;&#x3002;<pre><code>- &#x5982;&#x679C;&#x5C5E;&#x6027;&#x672A;&#x5355;&#x72EC;&#x5B9A;&#x4E49;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#xFF0C;&#x6216;&#x5355;&#x72EC;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#x4E2D;&#xFF0C;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x672A;&#x5B9A;&#x4E49;&#xFF08;&#x5982;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65B9;&#x5F0F;&#xFF09;&#xFF0C;&#x5219;&#x91C7;&#x7528; ExampleMatcher &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5373;&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#x7684; defaultStringMatcher &#x548C; defaultIgnoreCase &#x7684;&#x503C;&#x3002;
+</code></pre></li>
+<li>ignoredPaths&#xFF1A;&#x5FFD;&#x7565;&#x5C5E;&#x6027;&#x5217;&#x8868;&#xFF0C;&#x5FFD;&#x7565;&#x7684;&#x5C5E;&#x6027;&#x4E0D;&#x53C2;&#x4E0E;&#x67E5;&#x8BE2;&#x8FC7;&#x6EE4;&#x3002;</li>
+</ul>
+<p>&#xFF08;3&#xFF09;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x4E3E;&#x4F8B;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65B9;&#x5F0F;</th>
+<th>&#x5BF9;&#x5E94; JPQL &#x7684;&#x5199;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default&amp; &#x4E0D;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</td>
+<td>firstname=?1</td>
+</tr>
+<tr>
+<td>Exact&amp; &#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</td>
+<td>LOWER(firstname) = LOWER(?1)</td>
+</tr>
+<tr>
+<td>Staring&amp; &#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</td>
+<td>LOWER(firstname) like LOWER(?0)+&apos;%&apos;</td>
+</tr>
+<tr>
+<td>Ending&amp; &#x4E0D;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</td>
+<td>firstname like &apos;%&apos;+?1</td>
+</tr>
+<tr>
+<td>Containing &#x4E0D;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</td>
+<td>firstname like &apos;%&apos;+?1+&apos;%&apos;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="querybyexampleexecutor-&#x4F7F;&#x7528;&#x573A;&#x666F;--&#x5B9E;&#x9645;&#x7684;&#x4F7F;&#x7528;">QueryByExampleExecutor &#x4F7F;&#x7528;&#x573A;&#x666F; &amp; &#x5B9E;&#x9645;&#x7684;&#x4F7F;&#x7528;</h3>
+<h4 id="&#x4F7F;&#x7528;&#x573A;&#x666F;">&#x4F7F;&#x7528;&#x573A;&#x666F;</h4>
+<p>&#x4F7F;&#x7528;&#x4E00;&#x7EC4;&#x9759;&#x6001;&#x6216;&#x52A8;&#x6001;&#x7EA6;&#x675F;&#x6765;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3001;&#x9891;&#x7E41;&#x91CD;&#x6784;&#x57DF;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x7834;&#x574F;&#x73B0;&#x6709;&#x67E5;&#x8BE2;&#x3001;&#x7B80;&#x5355;&#x7684;&#x67E5;&#x8BE2;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x8FD8;&#x662F;&#x633A;&#x65B9;&#x4FBF;&#x7684;&#x3002;</p>
+<h4 id="&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x56E0;&#x7D20;">&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x56E0;&#x7D20;</h4>
+<p>&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x7684;&#x8868;&#x793A;&#xFF0C;&#x6709;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x4E00;&#x662F;&#x6761;&#x4EF6;&#x503C;&#xFF0C;&#x4E8C;&#x662F;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#x3002;&#x6761;&#x4EF6;&#x503C;&#x7528;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#xFF08;&#x5982; Customer &#x5BF9;&#x8C61;&#xFF09;&#x6765;&#x5B58;&#x50A8;&#xFF0C;&#x76F8;&#x5BF9;&#x7B80;&#x5355;&#xFF0C;&#x5F53;&#x9875;&#x9762;&#x4F20;&#x5165;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x503C;&#x65F6;&#xFF0C;&#x5B58;&#x5165;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x4E2D;&#xFF0C;&#x6CA1;&#x5165;&#x4F20;&#x5165;&#x65F6;&#xFF0C;&#x5C5E;&#x6027;&#x4FDD;&#x6301;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#x662F;&#x7528;&#x5339;&#x914D;&#x5668; ExampleMatcher &#x6765;&#x8868;&#x793A;&#xFF0C;&#x60C5;&#x51B5;&#x76F8;&#x5BF9;&#x590D;&#x6742;&#x4E9B;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x56E0;&#x7D20;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;Null &#x503C;&#x7684;&#x5904;&#x7406;</p>
+<p>&#x5F53;&#x67D0;&#x4E2A;&#x6761;&#x4EF6;&#x503C;&#x4E3A; Null&#x65F6;&#xFF0C;&#x662F;&#x5E94;&#x5F53;&#x5FFD;&#x7565;&#x8FD9;&#x4E2A;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x5462;&#xFF0C;&#x8FD8;&#x662F;&#x5E94;&#x5F53;&#x53BB;&#x5339;&#x914D;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x8BE5;&#x5B57;&#x6BB5;&#x503C;&#x662F; Null &#x7684;&#x8BB0;&#x5F55;&#xFF1F;</p>
+<p>Null &#x503C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF1A;&#x9ED8;&#x8BA4;&#x503C;&#x662F; IGNORE&#xFF08;&#x5FFD;&#x7565;&#xFF09;&#xFF0C;&#x5373;&#x5F53;&#x6761;&#x4EF6;&#x503C;&#x4E3A; Null &#x65F6;&#xFF0C;&#x5219;&#x5FFD;&#x7565;&#x6B64;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#xFF0C;&#x4E00;&#x822C;&#x4E1A;&#x52A1;&#x4E5F;&#x662F;&#x91C7;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5C31;&#x53EF;&#x6EE1;&#x8DB3;&#x3002;&#x5F53;&#x9700;&#x8981;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5C5E;&#x6027;&#x4E3A; Null &#x7684;&#x8BB0;&#x5F55;&#x65F6;&#xFF0C;&#x53EF;&#x5C06;&#x503C;&#x8BBE;&#x4E3A; INCLUDE&#xFF0C;&#x8FD9;&#x65F6;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0D;&#x9700;&#x8981;&#x53C2;&#x4E0E;&#x67E5;&#x8BE2;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x6DFB;&#x52A0;&#x5230;&#x5FFD;&#x7565;&#x5217;&#x8868;&#xFF08;ignoredPaths&#xFF09;&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x51FA;&#x73B0;&#x67E5;&#x4E0D;&#x5230;&#x6570;&#x636E;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#xFF08;2&#xFF09;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;</p>
+<p>&#x5982;&#x5BA2;&#x6237; Customer &#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x5E74;&#x9F84; age &#x662F; int &#x578B;&#x7684;&#xFF0C;&#x5F53;&#x9875;&#x9762;&#x4E0D;&#x4F20;&#x5165;&#x6761;&#x4EF6;&#x503C;&#x65F6;&#xFF0C;&#x5B83;&#x9ED8;&#x8BA4;&#x662F;0&#xFF0C;&#x662F;&#x6709;&#x503C;&#x7684;&#xFF0C;&#x90A3;&#x662F;&#x5426;&#x53C2;&#x4E0E;&#x67E5;&#x8BE2;&#x5462;&#xFF1F;</p>
+<p>&#x5173;&#x4E8E;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF1A;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x91C7;&#x7528;&#x5305;&#x88C5;&#x5668;&#x7C7B;&#x578B;&#x3002;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x91C7;&#x7528;&#x4E86;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x67E5;&#x8BE2;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF0C;&#x5219;&#x628A;&#x5B83;&#x6DFB;&#x52A0;&#x5230;&#x5FFD;&#x7565;&#x5217;&#x8868;&#xFF08;ignoredPaths&#xFF09;&#x4E2D;&#x3002;</p>
+<p>&#xFF08;3&#xFF09;&#x5FFD;&#x7565;&#x67D0;&#x4E9B;&#x5C5E;&#x6027;&#x503C;</p>
+<p>&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#xFF0C;&#x6709;&#x8BB8;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x662F;&#x5426;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x90FD;&#x53C2;&#x4E0E;&#x8FC7;&#x6EE4;&#xFF1F;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x67D0;&#x4E9B;&#x5C5E;&#x6027;&#xFF1F;</p>
+<p>ignoredPaths&#xFF1A;&#x867D;&#x7136;&#x67D0;&#x4E9B;&#x5B57;&#x6BB5;&#x91CC;&#x9762;&#x6709;&#x503C;&#x6216;&#x8005;&#x8BBE;&#x7F6E;&#x4E86;&#x5176;&#x4ED6;&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF0C;&#x53EA;&#x8981;&#x653E;&#x5728; ignoredPaths &#x4E2D;&#xFF0C;&#x5C31;&#x4F1A;&#x5FFD;&#x7565;&#x6B64;&#x5B57;&#x6BB5;&#x7684;&#xFF0C;&#x4E0D;&#x4F5C;&#x4E3A;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x3002;</p>
+<p>&#xFF08;4&#xFF09;&#x4E0D;&#x540C;&#x7684;&#x8FC7;&#x6EE4;&#x65B9;&#x5F0F;</p>
+<p>&#x540C;&#x6837;&#x662F;&#x4F5C;&#x4E3A; String &#x503C;&#xFF0C;&#x53EF;&#x80FD;&#x201C;&#x59D3;&#x540D;&#x201D;&#x5E0C;&#x671B;&#x7CBE;&#x786E;&#x5339;&#x914D;&#xFF0C;&#x201C;&#x5730;&#x5740;&#x201D;&#x5E0C;&#x671B;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#xFF0C;&#x5982;&#x4F55;&#x505A;&#x5230;&#xFF1F;</p>
+<p>&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x548C;&#x7279;&#x6B8A;&#x914D;&#x7F6E;&#x6DF7;&#x5408;&#x4F7F;&#x7528;&#xFF1A;&#x9ED8;&#x8BA4;&#x521B;&#x5EFA;&#x5339;&#x914D;&#x5668;&#x65F6;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x91C7;&#x7528;&#x7684;&#x662F;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x3001;&#x4E0D;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x6539;&#x53D8;&#x8FD9;&#x79CD;&#x9ED8;&#x8BA4;&#x5339;&#x914D;&#xFF0C;&#x4EE5;&#x6EE1;&#x8DB3;&#x5927;&#x591A;&#x6570;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x7684;&#x9700;&#x8981;&#xFF0C;&#x5982;&#x5C06;&#x201C;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65B9;&#x5F0F;&#x201D;&#x6539;&#x4E3A; CONTAINING&#xFF08;&#x5305;&#x542B;&#xFF0C;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#xFF09;&#xFF0C;&#x8FD9;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5BF9;&#x4E8E;&#x4E2A;&#x522B;&#x5C5E;&#x6027;&#x9700;&#x8981;&#x7279;&#x5B9A;&#x7684;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x201C;&#x5C5E;&#x6027;&#x7279;&#x5B9A;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#x201D;&#x6765;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#xFF0C;&#x8BBE;&#x7F6E; propertySpecifiers &#x7684;&#x503C;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#xFF08;5&#xFF09;&#x5927;&#x5C0F;&#x5199;&#x5339;&#x914D; </p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65F6;&#xFF0C;&#x6709;&#x65F6;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x6709;&#x65F6;&#x5219;&#x4E0D;&#x5FFD;&#x7565;&#xFF0C;&#x5982;&#x4F55;&#x505A;&#x5230;&#xFF1F;</p>
+<p>defaultIgnoreCase&#xFF1A;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x7684;&#x751F;&#x6548;&#x4E0E;&#x5426;&#xFF0C;&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x3002;&#x4F8B;&#x5982; MySQL &#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x521B;&#x5EFA;&#x8868;&#x7ED3;&#x6784;&#x65F6;&#xFF0C;&#x5B57;&#x6BB5;&#x662F;&#x5DF2;&#x7ECF;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x4E0E;&#x5426;&#xFF0C;&#x90FD;&#x662F;&#x5FFD;&#x7565;&#x7684;&#x3002;&#x5982;&#x679C;&#x4E1A;&#x52A1;&#x9700;&#x8981;&#x4E25;&#x683C;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;&#x5C5E;&#x6027;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<h4 id="&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x6848;&#x4F8B;&#x8BF4;&#x660E;">&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x6848;&#x4F8B;&#x8BF4;&#x660E;</h4>
+<p>&#xFF08;1&#xFF09;&#x65E0;&#x5339;&#x914D;&#x5668;&#x7684;&#x60C5;&#x51B5; </p>
+<ul>
+<li>&#x8981;&#x6C42;&#xFF1A;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x662F;&#x201C;&#x6CB3;&#x5357;&#x7701;&#x90D1;&#x5DDE;&#x5E02;&#x201D;&#xFF0C;&#x4E14;&#x91CD;&#x70B9;&#x5173;&#x6CE8;&#x7684;&#x5BA2;&#x6237;&#x3002;   </li>
+<li>&#x8BF4;&#x660E;&#xFF1A;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x5339;&#x914D;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x5339;&#x914D;&#x5668;&#x3002;   </li>
+</ul>
+<pre><code>//&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x6570;&#x636E;&#x5BF9;&#x8C61;
+Customer customer = new Customer();
+customer.setAddress(&quot;&#x6CB3;&#x5357;&#x7701;&#x90D1;&#x5DDE;&#x5E02;&quot;);
+customer.setFocus(true);
+//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;
+Example&lt;Customer&gt; ex = Example.of(customer); 
+//&#x67E5;&#x8BE2;
+List&lt;Customer&gt; ls = dao.findAll(ex);
+</code></pre><p>&#xFF08;2&#xFF09;&#x591A;&#x79CD;&#x6761;&#x4EF6;&#x7EC4;&#x5408;   </p>
+<ul>
+<li>&#x8981;&#x6C42;&#xFF1A;&#x6839;&#x636E;&#x59D3;&#x540D;&#x3001;&#x5730;&#x5740;&#x3001;&#x5907;&#x6CE8;&#x8FDB;&#x884C;&#x6A21;&#x7CCA;&#x67E5;&#x8BE2;&#xFF0C;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x5730;&#x5740;&#x8981;&#x6C42;&#x5F00;&#x59CB;&#x5339;&#x914D;&#x3002;     </li>
+<li>&#x8BF4;&#x660E;&#xFF1A;&#x8FD9;&#x662F;&#x901A;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x4E3B;&#x8981;&#x6F14;&#x793A;&#x6539;&#x53D8;&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65B9;&#x5F0F;&#x3001;&#x6539;&#x53D8;&#x9ED8;&#x8BA4;&#x5927;&#x5C0F;&#x5199;&#x5FFD;&#x7565;&#x65B9;&#x5F0F;&#x3001;&#x5C5E;&#x6027;&#x7279;&#x5B9A;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#x3001;&#x5FFD;&#x7565;&#x5C5E;&#x6027;&#x5217;&#x8868;&#x914D;&#x7F6E;&#x3002;   </li>
+</ul>
+<pre><code> //&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x6570;&#x636E;&#x5BF9;&#x8C61;
+Customer customer = new Customer();
+customer.setName(&quot;zhang&quot;);
+customer.setAddress(&quot;&#x6CB3;&#x5357;&#x7701;&quot;);
+customer.setRemark(&quot;BB&quot;);
+//&#x867D;&#x7136;&#x6709;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x53C2;&#x4E0E;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;
+customer.setFocus(true);
+//&#x521B;&#x5EFA;&#x5339;&#x914D;&#x5668;&#xFF0C;&#x5373;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+ExampleMatcher matcher = ExampleMatcher.matching() //&#x6784;&#x5EFA;&#x5BF9;&#x8C61;
+        .withStringMatcher(StringMatcher.CONTAINING) //&#x6539;&#x53D8;&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x65B9;&#x5F0F;&#xFF1A;&#x6A21;&#x7CCA;&#x67E5;&#x8BE2;
+        .withIgnoreCase(true) //&#x6539;&#x53D8;&#x9ED8;&#x8BA4;&#x5927;&#x5C0F;&#x5199;&#x5FFD;&#x7565;&#x65B9;&#x5F0F;&#xFF1A;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;
+        .withMatcher(&quot;address&quot;, GenericPropertyMatchers.startsWith()) //&#x5730;&#x5740;&#x91C7;&#x7528;&#x201C;&#x5F00;&#x59CB;&#x5339;&#x914D;&#x201D;&#x7684;&#x65B9;&#x5F0F;&#x67E5;&#x8BE2;
+        .withIgnorePaths(&quot;focus&quot;);  //&#x5FFD;&#x7565;&#x5C5E;&#x6027;&#xFF1A;&#x662F;&#x5426;&#x5173;&#x6CE8;&#x3002;&#x56E0;&#x4E3A;&#x662F;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF0C;&#x9700;&#x8981;&#x5FFD;&#x7565;&#x6389;
+//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;
+Example&lt;Customer&gt; ex = Example.of(customer, matcher); 
+//&#x67E5;&#x8BE2;
+List&lt;Customer&gt; ls = dao.findAll(ex);
+</code></pre><p>&#xFF08;3&#xFF09;&#x591A;&#x7EA7;&#x67E5;&#x8BE2; </p>
+<ul>
+<li>&#x8981;&#x6C42;&#xFF1A;&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x6F5C;&#x5728;&#x5BA2;&#x6237;&#x3002;</li>
+<li>&#x8BF4;&#x660E;&#xFF1A;&#x4E3B;&#x8981;&#x6F14;&#x793A;&#x591A;&#x5C42;&#x7EA7;&#x5C5E;&#x6027;&#x67E5;&#x8BE2;&#x3002;</li>
+</ul>
+<pre><code>//&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x6570;&#x636E;&#x5BF9;&#x8C61;
+CustomerType type = new CustomerType();
+type.setCode(&quot;01&quot;); //&#x7F16;&#x53F7;01&#x4EE3;&#x8868;&#x6F5C;&#x5728;&#x5BA2;&#x6237;
+Customer customer = new Customer();
+customer.setCustomerType(type);        
+//&#x521B;&#x5EFA;&#x5339;&#x914D;&#x5668;&#xFF0C;&#x5373;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+ExampleMatcher matcher = ExampleMatcher.matching() //&#x6784;&#x5EFA;&#x5BF9;&#x8C61;
+        .withIgnorePaths(&quot;focus&quot;);  //&#x5FFD;&#x7565;&#x5C5E;&#x6027;&#xFF1A;&#x662F;&#x5426;&#x5173;&#x6CE8;&#x3002;&#x56E0;&#x4E3A;&#x662F;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF0C;&#x9700;&#x8981;&#x5FFD;&#x7565;&#x6389;                
+//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;
+Example&lt;Customer&gt; ex = Example.of(customer, matcher); 
+//&#x67E5;&#x8BE2;
+List&lt;Customer&gt; ls = dao.findAll(ex);
+</code></pre><p>&#xFF08;4&#xFF09;&#x67E5;&#x8BE2; Null &#x503C;</p>
+<ul>
+<li>&#x8981;&#x6C42;&#xFF1A;&#x5730;&#x5740;&#x662F; Null &#x7684;&#x5BA2;&#x6237;&#x3002; </li>
+<li>&#x8BF4;&#x660E;&#xFF1A;&#x4E3B;&#x8981;&#x6F14;&#x793A;&#x6539;&#x53D8;&#x201C;Null &#x503C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x201D;&#x3002;  </li>
+</ul>
+<pre><code>//&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x6570;&#x636E;&#x5BF9;&#x8C61;
+Customer customer = new Customer();
+//&#x521B;&#x5EFA;&#x5339;&#x914D;&#x5668;&#xFF0C;&#x5373;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+ExampleMatcher matcher = ExampleMatcher.matching() //&#x6784;&#x5EFA;&#x5BF9;&#x8C61;
+        //&#x6539;&#x53D8;&#x201C;Null&#x503C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x201D;&#xFF1A;&#x5305;&#x62EC;&#x3002;
+      .withIncludeNullValues() 
+       //&#x5FFD;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;
+      .withIgnorePaths(&quot;id&quot;, &quot;name&quot;, &quot;sex&quot;, &quot;age&quot;, &quot;focus&quot;, &quot;addTime&quot;, &quot;remark&quot;, &quot;customerType&quot;); 
+//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;
+Example&lt;Customer&gt; ex = Example.of(customer, matcher);
+//&#x67E5;&#x8BE2;
+List&lt;Customer&gt; ls = dao.findAll(ex);
+</code></pre><p>&#xFF08;5&#xFF09;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x5DE5;&#x4F5C;&#x4E2D;&#x7528;&#x7684;&#x6700;&#x591A;&#x7684;&#x8FD8;&#x662F;&#x201C;&#x7B80;&#x5355;&#x67E5;&#x8BE2;&#x201D;&#xFF08;&#x56E0;&#x4E3A;&#x7B80;&#x5355;&#xFF0C;&#x6240;&#x4EE5;&#x2026;&#xFF09;&#x548C;&#x57FA;&#x4E8E; JPA Criteria &#x7684;&#x52A8;&#x6001;&#x67E5;&#x8BE2;&#xFF08;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x6240;&#x6709;&#x9700;&#x6C42;&#xFF0C;&#x6CA1;&#x6709;&#x5C40;&#x9650;&#x6027;&#xFF09;&#x3002; </p>
+<p>&#x4F46;&#x662F; QueryByExampleExecutor &#x8FD8;&#x662F;&#x4E2A;&#x975E;&#x5E38;&#x4E0D;&#x9519;&#x7684;&#x4E24;&#x79CD;&#x4E2D;&#x95F4;&#x573A;&#x666F;&#x7684;&#x67E5;&#x8BE2;&#x5904;&#x7406;&#x624B;&#x6BB5;&#xFF0C;&#x5176;&#x4ED6;&#x4EBA;&#x6CA1;&#x6709;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x662F;&#x5BF9;&#x5176;&#x4E0D;&#x719F;&#x6089;&#xFF0C;&#x8FD8;&#x662F;&#x5E0C;&#x671B;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x8FC7; QueryByExampleExecutor &#x7684;&#x5F00;&#x53D1;&#x8005;&#x7528;&#x8D77;&#x6765;&#xFF0C;&#x7528;&#x719F;&#x6089;&#x4E86;&#x4F1A;&#x589E;&#x52A0;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x3002; </p>
+<h3 id="querybyexampleexecutor-&#x7684;&#x5B9E;&#x73B0;&#x6E90;&#x7801;">QueryByExampleExecutor &#x7684;&#x5B9E;&#x73B0;&#x6E90;&#x7801;</h3>
+<p>&#xFF08;1&#xFF09;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x2014;&#x2014;Hierarchy&#xFF0C;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x5176;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x6709;&#x54EA;&#x4E9B;&#xFF1A;</p>
+<p><img src="http://images.gitbook.cn/777c1cb0-2f03-11e8-8dc4-1735333b0b3b" alt="enter image description here"></p>
+<p>&#xFF08;2&#xFF09;&#x6211;&#x4EEC;&#x53D1;&#x73B0; JpaSpecificationExecutor &#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x662F; SimpleJpaRepository&#x3002;</p>
+<p>&#x800C; SimpleJpaRepository &#x4E5F;&#x5B9E;&#x73B0;&#x4E86; JpaSpecificationExecutor&#xFF0C;&#x4E8E;&#x662F;&#x5C31;&#x5229;&#x7528; Specification &#x7684;&#x7279;&#x6027;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;&#x5185;&#x90E8;&#x7C7B; ExampleSpecification&#xFF0C;&#x901A;&#x8FC7; Exmaple &#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x5957;&#x5DE5;&#x5177;&#x7C7B;&#x548C;&#x5BF9; Predicate &#x7684;&#x6784;&#x5EFA;&#xFF0C;&#x8FDB;&#x800C;&#x5B9E;&#x73B0;&#x4E86;&#x6574;&#x4E2A; ExampleQuery &#x7684;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x53BB;&#x770B;&#x6E90;&#x7801;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0; QueryByExampleExecutor &#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x601D;&#x8DEF;&#xFF1A; </p>
+<ul>
+<li>&#x901A;&#x8FC7; JpaSpecificationExecutor &#x81EA;&#x5B9A;&#x4E49; Response &#x7684;&#x601D;&#x8DEF;&#x3002;   </li>
+<li>&#x548C;&#x5BF9; JpaSpecificationExecutor &#x7684;&#x6269;&#x5C55;&#x601D;&#x8DEF;&#xFF08;&#x5728;&#x540E;&#x9762;&#x7AE0;&#x8282;&#x81EA;&#x5B9A;&#x4E49; Repository &#x4E2D;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF09;&#x3002;   </li>
+</ul>
+<p>&#xFF08;3&#xFF09;SimpleJpaRepository &#x5B9E;&#x73B0;&#x7C7B;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code>public class SimpleJpaRepository&lt;T, ID extends Serializable&gt;
+      implements JpaRepository&lt;T, ID&gt;, JpaSpecificationExecutor&lt;T&gt; {
+       private final EntityManager em;
+public &lt;S extends T&gt; S findOne(Example&lt;S&gt; example) {
+   try {
+      return getQuery(new ExampleSpecification&lt;S&gt;(example), example.getProbeType(), (Sort) null).getSingleResult();
+   } catch (NoResultException e) {
+      return null;
+   }
+}
+protected &lt;S extends T&gt; TypedQuery&lt;S&gt; getQuery(Specification&lt;S&gt; spec, Class&lt;S&gt; domainClass, Sort sort) {
+   CriteriaBuilder builder = em.getCriteriaBuilder();
+   CriteriaQuery&lt;S&gt; query = builder.createQuery(domainClass);
+   Root&lt;S&gt; root = applySpecificationToCriteria(spec, domainClass, query);
+   query.select(root);
+   if (sort != null) {
+      query.orderBy(toOrders(sort, root, builder));
+   }
+   return applyRepositoryMethodMetadata(em.createQuery(query));
+}
+......
+}
+</code></pre><p>&#xFF08;4&#xFF09;&#x8BFB; SimpleJpaRepository &#x6E90;&#x7801;&#x7ED9;&#x5927;&#x5BB6;&#x7684;&#x542F;&#x793A;</p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x4E00;&#x4E2A; API &#x7684;&#x65F6;&#x5019;&#x6700;&#x597D;&#x987A;&#x5E26;&#x8BFB;&#x4E00;&#x4E0B;&#x6E90;&#x7801;&#xFF0C;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x5B83;&#x7684;&#x5B9E;&#x73B0;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x6837;&#x4F60;&#x4F1A;&#x6709;&#x610F;&#x5916;&#x53D1;&#x73B0;&#xFF1A;  </p>
+<ul>
+<li>&#x5B66;&#x4E60;&#x6E90;&#x7801;&#x7684;&#x7F16;&#x7A0B;&#x601D;&#x60F3;&#xFF1B;</li>
+<li>&#x5B66;&#x4E60;&#x6E90;&#x7801;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x81EA;&#x5DF1;&#x5982;&#x4F55;&#x5199;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x7684;&#x63D0;&#x9AD8;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x7F16;&#x7A0B;&#x6C34;&#x5E73;&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05.html" class="navigation navigation-prev " aria-label="Previous page: 05：@Entity实例里面常用注解详解            ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07.html" class="navigation navigation-next " aria-label="Next page: 07：JpaRepository扩展之JpaSpecificationExecutor">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"06：JpaRepository扩展之QueryByExampleExecutor","level":"1.2.6","depth":2,"next":{"title":"07：JpaRepository扩展之JpaSpecificationExecutor","level":"1.2.7","depth":2,"path":"《SpringDataJpa实战》书/07.md","ref":"./《SpringDataJpa实战》书/07.md","articles":[]},"previous":{"title":"05：@Entity实例里面常用注解详解            ","level":"1.2.5","depth":2,"path":"《SpringDataJpa实战》书/05.md","ref":"./《SpringDataJpa实战》书/05.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"《SpringDataJpa实战》书/06.md","mtime":"2018-05-11T07:12:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-17T06:04:38.403Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

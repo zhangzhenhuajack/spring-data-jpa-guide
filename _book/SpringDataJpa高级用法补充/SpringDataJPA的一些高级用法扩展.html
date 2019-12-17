@@ -1,0 +1,1154 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Spring Data JPA 晋级提升篇：复杂场景实战用法与优化 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="SpringDataJPA之Hibernate加载过程.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    《Spring Data JPA实战》
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../《SpringDataJpa实战》书/01.html">
+            
+                <a href="../《SpringDataJpa实战》书/01.html">
+            
+                    
+                    01：整体认识JPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../《SpringDataJpa实战》书/02.html">
+            
+                <a href="../《SpringDataJpa实战》书/02.html">
+            
+                    
+                    02：Jpa基础查询方法JpaRepository详解        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../《SpringDataJpa实战》书/03.html">
+            
+                <a href="../《SpringDataJpa实战》书/03.html">
+            
+                    
+                    03：定义查询方法(Defining Query Methods    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../《SpringDataJpa实战》书/04.html">
+            
+                <a href="../《SpringDataJpa实战》书/04.html">
+            
+                    
+                    04：注解式查询方法    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../《SpringDataJpa实战》书/05.html">
+            
+                <a href="../《SpringDataJpa实战》书/05.html">
+            
+                    
+                    05：@Entity实例里面常用注解详解            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../《SpringDataJpa实战》书/06.html">
+            
+                <a href="../《SpringDataJpa实战》书/06.html">
+            
+                    
+                    06：JpaRepository扩展之QueryByExampleExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../《SpringDataJpa实战》书/07.html">
+            
+                <a href="../《SpringDataJpa实战》书/07.html">
+            
+                    
+                    07：JpaRepository扩展之JpaSpecificationExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../《SpringDataJpa实战》书/08.html">
+            
+                <a href="../《SpringDataJpa实战》书/08.html">
+            
+                    
+                    08 :  JpaRepository扩展之自定义Repositor    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../《SpringDataJpa实战》书/09.html">
+            
+                <a href="../《SpringDataJpa实战》书/09.html">
+            
+                    
+                    09：Auditing与@version                    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../《SpringDataJpa实战》书/10.html">
+            
+                <a href="../《SpringDataJpa实战》书/10.html">
+            
+                    
+                    10：对MvcWeb的支持分页和排序的支持            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../《SpringDataJpa实战》书/11.html">
+            
+                <a href="../《SpringDataJpa实战》书/11.html">
+            
+                    
+                    11：Spring Data Jpa的配置之SpringBoot2.0加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../《SpringDataJpa实战》书/12.html">
+            
+                <a href="../《SpringDataJpa实战》书/12.html">
+            
+                    
+                    12：DataSource的配置与事务详解、多数据源        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../《SpringDataJpa实战》书/13.html">
+            
+                <a href="../《SpringDataJpa实战》书/13.html">
+            
+                    
+                    13：Spring Data Jpa之QueryDSL支持    
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Spring DATA JPA 扩展阅读
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="SpringDataJPA的一些高级用法扩展.html">
+            
+                <a href="SpringDataJPA的一些高级用法扩展.html">
+            
+                    
+                    Spring Data JPA 晋级提升篇：复杂场景实战用法与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="SpringDataJPA之Hibernate加载过程.html">
+            
+                <a href="SpringDataJPA之Hibernate加载过程.html">
+            
+                    
+                    SpringDataJPA之Hibernate加载过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="implement-equals-hashCode-why-when.html">
+            
+                <a href="implement-equals-hashCode-why-when.html">
+            
+                    
+                    implement-equals,-hashCode-why,when?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="JPA中lazy-loading-doesn’t-work.html">
+            
+                <a href="JPA中lazy-loading-doesn’t-work.html">
+            
+                    
+                    JPA中lazy-loading-doesn’t-work
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                <a href="SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                    
+                    SpringDataJPA之Entity关联关系Lazy过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                <a href="SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                    
+                    SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                <a href="多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                    
+                    多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Spring Data JPA 晋级提升篇：复杂场景实战用法与优化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x672C;&#x573A; Chat &#x6BD4;&#x8F83;&#x9002;&#x5408;&#x5BF9; Spring Data JPA &#x548C; Hibernate &#x6709;&#x4E00;&#x5B9A;&#x8BA4;&#x8BC6;&#x7684;&#x540C;&#x5B66;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x770B;&#x8FC7;&#x8001;&#x5E08;&#x7684;&#x4E66;&#x7684;&#x540C;&#x5B66;&#x3002;</p>
+<h3 id="&#x4E00;&#x3001;jpa-&#x5173;&#x6CE8;&#x7684;-hibernate-&#x5728;-application-&#x7684;&#x914D;&#x7F6E;&#x6709;&#x54EA;&#x4E9B;">&#x4E00;&#x3001;JPA &#x5173;&#x6CE8;&#x7684; Hibernate &#x5728; Application &#x7684;&#x914D;&#x7F6E;&#x6709;&#x54EA;&#x4E9B;?</h3>
+<h4 id="11-sql-&#x548C;&#x53C2;&#x6570;&#x7684;&#x6253;&#x5370;&#x95EE;&#x9898;">1.1 SQL &#x548C;&#x53C2;&#x6570;&#x7684;&#x6253;&#x5370;&#x95EE;&#x9898;</h4>
+<p>application.properties &#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>//sql&#x6807;&#x51C6;&#x8F93;&#x51FA;
+spring.jpa.show-sql=true
+//format&#x4E00;&#x4E0B;sql&#x8FDB;&#x884C;&#x8F93;&#x51FA;
+spring.jpa.properties.hibernate.format_sql=true
+//&#x663E;&#x793A;&#x51FA;&#x6765;jpa insert&#x7684;&#x6CE8;&#x91CA;&#x4FE1;&#x606F;
+spring.jpa.properties.hibernate.use_sql_comments=true
+</code></pre><p>&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>Hibernate: 
+    /* insert com.alo7.notification.message.core.domain.MessageRequestTelephone
+        */ 
+        insert 
+        into
+            message_request_telephone
+            (created_at, updated_at, version, created_by, updated_by, message_request_id, nation_code, retry_times, serial_number, status, status_remark, telephone, telephone_original, template_detail_id) 
+        values
+            (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+</code></pre><p>&#x6211;&#x4EEC;&#x60F3;&#x663E;&#x793A;&#x51FA;&#x6765;&#x53C2;&#x6570;&#x600E;&#x4E48;&#x529E;?</p>
+<p>&#x539F;&#x7406;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x627E;&#x5230;&#x53C2;&#x6570;&#x7ED1;&#x5B9A;&#x7684;&#x5730;&#x65B9;&#x628A;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;&#x5F00;&#x542F;&#x5373;&#x53EF;&#xFF0C;&#x8BE6;&#x7EC6;&#x770B; BasicBinder &#x7C7B;&#x3002;</p>
+<pre><code>//hibernate&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x662F;PreparedStatement
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+//&#x5F00;&#x542F;&#x53C2;&#x6570;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+[21304] 2018-07-22 11:48:13.490 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[65] - binding parameter [1] as [TIMESTAMP] - [2018-07-22T03:48:13.422Z]
+[21304] 2018-07-22 11:48:13.493 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[65] - binding parameter [2] as [TIMESTAMP] - [2018-07-22T03:48:13.422Z]
+[21304] 2018-07-22 11:48:13.495 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[65] - binding parameter [3] as [INTEGER] - [0]
+[21304] 2018-07-22 11:48:13.500 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[65] - binding parameter [4] as [VARCHAR] - [-1]
+[21304] 2018-07-22 11:48:13.501 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[65] - binding parameter [5] as [VARCHAR] - [-1]
+[21304] 2018-07-22 11:48:13.502 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[53] - binding parameter [6] as [VARCHAR] - [null]
+[21304] 2018-07-22 11:48:13.506 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[53] - binding parameter [7] as [INTEGER] - [null]
+[21304] 2018-07-22 11:48:13.509 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[53] - binding parameter [9] as [VARCHAR] - [null]
+[21304] 2018-07-22 11:48:13.510 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[65] - binding parameter [10] as [VARCHAR] - [MESSAGE_TEST]
+[21304] 2018-07-22 11:48:13.510 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[65] - binding parameter [11] as [VARCHAR] - [&#x81EA;&#x52A8;&#x5316;&#x538B;&#x6D4B;-JACK, 3344]
+[21304] 2018-07-22 11:48:13.511 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - TRACE [http-nio-8080-exec-1] org.hibernate.type.descriptor.sql.BasicBinder.bind[65] - binding parameter [12] as [VARCHAR] - [59ba9069-2f80-4f81-839c-3c406a031f8a]
+[21304] 2018-07-22 11:48:13.605 - [notification-api,04c9987e69d40628,04c9987e69d40628,false] - DEBUG [http-nio-8080-exec-1] org.hibernate.SQL.logStatement[92] - 
+//&#x5982;&#x679C;&#x9700;&#x8981;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x987A;&#x7406;&#x5F80;&#x4E0A;&#x9762;&#x63A8;&#x5C31;&#x884C;&#x4E86;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;
+\#logging.level.org.hibernate.SQL=DEBUG
+\#logging.level.org.hibernate.type.descriptor.sql=trace
+</code></pre><p>&#x6709;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x77E5;&#x9053;&#x8FDE;&#x63A5;&#x6C60;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</p>
+<pre><code>//hikari&#x8FDE;&#x63A5;&#x6C60;&#x65E5;&#x5FD7;
+logging.level.com.zaxxer.hikari=DEBUG
+//&#x65E5;&#x5FD7;&#x6548;&#x679C;&#x5982;&#x4E0B;:
+[21424] 2018-07-22 12:03:07.092 - [notification-api,0,0,false] - DEBUG [NotificationApiHikariCPPool housekeeper] com.zaxxer.hikari.pool.HikariPool.logPoolState[404] - NotificationApiHikariCPPool - Pool stats (total=20, active=0, idle=20, waiting=0)
+</code></pre><h4 id="12-&#x5173;&#x6CE8;&#x7684;-hibernate-&#x914D;&#x7F6E;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;">1.2 &#x5173;&#x6CE8;&#x7684; Hibernate &#x914D;&#x7F6E;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;</h4>
+<p>&#x9664;&#x4E86;&#x4E0A;&#x8FF0;&#x7684; Hibernate &#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x8BBE;&#x7F6E;&#x6709;&#x54EA;&#x4E9B;&#x5462;&#xFF1F;</p>
+<pre><code>//&#x6839;&#x636E;@Entity&#x521B;&#x5EFA;&#x6570;&#x636E;&#x7684;&#x7B56;&#x7565;,&#x53EF;&#x4EE5;&#x6839;&#x636E;Entity&#x81EA;&#x52A8;&#x751F;&#x6210;table
+spring.jpa.hibernate.ddl-auto=update
+//dialect&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7528;H2&#x505A;Test&#x9700;&#x8981;&#x6CE8;&#x610F;
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+//&#x662F;&#x5426;&#x751F;&#x6210;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;&#x7ED3;&#x5408;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x8BB2;&#x7684;prometheus&#xFF0C;&#x662F;&#x5426;&#x751F;&#x6210;db&#x7EA7;&#x522B;&#x7684;statistics
+spring.jpa.properties.hibernate.generate_statistics=true
+    //prometheus&#x683C;&#x5F0F;&#x5BF9;&#x5E94;&#x5982;&#x4E0B;&#xFF1A;
+    # TYPE jdbc_connections_min gauge
+    jdbc_connections_min{application=&quot;notification-api&quot;,cloud_client_host=&quot;192.168.120.162&quot;,name=&quot;dataSource&quot;,} 20.0
+    jdbc_connections_max{application=&quot;notification-api&quot;,cloud_client_host=&quot;192.168.120.162&quot;,name=&quot;dataSource&quot;,} 20.0
+//column&#x548C;db &#x5B57;&#x6BB5;&#x6620;&#x5C04;&#x7684;name strategy
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+</code></pre><h4 id="13-&#x5982;&#x4F55;&#x7EDF;&#x89C2;&#x5168;&#x5C40;&#x67E5;&#x627E;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;">1.3 &#x5982;&#x4F55;&#x7EDF;&#x89C2;&#x5168;&#x5C40;&#x67E5;&#x627E;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;</h4>
+<p>&#x5E38;&#x89C1;&#x7684;&#x662F;&#x4EE5;&#x4E0A;&#x51E0;&#x4E2A;&#xFF0C;&#x5F53;&#x7136;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x6211;&#x4EEC;&#x4E0D;&#x5E38;&#x89C1;&#x7684;,&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x53BB;&#x770B; AvailableSettings &#x7684;&#x6E90;&#x7801;&#x4E86;&#xFF0C;&#x7EB5;&#x89C2;&#x5168;&#x5C40;&#x6709;&#x54EA;&#x4E9B;&#x53C2;&#x6570;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF0C;&#x505A;&#x5230;&#x5FC3;&#x4E2D;&#x6709;&#x6570;&#x90E8;&#x5206;&#x6E90;&#x7801;&#x5982;&#x4E0B;:</p>
+<pre><code>package org.hibernate.cfg;
+public interface AvailableSettings {
+    String DEFAULT_SCHEMA = &quot;hibernate.default_schema&quot;;
+    String DEFAULT_CACHE_CONCURRENCY_STRATEGY = &quot;hibernate.cache.default_cache_concurrency_strategy&quot;;
+    //sql&#x5173;&#x952E;&#x5B57;&#x7684;&#x81EA;&#x52A8;&#x5904;&#x7406;&#x7B56;&#x7565;
+    String KEYWORD_AUTO_QUOTING_ENABLED = &quot;hibernate.auto_quote_keyword&quot;;
+    String SESSION_FACTORY_NAME = &quot;hibernate.session_factory_name&quot;;
+    String MAX_FETCH_DEPTH = &quot;hibernate.max_fetch_depth&quot;;
+    String JDBC_TIME_ZONE = &quot;hibernate.jdbc.time_zone&quot;;
+    String HBM2DLL_CREATE_NAMESPACES = &quot;hibernate.hbm2dll.create_namespaces&quot;;
+    ......
+}
+</code></pre><p>&#x592A;&#x591A;&#x4E86;&#x5C31;&#x4E0D;&#x4E00;&#x4E00;&#x770B;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x719F;&#x7EC3;&#x638C;&#x63E1; Hibernate &#x548C; JPA &#x8FD8;&#x662F;&#x6709;&#x5FC5;&#x8981;&#x628A;&#x8FD9;&#x4E2A;&#x7C7B;&#x770B;&#x4E00;&#x4E0B;&#x7684;&#xFF0C;&#x6700;&#x8D77;&#x7801;&#x77E5;&#x9053; Hibernate &#x548C; JPA &#x7684;&#x65B9;&#x5411;&#x5728;&#x54EA;&#x91CC;&#xFF0C;&#x4EE5;&#x81F3;&#x4E8E;&#x6211;&#x4EEC;&#x67E5;&#x8D44;&#x6599;&#x7684;&#x65F6;&#x5019;&#x65B9;&#x5411;&#x4E0D;&#x4F1A;&#x8D70;&#x9519;&#x3002;</p>
+<h3 id="&#x4E8C;&#x3001;spring-data-jpa-&#x4E2D;-n1-&#x6761;-sql-&#x7684;&#x5B9E;&#x6218;&#x4F7F;&#x7528;">&#x4E8C;&#x3001;Spring Data JPA &#x4E2D; N+1 &#x6761; SQL &#x7684;&#x5B9E;&#x6218;&#x4F7F;&#x7528;</h3>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528; @ManyToOne&#x3001;@OneToMany&#x3001;@ManyToMany &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x6709; loazy &#x4E4B;&#x540E;&#x51FA;&#x73B0; N+1 &#x6761; SQL &#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x5982;&#x4E0B;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
+<pre><code>@Entity
+@Table(name = &quot;message_template&quot;)
+public class MessageTemplate {
+    @OneToMany(mappedBy = &quot;messageTemplate&quot;)
+    public List&lt;MessageTemplateDetail&gt; getMessageTemplateDetailList() {
+        return messageTemplateDetailList;
+    }
+    ......
+}
+@Entity
+@Table(name = &quot;message_template_detail&quot;)
+public class MessageTemplateDetail{
+    @ManyToOne
+    @JoinColumn(name = &quot;message_template_id&quot;, referencedColumnName = &quot;id&quot;, insertable = false, updatable = false)
+    public MessageTemplate getMessageTemplate() {
+        return messageTemplate;
+    }
+    ......
+}
+</code></pre><p>&#x6211;&#x4EEC;&#x4EE5;&#x4E0A;&#x9762;&#x7684; @OneToMany &#x4E3A;&#x4F8B;&#xFF0C;&#x4F5C;&#x5982;&#x4E0B;&#x67E5;&#x8BE2;&#xFF1A;</p>
+<pre><code>MessageTemplate findByTemplateCode(String templateCode);
+</code></pre><p>&#x4F1A;&#x5206;&#x522B;&#x6253;&#x5370;&#x5982;&#x4E0B;&#x4E24;&#x4E2A; SQL&#xFF1A;</p>
+<pre><code>Hibernate: 
+    select
+        messagetem0_.id as id1_7_,
+        messagetem0_.title as title12_7_ 
+    from
+        message_template messagetem0_ 
+    where
+        messagetem0_.template_code=?
+Hibernate: 
+    select
+        messagetem0_.message_template_id as message_8_8_0_,
+        messagetem0_.id as id1_8_0_,
+        messagetem0_.message_template_id as message_8_8_1_,
+        messagetem0_.message_vendor_code as message_9_8_1_,
+        messagetem0_.nation_code as nation_10_8_1_, 
+    from
+        message_template_detail messagetem0_ 
+    where
+        messagetem0_.message_template_id=?
+</code></pre><p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x89E3;&#x51B3;&#x3002;</p>
+<h4 id="21-entitygraph-&#x7684;&#x4F7F;&#x7528;">2.1 @EntityGraph &#x7684;&#x4F7F;&#x7528;</h4>
+<pre><code>//1)Entity&#x4E0A;&#x9762;&#x6DFB;&#x52A0;@NamedEntityGraph&#x6CE8;&#x89E3;
+@Entity
+@Table(name = &quot;message_template&quot;)
+@NamedEntityGraph(name = &quot;MessageTemplate.messageTemplateDetailList&quot;,
+        attributeNodes = @NamedAttributeNode(&quot;messageTemplateDetailList&quot;))
+public class MessageTemplate {
+    @OneToMany(mappedBy = &quot;messageTemplate&quot;)
+    public List&lt;MessageTemplateDetail&gt; getMessageTemplateDetailList() {
+        return messageTemplateDetailList;
+    }
+    ......
+}
+//2&#xFF09;&#x67E5;&#x8BE2;&#x65B9;&#x6CD5;&#x4E0A;&#x6DFB;&#x52A0;@EntityGraph&#x6CE8;&#x89E3;
+public interface MessageTemplateRepository extends JpaRepository&lt;MessageTemplate, Long&gt; {
+    @EntityGraph(value = &quot;MessageTemplate.messageTemplateDetailList&quot;, type = EntityGraph.EntityGraphType.LOAD)
+    MessageTemplate findByTemplateCode(String templateCode);
+}
+</code></pre><p>&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x65B9;&#x6CD5;&#x5176;&#x65B9;&#x6CD5;&#x6253;&#x5370;&#x7684; SQL &#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>Hibernate: 
+    select
+        messagetem0_.id as id1_7_0_,
+        messagetem1_.id as id1_8_1_,
+        messagetem0_.template_code as templat10_7_0_,
+        messagetem0_.title as title12_7_0_,
+        messagetem1_.message_template_id as message_8_8_1_,
+        messagetem1_.message_template_id as message_8_8_0__,
+        messagetem1_.id as id1_8_0__ 
+    from
+        message_template messagetem0_ 
+    left outer join
+        message_template_detail messagetem1_ 
+            on messagetem0_.id=messagetem1_.message_template_id 
+    where
+        messagetem0_.template_code=?
+</code></pre><h4 id="22-query-&#x6216;&#x8005;-jpaspecificationexecutor-&#x6269;&#x5C55;-left-join-&#x4F7F;&#x7528;">2.2 @Query &#x6216;&#x8005; JpaSpecificationExecutor &#x6269;&#x5C55; left join &#x4F7F;&#x7528;</h4>
+<p>@Query &#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code>    @Query(&quot;Select t from MessageTemplate t,MessageTemplateDetail d where t.id=d.templateId and t.templateCode=:templateCode &quot;)
+    MessageTemplate findByTemplateCode(@Param(&quot;templateCode&quot;) String templateCode);
+</code></pre><p>JpaSpecificationExecutor &#x6269;&#x5C55;&#xFF0C;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#x4E66;&#x4E2D;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4F7F;&#x7528;root.join &#x505A;&#x8054;&#x8868;&#x67E5;&#x8BE2;&#x5373;&#x53EF;&#x3002;</p>
+<pre><code> public Page&lt;UserInfoEntity&gt; findByCondition(UserInfoRequest userParam,Pageable pageable){
+      return userRepository.findAll((root, query, cb) -&gt; {
+         List&lt;Predicate&gt; predicates = new ArrayList&lt;Predicate&gt;();
+         if (StringUtils.isNoneBlank(userParam.getFirstName())){
+            //liked&#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+            predicates.add(cb.like(root.get(&quot;firstName&quot;),&quot;%&quot;+userParam.getFirstName()+&quot;%&quot;));
+         }
+         if (StringUtils.isNotBlank(userParam.getAddressCity())) {
+            //&#x8054;&#x8868;&#x67E5;&#x8BE2;&#xFF0C;&#x5229;&#x7528;root&#x7684;join&#x65B9;&#x6CD5;&#xFF0C;&#x6839;&#x636E;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;&#x91CC;&#x9762;&#x7684;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x3002;
+            predicates.add(cb.equal(root.join(&quot;addressEntityList&quot;).get(&quot;addressCity&quot;), userParam.getAddressCity()));
+         }
+         return query.where(predicates.toArray(new Predicate[predicates.size()])).getRestriction();
+      }, pageable);
+   }
+}
+</code></pre><h4 id="23-view-&#x4E5F;&#x4E0D;&#x5916;&#x4E4E;&#x4E00;&#x79CD;&#x624B;&#x6BB5;">2.3 View &#x4E5F;&#x4E0D;&#x5916;&#x4E4E;&#x4E00;&#x79CD;&#x624B;&#x6BB5;</h4>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C31;&#x662F;&#xFF0C;&#x76F4;&#x63A5;&#x89C6;&#x56FE;&#xFF0C;&#x76F4;&#x63A5;&#x628A; TableView &#x914D;&#x7F6E;&#x6210; @Entity &#x5373;&#x53EF;&#x3002;</p>
+<ul>
+<li>&#x7F3A;&#x70B9;&#xFF1A;SQL &#x7EF4;&#x62A4;&#x5728;&#x6570;&#x636E;&#x90A3;&#x8FB9;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x597D; SQL &#x7684;&#x4FEE;&#x6539;&#x8BB0;&#x5F55;&#xFF1B;</li>
+<li>&#x4F18;&#x70B9;&#xFF1A;&#x8C03;&#x6574; SQL &#x4E0D;&#x9700;&#x8981;&#x53D1;&#x7248;&#xFF0C;&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x505A;&#x62A5;&#x8868;&#x5C55;&#x793A;&#x3002;</li>
+</ul>
+<p>&#x5F53;&#x7136;&#x4E86;&#x5982;&#x679C;&#x5927;&#x5BB6;&#x6709;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x4E5F;&#x6B22;&#x8FCE;&#x7559;&#x8A00;&#x5440;&#x3002;</p>
+<h3 id="&#x4E09;&#x3001;entity-&#x4E2D;-lazy-load-&#x6240;&#x9047;&#x5230;&#x7684;&#x5751;">&#x4E09;&#x3001;@Entity &#x4E2D; Lazy Load &#x6240;&#x9047;&#x5230;&#x7684;&#x5751;</h3>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>@OneToOne(fetch = FetchType.LAZY)  FetchType.LAZY</code> &#x7684;&#x65F6;&#x5019;&#x90FD;&#x662F;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x4F46;&#x6709;&#x65F6;&#x5019;&#x5F53;&#x6211;&#x4EEC;&#x5F15;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x7684;&#x65F6;&#x5019; LAZY &#x4F1A;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x5373;&#x4F7F;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x67E5;&#x5B57;&#x8868;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x662F; N+1SQL&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;Elide &#x5904;&#x7406; JSONAPI &#x7684;&#x65F6;&#x5019;&#x3002;</p>
+<blockquote>
+<p><a href="https://docs.jboss.org/hibernate/orm/5.0/topical/html/bytecode/BytecodeEnhancement.html" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a>     </p>
+</blockquote>
+<p>Hibernate &#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5B57;&#x8282;&#x7801;&#x589E;&#x5F3A;&#x6280;&#x672F;&#xFF0C;&#x5E2E;&#x6211;&#x4EEC;&#x89E3;&#x51B3;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#xFF0C;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x5668;&#x6539;&#x53D8; class &#x89E3;&#x51B3;&#x3002;&#x4EE5;&#x5907;&#x4E0D;&#x65F6;&#x4E4B;&#x9700;&#xFF0C;&#x5B9E;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>grandle &#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x914D;&#x7F6E;
+buildscript {
+    ext {
+        hibernateVersion = &apos;5.2.16.Final&apos;
+    }
+    dependencies {
+        classpath(&quot;org.hibernate:hibernate-gradle-plugin:${hibernateVersion}&quot;)
+    }
+}
+apply plugin: &apos;org.hibernate.orm&apos;
+hibernate {
+    enhance {
+        enableLazyInitialization = true
+        enableDirtyTracking = false
+        enableAssociationManagement = false
+        enableExtendedEnhancement = true
+    }
+}
+</code></pre><p>&#x5B9E;&#x4F53;&#x4E0A;&#x6DFB;&#x52A0; @Basic &#x548C; @LazyToOne &#x6CE8;&#x89E3;&#xFF1A;</p>
+<pre><code>@Entity
+@Table(name = &quot;user_tokens&quot;)
+public class UserToken extends AbstractToken&lt;User, UserToken&gt; {
+    private static final long serialVersionUID = -1184030877703854625L;
+    private User user; 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @Basic(fetch = FetchType.LAZY)
+    @LazyToOne(LazyToOneOption.NO_PROXY)
+    @JoinColumn(name = &quot;userId&quot;, insertable = false, updatable = false)
+    public User getUser() {
+        return user;
+    }
+</code></pre><p>&#x5F53;&#x6211;&#x4EEC; grandle build &#x5B8C;&#x4E4B;&#x540E; class &#x4E2D;&#x4F1A;&#x53D8;&#x6210;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>jacks-Mac-mini:account-service jack$ javap build/classes/java/main/com/alo7/msa/account/domain/UserToken.class 
+Compiled from &quot;UserToken.java&quot;
+public class com.alo7.msa.account.domain.UserToken extends com.alo7.msa.account.domain.AbstractToken&lt;com.alo7.msa.account.domain.User, com.alo7.msa.account.domain.UserToken&gt; {
+  public com.alo7.msa.account.domain.UserToken();
+  public com.alo7.msa.account.domain.User getUser();
+  public java.lang.Object $$_hibernate_getEntityInstance();
+  public org.hibernate.engine.spi.EntityEntry $$_hibernate_getEntityEntry();
+  public void $$_hibernate_setEntityEntry(org.hibernate.engine.spi.EntityEntry);
+  public org.hibernate.engine.spi.ManagedEntity $$_hibernate_getPreviousManagedEntity();
+  public void $$_hibernate_setPreviousManagedEntity(org.hibernate.engine.spi.ManagedEntity);
+  public org.hibernate.engine.spi.ManagedEntity $$_hibernate_getNextManagedEntity();
+  public void $$_hibernate_setNextManagedEntity(org.hibernate.engine.spi.ManagedEntity);
+  public org.hibernate.engine.spi.PersistentAttributeInterceptor $$_hibernate_getInterceptor();
+  public void $$_hibernate_setInterceptor(org.hibernate.engine.spi.PersistentAttributeInterceptor);
+  public com.alo7.msa.account.domain.User $$_hibernate_read_user();
+  public void $$_hibernate_write_user(com.alo7.msa.account.domain.User);
+  public java.lang.Long $$_hibernate_read_refreshTokenId();
+  public void $$_hibernate_write_refreshTokenId(java.lang.Long);
+  public java.lang.String $$_hibernate_read_serviceName();
+  public void $$_hibernate_write_serviceName(java.lang.String);
+  public java.lang.String $$_hibernate_read_token();
+  public void $$_hibernate_write_token(java.lang.String);
+  public com.alo7.msa.account.util.enums.TokenType $$_hibernate_read_tokenType();
+  public void $$_hibernate_write_tokenType(com.alo7.msa.account.util.enums.TokenType);
+  public java.lang.Long $$_hibernate_read_expiresIn();
+  public void $$_hibernate_write_expiresIn(java.lang.Long);
+  public java.time.Instant $$_hibernate_read_deactivatedAt();
+  public void $$_hibernate_write_deactivatedAt(java.time.Instant);
+  public com.alo7.msa.account.util.enums.DeactivationReason $$_hibernate_read_deactivationReason();
+  public void $$_hibernate_write_deactivationReason(com.alo7.msa.account.util.enums.DeactivationReason);
+  public java.lang.String[] $$_hibernate_read_serviceScopes();
+  public void $$_hibernate_write_serviceScopes(java.lang.String[]);
+  public java.util.Set $$_hibernate_read_accessTokens();
+  public void $$_hibernate_write_accessTokens(java.util.Set);
+  public com.alo7.msa.account.domain.AbstractToken $$_hibernate_read_refreshToken();
+  public void $$_hibernate_write_refreshToken(com.alo7.msa.account.domain.AbstractToken);
+  public java.lang.Long $$_hibernate_read_userId();
+  public void $$_hibernate_write_userId(java.lang.Long);
+  public java.lang.String $$_hibernate_read_uuid();
+  public void $$_hibernate_write_uuid(java.lang.String);
+  public java.time.temporal.TemporalAccessor $$_hibernate_read_createdAt();
+  public void $$_hibernate_write_createdAt(java.time.temporal.TemporalAccessor);
+  public java.time.temporal.TemporalAccessor $$_hibernate_read_updatedAt();
+  public void $$_hibernate_write_updatedAt(java.time.temporal.TemporalAccessor);
+  public java.lang.Integer $$_hibernate_read_version();
+  public void $$_hibernate_write_version(java.lang.Integer);
+  public java.lang.Long $$_hibernate_read_id();
+  public void $$_hibernate_write_id(java.lang.Long);
+}
+</code></pre><p>&#x8FD9;&#x6837;&#x57FA;&#x672C;&#x4E0A;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x4E2A;&#x6848;&#x4F8B;&#x5927;&#x5BB6;&#x4E00;&#x822C;&#x4E0D;&#x5E38;&#x89C1;&#xFF0C;&#x5F53;&#x5927;&#x5BB6;&#x9047;&#x5230;&#x7684;&#x65F6;&#x5019;&#x60F3;&#x5230;&#x6709;&#x8FD9;&#x4E00;&#x51FA;&#x5373;&#x53EF;&#x3002;</p>
+<h3 id="&#x56DB;&#x3001;hibernate-inheritance-mapping-&#x5B9E;&#x6218;&#x4F7F;&#x7528;">&#x56DB;&#x3001;Hibernate Inheritance Mapping &#x5B9E;&#x6218;&#x4F7F;&#x7528;</h3>
+<p>&#x5728; Java &#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#x73AF;&#x5883;&#xFF0C;@entity &#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x591A;&#x79CD;&#x591A;&#x6837;&#xFF0C;&#x800C;&#x6839;&#x636E; JPA &#x7684;&#x89C4;&#x8303;&#xFF0C;&#x6211;&#x4EEC;&#x5927;&#x81F4;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ol>
+<li>&#x7EAF;&#x7CB9;&#x7684;&#x7EE7;&#x627F;&#x548C;&#x8868;&#x6CA1;&#x5173;&#x7CFB;&#xFF0C;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x5B57;&#x6BB5;&#x5171;&#x4EAB;&#x3002;&#x5229;&#x7528;&#x6CE8;&#x89E3; @MappedSuperclass&#xFF0C;&#x7236;&#x7C7B;&#x4E0D;&#x80FD;&#x662F; @Entity&#xFF1B;</li>
+<li>&#x5355;&#x8868;&#x591A;&#x6001;&#x95EE;&#x9898;&#xFF0C;&#x540C;&#x4E00;&#x5F20; Table&#xFF0C;&#x8868;&#x793A;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x6765;&#x533A;&#x5206;&#x4EC0;&#x4E48;&#x5BF9;&#x8C61;&#x3002;&#x5229;&#x7528; <code>@Inheritance(strategy = InheritanceType.SINGLE_TABLE)</code> &#x6CE8;&#x89E3;&#x5B8C;&#x6210;&#xFF0C;&#x53EA;&#x6709;&#x7236;&#x7C7B;&#x6709; @Table&#xFF1B;</li>
+<li>&#x591A;&#x8868;&#x591A;&#x6001;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#x4E00;&#x5F20;&#x8868;&#xFF0C;&#x7236;&#x7C7B;&#x7684;&#x8868;&#x62E5;&#x6709;&#x6240;&#x6709;&#x516C;&#x7528;&#x5B57;&#x6BB5;&#x3002;&#x901A;&#x8FC7; <code>@Inheritance(strategy = InheritanceType.JOINED)</code> &#x6CE8;&#x89E3;&#x5B8C;&#x6210;&#xFF0C;&#x7236;&#x7C7B;&#x548C;&#x5B50;&#x7C7B;&#x90FD;&#x662F;&#x8868;&#xFF0C;&#x6709;&#x516C;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x5728;&#x7236;&#x8868;&#x91CC;&#x9762;&#xFF1B;</li>
+<li>Object &#x7684;&#x7EE7;&#x627F;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x9762;&#x8868;&#x662F;&#x6BCF;&#x4E00;&#x5F20;&#x5206;&#x5F00;&#x7684;&#xFF0C;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x4E0D;&#x5F71;&#x54CD;&#x3002;&#x901A;&#x8FC7; <code>@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)</code> &#x6CE8;&#x89E3;&#x5B8C;&#x6210;&#xFF0C;&#x7236;&#x7C7B;&#xFF08;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x5F20;&#x8868;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x662F;&#xFF09;&#x548C;&#x5B50;&#x7C7B;&#x90FD;&#x662F;&#x8868;&#xFF0C;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#x3002;</li>
+</ol>
+<p>&#x6211;&#x4EEC;&#x6765;&#x5B9E;&#x9645;&#x770B;&#x4E0B;&#x8FD9;&#x56DB;&#x79CD;&#x5177;&#x4F53;&#x7684;&#x8BE6;&#x60C5;&#x3002;</p>
+<h4 id="41-mappedsuperclass">4.1 @MappedSuperclass</h4>
+<p>&#x666E;&#x901A;&#x7684;&#x7EE7;&#x627F;&#x7528;&#x6CD5;&#xFF0C;&#x65E2;&#x516C;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x653E;&#x5728;&#x7236;&#x7C7B;&#x91CC;&#x9762;&#xFF0C;&#x4F46;&#x662F;&#x7236;&#x7C7B;&#x4E0D;&#x662F;&#x4E00;&#x5F20;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B50;&#x7C7B;&#x90FD;&#x662F;&#x4E00;&#x5F20;&#x8868;&#xFF1B;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x62C6;&#x8868;&#x573A;&#x666F;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x662F;&#x516C;&#x7528;&#x5B57;&#x6BB5;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x7528;&#x6765;&#x505A;&#x6846;&#x67B6;&#x7684;&#x7EDF;&#x4E00;&#x7EA6;&#x5B9A;&#x5982;&#x4E0B;:</p>
+<pre><code>@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+public abstract class AbstractAdvancedAuditable&lt;T extends TemporalAccessor, U&gt; extends AbstractSimpleAuditable&lt;T&gt; implements AdvancedAuditable&lt;T, U&gt; {
+    private U createdBy;
+    private U updatedBy;
+    @CreatedBy
+    @Column(name = &quot;created_by&quot;)
+    public U getCreatedBy() {
+        return createdBy;
+    }
+    @Override
+    @LastModifiedBy
+    @Column(name = &quot;updated_by&quot;)
+    public U getUpdatedBy() {
+        return updatedBy;
+    }
+}
+</code></pre><p>&#x7236;&#x7C7B;&#x505A;&#x4E00;&#x4E9B;&#x516C;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x5C01;&#x88C5;&#xFF1B;</p>
+<h4 id="42-inheritancestrategy--inheritancetypetableperclass">4.2 <code>@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)</code></h4>
+<p>&#x5176;&#x5B9E;&#x9ED8;&#x8BA4;&#x7684; @MappedSuperClass &#x5C31;&#x662F;&#x6B64;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x5F53;&#x7136;&#x4E86;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x7528;&#xFF0C;&#x8981;&#x6C42;&#x7EE7;&#x627F;&#x57FA;&#x7C7B;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>@MappedSuperclass
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@EntityListeners(AuditingEntityListener.class)
+public abstract class AbstractAdvancedAuditable&lt;T extends TemporalAccessor, U&gt; extends AbstractSimpleAuditable&lt;T&gt; implements AdvancedAuditable&lt;T, U&gt; {
+    private U createdBy;
+    private U updatedBy;
+    @CreatedBy
+    @Column(name = &quot;created_by&quot;)
+    public U getCreatedBy() {
+        return createdBy;
+    }
+    @Override
+    @LastModifiedBy
+    @Column(name = &quot;updated_by&quot;)
+    public U getUpdatedBy() {
+        return updatedBy;
+    }
+}
+</code></pre><p>example2&#xFF1A;</p>
+<pre><code>@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Animal {
+    @Id
+    private long animalId;
+    private String species;
+    // constructor, getters, setters 
+}
+@Entity
+public class Pet extends Animal {
+    private String name;
+    // constructor, getters, setters
+}
+@Entity
+public class Pet extends Animal {
+    private String name;
+    // constructor, getters, setters
+}
+</code></pre><p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5F00; <code>spring.jpa.show-sql=true</code> &#x4F1A;&#x5E2E;&#x6211;&#x4EEC;&#x751F;&#x6210; 3 &#x5F20;&#x4E92;&#x76F8;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#x7684;&#x8868;&#x3002;</p>
+<h4 id="43-inheritancestrategy--inheritancetypesingletable">4.3 <code>@Inheritance(strategy = InheritanceType.SINGLE_TABLE)</code></h4>
+<p>&#x5171;&#x7528;&#x4E00;&#x5F20;&#x8868;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x4E0D;&#x540C;&#x503C;&#x4EE3;&#x8868;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;exmaple&#xFF1A;</p>
+<pre><code>//&#x4E66;&#x96C6;&#x5408;
+@Entity(name=&quot;books&quot;)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name=&quot;color&quot;, discriminatorType = DiscriminatorType.STRING)
+public class Books {
+    // ...
+}
+//&#x7EA2;&#x76AE;&#x4E66;&#x96C6;&#x5408;
+@Entity
+@DiscriminatorValue(&quot;red&quot;)
+public class RedBooks extends Books {
+    // ...
+}
+//Yellow&#x4E66;&#x96C6;&#x5408;
+@Entity
+@DiscriminatorValue(&quot;yellow&quot;)
+public class YellowBooks extends Books {
+    // ...
+}
+</code></pre><p>&#x5E73;&#x65F6;&#x4E00;&#x822C;&#x7528;&#x5728;&#x6570;&#x636E;&#x8BCD;&#x5178;&#x6216;&#x8005;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x4E0A;&#x3002;</p>
+<h4 id="44-inheritancestrategy--inheritancetypejoined">4.4 <code>@Inheritance(strategy = InheritanceType.JOINED)</code></h4>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x6620;&#x5C04;&#x7B56;&#x7565;&#x91CC;&#x9762;&#xFF0C;&#x7EE7;&#x627F;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#xFF08;entity&#xFF09;&#x7C7B;&#x90FD;&#x4F1A;&#x6620;&#x5C04;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x8868;&#x4E2D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F53;&#xFF08;entity&#xFF09;&#x90FD;&#x4F1A;&#x88AB;&#x6620;&#x5C04;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#xFF08;entity&#xFF09;&#x7C7B;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x8868;&#x3002;&#x5176;&#x4E2D;&#x6839;&#x5B9E;&#x4F53;&#xFF08;root entity&#xFF09;&#x5BF9;&#x5E94;&#x7684;&#x8868;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E3B;&#x952E;&#xFF08;primary key&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5B50;&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#x90FD;&#x8981;&#x5171;&#x540C;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x4E3B;&#x952E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x8FD9;&#x4E2A;&#x8868;&#x4E2D;&#x548C;&#x5355;&#x8868;&#x6620;&#x5C04;&#x7B56;&#x7565;&#x4E00;&#x6837;&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x533A;&#x5206;&#x5217;&#xFF08;DTYPE&#xFF09;&#x3002;</p>
+<p>example&#xFF1A;</p>
+<pre><code>//&#x4EBA;&#xFF0C;&#x7236;&#x4EB2;&#x8868;&#xFF0C;&#x516C;&#x7528;person_id
+@Entity
+@Table(name=&quot;person&quot;)
+@Inheritance(strategy=InheritanceType.JOINED)
+public class Person {
+ @Id
+ @GeneratedValue
+  @Column(name=&quot;person_id&quot;)
+  private Long id;
+ @Column(name=&quot;firstName&quot;)
+ private String firstName;
+ @Column(name=&quot;lastName&quot;)
+private String lastName;
+}
+//&#x8001;&#x5E08;student_id&#x65E2;&#x662F;&#x4E3B;&#x952E;&#xFF0C;&#x53C8;&#x662F;&#x5916;&#x952E;
+@Entity
+@Table(name = &quot;student&quot;)
+@PrimaryKeyJoinColumn(name = &quot;student_id&quot;, referencedColumnName = &quot;person_id&quot;)
+public class Student extends Person {
+ @Column(name = &quot;standard&quot;)
+ private String standard;
+ @Column(name = &quot;instructor&quot;)
+ private String instructor;
+}
+//&#x8001;&#x5E08;teacher_id&#x65E2;&#x662F;&#x4E3B;&#x952E;&#xFF0C;&#x53C8;&#x662F;&#x5916;&#x952E;
+@Entity
+@Table(name = &quot;teacher&quot;)
+@PrimaryKeyJoinColumn(name = &quot;teacher_id&quot;, referencedColumnName = &quot;person_id&quot;)
+public class Teacher extends Person{
+ @Column(name = &quot;main_subject&quot;)
+ private String mainSubject;
+ @Column(name = &quot;salary&quot;)
+    private int salary;
+}
+</code></pre><p>&#x7559;&#x4E2A;&#x95EE;&#x9898;&#x601D;&#x8003;&#x4E00;&#x4E0B;&#xFF0C;&#x5E73;&#x65F6;&#x6211;&#x4EEC;&#x62C6;&#x8868;&#x600E;&#x4E48;&#x505A;&#xFF1F;</p>
+<h3 id="&#x4E94;&#x3001;transactional-&#x5728;&#x79C1;&#x6709;&#x65B9;&#x6CD5;&#x548C;&#x5F02;&#x6B65;&#x7EBF;&#x7A0B;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1F;&#x53CA;&#x5176;&#x5982;&#x4F55;&#x4F18;&#x96C5;&#x89E3;&#x51B3;&#xFF1F;">&#x4E94;&#x3001;@Transactional &#x5728;&#x79C1;&#x6709;&#x65B9;&#x6CD5;&#x548C;&#x5F02;&#x6B65;&#x7EBF;&#x7A0B;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1F;&#x53CA;&#x5176;&#x5982;&#x4F55;&#x4F18;&#x96C5;&#x89E3;&#x51B3;&#xFF1F;</h3>
+<p>Spring &#x5B98;&#x65B9;&#x660E;&#x786E;&#x8BF4;&#x4E86;&#x5728; private &#x65B9;&#x6CD5;&#x548C; protected &#x65B9;&#x6CD5;&#x4E0A;&#x76F4;&#x63A5;&#x4F7F;&#x7528; @Transactional &#x662F;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x7684;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;&#x8FD8;&#x6709;&#x5C31;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x65F6;&#x5019;&#x5982;&#x4F55;&#x7BA1;&#x7406; @Transactional&#x3002;&#x76F4;&#x63A5;&#x770B;&#x505A;&#x6CD5;&#x5427;&#xFF1A;</p>
+<h4 id="51-&#x76F4;&#x63A5;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x7684;-transactionalhelper">5.1 &#x76F4;&#x63A5;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x7684; TransactionalHelper</h4>
+<pre><code>@Service
+public class TransactionalHelper {
+    @Transactional(rollbackFor = Exception.class)
+    public &lt;T,R&gt; R transactional(Function&lt;T,R&gt; function, T t){
+        return function.apply(t);
+    }
+    @Transactional(rollbackFor = Exception.class)
+    public &lt;R&gt; R transactional(Supplier&lt;R&gt; supplier){
+        return supplier.get();
+    }
+    @Transactional(rollbackFor = Exception.class)
+    public &lt;T&gt; void transactional(Consumer&lt;T&gt; consumer, T t){
+        consumer.accept(t);
+    }
+}
+</code></pre><h4 id="52-&#x5728;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;-asynctransactionalhelper">5.2 &#x5728;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5F02;&#x6B65; AsyncTransactionalHelper</h4>
+<pre><code>@Component
+public class AsyncTransactionalHelper {
+    private TransactionalHelper transactionalHelper;
+    @Autowired
+    public AsyncTransactionalHelper(TransactionalHelper transactionalHelper) {
+        this.transactionalHelper = transactionalHelper;
+    }
+    @Async
+    public &lt;T, R&gt; R asyncExecuteTransaction(Function&lt;T, R&gt; function, T t) {
+        return transactionalHelper.transactional(function, t);
+    }
+    @Async
+    public &lt;R&gt; R asyncExecuteTransaction(Supplier&lt;R&gt; supplier) {
+        return transactionalHelper.transactional(supplier);
+    }
+    @Async
+    public &lt;T&gt; void asyncExecuteTransaction(Consumer&lt;T&gt; consumer, T t) {
+        transactionalHelper.transactional(consumer, t);
+    }
+}
+</code></pre><p>&#x4F7F;&#x7528;&#x7684;&#x5730;&#x65B9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>//&#x5F02;&#x6B65;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x4E8B;&#x52A1;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;
+    @Autowired
+    private AsyncTransactionalHelper asyncTransactionalHelper;
+    private void expireTokenAndSendLogoutMessage(DecodedJWT jwt, SessionExtraParameterDTO logoutExtraParameterDTO) {
+        UserType userType = UserType.valueOf(jwt.getClaim(Constant.JWT_PAYLOAD_USER_TYPE).asString().toUpperCase());
+        asyncTransactionalHelper.asyncExecuteTransaction(() -&gt; {
+            LoginService loginStrategy = loginService.getGenericLoginService(userType);
+            loginStrategy.clearUserSessions(jwt.getId(), DeactivationReason.LOGOUT);
+            return null;
+        });
+    }
+    //&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x4E8B;&#x52A1;&#x4F7F;&#x7528;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;:
+    @Autowired
+    private TransactionalHelper transactionalHelper;
+     MessageRequest result = transactionalHelper.transactional(() -&gt; {
+        MessageRequest value = new MessageRequest();
+        value.setUuid(UUID.randomUUID().toString());
+        log.info(&quot;MessageRequest is save :{}&quot;, value);
+        getDefaultRepository().save(value);
+        return messageRequest;
+    });
+</code></pre><h3 id="&#x516D;&#x3001;repository-&#x4E2D;-cache-&#x7684;&#x4F7F;&#x7528;">&#x516D;&#x3001;Repository &#x4E2D; Cache &#x7684;&#x4F7F;&#x7528;</h3>
+<p>&#x4F5C;&#x8005;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x628A; Cache &#x8FD9;&#x4E2A;&#x4E8B;&#x60C5;&#x5355;&#x72EC;&#x63D0;&#x4E00;&#x4E0B;&#x5462;?&#x56E0;&#x4E3A;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x53D1;&#x73B0;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x628A;&#x8FD9;&#x4E2A;&#x641E;&#x6DF7;&#x6389;&#x4E86;&#x3002;&#x5176;&#x5B9E; Spring Data JPA &#x91CC;&#x9762;&#x6709;&#x4E24;&#x79CD;&#x7F13;&#x5B58;&#x673A;&#x5236;&#xFF1A;</p>
+<ol>
+<li>&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;&#x57FA;&#x4E8E; Spring Data Cache &#x505A;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x7F13;&#x5B58;&#xFF0C;&#x53C8;&#x79F0;&#x5206;&#x5E03;&#x5F0F;&#x7F13;&#x5B58;&#xFF0C;&#x4E00;&#x822C;&#x4F7F;&#x7528; Redis&#xFF1B;</li>
+<li>&#x7B2C;&#x4E8C;&#x79CD;&#xFF1A;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5E38;&#x8BF4;&#x7684; Hibernate &#x7684;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#xFF0C;&#x4E5F;&#x662F;&#x57FA;&#x4E8E;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x5E94;&#x7528;&#x5185;&#x7684;&#x5355;&#x5E94;&#x7528;&#x7F13;&#x5B58;&#xFF1B;</li>
+</ol>
+<h4 id="&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;spring-data-cache">&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;Spring Data Cache</h4>
+<p>&#x8FD9;&#x79CD;&#x7F13;&#x5B58;&#x673A;&#x5236;&#xFF0C;&#x4F5C;&#x8005;&#x5728;&#x4E66;&#x4E0A;&#x5DF2;&#x7ECF;&#x6709;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x4E86;&#xFF0C;&#x5C31;&#x4E0D;&#x91CD;&#x590D;&#x90A3;&#x4E48;&#x591A;&#x4E86;&#x554A;&#xFF0C;&#x6211;&#x76F4;&#x63A5;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>//&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;springframework.cache
+package hello;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Component;
+@Component
+public class SimpleBookRepository implements BookRepository {
+    @Override
+    @Cacheable(&quot;books&quot;)
+    public Book getByIsbn(String isbn) {
+        simulateSlowService();
+        return new Book(isbn, &quot;Some book&quot;);
+    }
+    //@Cacheable&#x7684;&#x8BED;&#x6CD5;&#x53CA;&#x5176;&#x4E30;&#x5BCC;
+    @Cacheable(value = &quot;account&quot;, cacheManager = &quot;redis.cache&quot;, unless = &quot;#result == null&quot;)
+    public String getUserUuidFrom(final String uid) {
+        return executeCall(accountApi.getUserInfoById(uid)).getUuid();
+    }
+}
+</code></pre><p><img src="https://images.gitbook.cn/f6d60680-8da2-11e8-bd0f-f38f8b899327" alt="enter image description here"></p>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5F88;&#x591A;&#x7279;&#x522B;&#x662F;&#x914D;&#x7F6E;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#xFF1B;&#x8FD9;&#x4E2A;&#x662F;&#x8DE8;&#x8FDB;&#x7A0B;&#x7684;&#xFF0C;&#x5206;&#x5E03;&#x5F0F;&#x7F13;&#x5B58;&#xFF1B;&#x7F3A;&#x70B9;&#x53EA;&#x80FD;&#x5728;&#x5177;&#x4F53;&#x7684; public &#x65B9;&#x6CD5;&#x4E0A;&#x9762;&#x52A0; @Cache &#x6CE8;&#x89E3;&#x624D;&#x6709;&#x6548;&#xFF1B;&#x6709;&#x660E;&#x786E;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x5426;&#x5219;&#x9700;&#x8981;&#x52A8;&#x6001;&#x6E05;&#x9664;&#x624D;&#x8FC7;&#x671F;&#x3002;</p>
+<h4 id="&#x7B2C;&#x4E8C;&#x79CD;&#xFF1A;hibernate-&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;">&#x7B2C;&#x4E8C;&#x79CD;&#xFF1A;Hibernate &#x4E8C;&#x7EA7;&#x7F13;&#x5B58;</h4>
+<p>&#x6211;&#x4EEC;&#x90FD;&#x77E5;&#x9053; Hibernate &#x6709;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#xFF08;Hibernate session &#x7EA7;&#x522B;&#xFF09;&#x548C;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#xFF08;&#x7B2C;&#x4E09;&#x65B9;&#x7F13;&#x5B58;&#x8131;&#x79BB; session &#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#xFF0C;&#x5982;&#x5BF9;&#x63A5; ehcache &#x7B49;&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x662F;&#x5355;&#x5E94;&#x7528;&#x5185;&#x7684;&#xFF0C;&#x4E0D;&#x8DE8;&#x8FDB;&#x7A0B;&#x7684;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x52A8;&#x6001;&#x6E05;&#x9664;&#xFF0C;&#x6709; Hibernate &#x8D1F;&#x8D23;&#x5728; @Entity &#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;&#x66F4;&#x65B0;&#x7F13;&#x5B58;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F9D;&#x636E; ehcache &#x7684;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x8BBE;&#x7F6E;&#x8FC7;&#x671F;&#x7B56;&#x7565;&#xFF0C;&#x5C3D;&#x91CF;&#x77ED;&#xFF0C;&#x56E0;&#x4E3A;&#x8DE8;&#x5E94;&#x7528;&#x4E0D;&#x597D;&#x540C;&#x6B65;&#x3002;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;    </p>
+<p>&#x6211;&#x4EEC;&#x4EE5; Ehcache &#x505A;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#x4F7F;&#x7528;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>1) gradle &#x6DFB;&#x52A0; cache &#x4F9D;&#x8D56;</p>
+<pre><code>    compile(&apos;org.hibernate:hibernate-ehcache&apos;)
+    compile(&apos;net.sf.ehcache:ehcache&apos;)
+</code></pre><p>2) application.properties &#x914D;&#x7F6E;&#x5982;&#x4E0B;</p>
+<pre><code>    //&#x6253;&#x5F00;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;
+    spring.jpa.properties.hibernate.cache.use_second_level_cache=true
+    //&#x6253;&#x5F00;&#x67E5;&#x8BE2;&#x7F13;&#x5B58;
+    spring.jpa.properties.hibernate.cache.use_query_cache=true
+    //&#x6307;&#x5B9A;&#x7F13;&#x5B58;provider
+spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    //&#x914D;&#x7F6E;shared-cache-mode
+    spring.jpa.properties.javax.persistence.sharedCache.mode=ENABLE_SELECTIVE
+</code></pre><p>3) ehcache &#x8BBE;&#x7F6E;</p>
+<pre><code>    &lt;!-- &#x7F13;&#x5B58;&#x6A21;&#x7248;,&#x6B64;&#x5904;&#x4E3A;&#x4E86;&#x663E;&#x793A;&#x5176;&#x7528;&#x6CD5;,&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x6A21;&#x7248;&#x76F4;&#x63A5;&#x5728;cache&#x4E2D;&#x914D;&#x7F6E;&#x4E0E;&#x6A21;&#x7248;&#x53C2;&#x6570;&#x76F8;&#x540C; --&gt;
+    &lt;cache-template name=&quot;template&quot;&gt;
+        &lt;key-type&gt;java.lang.String&lt;/key-type&gt;
+        &lt;value-type&gt;java.lang.String&lt;/value-type&gt;
+        &lt;expiry&gt;
+            &lt;!-- &#x5355;&#x4F4D;&#x9ED8;&#x8BA4;&#x4E3A;&#x79D2;&#x5F53;&#x7528;&#x79D2;&#x4F5C;&#x5355;&#x4F4D;&#x65F6;,&#x53EF;&#x4EE5;&#x4E0D;&#x586B;--&gt;
+            &lt;ttl unit=&quot;hours&quot;&gt;1&lt;/ttl&gt;
+        &lt;/expiry&gt;
+        &lt;resources&gt;
+            &lt;!-- &#x5355;&#x4F4D;&#x9ED8;&#x8BA4;&#x4E3A;entries&#x5F53;&#x7528;entries&#x4F5C;&#x5355;&#x4F4D;&#x65F6;,&#x53EF;&#x4EE5;&#x4E0D;&#x586B;--&gt;
+            &lt;heap&gt;1&lt;/heap&gt;
+            &lt;offheap unit=&quot;MB&quot;&gt;1&lt;/offheap&gt;
+            &lt;!-- persistent &#x9ED8;&#x8BA4;&#x4E3A;false&#x53EF;&#x4EE5;&#x4E0D;&#x586B;--&gt;
+            &lt;disk unit=&quot;MB&quot;&gt;20&lt;/disk&gt;
+        &lt;/resources&gt;    
+    &lt;/cache-template&gt;
+</code></pre><p>4) entity &#x91CC;&#x9762;&#x7684;&#x4F7F;&#x7528;&#xFF0C;Collection Cache</p>
+<pre><code>    @Entity
+    @Cacheable
+    @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    public class Foo {
+        ...
+        @Cacheable
+        @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+        @OneToMany
+        private Collection&lt;Bar&gt; bars;
+        // getters and setters
+    }
+    //&#x76F4;&#x63A5;&#x5728;Entity&#x4E0A;&#x9762;&#x6DFB;&#x52A0;&#x7F13;&#x5B58;
+    @Entity
+    @Cacheable
+    @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    public class Foo {
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        @Column(name = &quot;ID&quot;)
+        private long id;
+        @Column(name = &quot;NAME&quot;)
+        private String name;
+    }
+</code></pre><p>CacheConcurrencyStrategy &#x7684;&#x56DB;&#x79CD;&#x7B56;&#x7565;&#xFF1A;</p>
+<ol>
+<li><code>CacheConcurrencyStrategy.READ_ONLY</code>&#xFF1A;&#x53EA;&#x8BFB;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B64;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#xFF0C;&#x4F1A;&#x6709;&#x5F02;&#x5E38;&#xFF1B;</li>
+<li><code>CacheConcurrencyStrategy.READ_WRITE</code>&#xFF1A;&#x8BFB;&#x5199;&#x6A21;&#x5F0F;&#x5728;&#x66F4;&#x65B0;&#x7F13;&#x5B58;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x628A;&#x7F13;&#x5B58;&#x91CC;&#x9762;&#x7684;&#x6570;&#x636E;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x9501;&#xFF0C;&#x5176;&#x5B83;&#x4E8B;&#x52A1;&#x5982;&#x679C;&#x53BB;&#x53D6;&#x76F8;&#x5E94;&#x7684;&#x7F13;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x53D1;&#x73B0;&#x88AB;&#x9501;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x5C31;&#x53BB;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#xFF1B;</li>
+<li><code>CacheConcurrencyStrategy.NONSTRICT_READ_WRITE</code>&#xFF1A;&#x4E0D;&#x4E25;&#x683C;&#x7684;&#x8BFB;&#x5199;&#x6A21;&#x5F0F;&#x5219;&#x4E0D;&#x4F1A;&#x7684;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x52A0;&#x9501;&#xFF1B;</li>
+<li><code>CacheConcurrencyStrategy.TRANSACTIONAL</code>&#xFF1A;&#x4E8B;&#x52A1;&#x6A21;&#x5F0F;&#x6307;&#x7F13;&#x5B58;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#xFF0C;&#x5F53;&#x4E8B;&#x52A1;&#x56DE;&#x6EDA;&#x65F6;&#xFF0C;&#x7F13;&#x5B58;&#x4E5F;&#x80FD;&#x56DE;&#x6EDA;&#xFF0C;&#x53EA;&#x652F;&#x6301; JTA &#x73AF;&#x5883;&#x3002;</li>
+</ol>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4E24;&#x79CD;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x4E0D;&#x80FD;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x4E71;&#x5957;&#x3002;</p>
+<h3 id="&#x4E03;&#xFF1A;hibernate&#x3001;session&#x3001;sessionfactory&#x3001;entitymanager-&#x5173;&#x7CFB;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#xFF1F;">&#x4E03;&#xFF1A;Hibernate&#x3001;Session&#x3001;SessionFactory&#x3001;EntityManager &#x5173;&#x7CFB;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#xFF1F;</h3>
+<p><img src="https://images.gitbook.cn/0649bb20-8dc1-11e8-80d1-2d51ff7e1c55" alt="SessionImpl"></p>
+<p>&#x4E00;&#x56FE;&#x80DC;&#x5343;&#x8A00;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684; UML &#x56FE;&#x6765;&#x770B;&#x4E0B;&#x6211;&#x4EEC;&#x8981;&#x5173;&#x5FC3;&#x7684;&#x51E0;&#x4E2A;&#x7C7B;&#x7684;&#x5173;&#x7CFB;&#x60C5;&#x51B5;&#xFF1B;</p>
+<ol>
+<li>Hibernate &#x662F;&#x57FA;&#x4E8E; SessionFactory &#x7BA1;&#x7406; Session &#x6765;&#x83B7;&#x5F97;&#x4E8B;&#x52A1;&#x7684;&#xFF1B;</li>
+<li>Spring Data JPA &#x662F;&#x57FA;&#x4E8E; EntityManagerFactory &#x7BA1;&#x7406; EntityManager &#x6765;&#x83B7;&#x5F97;&#x4E8B;&#x52A1;&#x7684;&#xFF1B;</li>
+<li>Session &#x7EE7;&#x627F; EntityManager&#xFF0C;&#x62E5;&#x6709;&#x5171;&#x540C;&#x7684;&#x5B9E;&#x73B0;&#x7C7B; SessionImpl;</li>
+<li>&#x800C; JPA &#x7684;&#x6574;&#x4F53;&#x5B9E;&#x73B0;&#x90FD;&#x662F;&#x901A;&#x8FC7; SimpleJpaRepostory &#x8C03;&#x7528; EntityManager &#x6765;&#x505A;&#x7684;&#xFF1B;</li>
+</ol>
+<p>&#x800C; Session &#x548C; EntityManager &#x5728;&#x4EC0;&#x4E48;&#x65F6;&#x673A;&#x88AB;&#x83B7;&#x53D6;&#x6709;&#x4E24;&#x6761;&#x7EBF;&#x8DEF;&#xFF1A;  </p>
+<p><strong>1) Hibernate &#x4F20;&#x7EDF;&#x7684;&#x52A0;&#x8F7D;&#x8DEF;&#x7EBF;&#xFF1A;</strong></p>
+<p>1.&#x4E8B;&#x52A1;&#x52A0;&#x8F7D;&#x65F6;&#x673A;&#xFF1A;HibernateTransactionManager &#x7BA1;&#x7406; SessionFactory&#xFF0C;&#x83B7;&#x5F97; Session &#x4ECE;&#x800C;&#x5F00;&#x542F;&#x4E8B;&#x52A1;&#xFF1B;&#x901A;&#x8FC7; </p>
+<pre><code>TransactionSynchronizationManager.getResource(sessionFactory)
+private static final ThreadLocal&lt;Map&lt;Object, Object&gt;&gt; resources = new NamedThreadLocal&lt;&gt;(&quot;Transactional resources&quot;);
+</code></pre><p>&#x6765;&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x73B0;&#x573A;&#x7684; SessionHolder&#xFF0C;&#x4ECE;&#x800C;&#x83B7;&#x5F97; session&#x3002;</p>
+<p>2.filter &#x52A0;&#x8F7D;&#x65F6;&#x673A;&#xFF1A;OpenSessionInViewFilter &#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x5F00;&#x542F;&#xFF0C;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x57FA;&#x672C;&#x540C;&#x4E0A;&#x9762;&#x76F8;&#x540C;&#xFF1B;</p>
+<p>3.Interceptor &#x65F6;&#x673A;&#x52A0;&#x8F7D; Session&#xFF1A;&#x901A;&#x8FC7; OpenSessionInViewInterceptor &#x5B9E;&#x73B0;&#xFF0C;&#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x52A0;&#x8F7D;&#xFF1B;</p>
+<p><strong>2) JPA &#x8FD9;&#x6761;&#x52A0;&#x8F7D;&#x7EBF;&#x8DEF;&#xFF1A;</strong></p>
+<p>1.&#x4E8B;&#x52A1;&#x52A0;&#x8F7D;&#x65F6;&#x673A;&#xFF1A;JpaTransactionManager &#x7BA1;&#x7406; EntityManagerFactory&#xFF0C;&#x83B7;&#x5F97; EntityManager &#x4ECE;&#x800C;&#x5F00;&#x542F;&#x4E8B;&#x52A1;&#xFF1A;&#x5173;&#x952E;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>//JpaTransactionManager&#x5F00;&#x542F;&#x4E8B;&#x52A1;&#x65B9;&#x6CD5;
+@Override
+    protected Object doGetTransaction() {
+        JpaTransactionObject txObject = new JpaTransactionObject();
+        txObject.setSavepointAllowed(isNestedTransactionAllowed());
+        EntityManagerHolder emHolder = (EntityManagerHolder)
+                TransactionSynchronizationManager.getResource(obtainEntityManagerFactory());
+.....
+}
+//TransactionSynchronizationManager.getResource&#x5173;&#x952E;&#x4EE3;&#x7801;
+private static final ThreadLocal&lt;Map&lt;Object, Object&gt;&gt; resources =
+            new NamedThreadLocal&lt;&gt;(&quot;Transactional resources&quot;);
+    @Nullable
+    public static Object getResource(Object key) {
+        Object actualKey = TransactionSynchronizationUtils.unwrapResourceIfNecessary(key);
+        Object value = doGetResource(actualKey);
+        if (value != null &amp;&amp; logger.isTraceEnabled()) {
+            logger.trace(&quot;Retrieved value [&quot; + value + &quot;] for key [&quot; + actualKey + &quot;] bound to thread [&quot; +
+                    Thread.currentThread().getName() + &quot;]&quot;);
+        }
+        return value;
+    }
+    @Nullable
+    private static Object doGetResource(Object actualKey) {
+        Map&lt;Object, Object&gt; map = resources.get();
+    }
+    ......
+</code></pre><p>&#x6765;&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x73B0;&#x573A;&#x7684; EntityManagerHolder&#xFF0C;&#x4ECE;&#x800C;&#x83B7;&#x5F97; EntityManager&#x3002;</p>
+<p>2.filter &#x52A0;&#x8F7D;&#x65F6;&#x673A;&#xFF1A; OpenEntityManagerInViewFilter &#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x5F00;&#x542F;&#xFF0C;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x57FA;&#x672C;&#x540C;&#x4E0A;&#x9762;&#x76F8;&#x540C;&#xFF1B;</p>
+<p>3.Interceptor &#x65F6;&#x673A;&#x52A0;&#x8F7D; EntityManager&#xFF1A;&#x901A;&#x8FC7; OpenEntityManagerInViewInterceptor &#x5B9E;&#x73B0;&#xFF0C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x52A0;&#x8F7D;&#xFF1B;&#x52A0;&#x8F7D;&#x903B;&#x8F91;&#x5728; JpaBaseConfiguration &#x7C7B;&#x91CC;&#x9762;&#x3002;</p>
+<h3 id="&#x516B;&#xFF1A;&#x900F;&#x8FC7;&#x73B0;&#x8C61;&#x770B;&#x672C;&#x8D28;&#xFF0C;&#x601D;&#x60F3;&#x4E0A;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x5F62;&#x6210;&#x8F6C;&#x53D8;&#xFF1F;">&#x516B;&#xFF1A;&#x900F;&#x8FC7;&#x73B0;&#x8C61;&#x770B;&#x672C;&#x8D28;&#xFF0C;&#x601D;&#x60F3;&#x4E0A;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x5F62;&#x6210;&#x8F6C;&#x53D8;&#xFF1F;</h3>
+<ol>
+<li>&#x7528;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x601D;&#x8DEF;&#x6765;&#x505A; DB &#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E0A;&#x6765;&#x6211;&#x4EEC;&#x5C31;&#x60F3;&#x7740;&#x5982;&#x4F55;&#x901A;&#x8FC7; SQL &#x6211;&#x4EEC;&#x8BE5;&#x600E;&#x4E48;&#x5199;&#xFF1B;</li>
+<li>&#x5F53;&#x6211;&#x4EEC;&#x54EA;&#x91CC;&#x7528;&#x7684;&#x590D;&#x6742;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x5B9A;&#x662F;&#x54EA;&#x91CC;&#x4E0D;&#x5BF9;&#x4E86;&#xFF0C;&#x5E94;&#x8BE5;&#x6709;&#x66F4;&#x597D;&#x7684;&#x5B9E;&#x8DF5;&#x65B9;&#x6CD5;&#xFF1B;</li>
+<li>&#x5BF9; @Entity &#x8981;&#x8BA4;&#x8BC6;&#x5230;&#x672C;&#x8D28;&#xFF0C;@Entity &#x5176;&#x5B9E;&#x80FD;&#x5145;&#x5206;&#x4F53;&#x73B0;&#x8BBE;&#x8BA1;&#x8005;&#x7684;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4; DDD&#xFF0C;&#x662F;&#x8BBE;&#x8BA1;&#x6210;&#x8D2B;&#x8840;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD8;&#x662F;&#x8BE5;&#x7528;&#x5145;&#x8840;&#x6A21;&#x5F0F;&#xFF1F;&#x6211;&#x4EEC;&#x8BBE;&#x8BA1;&#x8868;&#x7684;&#x65F6;&#x5019;&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x9075;&#x5FAA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4E09;&#x5927;&#x8303;&#x5F0F;&#xFF1F;&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x8981;&#x601D;&#x8003;&#x7684;&#xFF1B;</li>
+<li>JPA &#x7684;&#x5B9E;&#x8D28;&#x662F;&#x7406;&#x89E3;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#xFF0C;&#x800C; Hibernate &#x6211;&#x4EEC;&#x8981;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x638C;&#x63E1; @Entity &#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x8FD9;&#x662F;&#x672C;&#x8D28;&#xFF1B;</li>
+<li>&#x4E8B;&#x52A1;&#x3001;session&#x3001;connection &#x7684;&#x539F;&#x7406;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x7AD9;&#x5728;&#x5168;&#x5C40;&#x53BB;&#x770B; Spring Data JPA &#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1B;</li>
+<li>&#x5148;&#x638C;&#x63E1;&#x5927;&#x5C40;&#x548C;&#x7406;&#x8BBA;&#x89E3;&#x51B3;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF0C;&#x7136;&#x540E;&#x9488;&#x5BF9;&#x7EC6;&#x8282;&#x95EE;&#x9898;&#x6211;&#x4EEC;&#x9010;&#x6B65;&#x53BB;&#x627E;&#x65B9;&#x6848;&#x5C31;&#x884C;&#x4E86;&#xFF1B;</li>
+</ol>
+<h3 id="&#x6700;&#x540E;">&#x6700;&#x540E;</h3>
+<p>&#x8001;&#x5E08;&#x7684;&#x65B0;&#x4E66;<a href="https://s.click.taobao.com/LsfmVOw" target="_blank">&#x300A;Spring Data JPA &#x4ECE;&#x5165;&#x95E8;&#x5230;&#x7CBE;&#x901A;&#x300B;</a>&#xFF0C;&#x53EF;&#x4EE5;&#x8DDF;&#x7740;&#x8001;&#x5E08;&#x4E00;&#x8D77;&#x4ECE;&#x4E0B;&#x5F80;&#x4E0A;&#x5B66;&#x4E60;&#x3002;</p>
+<p><img src="http://images.gitbook.cn/15d12610-5c1f-11e8-b5c3-3fe2bc231f99" alt="&#x300A;Spring Data JPA &#x4ECE;&#x5165;&#x95E8;&#x5230;&#x7CBE;&#x901A;&#x300B;"></p>
+<h4 id="&#x798F;&#x5229;">&#x798F;&#x5229;</h4>
+<p>&#x53C2;&#x52A0;&#x672C; chat &#x7684;&#x5C0F;&#x4F19;&#x4F34;&#x4EEC;&#x6709;&#x798F;&#x5229;&#x4E86;&#xFF0C;&#x5F53;&#x5929;&#x4EA4;&#x6D41;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C3E;&#x90E8;&#x6709;&#x5F69;&#x86CB;&#xFF0C;&#x8D60;&#x4E66;&#x4E00;&#x672C;&#x4E66;&#xFF0C;&#x6761;&#x4EF6;&#x662F;&#xFF1A;  </p>
+<ol>
+<li>&#x81F3;&#x5C11;&#x53C2;&#x52A0;&#x8FC7;&#x8001;&#x5E08;&#x7684;&#x4E00;&#x7BC7;&#x8FBE;&#x4EBA;&#x8BFE;&#x3002; </li>
+<li>&#x81F3;&#x5C11;&#x6709;&#x8001;&#x5E08;&#x7684;&#x4E09;&#x4E2A; 5 &#x661F;&#x7684; chat &#x8BC4;&#x4EF7;&#x3002;</li>
+<li>&#x672C; chat &#x5206;&#x4EAB;&#x670B;&#x53CB;&#x5708; 30 &#x4E2A;&#x8D5E;&#x3002;</li>
+</ol>
+<p>&#xFF08;&#x672C;&#x6D3B;&#x52A8;&#x622A;&#x6B62;&#x65F6;&#x95F4;&#x662F; Chat &#x5206;&#x4EAB;&#x5F53;&#x5929;&#x665A;&#x4E0A; 9:40&#x3002;&#xFF09;&#x6761;&#x4EF6;&#x90FD;&#x8FBE;&#x5230;&#x7684;&#x53D6;&#x670B;&#x53CB;&#x5708;&#x70B9;&#x8D5E;&#x6570;&#x6700;&#x591A;&#x7684;&#x7B2C;&#x4E00;&#x540D;&#x3002;&#x8D60;&#x4E66;&#x300A;Spring Data JPA&#x5165;&#x95E8;&#x5230;&#x7CBE;&#x901A;&#x300B;&#x4E00;&#x672C;&#x3002;&#x8BE6;&#x60C5;&#x53EF;&#x4EE5;&#x95EE; chat &#x5C0F;&#x7F16;&#x3002;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x5927;&#x5BB6;&#x6709;&#x95EE;&#x9898;&#x9700;&#x8981;&#x4E92;&#x76F8;&#x4EA4;&#x6D41;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x7FA4;&#x3002;</p>
+<ul>
+<li>QQ&#x4EA4;&#x6D41;&#x7FA4;1&#xFF1A;240619787</li>
+<li>QQ&#x4EA4;&#x6D41;&#x7FA4;2&#xFF1A;559701472</li>
+</ul>
+<p>&#x6B22;&#x8FCE;&#x5927;&#x5BB6;&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x6E20;&#x9053;&#x4E00;&#x8D77;&#x4EA4;&#x6D41;&#xFF1B;</p>
+</blockquote>
+<hr>
+<p>&#x672C;&#x6587;&#x9996;&#x53D1;&#x4E8E;GitChat&#xFF0C;&#x672A;&#x7ECF;&#x6388;&#x6743;&#x4E0D;&#x5F97;&#x8F6C;&#x8F7D;&#xFF0C;&#x8F6C;&#x8F7D;&#x9700;&#x4E0E;GitChat&#x8054;&#x7CFB;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="SpringDataJPA之Hibernate加载过程.html" class="navigation navigation-next navigation-unique" aria-label="Next page: SpringDataJPA之Hibernate加载过程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Spring Data JPA 晋级提升篇：复杂场景实战用法与优化","level":"1.3.1","depth":2,"next":{"title":"SpringDataJPA之Hibernate加载过程","level":"1.3.2","depth":2,"path":"SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.md","ref":"./SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.md","articles":[]},"previous":{"title":"Spring DATA JPA 扩展阅读","level":"1.3","depth":1,"ref":"","articles":[{"title":"Spring Data JPA 晋级提升篇：复杂场景实战用法与优化","level":"1.3.1","depth":2,"path":"SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md","ref":"./SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md","articles":[]},{"title":"SpringDataJPA之Hibernate加载过程","level":"1.3.2","depth":2,"path":"SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.md","ref":"./SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.md","articles":[]},{"title":"implement-equals,-hashCode-why,when?","level":"1.3.3","depth":2,"path":"SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.md","ref":"./SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.md","articles":[]},{"title":"JPA中lazy-loading-doesn’t-work","level":"1.3.4","depth":2,"path":"SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.md","ref":"./SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.md","articles":[]},{"title":"SpringDataJPA之Entity关联关系Lazy过程","level":"1.3.5","depth":2,"path":"SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.md","ref":"./SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.md","articles":[]},{"title":"SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程","level":"1.3.6","depth":2,"path":"SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.md","ref":"./SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.md","articles":[]},{"title":"多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑","level":"1.3.7","depth":2,"path":"SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.md","ref":"./SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md","mtime":"2019-12-08T03:31:47.744Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-17T06:04:38.403Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

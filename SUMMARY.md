@@ -1,0 +1,25 @@
+# Summary
+
+* [Introduction](README.md)
+* 《Spring Data JPA实战》
+	- [01：整体认识JPA](./《SpringDataJpa实战》书/01.md)					
+	- [02：Jpa基础查询方法JpaRepository详解		](./《SpringDataJpa实战》书/02.md)							
+	- [03：定义查询方法(Defining Query Methods	](./《SpringDataJpa实战》书/03.md)									
+	- [04：注解式查询方法	](./《SpringDataJpa实战》书/04.md)									
+	- [05：@Entity实例里面常用注解详解			](./《SpringDataJpa实战》书/05.md)							
+	- [06：JpaRepository扩展之QueryByExampleExecutor](./《SpringDataJpa实战》书/06.md)										
+	- [07：JpaRepository扩展之JpaSpecificationExecutor](./《SpringDataJpa实战》书/07.md)										
+	- [08 :  JpaRepository扩展之自定义Repositor	](./《SpringDataJpa实战》书/08.md)									
+	- [09：Auditing与@version					](./《SpringDataJpa实战》书/09.md)					
+	- [10：对MvcWeb的支持分页和排序的支持			](./《SpringDataJpa实战》书/10.md)						
+	- [11：Spring Data Jpa的配置之SpringBoot2.0加载详解](./《SpringDataJpa实战》书/11.md)										
+	- [12：DataSource的配置与事务详解、多数据源		](./《SpringDataJpa实战》书/12.md)								
+	- [13：Spring Data Jpa之QueryDSL支持	](./《SpringDataJpa实战》书/13.md)
+* Spring DATA JPA 扩展阅读
+	- [Spring Data JPA 晋级提升篇：复杂场景实战用法与优化](./SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md)  
+	- [SpringDataJPA之Hibernate加载过程](./SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.md)
+	- [implement-equals,-hashCode-why,when?](./SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.md)
+	- [JPA中lazy-loading-doesn’t-work](./SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.md)
+	- [SpringDataJPA之Entity关联关系Lazy过程](./SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.md)
+	- [SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程](./SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.md)                                
+	- [多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑](./SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.md)

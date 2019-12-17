@@ -1,0 +1,829 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>07：JpaRepository扩展之JpaSpecificationExecutor · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08.html" />
+    
+    
+    <link rel="prev" href="06.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    《Spring Data JPA实战》
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    01：整体认识JPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    02：Jpa基础查询方法JpaRepository详解        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    03：定义查询方法(Defining Query Methods    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    04：注解式查询方法    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    05：@Entity实例里面常用注解详解            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    06：JpaRepository扩展之QueryByExampleExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    07：JpaRepository扩展之JpaSpecificationExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    08 :  JpaRepository扩展之自定义Repositor    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="09.html">
+            
+                <a href="09.html">
+            
+                    
+                    09：Auditing与@version                    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10：对MvcWeb的支持分页和排序的支持            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    11：Spring Data Jpa的配置之SpringBoot2.0加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    12：DataSource的配置与事务详解、多数据源        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    13：Spring Data Jpa之QueryDSL支持    
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Spring DATA JPA 扩展阅读
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.html">
+            
+                    
+                    Spring Data JPA 晋级提升篇：复杂场景实战用法与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.html">
+            
+                    
+                    SpringDataJPA之Hibernate加载过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.html">
+            
+                <a href="../SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.html">
+            
+                    
+                    implement-equals,-hashCode-why,when?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.html">
+            
+                <a href="../SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.html">
+            
+                    
+                    JPA中lazy-loading-doesn’t-work
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                    
+                    SpringDataJPA之Entity关联关系Lazy过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                    
+                    SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                <a href="../SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                    
+                    多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >07：JpaRepository扩展之JpaSpecificationExecutor</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7B2C;07&#x8BFE;&#xFF1A;jparepository-&#x6269;&#x5C55;&#x4E4B;-jpaspecificationexecutor">&#x7B2C;07&#x8BFE;&#xFF1A;JpaRepository &#x6269;&#x5C55;&#x4E4B; JpaSpecificationExecutor</h2>
+<h3 id="jpaspecificationexecutor-&#x4ECB;&#x7ECD;">JpaSpecificationExecutor &#x4ECB;&#x7ECD;</h3>
+<p>&#x901A;&#x8FC7;&#x524D;&#x9762;&#x7684;&#x51E0;&#x8282;&#x5185;&#x5BB9;&#x4ECB;&#x7ECD;&#xFF0C;&#x6211;&#x4EEC;&#x5176;&#x5B9E;&#x5927;&#x90E8;&#x5206;&#x7684;&#x7B80;&#x5355;&#x573A;&#x666F;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E2A; ORM &#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7EDD;&#x4E0D;&#x80FD;&#x62D8;&#x6CE5;&#x4E0E;&#x7B80;&#x5355;&#x65B9;&#x6848;&#xFF0C;&#x800C; JpaSpecificationExecutor &#x662F; JPA 2.0 &#x63D0;&#x4F9B;&#x7684; Criteria API &#x7684;&#x4F7F;&#x7528;&#x5C01;&#x88C5;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x52A8;&#x6001;&#x751F;&#x6210; Query &#x6765;&#x6EE1;&#x8DB3;&#x6211;&#x4EEC;&#x4E1A;&#x52A1;&#x4E2D;&#x7684;&#x5404;&#x79CD;&#x590D;&#x6742;&#x573A;&#x666F;&#x3002;Spring Data JPA &#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86; JpaSpecificationExecutor &#x63A5;&#x53E3;&#xFF0C;&#x53EA;&#x8981;&#x7B80;&#x5355;&#x5B9E;&#x73B0; toPredicate &#x65B9;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x7684;&#x67E5;&#x8BE2;&#x3002;</p>
+<h3 id="jpaspecificationexecutor-&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">JpaSpecificationExecutor &#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h3>
+<h4 id="jpaspecificationexecutor-&#x6E90;&#x7801;&#x548C;-api">JpaSpecificationExecutor &#x6E90;&#x7801;&#x548C; API</h4>
+<p><img src="http://images.gitbook.cn/c5b05b30-397b-11e8-9769-ad5a3e0d00fa" alt="enter image description here"></p>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; idea &#x5DE5;&#x5177;&#x8BE6;&#x7EC6;&#x770B;&#x5176;&#x7528;&#x6CD5;&#x548C;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;JpaSpecificationExecutor &#x662F; Repository &#x8981;&#x7EE7;&#x627F;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x800C; SimpleJpaRepository &#x662F;&#x5176;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x3002;&#x800C;&#x901A;&#x8FC7;&#x6E90;&#x7801;&#x6765;&#x770B;&#x5176;&#x63D0;&#x4F9B;&#x7684; API &#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x3001;&#x660E;&#x4E86;&#xFF0C;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>public interface JpaSpecificationExecutor&lt;T&gt; {
+   //&#x6839;&#x636E; Specification &#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#x5355;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x80FD;&#x67E5;&#x51FA;&#x6765;&#x591A;&#x4E2A;&#x4F1A;&#x62A5;&#x9519;
+   T findOne(@Nullable Specification&lt;T&gt; spec);
+   //&#x6839;&#x636E; Specification &#x6761;&#x4EF6;&#x67E5;&#x8BE2; List &#x7ED3;&#x679C;
+   List&lt;T&gt; findAll(@Nullable Specification&lt;T&gt; spec);
+   //&#x6839;&#x636E; Specification &#x6761;&#x4EF6;&#xFF0C;&#x5206;&#x9875;&#x67E5;&#x8BE2;
+   Page&lt;T&gt; findAll(@Nullable Specification&lt;T&gt; spec, Pageable pageable);
+   //&#x6839;&#x636E; Specification &#x6761;&#x4EF6;&#xFF0C;&#x5E26;&#x6392;&#x5E8F;&#x7684;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;
+   List&lt;T&gt; findAll(@Nullable Specification&lt;T&gt; spec, Sort sort);
+   //&#x6839;&#x636E; Specification &#x6761;&#x4EF6;&#xFF0C;&#x67E5;&#x8BE2;&#x6570;&#x91CF;
+   long count(@Nullable Specification&lt;T&gt; spec);
+}
+</code></pre><p>&#x4E0D;&#x96BE;&#x770B;&#x51FA;&#xFF0C;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x57FA;&#x672C;&#x662F;&#x56F4;&#x7ED5;&#x7740; Specification &#x63A5;&#x53E3;&#x6765;&#x5B9A;&#x4E49;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E0B;&#x5176;&#x6E90;&#x7801;&#xFF1A;</p>
+<p><img src="http://images.gitbook.cn/2b0572c0-397e-11e8-9f33-a7686c32808c" alt="enter image description here"></p>
+<p>&#x4ED4;&#x7EC6;&#x770B;&#x770B;&#x56FE;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0; Specifications &#x7684;&#x63A5;&#x53E3;&#x5B9E;&#x73B0;&#x7C7B;&#x5C31;&#x4E09;&#x4E2A;&#x3002;</p>
+<pre><code>/**
+ * Specifications &#x662F; Spring Data JPA &#x5BF9; Specification &#x7684;&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x5DE5;&#x5177;&#x7C7B;&#xFF0C;&#x91CC;&#x9762;&#x6709;&#x4EE5;&#x4E0B;&#x56DB;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;
+*/
+@Deprecated  //&#x5DF2;&#x7ECF;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528; Specification &#x6765;&#x4EE3;&#x66FF;&#xFF0C;&#x5982;&#x4E0A;&#x56FE;&#x3002;
+public class Specifications&lt;T&gt; implements Specification&lt;T&gt;, Serializable {
+   private final Specification&lt;T&gt; spec;
+   //&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x79C1;&#x6709;&#x5316;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7; where/not &#x521B;&#x5EFA; Specifications &#x5BF9;&#x8C61;&#x3002;
+   private Specifications(Specification&lt;T&gt; spec) {
+      this.spec = spec;
+   }
+   //&#x521B;&#x5EFA; where &#x540E;&#x9762;&#x7684; Predicate &#x96C6;&#x5408;
+   public static &lt;T&gt; Specifications&lt;T&gt; where(Specification&lt;T&gt; spec) {
+      return new Specifications&lt;T&gt;(spec);
+   }
+   //&#x521B;&#x5EFA; not &#x96C6;&#x5408;&#x7684; Predicate
+   public static &lt;T&gt; Specifications&lt;T&gt; not(Specification&lt;T&gt; spec) {
+      return new Specifications&lt;T&gt;(new NegatedSpecification&lt;T&gt;(spec));
+   }
+   //Specification &#x7684; and &#x5173;&#x7CFB;&#x96C6;&#x5408;
+   public Specifications&lt;T&gt; and(Specification&lt;T&gt; other) {
+      return new Specifications&lt;T&gt;(new ComposedSpecification&lt;T&gt;(spec, other, AND));
+   }
+   //Specification &#x7684; or &#x5173;&#x7CFB;&#x96C6;&#x5408;
+   public Specifications&lt;T&gt; or(Specification&lt;T&gt; other) {
+      return new Specifications&lt;T&gt;(new ComposedSpecification&lt;T&gt;(spec, other, OR));
+   }
+......
+}
+</code></pre><p>&#x800C;&#x5982;&#x679C;&#x67E5;&#x770B; Specifications &#x6E90;&#x7801;&#x7684;&#x8BDD;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x5176;&#x5DF2;&#x7ECF;&#x5C06;&#x6765;&#x8981;&#x88AB;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x5DF2;&#x7ECF;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x800C;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x90FD;&#x662F;&#x5C40;&#x90E8;&#x79C1;&#x6709;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x771F;&#x6B63;&#x5173;&#x6CE8;&#x7684;&#x5C31;&#x662F; Specification &#x63A5;&#x53E3;&#x4E2D;&#x5982;&#x4E0B;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>public interface Specification&lt;T&gt; {
+   Predicate toPredicate(Root&lt;T&gt; root, CriteriaQuery&lt;?&gt; query, CriteriaBuilder cb);
+}
+</code></pre><p>&#x4ECE;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x6BCF;&#x4E2A;&#x8C03;&#x7528;&#x7684;&#x5730;&#x65B9;&#x90FD;&#x9700;&#x8981;&#xFF0C;&#x521B;&#x5EFA; Specification &#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x800C; JpaSpecificationExecutor &#x662F;&#x9488;&#x5BF9; Criteria API &#x8FDB;&#x884C;&#x4E86; predicate &#x6807;&#x51C6;&#x5C01;&#x88C5;&#xFF0C;&#x5E2E;&#x6211;&#x4EEC;&#x5C01;&#x88C5;&#x4E86;&#x901A;&#x8FC7; EntityManager &#x7684;&#x67E5;&#x8BE2;&#x548C;&#x4F7F;&#x7528;&#x7EC6;&#x8282;&#xFF0C;&#x4F7F;&#x64CD;&#x4F5C; Criteria &#x66F4;&#x52A0;&#x4FBF;&#x5229;&#x4E86;&#x4E00;&#x4E9B;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x638C;&#x63E1;&#x4E00;&#x4E0B; Predicate&#x3001;Root&#x3001;CriteriaQuery&#x3001;CriteriaBuilder &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<h4 id="criteria-&#x7684;&#x6982;&#x5FF5;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;">Criteria &#x7684;&#x6982;&#x5FF5;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;</h4>
+<p><strong>&#xFF08;1&#xFF09;Root<t> root</t></strong>   </p>
+<p>&#x4EE3;&#x8868;&#x4E86;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x548C;&#x64CD;&#x4F5C;&#x7684;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x7684;&#x6839;&#xFF0C;&#x5982;&#x679C;&#x5C06;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x6BD4;&#x55BB;&#x6210;&#x8868;&#x540D;&#xFF0C;&#x90A3; root &#x91CC;&#x9762;&#x5C31;&#x662F;&#x8FD9;&#x5F20;&#x8868;&#x91CC;&#x9762;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E0D;&#x8FC7;&#x662F; JPQL &#x7684;&#x5B9E;&#x4F53;&#x5B57;&#x6BB5;&#x800C;&#x5DF2;&#x3002;&#x901A;&#x8FC7;&#x91CC;&#x9762;&#x7684; Path<y> get(String attributeName)&#xFF0C;&#x6765;&#x83B7;&#x5F97;&#x6211;&#x4EEC;&#x60F3;&#x64CD;&#x4F5C;&#x7684;&#x5B57;&#x6BB5;&#x3002;   </y></p>
+<p><strong>&#xFF08;2&#xFF09;CriteriaQuery&lt;?&gt; query</strong>  </p>
+<p>&#x4EE3;&#x8868;&#x4E00;&#x4E2A; specific &#x7684;&#x9876;&#x5C42;&#x67E5;&#x8BE2;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x7740;&#x67E5;&#x8BE2;&#x7684;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x6BD4;&#x5982; select &#x3001;from&#x3001;where&#x3001;group by&#x3001;order by &#x7B49;&#x3002;CriteriaQuery &#x5BF9;&#x8C61;&#x53EA;&#x5BF9;&#x5B9E;&#x4F53;&#x7C7B;&#x578B;&#x6216;&#x5D4C;&#x5165;&#x5F0F;&#x7C7B;&#x578B;&#x7684; Criteria &#x67E5;&#x8BE2;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x7B80;&#x5355;&#x7406;&#x89E3;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x67E5;&#x8BE2; ROOT &#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#xFF1A;</p>
+<pre><code>CriteriaQuery&lt;T&gt; where(Predicate... restrictions);
+CriteriaQuery&lt;T&gt; select(Selection&lt;? extends T&gt; selection);
+CriteriaQuery&lt;T&gt; having(Predicate... restrictions);
+</code></pre><p><strong>&#xFF08;3&#xFF09;CriteriaBuilder cb</strong></p>
+<p>&#x7528;&#x6765;&#x6784;&#x5EFA; CritiaQuery &#x7684;&#x6784;&#x5EFA;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x6761;&#x4EF6;&#x6216;&#x8005;&#x662F;&#x6761;&#x4EF6;&#x7EC4;&#x5408;&#xFF0C;&#x5E76;&#x4EE5; Predicate &#x7684;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x6784;&#x5EFA;&#x7B80;&#x5355;&#x7684; Predicate &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>Predicate p1=cb.like(root.get(&#x201C;name&#x201D;).as(String.class), &#x201C;%&#x201D;+uqm.getName()+&#x201C;%&#x201D;);
+Predicate p2=cb.equal(root.get(&quot;uuid&quot;).as(Integer.class), uqm.getUuid());
+Predicate p3=cb.gt(root.get(&quot;age&quot;).as(Integer.class), uqm.getAge());
+</code></pre><p>&#x6784;&#x5EFA;&#x7EC4;&#x5408;&#x7684; Predicate &#x793A;&#x4F8B;&#xFF1A;   </p>
+<p><code>Predicate p = cb.and(p3,cb.or(p1,p2));</code>      </p>
+<p><strong>&#xFF08;4&#xFF09;&#x5B9E;&#x9645;&#x7ECF;&#x9A8C;</strong></p>
+<p>&#x5230;&#x6B64;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x5176;&#x5B9E; JpaSpecificationExecutor &#x5E2E;&#x6211;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x9AD8;&#x7EA7;&#x7684;&#x5165;&#x53E3;&#x548C;&#x7ED3;&#x6784;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5165;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5E95;&#x5C42; JPA &#x7684; Criteria &#x6240;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x4E86;&#x6240;&#x6709;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x3002;&#x4F46;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x65E6;&#x6211;&#x4EEC;&#x5199;&#x7684;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x592A;&#x590D;&#x6742;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x4EBA;&#x770B;&#x4E0D;&#x61C2;&#x65F6;&#xFF0C;&#x90A3;&#x4E00;&#x5B9A;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x6211;&#x8981;&#x5BFB;&#x627E;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x3001;&#x66F4;&#x6613;&#x61C2;&#x7684;&#x3001;&#x66F4;&#x4F18;&#x96C5;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6BD4;&#x5982;&#xFF1A;   </p>
+<ul>
+<li>&#x5206;&#x9875;&#x548C;&#x6392;&#x5E8F;&#x6211;&#x4EEC;&#x5C31;&#x6CA1;&#x6709;&#x6BD4;&#x8F83;&#x81EA;&#x5DF1;&#x518D;&#x53BB;&#x5B9E;&#x73B0;&#x4E00;&#x904D;&#x903B;&#x8F91;&#xFF0C;&#x76F4;&#x63A5;&#x7528;&#x5176;&#x5F00;&#x653E;&#x7684; Pageable &#x548C; Sort &#x5373;&#x53EF;&#x3002;</li>
+<li>&#x5F53;&#x6211;&#x4EEC;&#x8FC7;&#x591A;&#x7684;&#x4F7F;&#x7528; group &#x6216;&#x8005; having&#x3001;sum&#x3001;count &#x7B49;&#x5185;&#x7F6E;&#x7684; SQL &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x60F3;&#x5C31;&#x662F;&#x901A;&#x8FC7; Specification &#x5B9E;&#x73B0;&#x4E86;&#x903B;&#x8F91;&#xFF0C;&#x8FD9;&#x79CD;&#x6548;&#x7387;&#x771F;&#x7684;&#x9AD8;&#x5417;&#xFF1F;&#x662F;&#x4E0D;&#x662F;&#x6570;&#x636E;&#x5728;&#x5176;&#x4ED6;&#x7B97;&#x597D;&#x66F4;&#x597D;&#xFF1F;</li>
+<li>&#x5F53;&#x6211;&#x4EEC;&#x8FC7;&#x591A;&#x7684;&#x64CD;&#x4F5C; left join &#x548C; inner Join &#x7684;&#x94FE;&#x8868;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x60F3;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x5E93;&#x7684;&#x89C6;&#x56FE;&#xFF08;view&#xFF09;&#x66F4;&#x4F18;&#x96C5;&#x4E00;&#x70B9;&#xFF1F;</li>
+</ul>
+<h4 id="jpaspecificationexecutor-&#x4F7F;&#x7528;&#x6848;&#x4F8B;">JpaSpecificationExecutor &#x4F7F;&#x7528;&#x6848;&#x4F8B;</h4>
+<h5 id="&#x65B0;&#x5EFA;&#x4E24;&#x4E2A;&#x5B9E;&#x4F53;"><strong>&#x65B0;&#x5EFA;&#x4E24;&#x4E2A;&#x5B9E;&#x4F53;</strong></h5>
+<pre><code>@Entity(name = &quot;UserInfoEntity&quot;)
+@Table(name = &quot;user_info&quot;, schema = &quot;test&quot;)
+public class UserInfoEntity  implements Serializable {
+   @Id
+   @Column(name = &quot;id&quot;, nullable = false)
+   private Integer id;
+   @Column(name = &quot;first_name&quot;, nullable = true, length = 100)
+   private String firstName;
+   @Column(name = &quot;last_name&quot;, nullable = true, length = 100)
+   private String lastName;
+   @Column(name = &quot;telephone&quot;, nullable = true, length = 100)
+   private String telephone;
+   @Column(name = &quot;create_time&quot;, nullable = true)
+   private Date createTime;
+   @Column(name = &quot;version&quot;, nullable = true)
+   private String version;
+   @OneToOne(optional = false,fetch = FetchType.EAGER)
+   @JoinColumn(referencedColumnName = &quot;id&quot;,name = &quot;address_id&quot;,nullable = false)
+   @Fetch(FetchMode.JOIN)
+   private UserReceivingAddressEntity addressEntity;
+......
+}
+</code></pre><pre><code>@Entity
+@Table(name = &quot;user_receiving_address&quot;, schema = &quot;test&quot;)
+public class UserReceivingAddressEntity  implements Serializable {
+   @Id
+   @Column(name = &quot;id&quot;, nullable = false)
+   private Integer id;
+   @Column(name = &quot;user_id&quot;, nullable = false)
+   private Integer userId;
+   @Column(name = &quot;address_city&quot;, nullable = true, length = 500)
+   private String addressCity;
+......
+}
+</code></pre><h5 id="userrepository-&#x9700;&#x8981;&#x7EE7;&#x627F;-jpaspecificationexecutor"><strong>UserRepository &#x9700;&#x8981;&#x7EE7;&#x627F; JpaSpecificationExecutor</strong></h5>
+<pre><code>public interface UserRepository extends JpaSpecificationExecutor&lt;UserInfoEntity&gt; {
+}
+</code></pre><h5 id="&#x8C03;&#x7528;&#x8005;-userinfomanager-&#x7684;&#x5199;&#x6CD5;"><strong>&#x8C03;&#x7528;&#x8005; UserInfoManager &#x7684;&#x5199;&#x6CD5;</strong></h5>
+<ul>
+<li>&#x6211;&#x4EEC;&#x6F14;&#x793A;&#x4E00;&#x4E0B;&#x76F4;&#x63A5;&#x7528; lambda &#x4F7F;&#x7528; Root<t> &#x548C; CriteriaBuilder &#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4E0D;&#x540C;&#x6761;&#x4EF6;&#x7684;&#x67E5;&#x8BE2;&#x548C;&#x94FE;&#x8868;&#x67E5;&#x8BE2;&#x3002; </t></li>
+</ul>
+<pre><code>@Component
+public class UserInfoManager {
+   @Autowired
+   private UserRepository userRepository;
+   public Page&lt;UserInfoEntity&gt; findByCondition(UserInfoRequest userParam,Pageable pageable){
+      return userRepository.findAll((root, query, cb) -&gt; {
+         List&lt;Predicate&gt; predicates = new ArrayList&lt;Predicate&gt;();
+         if (StringUtils.isNoneBlank(userParam.getFirstName())){
+            //liked&#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+            predicates.add(cb.like(root.get(&quot;firstName&quot;),&quot;%&quot;+userParam.getFirstName()+&quot;%&quot;));
+         }
+         if (StringUtils.isNoneBlank(userParam.getTelephone())){
+            //equal&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+            predicates.add(cb.equal(root.get(&quot;telephone&quot;),userParam.getTelephone()));
+         }
+         if (StringUtils.isNoneBlank(userParam.getVersion())){
+            //greaterThan&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+            predicates.add(cb.greaterThan(root.get(&quot;version&quot;),userParam.getVersion()));
+         }
+         if (userParam.getBeginCreateTime()!=null&amp;&amp;userParam.getEndCreateTime()!=null){
+            //&#x6839;&#x636E;&#x65F6;&#x95F4;&#x533A;&#x95F4;&#x53BB;&#x67E5;&#x8BE2;   predicates.add(cb.between(root.get(&quot;createTime&quot;),userParam.getBeginCreateTime(),userParam.getEndCreateTime()));
+         }
+         if (StringUtils.isNotBlank(userParam.getAddressCity())) {
+            //&#x8054;&#x8868;&#x67E5;&#x8BE2;&#xFF0C;&#x5229;&#x7528;root&#x7684;join&#x65B9;&#x6CD5;&#xFF0C;&#x6839;&#x636E;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x8868;&#x91CC;&#x9762;&#x7684;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x3002;
+            predicates.add(cb.equal(root.join(&quot;addressEntityList&quot;).get(&quot;addressCity&quot;), userParam.getAddressCity()));
+         }
+         return query.where(predicates.toArray(new Predicate[predicates.size()])).getRestriction();
+      }, pageable);
+   }
+}
+//&#x53EF;&#x4EE5;&#x4ED4;&#x7EC6;&#x4F53;&#x4F1A;&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x6848;&#x4F8B;&#xFF0C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x5E94;&#x8BE5;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x5C31;&#x7B97;&#x6269;&#x5C55;&#x4E5F;&#x662F;&#x767E;&#x53D8;&#x4E0D;&#x79BB;&#x5176;&#x4E2D;&#x3002;
+</code></pre><ul>
+<li>&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x4E0D;&#x5E38;&#x89C1;&#x7684;&#x590D;&#x6742;&#x67E5;&#x8BE2;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x6765;&#x5C55;&#x793A;&#x4E00;&#x4E0B; CriteriaQuery &#x7684;&#x7528;&#x6CD5;&#xFF08;&#x4F5C;&#x8005;&#x5DF2;&#x7ECF;&#x5F3A;&#x70C8;&#x4E0D;&#x63A8;&#x8350;&#x4E86;&#x54E6;&#xFF0C;&#x548C;&#x4E0A;&#x9762;&#x6BD4;&#x8D77;&#x6765;&#x592A;&#x4E0D;&#x4F18;&#x96C5;&#x4E86;&#xFF09;&#x3002;</li>
+</ul>
+<pre><code>public List&lt;MessageRequest&gt; findByConditions(String name, Integer price, Integer stock) {  
+        messageRequestRepository.findAll((Specification&lt;MessageRequest&gt;) (itemRoot, query, criteriaBuilder) -&gt; {
+            //&#x8FD9;&#x91CC;&#x7528; List &#x5B58;&#x653E;&#x591A;&#x79CD;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x67E5;&#x8BE2;
+            List&lt;Predicate&gt; predicatesList = new ArrayList&lt;&gt;();
+            //name &#x6A21;&#x7CCA;&#x67E5;&#x8BE2;&#xFF0C;like &#x8BED;&#x53E5;
+            if (name != null) {
+                predicatesList.add(
+                    criteriaBuilder.and(
+                        criteriaBuilder.like(
+                            itemRoot.get(&quot;name&quot;), &quot;%&quot; + name + &quot;%&quot;)));
+            }
+            // itemPrice &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; &lt;= &#x8BED;&#x53E5;
+            if (price != null) {
+                predicatesList.add(
+                    criteriaBuilder.and(
+                        criteriaBuilder.le(
+                            itemRoot.get(&quot;price&quot;), price)));
+            }
+            //itemStock &#x5927;&#x4E8E;&#x7B49;&#x4E8E; &gt;= &#x8BED;&#x53E5;
+            if (stock != null) {
+                predicatesList.add(
+                    criteriaBuilder.and(
+                        criteriaBuilder.ge(
+                            itemRoot.get(&quot;stock&quot;), stock)));
+            }
+            //where() &#x62FC;&#x63A5;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+            query.where(predicatesList.toArray(new Predicate[predicatesList.size()]));
+            //&#x8FD4;&#x56DE;&#x901A;&#x8FC7; CriteriaQuery &#x62FC;&#x88C5;&#x7684; Predicate
+            return query.getRestriction();
+        });
+    }
+</code></pre><ul>
+<li>&#x800C;&#x6CA1;&#x6709; Spring Data JPA &#x5C01;&#x88C5;&#x4E4B;&#x524D;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x83B7;&#x5F97;&#x6B64;&#x4E09;&#x4E2A;&#x5BF9;&#x8C61; Root<t> root, CriteriaQuery&lt;?&gt; query, CriteriaBuilder criteriaBuilder&#xFF0C;&#x8001;&#x5F0F; Hibernate &#x7684;&#x5199;&#x6CD5;&#x5982;&#x4E0B;&#xFF08;PS&#xFF1A;&#x5F3A;&#x70C8;&#x4E0D;&#x63A8;&#x8350;&#x54E6;&#xFF0C;&#x867D;&#x7136;&#x73B0;&#x5728;&#x4E5F;&#x652F;&#x6301;&#xFF0C;&#x53EA;&#x662F;&#x8BA9;&#x5927;&#x5BB6;&#x77E5;&#x9053;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;&#x3002;&#xFF09;&#xFF1A;</t></li>
+</ul>
+<pre><code>@Autowired //&#x5BFC;&#x5165;entityManager
+ private EntityManager entityManager;
+//&#x521B;&#x5EFA;CriteriaBuilder&#x5B89;&#x5168;&#x67E5;&#x8BE2;&#x5DE5;&#x5382;&#xFF0C;CriteriaBuilder&#x662F;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;&#x5BF9;&#x8C61;,&#x5B89;&#x5168;&#x67E5;&#x8BE2;&#x7684;&#x5F00;&#x59CB;.&#x7528;&#x4E8E;&#x6784;&#x5EFA;JPA&#x5B89;&#x5168;&#x67E5;&#x8BE2;.
+CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+//&#x521B;&#x5EFA;CriteriaQuery&#x5B89;&#x5168;&#x67E5;&#x8BE2;&#x4E3B;&#x8BED;&#x53E5;
+//CriteriaQuery&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x5728;&#x5B9E;&#x4F53;&#x7C7B;&#x578B;&#x6216;&#x5D4C;&#x5165;&#x5F0F;&#x7C7B;&#x578B;&#x4E0A;&#x7684;Criteria &#x67E5;&#x8BE2;&#x4E0A;&#x8D77;&#x4F5C;&#x7528;&#x3002;
+CriteriaQuery&lt;Item&gt; query = criteriaBuilder.createQuery(Item.class);
+//Root &#x5B9A;&#x4E49;&#x67E5;&#x8BE2;&#x7684;From&#x5B50;&#x53E5;&#x4E2D;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x7C7B;&#x578B;
+Root&lt;Item&gt; itemRoot = query.from(Item.class);
+</code></pre><ul>
+<li>&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x5229;&#x7528; CriteriaQuery &#x4F8B;&#x5B50;&#xFF0C;&#x5176;&#x5B9E;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x4E00;&#x4E0B;&#x601D;&#x8DEF;&#xFF0C;&#x5C31;&#x662F; Hibernate &#x90A3;&#x5957;&#x5728;&#x8FD9;&#x91CC;&#x9762;&#x90FD;&#x652F;&#x6301;&#xFF0C;&#x4E0D;&#x8FC7;&#x4F5C;&#x8005;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x4EE3;&#x7801;&#x8D8A;&#x7B80;&#x5355;&#x8D8A;&#x597D;&#x3002;</li>
+</ul>
+<pre><code>        List&lt;UserSpuFavoriteEntity&gt; result = userSpuFavoriteDao.findAll((Root&lt;UserSpuFavoriteEntity&gt; root, CriteriaQuery&lt;?&gt; query, CriteriaBuilder cb)-&gt;{
+            query.where(cb.and(cb.equal(root.get(&quot;userName&quot;), userName),cb.isFalse(root.get(&quot;isDelete&quot;))));
+            query.orderBy(cb.desc(root.get(&quot;updateTime&quot;)));
+            return query.getRestriction();
+        });
+</code></pre><h4 id="specification-&#x5DE5;&#x4F5C;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x6269;&#x5C55;">Specification &#x5DE5;&#x4F5C;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x6269;&#x5C55;</h4>
+<p>&#x6211;&#x4EEC;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x5982;&#x679C;&#x4E0A;&#x9762;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x7B80;&#x5355;&#x91CD;&#x590D;&#x5199;&#x603B;&#x611F;&#x89C9;&#x662F;&#x4E0D;&#x662F;&#x53EF;&#x4EE5;&#x62BD;&#x51FA;&#x4E00;&#x4E9B;&#x516C;&#x7528;&#x65B9;&#x6CD5;&#x5462;&#xFF0C;&#x6B64;&#x65F6;&#x5F15;&#x5165;&#x4E00;&#x79CD;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#xFF0C;&#x5E2E;&#x6211;&#x4EEC;&#x505A;&#x4E00;&#x4E9B;&#x4E8B;&#x60C5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x4F18;&#x96C5;&#x3002;&#x57FA;&#x4E8E; JpaSpecificationExecutor &#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; SpecificationFactory.Java &#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>public final class SpecificationFactory {
+   /**
+    * &#x6A21;&#x7CCA;&#x67E5;&#x8BE2;&#xFF0C;&#x5339;&#x914D;&#x5BF9;&#x5E94;&#x5B57;&#x6BB5;
+    */
+   public static Specification containsLike(String attribute, String value) {
+      return (root, query, cb)-&gt; cb.like(root.get(attribute), &quot;%&quot; + value + &quot;%&quot;);
+   }
+   /**
+    * &#x67D0;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x7B49;&#x4E8E; value &#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+    */
+   public static Specification equal(String attribute, Object value) {
+      return (root, query, cb) -&gt; cb.equal(root.get(attribute),value);
+   }
+   /**
+    * &#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x6240;&#x5728;&#x533A;&#x95F4;
+    */
+   public static Specification isBetween(String attribute, int min, int max) {
+      return (root, query, cb) -&gt; cb.between(root.get(attribute), min, max);
+   }
+   public static Specification isBetween(String attribute, double min, double max) {
+      return (root, query, cb) -&gt; cb.between(root.get(attribute), min, max);
+   }
+   public static Specification isBetween(String attribute, Date min, Date max) {
+      return (root, query, cb) -&gt; cb.between(root.get(attribute), min, max);
+   }
+   /**
+    * &#x901A;&#x8FC7;&#x5C5E;&#x6027;&#x540D;&#x548C;&#x96C6;&#x5408;&#x5B9E;&#x73B0; in &#x67E5;&#x8BE2;
+    */
+   public static Specification in(String attribute, Collection c) {
+      return (root, query, cb) -&gt;root.get(attribute).in(c);
+   }
+   /**
+    * &#x901A;&#x8FC7;&#x5C5E;&#x6027;&#x540D;&#x6784;&#x5EFA;&#x5927;&#x4E8E;&#x7B49;&#x4E8E; Value &#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+    */
+   public static Specification greaterThan(String attribute, BigDecimal value) {
+      return (root, query, cb) -&gt;cb.greaterThan(root.get(attribute),value);
+   }
+   public static Specification greaterThan(String attribute, Long value) {
+      return (root, query, cb) -&gt;cb.greaterThan(root.get(attribute),value);
+   }
+......
+}
+</code></pre><blockquote>
+<p>PS&#xFF1A;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x9700;&#x8981;&#x548C;&#x573A;&#x666F;&#x8FDB;&#x884C;&#x4E0D;&#x65AD;&#x6269;&#x5145;&#x3002;</p>
+</blockquote>
+<h5 id="&#x8C03;&#x7528;&#x5B9E;&#x4F8B;1&#xFF1A;"><strong>&#x8C03;&#x7528;&#x5B9E;&#x4F8B;1&#xFF1A;</strong></h5>
+<pre><code>userRepository.findAll(
+      SpecificationFactory.containsLike(&quot;firstName&quot;, userParam.getLastName()),
+      pageable);
+</code></pre><p>&#x662F;&#x4E0D;&#x662F;&#x53D1;&#x73B0;&#x4EE3;&#x7801;&#x4E00;&#x4E0B;&#x5B50;&#x5C11;&#x4E86;&#x5F88;&#x591A;&#xFF1F;</p>
+<h5 id="&#x914D;&#x5408;-specifications-&#x4F7F;&#x7528;&#xFF0C;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;2&#xFF1A;"><strong>&#x914D;&#x5408; Specifications &#x4F7F;&#x7528;&#xFF0C;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;2&#xFF1A;</strong></h5>
+<pre><code>userRepository.findAll(Specifications.where(
+      SpecificationFactory.containsLike(&quot;firstName&quot;, userParam.getLastName()))
+            .and(SpecificationFactory.greaterThan(&quot;version&quot;,userParam.getVersion())),
+      pageable);
+</code></pre><p>&#x548C;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x4E3E;&#x7684;&#x4F8B;&#x5B50;&#x6BD4;&#x8D77;&#x6765;&#x662F;&#x4E0D;&#x662F;&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x4F18;&#x96C5;&#x3001;&#x53EF;&#x8BFB;&#x6027;&#x66F4;&#x52A0;&#x5F3A;&#x4E86;&#xFF1F;</p>
+<h4 id="jpaspecificationexecutor-&#x5B9E;&#x73B0;&#x539F;&#x7406;">JpaSpecificationExecutor &#x5B9E;&#x73B0;&#x539F;&#x7406;</h4>
+<h5 id="&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x5148;&#x901A;&#x8FC7;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#xFF0C;&#x628A;&#x5173;&#x952E;&#x7684;&#x7C7B;&#x6DFB;&#x52A0;&#x5230;diagram&#x4E0A;&#x9762;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;"><strong>&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x5148;&#x901A;&#x8FC7;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#xFF0C;&#x628A;&#x5173;&#x952E;&#x7684;&#x7C7B;&#x6DFB;&#x52A0;&#x5230;Diagram&#x4E0A;&#x9762;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;</strong></h5>
+<p><img src="http://images.gitbook.cn/b22ffc50-397b-11e8-9f33-a7686c32808c" alt="enter image description here"></p>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E0A;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x4E00;&#x4E0B;&#xFF0C;&#x524D;&#x9762;&#x4ECB;&#x7ECD;&#x7684;&#x51E0;&#x4E2A;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x3002;</p>
+<h5 id="simplejparepository-&#x5B9E;&#x73B0;&#x7C7B;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><strong>SimpleJpaRepository &#x5B9E;&#x73B0;&#x7C7B;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</strong></h5>
+<pre><code>/**
+ *&#x4EE5; findOne &#x4E3A;&#x4F8B;
+*/
+public T findOne(Specification&lt;T&gt; spec) {
+   try {
+      return getQuery(spec, (Sort) null).getSingleResult();
+   } catch (NoResultException e) {
+      return null;
+   }
+}
+/*
+ * &#x89E3;&#x6790; Specification&#xFF0C;&#x5229;&#x7528; EntityManager &#x76F4;&#x63A5;&#x5B9E;&#x73B0;&#x8C03;&#x7528;&#x903B;&#x8F91;&#x3002;
+*/
+protected &lt;S extends T&gt; TypedQuery&lt;S&gt; getQuery(Specification&lt;S&gt; spec, Class&lt;S&gt; domainClass, Sort sort) {
+   CriteriaBuilder builder = em.getCriteriaBuilder();
+   CriteriaQuery&lt;S&gt; query = builder.createQuery(domainClass);
+   Root&lt;S&gt; root = applySpecificationToCriteria(spec, domainClass, query);
+   query.select(root);
+   if (sort != null) {
+      query.orderBy(toOrders(sort, root, builder));
+   }
+   return applyRepositoryMethodMetadata(em.createQuery(query));
+}
+</code></pre><p>&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x7684;&#x51FA;&#x6765;&#x5E95;&#x5C42;&#x90FD;&#x662F;&#x8C03;&#x7528;&#x7684; EntityManager&#x3002;</p>
+<h5 id="&#x4E0E;-entitymanager-&#x7684;&#x5173;&#x7CFB;&#x56FE;"><strong>&#x4E0E; EntityManager &#x7684;&#x5173;&#x7CFB;&#x56FE;</strong></h5>
+<p><img src="http://images.gitbook.cn/f0cc4580-3986-11e8-9b9a-53206b7f130d" alt="enter image description here"> </p>
+<p>&#x901A;&#x8FC7;&#x6B64;&#x56FE;&#x53EF;&#x4EE5;&#x4F53;&#x4F1A;&#x4E00;&#x4E0B; Repository &#x548C; EntityManager &#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x3002;</p>
+<blockquote>
+<p>&#x5176;&#x5B9E;&#x5728;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x7684; Repository &#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x7684;&#x66F4;&#x52A0;&#x4F18;&#x96C5;&#x4E00;&#x70B9;&#x6765;&#x89E3;&#x51B3;&#x540E;&#x53F0; API &#x7684; search &#x95EE;&#x9898;&#x548C;&#x5982;&#x4F55;&#x81EA;&#x5B9A;&#x4E49; Respository?&#x4E0B;&#x4E00;&#x7BC7;&#x5185;&#x5BB9;&#x5C06;&#x4F1A;&#x6765;&#x8BB2;&#x89E3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06.html" class="navigation navigation-prev " aria-label="Previous page: 06：JpaRepository扩展之QueryByExampleExecutor">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08.html" class="navigation navigation-next " aria-label="Next page: 08 :  JpaRepository扩展之自定义Repositor    ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"07：JpaRepository扩展之JpaSpecificationExecutor","level":"1.2.7","depth":2,"next":{"title":"08 :  JpaRepository扩展之自定义Repositor    ","level":"1.2.8","depth":2,"path":"《SpringDataJpa实战》书/08.md","ref":"./《SpringDataJpa实战》书/08.md","articles":[]},"previous":{"title":"06：JpaRepository扩展之QueryByExampleExecutor","level":"1.2.6","depth":2,"path":"《SpringDataJpa实战》书/06.md","ref":"./《SpringDataJpa实战》书/06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"《SpringDataJpa实战》书/07.md","mtime":"2018-04-07T08:53:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-17T06:04:38.403Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

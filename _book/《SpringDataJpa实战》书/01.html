@@ -1,0 +1,731 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>01：整体认识JPA · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    《Spring Data JPA实战》
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    01：整体认识JPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    02：Jpa基础查询方法JpaRepository详解        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    03：定义查询方法(Defining Query Methods    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    04：注解式查询方法    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    05：@Entity实例里面常用注解详解            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    06：JpaRepository扩展之QueryByExampleExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    07：JpaRepository扩展之JpaSpecificationExecutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    08 :  JpaRepository扩展之自定义Repositor    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="09.html">
+            
+                <a href="09.html">
+            
+                    
+                    09：Auditing与@version                    
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10：对MvcWeb的支持分页和排序的支持            
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    11：Spring Data Jpa的配置之SpringBoot2.0加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    12：DataSource的配置与事务详解、多数据源        
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    13：Spring Data Jpa之QueryDSL支持    
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Spring DATA JPA 扩展阅读
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.html">
+            
+                    
+                    Spring Data JPA 晋级提升篇：复杂场景实战用法与优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA之Hibernate加载过程.html">
+            
+                    
+                    SpringDataJPA之Hibernate加载过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.html">
+            
+                <a href="../SpringDataJpa高级用法补充/implement-equals-hashCode-why-when.html">
+            
+                    
+                    implement-equals,-hashCode-why,when?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.html">
+            
+                <a href="../SpringDataJpa高级用法补充/JPA中lazy-loading-doesn’t-work.html">
+            
+                    
+                    JPA中lazy-loading-doesn’t-work
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJPA之Entity关联关系Lazy过程.html">
+            
+                    
+                    SpringDataJPA之Entity关联关系Lazy过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                <a href="../SpringDataJpa高级用法补充/SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程.html">
+            
+                    
+                    SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                <a href="../SpringDataJpa高级用法补充/多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑.html">
+            
+                    
+                    多线程环境下遇到的Session的更新的坑，CompletableFuture使用的坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >01：整体认识JPA</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7B2C;01&#x8BFE;&#xFF1A;&#x6574;&#x4F53;&#x8BA4;&#x8BC6;-jpa">&#x7B2C;01&#x8BFE;&#xFF1A;&#x6574;&#x4F53;&#x8BA4;&#x8BC6; JPA</h2>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x91CD;&#x65B0;&#x5B66;&#x4E60;&#x201C;Spring Data JPA&#x201D;&#xFF1F;&#x4FD7;&#x8BDD;&#x8BF4;&#x7684;&#x597D;&#xFF1A;&#x201C;&#x672A;&#x6765;&#x5DF2;&#x7ECF;&#x6765;&#x4E34;&#xFF0C;&#x53EA;&#x662F;&#x5C1A;&#x672A;&#x6D41;&#x884C;&#x201D;&#xFF0C;&#x7EB5;&#x89C2;&#x5E02;&#x573A;&#x4E0A;&#x7684; ORM &#x6846;&#x67B6;&#xFF0C;MyBatis &#x4EE5;&#x7075;&#x6D3B;&#x8457;&#x79F0;&#xFF0C;&#x4F46;&#x662F;&#x8981;&#x7EF4;&#x62A4;&#x590D;&#x6742;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x662F; Spring &#x5B98;&#x65B9;&#x7684;&#x5929;&#x7136;&#x5168;&#x5BB6;&#x6876;&#xFF0C;&#x8FD8;&#x5F97;&#x505A;&#x989D;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x5DE5;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x8D44;&#x6DF1;&#x7684;&#x67B6;&#x6784;&#x5E08;&#x8FD8;&#x5F97;&#x505A;&#x5F88;&#x591A;&#x5C01;&#x88C5;&#xFF1B;Hibernate &#x4EE5; HQL &#x548C;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#x8457;&#x79F0;&#xFF0C;&#x4F46;&#x662F;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x7075;&#x6D3B;&#xFF1B;&#x90A3;&#x4E48; Spring Data JPA &#x6765;&#x4E86;&#xFF0C;&#x611F;&#x89C9;&#x8981;&#x593A;&#x53D6; ORM &#x7684; JPA &#x9738;&#x4E3B;&#x5730;&#x4F4D;&#x4E86;&#xFF0C;&#x5E95;&#x5C42;&#x4EE5; Hibernate &#x4E3A;&#x5C01;&#x88C5;&#xFF0C;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x4E86;&#x8D85;&#x7EA7;&#x7075;&#x6D3B;&#x7684;&#x4F7F;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x53C8;&#x975E;&#x5E38;&#x7B26;&#x5408;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x548C; Rest &#x7684;&#x98CE;&#x683C;&#xFF0C;&#x611F;&#x89C9;&#x662F;&#x67B6;&#x6784;&#x5E08;&#x548C;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x798F;&#x97F3;&#xFF0C;&#x5E76;&#x4E14; Spring Data JPA &#x4E0E; Spring Boot &#x914D;&#x5408;&#x8D77;&#x6765;&#x4F7F;&#x7528;&#x5177;&#x6709;&#x5929;&#x7136;&#x7684;&#x4F18;&#x52BF;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684;&#x516C;&#x53F8;&#x7684;&#x62DB;&#x8058;&#x8981;&#x7528;&#x4F1A;&#x6709;&#x4F20;&#x7EDF;&#x7684; SSH&#x3001;Spring&#x3001;MyBatis &#x8981;&#x6C42;&#xFF0C;&#x9010;&#x6B65;&#x7684;&#x53D8;&#x4E3A; Spring Boot&#x3001;Spring Cloud&#x3001;Spring Data &#x7B49; Spring &#x5168;&#x5BB6;&#x6876;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x800C;&#x5F88;&#x591A;&#x65B0;&#x751F;&#x4EE3;&#x7684;&#x67B6;&#x6784;&#x5E08;&#x57FA;&#x4E8E;&#x5176;&#x751F;&#x6001;&#x7684;&#x8003;&#x8651;&#xFF0C;&#x6B63;&#x5728;&#x9010;&#x6B65;&#x63A8;&#x52A8;&#x8005; Spring Data JPA &#x7684;&#x66F4;&#x591A;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x3002;    </p>
+<p>&#x672C;&#x7AE0;&#x6211;&#x4EEC;&#x4ECE;&#x6574;&#x4F53;&#x5230;&#x5C40;&#x90E8;&#xFF0C;&#x5148;&#x6765;&#x6574;&#x4F53;&#x8BA4;&#x8BC6;&#x4E00;&#x4E0B; Spring Data JPA&#x3002;</p>
+<h3 id="&#x5E02;&#x573A;&#x4E0A;-orm-&#x6846;&#x67B6;&#x6BD4;&#x5BF9;">&#x5E02;&#x573A;&#x4E0A; ORM &#x6846;&#x67B6;&#x6BD4;&#x5BF9;</h3>
+<ul>
+<li>MyBatis&#xFF1A;MyBatis &#x672C;&#x662F; Apache &#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x9879;&#x76EE; iBatis&#xFF0C;2010 &#x5E74;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x7531; Apache Software Foundation &#x8FC1;&#x79FB;&#x5230;&#x4E86; Google Code&#xFF0C;&#x5E76;&#x4E14;&#x6539;&#x540D;&#x4E3A; MyBatis&#xFF0C;&#x5176;&#x7740;&#x529B;&#x4E8E; POJO &#x4E0E; SQL &#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x66F4;&#x4E3A;&#x7EC6;&#x81F4;&#x7684; SQL&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x5341;&#x5206;&#x7075;&#x6D3B;&#x3001;&#x4E0A;&#x624B;&#x7B80;&#x5355;&#x3001;&#x5BB9;&#x6613;&#x638C;&#x63E1;&#xFF0C;&#x6240;&#x4EE5;&#x6DF1;&#x53D7;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x559C;&#x6B22;&#xFF0C;&#x76EE;&#x524D;&#x5E02;&#x573A;&#x5360;&#x6709;&#x7387;&#x6700;&#x9AD8;&#xFF0C;&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x4E92;&#x8054;&#x5E94;&#x7528;&#x516C;&#x53F8;&#x7684; API &#x573A;&#x666F;&#xFF1B;&#x7F3A;&#x70B9;&#x5C31;&#x662F;&#x5DE5;&#x4F5C;&#x91CF;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x9700;&#x8981;&#x5404;&#x79CD;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x548C; SQL &#x8BED;&#x53E5;&#x3002;</li>
+<li>Hibernate&#xFF1A;Hibernate &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x653E;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x5BF9; JDBC &#x8FDB;&#x884C;&#x4E86;&#x975E;&#x5E38;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x5BF9;&#x8C61;&#x5C01;&#x88C5;&#xFF0C;&#x4F7F;&#x5F97; Java &#x7A0B;&#x5E8F;&#x5458;&#x53EF;&#x4EE5;&#x968F;&#x5FC3;&#x6240;&#x6B32;&#x7684;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x601D;&#x7EF4;&#x6765;&#x64CD;&#x7EB5;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x8C61;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x7740;&#x529B;&#x70B9;&#x5BF9;&#x8C61;&#x4E0E;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x5173;&#x7CFB;&#xFF0C;&#x6709;&#x81EA;&#x5DF1;&#x7684; HQL &#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#xFF0C;&#x6240;&#x4EE5;&#x6570;&#x636E;&#x5E93;&#x79FB;&#x690D;&#x6027;&#x5F88;&#x597D;&#x3002;Hibernate &#x662F;&#x5B8C;&#x5907;&#x7684; ORM &#x6846;&#x67B6;&#xFF0C;&#x662F;&#x7B26;&#x5408; JPA &#x89C4;&#x8303;&#x7684;&#xFF0C;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#xFF0C;&#x4E0A;&#x624B;&#x6765;&#x8BF4;&#x6BD4;&#x8F83;&#x96BE;&#xFF0C;&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x4F01;&#x4E1A;&#x7EA7;&#x7684;&#x5E94;&#x7528;&#x7CFB;&#x7EDF;&#x5F00;&#x53D1;&#x3002;</li>
+<li>Spring Data JPA&#xFF1A;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A; JPA &#x89C4;&#x8303;&#x7684;&#x518D;&#x6B21;&#x5C01;&#x88C5;&#x62BD;&#x8C61;&#xFF0C;&#x5E95;&#x5C42;&#x8FD8;&#x662F;&#x4F7F;&#x7528;&#x4E86; Hibernate &#x7684; JPA &#x6280;&#x672F;&#x5B9E;&#x73B0;&#xFF0C;&#x5F15;&#x7528; JPQL&#xFF08;Java Persistence Query Language&#xFF09;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#xFF0C;&#x5C5E;&#x4E8E; Spring &#x7684;&#x6574;&#x4E2A;&#x751F;&#x6001;&#x4F53;&#x7CFB;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x7531;&#x4E8E; Spring Boot &#x548C; Spring Cloud &#x5728;&#x5E02;&#x573A;&#x4E0A;&#x7684;&#x6D41;&#x884C;&#xFF0C;Spring Data JPA &#x4E5F;&#x9010;&#x6E10;&#x8FDB;&#x5165;&#x5927;&#x5BB6;&#x7684;&#x89C6;&#x91CE;&#xFF0C;&#x4ED6;&#x4EEC;&#x6709;&#x673A;&#x7684;&#x6574;&#x4F53;&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#xFF0C;&#x52A0;&#x5FEB;&#x4E86;&#x5F00;&#x53D1;&#x7684;&#x6548;&#x7387;&#xFF0C;&#x4F7F;&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x7CFB;&#x548C;&#x914D;&#x7F6E;&#x66F4;&#x591A;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x6C89;&#x6D78;&#x5728; Spring &#x7684;&#x5B8C;&#x6574;&#x751F;&#x6001;&#x6807;&#x51C6;&#x7684;&#x5B9E;&#x73B0;&#x4E0B;&#xFF0C;&#x4E0A;&#x624B;&#x7B80;&#x5355;&#x3001;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x9AD8;&#xFF0C;&#x53C8;&#x5BF9;&#x5BF9;&#x8C61;&#x7684;&#x652F;&#x6301;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x53C8;&#x6709;&#x5F88;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x5E02;&#x573A;&#x7684;&#x8BA4;&#x53EF;&#x5EA6;&#x8D8A;&#x6765;&#x8D8A;&#x9AD8;&#x3002;</li>
+<li>OpenJPA &#xFF1A;&#x662F; Apache &#x7EC4;&#x7EC7;&#x63D0;&#x4F9B;&#x7684;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x4E86; EJB 3.0 &#x4E2D;&#x7684; JPA &#x6807;&#x51C6;&#xFF0C;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x3001;&#x4F7F;&#x7528;&#x7B80;&#x5355;&#x7684;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x6846;&#x67B6;&#xFF0C;&#x4F46;&#x529F;&#x80FD;&#x3001;&#x6027;&#x80FD;&#x3001;&#x666E;&#x53CA;&#x6027;&#x7B49;&#x65B9;&#x9762;&#x66F4;&#x52A0;&#x9700;&#x8981;&#x52A0;&#x5927;&#x529B;&#x5EA6;&#xFF0C;&#x6240;&#x4EE5;&#x7528;&#x7684;&#x4EBA;&#x4E0D;&#x4EBA;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x591A;&#x3002;</li>
+<li>QueryDSL&#xFF1A;QueryDSL &#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x652F;&#x6301;&#x7684; ORM &#x6846;&#x67B6;&#x6216;&#x8005; SQL &#x5E73;&#x53F0;&#x4E0A;&#x4EE5;&#x4E00;&#x79CD;&#x901A;&#x7528;&#x7684; API &#x65B9;&#x5F0F;&#x6765;&#x6784;&#x5EFA;&#x67E5;&#x8BE2;&#xFF0C;&#x76EE;&#x524D; QueryDSL &#x652F;&#x6301;&#x7684;&#x5E73;&#x53F0;&#x5305;&#x62EC; JPA&#x3001;JDO&#x3001;SQL&#x3001;Java Collections&#x3001;RDF&#x3001;Lucene&#x3001;Hibernate Search&#xFF0C;&#x540C;&#x65F6; Spring Data JPA &#x4E5F;&#x5BF9; QueryDSL &#x505A;&#x4E86;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#x3002;</li>
+</ul>
+<h3 id="jpa-&#x7684;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x54EA;&#x4E9B;&#x5F00;&#x6E90;&#x5B9E;&#x73B0;">JPA &#x7684;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x54EA;&#x4E9B;&#x5F00;&#x6E90;&#x5B9E;&#x73B0;</h3>
+<p>JPA&#xFF08;Java Persistence API&#xFF09;&#x4E2D;&#x6587;&#x540D; Java &#x6301;&#x4E45;&#x5C42; API&#xFF0C;&#x662F; JDK 5.0 &#x6CE8;&#x89E3;&#x6216; XML &#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#xFF0D;&#x5173;&#x7CFB;&#x8868;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x5E76;&#x5C06;&#x8FD0;&#x884C;&#x671F;&#x7684;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x6301;&#x4E45;&#x5316;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002; </p>
+<p>Sun &#x5F15;&#x5165;&#x65B0;&#x7684; JPA ORM &#x89C4;&#x8303;&#x51FA;&#x4E8E;&#x4E24;&#x4E2A;&#x539F;&#x56E0;&#xFF1A;&#x5176;&#x4E00;&#xFF0C;&#x7B80;&#x5316;&#x73B0;&#x6709; Java EE &#x548C; Java SE &#x5E94;&#x7528;&#x5F00;&#x53D1;&#x5DE5;&#x4F5C;&#xFF1B;&#x5176;&#x4E8C;&#xFF0C;Sun &#x5E0C;&#x671B;&#x6574;&#x5408; ORM &#x6280;&#x672F;&#xFF0C;&#x5B9E;&#x73B0;&#x5929;&#x4E0B;&#x5F52;&#x4E00;&#x3002;   </p>
+<h4 id="jpa-&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x4E09;&#x65B9;&#x9762;&#x7684;&#x5185;&#x5BB9;">JPA &#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x4E09;&#x65B9;&#x9762;&#x7684;&#x5185;&#x5BB9;</h4>
+<ul>
+<li>&#x4E00;&#x5957; API &#x6807;&#x51C6;&#xFF0C;&#x5728; javax.persistence &#x7684;&#x5305;&#x4E0B;&#x9762;&#xFF0C;&#x7528;&#x6765;&#x64CD;&#x4F5C;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#xFF0C;&#x6267;&#x884C; CRUD &#x64CD;&#x4F5C;&#xFF0C;&#x6846;&#x67B6;&#x5728;&#x540E;&#x53F0;&#x66FF;&#x4EE3;&#x6211;&#x4EEC;&#x5B8C;&#x6210;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x4ECE;&#x7E41;&#x7410;&#x7684; JDBC &#x548C; SQL &#x4EE3;&#x7801;&#x4E2D;&#x89E3;&#x8131;&#x51FA;&#x6765;&#x3002;</li>
+<li>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#xFF1A;Java Persistence Query Language&#xFF08;JPQL&#xFF09;&#xFF0C;&#x8FD9;&#x662F;&#x6301;&#x4E45;&#x5316;&#x64CD;&#x4F5C;&#x4E2D;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x9762;&#xFF0C;&#x901A;&#x8FC7;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x800C;&#x975E;&#x9762;&#x5411;&#x6570;&#x636E;&#x5E93;&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#xFF0C;&#x907F;&#x514D;&#x7A0B;&#x5E8F;&#x7684; SQL &#x8BED;&#x53E5;&#x7D27;&#x5BC6;&#x8026;&#x5408;&#x3002;</li>
+<li>ORM&#xFF08;Object/Relational Metadata&#xFF09;&#x5143;&#x6570;&#x636E;&#x7684;&#x6620;&#x5C04;&#xFF0C;JPA &#x652F;&#x6301; XML &#x548C; JDK 5.0 &#x6CE8;&#x89E3;&#x4E24;&#x79CD;&#x5143;&#x6570;&#x636E;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x5143;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#x548C;&#x8868;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x6846;&#x67B6;&#x636E;&#x6B64;&#x5C06;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x6301;&#x4E45;&#x5316;&#x5230;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x3002;     </li>
+</ul>
+<h4 id="jpa-&#x7684;&#x5F00;&#x6E90;&#x5B9E;&#x73B0;">JPA &#x7684;&#x5F00;&#x6E90;&#x5B9E;&#x73B0;</h4>
+<p>JPA &#x7684;&#x5B97;&#x65E8;&#x662F;&#x4E3A; POJO &#x63D0;&#x4F9B;&#x6301;&#x4E45;&#x5316;&#x6807;&#x51C6;&#x89C4;&#x8303;&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x89C1;&#xFF0C;&#x7ECF;&#x8FC7;&#x8FD9;&#x51E0;&#x5E74;&#x7684;&#x5B9E;&#x8DF5;&#x63A2;&#x7D22;&#xFF0C;&#x80FD;&#x591F;&#x8131;&#x79BB;&#x5BB9;&#x5668;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#xFF0C;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x548C;&#x6D4B;&#x8BD5;&#x7684;&#x7406;&#x5FF5;&#x5DF2;&#x7ECF;&#x6DF1;&#x5165;&#x4EBA;&#x5FC3;&#x4E86;&#x3002;Hibernate 3.2+&#x3001;TopLink 10.1.3 &#x4EE5;&#x53CA; OpenJPA&#x3001;QueryDSL &#x90FD;&#x63D0;&#x4F9B;&#x4E86; JPA &#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4EE5;&#x53CA;&#x6700;&#x540E;&#x7684; Spring &#x7684;&#x6574;&#x5408; Spring Data JPA&#x3002;&#x76EE;&#x524D;&#x4E92;&#x8054;&#x7F51;&#x516C;&#x53F8;&#x548C;&#x4F20;&#x7EDF;&#x516C;&#x53F8;&#x5927;&#x91CF;&#x4F7F;&#x7528;&#x4E86; JPA &#x7684;&#x5F00;&#x53D1;&#x6807;&#x51C6;&#x89C4;&#x8303;&#x3002; </p>
+<p><img src="http://images.gitbook.cn/6fa75240-252e-11e8-8c14-19da63913af3" alt="enter image description here">   </p>
+<h3 id="&#x4E86;&#x89E3;-spring-data">&#x4E86;&#x89E3; Spring Data</h3>
+<h4 id="spring-data-&#x4ECB;&#x7ECD;">Spring Data &#x4ECB;&#x7ECD;</h4>
+<p>Spring Data &#x9879;&#x76EE;&#x662F;&#x4ECE; 2010 &#x5E74;&#x5F00;&#x53D1;&#x53D1;&#x5C55;&#x8D77;&#x6765;&#x7684;&#xFF0C;&#x4ECE;&#x521B;&#x7ACB;&#x4E4B;&#x521D; Spring Data &#x5C31;&#x60F3;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5927;&#x5BB6;&#x719F;&#x6089;&#x7684;&#x3001;&#x4E00;&#x81F4;&#x7684;&#x3001;&#x57FA;&#x4E8E; Spring &#x7684;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x7F16;&#x7A0B;&#x6A21;&#x578B;&#xFF0C;&#x540C;&#x65F6;&#x4ECD;&#x7136;&#x4FDD;&#x7559;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x7279;&#x6B8A;&#x7279;&#x6027;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5730;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x6280;&#x672F;&#x5305;&#x62EC;&#xFF1A;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x3001;&#x975E;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#xFF08;NoSQL&#xFF09;&#x548C;&#x57FA;&#x4E8E;&#x4E91;&#x7684;&#x6570;&#x636E;&#x670D;&#x52A1;&#x3002; </p>
+<p>Spring Data Common &#x662F; Spring Data &#x6240;&#x6709;&#x6A21;&#x5757;&#x7684;&#x516C;&#x7528;&#x90E8;&#x5206;&#xFF0C;&#x8BE5;&#x9879;&#x76EE;&#x63D0;&#x4F9B;&#x8DE8; Spring &#x6570;&#x636E;&#x9879;&#x76EE;&#x7684;&#x5171;&#x4EAB;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E86;&#x6280;&#x672F;&#x4E2D;&#x7ACB;&#x7684;&#x5E93;&#x63A5;&#x53E3;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x575A;&#x6301; Java &#x7C7B;&#x7684;&#x5143;&#x6570;&#x636E;&#x6A21;&#x578B;&#x3002;  </p>
+<p>Spring Data &#x4E0D;&#x4EC5;&#x5BF9;&#x4F20;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8BBF;&#x95EE;&#x6280;&#x672F;&#xFF1A;JDBC&#x3001;Hibernate&#x3001;JDO&#x3001;TopLick&#x3001;JPA&#x3001;MyBatis &#x505A;&#x4E86;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#x548C;&#x6269;&#x5C55;&#x3001;&#x62BD;&#x8C61;&#x3001;&#x63D0;&#x4F9B;&#x65B9;&#x4FBF;&#x7684; API&#xFF0C;&#x8FD8;&#x5BF9; NoSQL &#x7B49;&#x975E;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x505A;&#x4E86;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#xFF1A;MongoDB &#x3001;Redis&#x3001;Apache Solr &#x7B49;&#x3002; </p>
+<h4 id="spring-data-&#x7684;&#x5B50;&#x9879;&#x76EE;&#x6709;&#x54EA;&#x4E9B;">Spring Data &#x7684;&#x5B50;&#x9879;&#x76EE;&#x6709;&#x54EA;&#x4E9B;</h4>
+<p>&#x4E3B;&#x8981;&#x9879;&#x76EE;&#xFF08;Main Modules&#xFF09;&#xFF1A;    </p>
+<ul>
+<li>Spring Data Commons</li>
+<li>Spring Data Gemfire</li>
+<li>Spring Data JPA</li>
+<li>Spring Data KeyValue</li>
+<li>Spring Data LDAP</li>
+<li>Spring Data MongoDB</li>
+<li>Spring Data REST</li>
+<li>Spring Data Redis</li>
+<li>Spring Data for Apache Cassandra</li>
+<li>Spring Data for Apache Solr</li>
+</ul>
+<p>&#x793E;&#x533A;&#x652F;&#x6301;&#x7684;&#x9879;&#x76EE;&#xFF08;Community Modules&#xFF09;&#xFF1A;</p>
+<ul>
+<li>Spring Data Aerospike</li>
+<li>Spring Data Couchbase</li>
+<li>Spring Data DynamoDB</li>
+<li>Spring Data Elasticsearch</li>
+<li>Spring Data Hazelcast</li>
+<li>Spring Data Jest </li>
+<li>Spring Data Neo4j</li>
+<li>Spring Data Vault </li>
+</ul>
+<p>&#x5176;&#x4ED6;&#xFF08;Related Modules&#xFF09;&#xFF1A;</p>
+<ul>
+<li>Spring Data JDBC Extensions</li>
+<li>Spring for Apache Hadoop </li>
+<li>Spring Content  </li>
+</ul>
+<p>&#x5F53;&#x7136;&#x4E86;&#x8FD8;&#x6709;&#x8BB8;&#x591A;&#x5F00;&#x6E90;&#x793E;&#x533A;&#x505A;&#x51FA;&#x7684;&#x8BB8;&#x591A;&#x8D21;&#x732E;&#x5982; MyBatis &#x7B49;&#x3002;</p>
+<p>&#x5E02;&#x9762;&#x4E0A;&#x4E3B;&#x8981;&#x7684;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="http://images.gitbook.cn/67fa9980-252e-11e8-a863-110ad122986d" alt="enter image description here">  </p>
+<h4 id="spring-data-&#x64CD;&#x4F5C;&#x7684;&#x4E3B;&#x8981;&#x7279;&#x6027;">Spring Data &#x64CD;&#x4F5C;&#x7684;&#x4E3B;&#x8981;&#x7279;&#x6027;</h4>
+<p>Spring Data &#x9879;&#x76EE;&#x65E8;&#x5728;&#x4E3A;&#x5927;&#x5BB6;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x901A;&#x7528;&#x7684;&#x7F16;&#x7801;&#x6A21;&#x5F0F;&#xFF0C;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;&#x5B9E;&#x73B0;&#x4E86;&#x5BF9;&#x7269;&#x7406;&#x6570;&#x636E;&#x5C42;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x4E3A;&#x7F16;&#x5199;&#x67E5;&#x8BE2;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x4E86;&#x65B9;&#x4FBF;&#x3002;&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x6620;&#x5C04;&#xFF0C;&#x5B9E;&#x73B0;&#x57DF;&#x5BF9;&#x8C61;&#x548C;&#x6301;&#x7EED;&#x5316;&#x5B58;&#x50A8;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;&#xFF0C;&#x800C;&#x6A21;&#x677F;&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x5BF9;&#x5E95;&#x5C42;&#x5B58;&#x50A8;&#x5B9E;&#x4F53;&#x7684;&#x8BBF;&#x95EE;&#x5B9E;&#x73B0;&#xFF0C;&#x64CD;&#x4F5C;&#x4E0A;&#x4E3B;&#x8981;&#x6709;&#x5982;&#x4E0B;&#x7279;&#x5F81;&#xFF1A;</p>
+<ul>
+<li>&#x63D0;&#x4F9B;&#x6A21;&#x677F;&#x64CD;&#x4F5C;&#xFF0C;&#x5982; Spring Data Redis &#x548C; Spring Data Riak&#xFF1B;</li>
+<li>&#x5F3A;&#x5927;&#x7684; Repository &#x548C;&#x5B9A;&#x5236;&#x7684;&#x6570;&#x636E;&#x50A8;&#x5B58;&#x5BF9;&#x8C61;&#x7684;&#x62BD;&#x8C61;&#x6620;&#x5C04;&#xFF1B;</li>
+<li>&#x5BF9;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;&#x7684;&#x652F;&#x6301;&#xFF08;Auting &#x7B49;&#xFF09;&#x3002;</li>
+</ul>
+<p><img src="http://images.gitbook.cn/860a1090-252e-11e8-a332-931f85438b0b" alt="enter image description here"></p>
+<h4 id="spring-data-jpa-&#x7684;&#x4E3B;&#x8981;&#x7C7B;&#x53CA;&#x7ED3;&#x6784;&#x56FE;">Spring Data JPA &#x7684;&#x4E3B;&#x8981;&#x7C7B;&#x53CA;&#x7ED3;&#x6784;&#x56FE;</h4>
+<h5 id="&#x6211;&#x4EEC;&#x9700;&#x8981;&#x638C;&#x63E1;&#x548C;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x7C7B;">&#x6211;&#x4EEC;&#x9700;&#x8981;&#x638C;&#x63E1;&#x548C;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x7C7B;</h5>
+<p>&#x4E03;&#x4E2A;&#x5927; Repository &#x63A5;&#x53E3;&#xFF1A;</p>
+<ul>
+<li>Repository&#xFF08;org.springframework.data.repository&#xFF09;&#xFF1B;</li>
+<li>CrudRepository&#xFF08;org.springframework.data.repository&#xFF09;&#xFF1B;</li>
+<li>PagingAndSortingRepository&#xFF08;org.springframework.data.repository&#xFF09;&#xFF1B;</li>
+<li>JpaRepository&#xFF08;org.springframework.data.jpa.repository&#xFF09;&#xFF1B;</li>
+<li>QueryByExampleExecutor&#xFF08;org.springframework.data.repository.query&#xFF09;&#xFF1B;</li>
+<li>JpaSpecificationExecutor&#xFF08;org.springframework.data.jpa.repository&#xFF09;&#xFF1B;</li>
+<li>QueryDslPredicateExecutor&#xFF08;org.springframework.data.querydsl&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x4E24;&#x5927; Repository &#x5B9E;&#x73B0;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>SimpleJpaRepository&#xFF08;org.springframework.data.jpa.repository.support&#xFF09;&#xFF1B;</li>
+<li>QueryDslJpaRepository&#xFF08;org.springframework.data.jpa.repository.support&#xFF09;&#x3002;</li>
+</ul>
+<h5 id="&#x7C7B;&#x7684;&#x7ED3;&#x6784;&#x5173;&#x7CFB;&#x56FE;&#x5982;&#x56FE;&#x6240;&#x793A;">&#x7C7B;&#x7684;&#x7ED3;&#x6784;&#x5173;&#x7CFB;&#x56FE;&#x5982;&#x56FE;&#x6240;&#x793A;</h5>
+<p><img src="http://images.gitbook.cn/bbc3ba10-252e-11e8-a332-931f85438b0b" alt="enter image description here"></p>
+<p>&#x57FA;&#x672C;&#x4E0A;&#x9762;&#x90FD;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x5173;&#x5FC3;&#x7684;&#x7C7B;&#x548C;&#x63A5;&#x53E3;&#xFF0C;&#x5148;&#x505A;&#x5230;&#x5927;&#x4F53;&#x5FC3;&#x4E2D;&#x6709;&#x4E2A;&#x6570;&#xFF0C;&#x540E;&#x9762;&#x7AE0;&#x8282;&#x4F1A;&#x4E00;&#x4E00;&#x505A;&#x8BB2;&#x89E3;&#x3002;</p>
+<h5 id="&#x9700;&#x8981;&#x4E86;&#x89E3;&#x5230;&#x7684;&#x7C7B;&#xFF0C;&#x771F;&#x6B63;&#x7684;-jpa-&#x7684;&#x5E95;&#x5C42;&#x5C01;&#x88C5;&#x7C7B;">&#x9700;&#x8981;&#x4E86;&#x89E3;&#x5230;&#x7684;&#x7C7B;&#xFF0C;&#x771F;&#x6B63;&#x7684; JPA &#x7684;&#x5E95;&#x5C42;&#x5C01;&#x88C5;&#x7C7B;</h5>
+<ul>
+<li>EntityManager&#xFF08;javax.persistence&#xFF09;&#xFF1B;</li>
+<li>EntityManagerImpl&#xFF08;org.hibernate.jpa.internal&#xFF09;&#x3002;</li>
+</ul>
+<h3 id="mysql-&#x7684;&#x5FEB;&#x901F;&#x5F00;&#x59CB;&#x5B9E;&#x4F8B;">MySQL &#x7684;&#x5FEB;&#x901F;&#x5F00;&#x59CB;&#x5B9E;&#x4F8B;</h3>
+<p>&#x4EE5; Spring Boot 2.0 &#x548C; Spring JDBC &#x4E3A;&#x6280;&#x672F;&#x573A;&#x666F;&#xFF0C;&#x9009;&#x7528; MySQL &#x6765;&#x505A;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;</p>
+<p>&#x73AF;&#x5883;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>JDK 1.8 </li>
+<li>Maven 3.0+</li>
+<li>IntelliJ IDEA</li>
+</ul>
+<h4 id="&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x5E76;&#x5EFA;&#x7ACB;-user-&#x8868;">&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x5E76;&#x5EFA;&#x7ACB; user &#x8868;</h4>
+<p>1&#xFF09;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x65B0;&#x7528;&#x6237;&#x5E76;&#x9644;&#x4E0A;&#x6743;&#x9650;</p>
+<pre><code>mysql&gt; create database db_example;
+mysql&gt; create user &apos;springuser&apos;@&apos;localhost&apos; identified by &apos;ThePassword&apos;;
+mysql&gt; grant all on db_example.* to &apos;springuser&apos;@&apos;localhost&apos;;
+</code></pre><p>2&#xFF09;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8868;</p>
+<pre><code>CREATE TABLE `user` (  
+`id` int(11) NOT NULL AUTO_INCREMENT,  
+`name` varchar(50) DEFAULT NULL,  
+`email` varchar(200) DEFAULT NULL,  
+PRIMARY KEY (`id`))
+</code></pre><h4 id="&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x5229;&#x7528;-intellij-idea-&#x521B;&#x5EFA;-example1">&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x5229;&#x7528; Intellij IDEA &#x521B;&#x5EFA; Example1</h4>
+<p><img src="http://images.gitbook.cn/c6b368d0-252e-11e8-a332-931f85438b0b" alt="enter image description here">  </p>
+<p><img src="http://images.gitbook.cn/dcd85ad0-252e-11e8-92db-817ab3b7ffb7" alt="enter image description here">  </p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4FE1;&#x606F;&#x662F; maven &#x7684; pom &#x91CC;&#x9762;&#x6240;&#x9700;&#x8981;&#x7684;&#x90FD;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x3002;</p>
+<p><img src="http://images.gitbook.cn/9bf140d0-252f-11e8-a332-931f85438b0b" alt="enter image description here"> </p>
+<p>&#x9009;&#x62E9; JPA &#x548C; MySQL &#x548C; Web &#x4E00;&#x8DEF;&#x5355;&#x51FB; Next &#x6309;&#x94AE;&#xFF0C;&#x7136;&#x540E;&#x5B8C;&#x6210;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5DE5;&#x7A0B;&#xFF0C;&#x5B8C;&#x6210;&#x540E;&#x5982;&#x4E0B;&#x7ED3;&#x6784;&#xFF1A; </p>
+<p><img src="http://images.gitbook.cn/12e0a410-2530-11e8-a863-110ad122986d" alt="enter image description here"></p>
+<h4 id="&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x6216;&#x8005;&#x4FEE;&#x6539;-applicationproperties-&#x6587;&#x4EF6;">&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x6216;&#x8005;&#x4FEE;&#x6539; application.properties &#x6587;&#x4EF6;</h4>
+<p>&#x5728;&#x5DE5;&#x7A0B;&#x7684; sources &#x4E0B;&#x9762;&#x7684; src/main/resources/application.properties &#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>spring.datasource.url=jdbc:mysql://localhost:3306/db_example
+spring.datasource.username=springuser
+spring.datasource.password=ThePassword
+</code></pre><h4 id="&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;-entity">&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; @Entity</h4>
+<p>src/main/java/example/example1/User.java&#xFF1A;</p>
+<pre><code>package com.example.example1;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity 
+public class User {
+   @Id
+   @GeneratedValue(strategy=GenerationType.AUTO)
+   private Long id;
+   private String name;
+   private String email;
+   public Long getId() {
+      return id;
+   }
+   public void setId(Long id) {
+      this.id = id;
+   }
+   public String getName() {
+      return name;
+   }
+   public void setName(String name) {
+      this.name = name;
+   }
+   public String getEmail() {
+      return email;
+   }
+   public void setEmail(String email) {
+      this.email = email;
+   }
+}
+</code></pre><h4 id="&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;-repository">&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Repository</h4>
+<p>src/main/java/example/example1/UserRepository.java&#xFF1A;</p>
+<pre><code>package com.example.example1;
+import org.springframework.data.repository.CrudRepository;
+public interface UserRepository extends CrudRepository&lt;User, Long&gt; {
+}
+</code></pre><h4 id="&#x7B2C;&#x516D;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;-controller">&#x7B2C;&#x516D;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; controller</h4>
+<pre><code>package com.example.example1;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+@Controller
+@RequestMapping(path = &quot;/demo&quot;)
+public class UserController {
+   @Autowired
+   private UserRepository userRepository;
+   @GetMapping(path = &quot;/add&quot;)
+   public void addNewUser(@RequestParam String name, @RequestParam String email) {
+      User n = new User();
+      n.setName(name);
+      n.setEmail(email);
+      userRepository.save(n);
+   }
+   @GetMapping(path = &quot;/all&quot;)
+   @ResponseBody
+   public Iterable&lt;User&gt; getAllUsers() {
+      return userRepository.findAll();
+   }
+}
+</code></pre><h4 id="&#x7B2C;&#x4E03;&#x6B65;&#xFF1A;&#x76F4;&#x63A5;&#x8FD0;&#x884C;-example1application-&#x7684;-main-&#x51FD;&#x6570;&#x5373;&#x53EF;">&#x7B2C;&#x4E03;&#x6B65;&#xFF1A;&#x76F4;&#x63A5;&#x8FD0;&#x884C; Example1Application &#x7684; main() &#x51FD;&#x6570;&#x5373;&#x53EF;</h4>
+<p>&#x6253;&#x5F00; Example1Application &#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>package com.example.example1;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
+public class Example1Application {
+   public static void main(String[] args) {
+      SpringApplication.run(Example1Application.class, args);
+   }
+}
+</code></pre><p>&#x8BBF;&#x95EE;&#x7684; URL &#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>$ curl &apos;localhost:8080/demo/add?name=First&amp;email=someemail@someemailprovider.com&apos;
+$ curl &apos;localhost:8080/demo/all&apos;
+</code></pre><p>&#x8FD9;&#x65F6;&#x5019;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6548;&#x679C;&#x4E86;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="02.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 02：Jpa基础查询方法JpaRepository详解        ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"01：整体认识JPA","level":"1.2.1","depth":2,"next":{"title":"02：Jpa基础查询方法JpaRepository详解        ","level":"1.2.2","depth":2,"path":"《SpringDataJpa实战》书/02.md","ref":"./《SpringDataJpa实战》书/02.md","articles":[]},"previous":{"title":"《Spring Data JPA实战》","level":"1.2","depth":1,"ref":"","articles":[{"title":"01：整体认识JPA","level":"1.2.1","depth":2,"path":"《SpringDataJpa实战》书/01.md","ref":"./《SpringDataJpa实战》书/01.md","articles":[]},{"title":"02：Jpa基础查询方法JpaRepository详解        ","level":"1.2.2","depth":2,"path":"《SpringDataJpa实战》书/02.md","ref":"./《SpringDataJpa实战》书/02.md","articles":[]},{"title":"03：定义查询方法(Defining Query Methods    ","level":"1.2.3","depth":2,"path":"《SpringDataJpa实战》书/03.md","ref":"./《SpringDataJpa实战》书/03.md","articles":[]},{"title":"04：注解式查询方法    ","level":"1.2.4","depth":2,"path":"《SpringDataJpa实战》书/04.md","ref":"./《SpringDataJpa实战》书/04.md","articles":[]},{"title":"05：@Entity实例里面常用注解详解            ","level":"1.2.5","depth":2,"path":"《SpringDataJpa实战》书/05.md","ref":"./《SpringDataJpa实战》书/05.md","articles":[]},{"title":"06：JpaRepository扩展之QueryByExampleExecutor","level":"1.2.6","depth":2,"path":"《SpringDataJpa实战》书/06.md","ref":"./《SpringDataJpa实战》书/06.md","articles":[]},{"title":"07：JpaRepository扩展之JpaSpecificationExecutor","level":"1.2.7","depth":2,"path":"《SpringDataJpa实战》书/07.md","ref":"./《SpringDataJpa实战》书/07.md","articles":[]},{"title":"08 :  JpaRepository扩展之自定义Repositor    ","level":"1.2.8","depth":2,"path":"《SpringDataJpa实战》书/08.md","ref":"./《SpringDataJpa实战》书/08.md","articles":[]},{"title":"09：Auditing与@version                    ","level":"1.2.9","depth":2,"path":"《SpringDataJpa实战》书/09.md","ref":"./《SpringDataJpa实战》书/09.md","articles":[]},{"title":"10：对MvcWeb的支持分页和排序的支持            ","level":"1.2.10","depth":2,"path":"《SpringDataJpa实战》书/10.md","ref":"./《SpringDataJpa实战》书/10.md","articles":[]},{"title":"11：Spring Data Jpa的配置之SpringBoot2.0加载详解","level":"1.2.11","depth":2,"path":"《SpringDataJpa实战》书/11.md","ref":"./《SpringDataJpa实战》书/11.md","articles":[]},{"title":"12：DataSource的配置与事务详解、多数据源        ","level":"1.2.12","depth":2,"path":"《SpringDataJpa实战》书/12.md","ref":"./《SpringDataJpa实战》书/12.md","articles":[]},{"title":"13：Spring Data Jpa之QueryDSL支持    ","level":"1.2.13","depth":2,"path":"《SpringDataJpa实战》书/13.md","ref":"./《SpringDataJpa实战》书/13.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"《SpringDataJpa实战》书/01.md","mtime":"2018-03-24T03:06:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-17T06:04:38.403Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
