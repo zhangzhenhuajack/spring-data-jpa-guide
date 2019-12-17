@@ -1,5 +1,5 @@
 # spring-data-jpa-guide
-> spring-data-jpa-guide example
+> [http://www.jackzhang.cn/spring-data-jpa-guide/](http://www.jackzhang.cn/spring-data-jpa-guide/)
 
 ## Spring Data Jpa 实战					
 - [01：整体认识JPA](./《SpringDataJpa实战》书/01.md)					
