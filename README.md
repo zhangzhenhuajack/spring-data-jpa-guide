@@ -34,6 +34,27 @@
 ## 欢迎大家一起修改和提交
 1. 提issue或者mr都可以 [https://github.com/zhangzhenhuajack/spring-data-jpa-guide](https://github.com/zhangzhenhuajack/spring-data-jpa-guide)
 2. 同时注意issue和wiki的更新 [https://github.com/zhangzhenhuajack/spring-data-jpa-guide](https://github.com/zhangzhenhuajack/spring-data-jpa-guide)
+## 第三方资料阅读指南
+```` 
+阅读文档顺序：  
+SpringDataJPA:https://docs.spring.io/spring-data/jpa/docs/current/reference/html/  
+
+JPA协议重点：https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html
+
+Hibernate文档：https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.htm
+
+JPA详细协议：https://github.com/eclipse-ee4j/jpa-api
+扩展阅读：
+https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa
+https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-2
+https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-3
+https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-4
+
+Tips:
+https://dzone.com/articles/50-best-performance-practices-for-hibernate-5-amp
+https://dzone.com/articles/best-performance-practices-for-hibernate-5-and-spr
+https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+````
 
 ## 推荐查阅文档
 1. https://github.com/eclipse-ee4j/jpa-api
