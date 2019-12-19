@@ -1,6 +1,6 @@
 #### 1. 首先我们要高明白，equals和hashCode的作用：
 `参考：[https://www.journaldev.com/21095/java-equals-hashcode](https://www.journaldev.com/21095/java-equals-hashcode)`
-![](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/tree/master/images/equals/1.png)
+![](http://www.jackzhang.cn/spring-data-jpa-guide/images/equals/1.png)
 ````
 我们要明白几点：
 1. equals和hashcode要同时实现；
@@ -12,7 +12,7 @@
 
 ````
 ````
-![](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/tree/master/images/equals/eclipse-generate-hashcode-equals.png)
+![](http://www.jackzhang.cn/spring-data-jpa-guide/images/equals/eclipse-generate-hashcode-equals.png)
 可以通过开发者工具实现；
 
 ##### 2. hibernatre里面我们如何去实现equals和hashCode;
