@@ -37,23 +37,23 @@
 ## 第三方资料阅读指南
 
   ### 阅读文档顺序：  
-  ##### 1. SpringDataJPA:[https://docs.spring.io/spring-data/jpa/docs/current/reference/html/](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)  
+  ##### 1. SpringDataJPA:[https://docs.spring.io/spring-data/jpa/docs/current/reference/html/](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)   
 
-  ##### 2. JPA协议重点：https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html
+  ##### 2. JPA协议重点：https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html   
 
-  ##### 3. Hibernate文档：https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.htm
+  ##### 3. Hibernate文档：https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.htm   
 
-  ##### 4. JPA详细协议：https://github.com/eclipse-ee4j/jpa-api
+  ##### 4. JPA详细协议：https://github.com/eclipse-ee4j/jpa-api   
   ##### 5. 扩展阅读：
-  https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa
-  https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-2
-  https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-3
-  https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-4
+  https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa   
+  https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-2   
+  https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-3   
+  https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-4   
 
   ##### 6.Tips:
-  https://dzone.com/articles/50-best-performance-practices-for-hibernate-5-amp
-  https://dzone.com/articles/best-performance-practices-for-hibernate-5-and-spr
-  https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+  https://dzone.com/articles/50-best-performance-practices-for-hibernate-5-amp  
+  https://dzone.com/articles/best-performance-practices-for-hibernate-5-and-spr   
+  https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/    
 
 
 ## 推荐查阅文档
