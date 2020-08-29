@@ -14,7 +14,8 @@ public class UserRepositoryTest {
 
     @Test
     public void testSaveUser() {
-        User user = userRepository.save(User.builder().name("jackxx").email("123456@126.com").build());
+        User user = userRepository.save(User.builder().version(1L).id(1L).name("jackxx").email("123456@126.com").build());
+//        User user2 = userRepository.save(User.builder().version(1L).id(1L).name("jackffff").email("123456@126.com").build());
         Assert.assertNotNull(user);
         List<User> users= userRepository.findAll();
         System.out.println(users);
