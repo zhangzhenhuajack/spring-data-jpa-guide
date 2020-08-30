@@ -20,4 +20,6 @@ public class User {
 	private String email;
 	@Version
 	private Long version;
+	private String sex;
+	private String address;
 }
