@@ -9,11 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Slice;
 import org.springframework.data.util.Streamable;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 @DataJpaTest
 public class UserRepositoryTest {
@@ -26,6 +24,9 @@ public class UserRepositoryTest {
     public void testSaveUser() throws JsonProcessingException {
         User user = userRepository.save(User.builder().name("jackxx").email("123456@126.com").sex("man").address("shanghai").build());
         Assert.assertNotNull(user);
+//        User user2 = userRepository.save(User.builder().version(1L).id(1L).name("jackffff").email("123456@126.com").build());
+//        User user = userRepository.save(User.builder().name("jackxx").email("123456@126.com").sex("man").address("shanghai").build());
+//        Assert.assertNotNull(user);
 //        List<User> users= userRepository.findAll();
 //        System.out.println(users);
 //        Assert.assertNotNull(users);

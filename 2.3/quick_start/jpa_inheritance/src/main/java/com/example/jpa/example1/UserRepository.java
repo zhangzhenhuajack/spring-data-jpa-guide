@@ -1,12 +1,5 @@
 package com.example.jpa.example1;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface UserRepository extends JpaRepository<User,Long> {
-//    @Query("select u from User u")
-//    Stream<User> findAllByCustomQueryAndStream(Pageable pageable);
-//    @Query("select u from User u")
-//    Slice<User> findAllByCustomQueryAndSlice(Pageable pageable);
+public interface UserRepository{ //extends JpaRepository<User,Long> {
 //    /**
 //     * 根据名称进行查询用户列表
 //     * @param name
@@ -30,18 +23,11 @@ public interface UserRepository extends JpaRepository<User,Long> {
 //    UserDto findByEmail(String email);
 
 //    /**
-//     * 测试一下DTO的返回结果
-//     * @param email
+//     * 接口的方式返回DTO
+//     * @param address
 //     * @return
 //     */
-//    UserDto findByEmail(String email);
-
-    /**
-     * 接口的方式返回DTO
-     * @param address
-     * @return
-     */
-    UserOnlyName findByAddress(String address);
+//    UserOnlyName findByAddress(String address);
 
 //    /**
 //     * constructor expression:
@@ -50,8 +36,4 @@ public interface UserRepository extends JpaRepository<User,Long> {
 //     */
 //    @Query("select new com.example.jpa.example1.UserDto(t.name, t.email) from User t where t.sex =:sex")
 //    UserDto findBySex(@Param("sex") String sex);
-
-//    //测试只返回name和email的DTO
-//    UserOnlyNameEmailDto findByEmail(String email);
-
 }
