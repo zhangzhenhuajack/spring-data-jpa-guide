@@ -18,8 +18,11 @@ public class User {
 	private Long id;
 	private String name;
 	private String email;
-	@Version
-	private Long version;
+	@OneToOne(mappedBy = "user",fetch = FetchType.LAZY,optional = true)
+	@JoinColumn
+	private UserInfo userInfo;
+//	@Version
+//	private Long version;
 	private String sex;
 	private String address;
 }

@@ -3,27 +3,65 @@ package com.example.jpa.example1;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.assertj.core.util.Lists;
-import org.junit.Assert;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.util.Streamable;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @DataJpaTest
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
     @Autowired
+    private UserInfoRepository userInfoRepository;
+    @Autowired
     private UserOnlyNameEmailEntityRepository userOnlyNameEmailEntityRepository;
 
+    @BeforeAll
+    @Rollback(false)
+    @Transactional()
+    void init() {
+        User user = User.builder().name("jackxx").email("123456@126.com").build();
+        UserInfo userInfo = UserInfo.builder().ages(12).user(user).telephone("12345678").build();
+        userInfoRepository.saveAndFlush(userInfo);
+        userRepository.save(User.builder().name("jackxx").email("123456@126.com").build());
+        userRepository.save(User.builder().name("jackxx").email("123456@126.com").build());
+    }
+    /**
+     * 测试用User关联关系操作
+     *
+     * @throws JsonProcessingException
+     */
+    @Test
+    @Rollback(false)
+    public void testUserRelationships() throws JsonProcessingException {
+//        User user1 = userRepository.getOne(3L);
+//        System.out.println(user1.getName());
+        
+//        userInfo.setAges(13);
+//        userInfo.setUser(null);
+//        userInfoRepository.delete(userInfo);
+//        User user = userRepository.save();
+//        Assert.assertNotNull(user);
+//        User user1 = userRepository.getOne(1L);
+//        System.out.println(user1);
+        UserInfo userInfo1 = userInfoRepository.getOne(1L);
+        System.out.println(userInfo1);
+        System.out.println(userInfo1.getUser());
+    }
     @Test
     public void testSaveUser() throws JsonProcessingException {
-        User user = userRepository.save(User.builder().name("jackxx").email("123456@126.com").sex("man").address("shanghai").build());
-        Assert.assertNotNull(user);
+//        User user = userRepository.save(User.builder().name("jackxx").email("123456@126.com").sex("man").address("shanghai").build());
+//        Assert.assertNotNull(user);
 //        User user2 = userRepository.save(User.builder().version(1L).id(1L).name("jackffff").email("123456@126.com").build());
 //        User user = userRepository.save(User.builder().name("jackxx").email("123456@126.com").sex("man").address("shanghai").build());
 //        Assert.assertNotNull(user);
