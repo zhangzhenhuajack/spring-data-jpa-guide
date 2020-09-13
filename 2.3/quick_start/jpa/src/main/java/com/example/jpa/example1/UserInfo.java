@@ -3,7 +3,6 @@ package com.example.jpa.example1;
 import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Data
@@ -11,31 +10,17 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(exclude = "user")
-public class UserInfo implements Serializable {
-//	@Id
-//	@GeneratedValue(strategy= GenerationType.AUTO)
-//	private Long id;
+public class UserInfo{
 	@Id
-    Long id;
-	@Column(name="user_id",insertable = false,updatable = false,nullable = true)
-	private Long userId;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long id;
+//	@Column(insertable = false,updatable = false,name = "user_id")
+//	private Long userId;
 
 	private Integer ages;
 	private String telephone;
-	@MapsId
-	@OneToOne(cascade = {CascadeType.PERSIST},orphanRemoval = true)
-	@JoinColumn(name = "user_id")
-	private User user;
-//	private Long userId;
-//	@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})//,fetch = FetchType.LAZY,orphanRemoval = false)
-//	@JoinColumn(foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
 //	@MapsId
-//	@EmbeddedId
-//	private UserInfoID userInfoID;
-//	@Column(unique = true)
-//	private String uniqueNumber;
-//	@Id
-//	private String name;
-//	@Id
-//	private String telephone;
+	@OneToOne(cascade = {CascadeType.PERSIST},orphanRemoval = true,fetch = FetchType.LAZY)
+	@JoinColumn(foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT),name = "my_user_id")
+	private User user;
 }

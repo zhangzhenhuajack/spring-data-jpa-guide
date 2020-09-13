@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -19,10 +20,10 @@ public class User implements Serializable {
 	private Long id;
 	private String name;
 	private String email;
+	private String sex;
+	@OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
+	private List<UserAddress> address;
 	@OneToOne(mappedBy = "user",fetch = FetchType.LAZY,optional = true)
 	private UserInfo userInfo;
-//	@Version
-//	private Long version;
-	private String sex;
-	private String address;
 }
+
