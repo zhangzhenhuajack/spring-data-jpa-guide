@@ -6,20 +6,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long id;
 	private String name;
 	private String email;
 	@OneToOne(mappedBy = "user",fetch = FetchType.LAZY,optional = true)
-	@JoinColumn
 	private UserInfo userInfo;
 //	@Version
 //	private Long version;

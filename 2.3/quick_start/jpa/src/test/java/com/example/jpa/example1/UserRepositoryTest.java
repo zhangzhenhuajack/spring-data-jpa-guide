@@ -26,9 +26,9 @@ public class UserRepositoryTest {
     @Autowired
     private UserOnlyNameEmailEntityRepository userOnlyNameEmailEntityRepository;
 
-    @BeforeAll
-    @Rollback(false)
-    @Transactional()
+//    @BeforeAll
+//    @Rollback(false)
+//    @Transactional()
     void init() {
         User user = User.builder().name("jackxx").email("123456@126.com").build();
         UserInfo userInfo = UserInfo.builder().ages(12).user(user).telephone("12345678").build();
@@ -46,7 +46,10 @@ public class UserRepositoryTest {
     public void testUserRelationships() throws JsonProcessingException {
 //        User user1 = userRepository.getOne(3L);
 //        System.out.println(user1.getName());
-        
+
+        User user = User.builder().name("jackxx").email("123456@126.com").build();
+        UserInfo userInfo = UserInfo.builder().ages(12).user(user).telephone("12345678").build();
+        userInfoRepository.saveAndFlush(userInfo);
 //        userInfo.setAges(13);
 //        userInfo.setUser(null);
 //        userInfoRepository.delete(userInfo);
@@ -54,9 +57,10 @@ public class UserRepositoryTest {
 //        Assert.assertNotNull(user);
 //        User user1 = userRepository.getOne(1L);
 //        System.out.println(user1);
-        UserInfo userInfo1 = userInfoRepository.getOne(1L);
-        System.out.println(userInfo1);
-        System.out.println(userInfo1.getUser());
+
+//        UserInfo userInfo1 = userInfoRepository.getOne(1L);
+//        System.out.println(userInfo1);
+//        System.out.println(userInfo1.getUser());
     }
     @Test
     public void testSaveUser() throws JsonProcessingException {
