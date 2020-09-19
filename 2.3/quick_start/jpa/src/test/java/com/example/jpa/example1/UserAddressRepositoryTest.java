@@ -1,5 +1,7 @@
 package com.example.jpa.example1;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -37,5 +39,16 @@ public class UserAddressRepositoryTest {
 		User user = userRepository.getOne(2L);
 		System.out.println(user.getName());
 		System.out.println(user.getAddress());
+	}
+	@Test
+	@Rollback(false)
+	public void testJackson() throws JsonProcessingException {
+		ObjectMapper objectMapper = new ObjectMapper();
+//		objectMapper.registerModule(new Hibernate5Module().configure(Hibernate5Module.Feature.REPLACE_PEhiRSISTENT_COLLECTIONS,true));
+		User user = userRepository.getOne(2L);
+		System.out.println(user);
+		System.out.println(user.getAddress().get(0).getAddress());
+		String json = objectMapper.writeValueAsString(user);
+		System.out.println(json);
 	}
 }

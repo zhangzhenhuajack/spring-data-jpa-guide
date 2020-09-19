@@ -1,5 +1,6 @@
 package com.example.jpa.example1;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,5 +17,6 @@ public class UserAddress {
 	private Long id;
 	private String address;
 	@ManyToOne(cascade = CascadeType.ALL)
+	@JsonManagedReference
 	private User user;
 }
