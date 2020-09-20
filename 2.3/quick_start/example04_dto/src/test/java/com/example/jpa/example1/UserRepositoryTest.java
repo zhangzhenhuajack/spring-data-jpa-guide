@@ -9,11 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Slice;
 import org.springframework.data.util.Streamable;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 @DataJpaTest
 public class UserRepositoryTest {
@@ -29,15 +27,15 @@ public class UserRepositoryTest {
 //        List<User> users= userRepository.findAll();
 //        System.out.println(users);
 //        Assert.assertNotNull(users);
-//
+////
 //        UserDto userDto = userRepository.findBySex("man");
 //        System.out.println(userDto);
 //
 //        UserOnlyName userOnlyName = userRepository.findByAddress("shanghai");
 //        System.out.println(userOnlyName.getName()+"==============");
 
-//        UserDto userDtox = userRepository.findByEmail("123456@126.com");
-//        System.out.println(userDtox);
+        UserDto userDtox = userRepository.findByEmail("123456@126.com");
+        System.out.println(userDtox);
     }
 
     @Test
@@ -51,9 +49,9 @@ public class UserRepositoryTest {
 //        UserOnlyNameEmailDto userOnlyNameEmailDto =  userRepository.findByEmail("123456@126.com");
 //        System.out.println(userOnlyNameEmailDto);
 
-        userRepository.save(User.builder().name("jack12").email("123456@126.com").sex("man").address("shanghai").build());
-        UserOnlyName userOnlyName = userRepository.findByAddress("shanghai");
-        System.out.println(userOnlyName);
+//        userRepository.save(User.builder().name("jack12").email("123456@126.com").sex("man").address("shanghai").build());
+//        UserOnlyName userOnlyName = userRepository.findByAddress("shanghai");
+//        System.out.println(userOnlyName);
     }
 
     @Test

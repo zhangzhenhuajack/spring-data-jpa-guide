@@ -27,14 +27,14 @@ public interface UserRepository extends JpaRepository<User,Long> {
 //     * @param email
 //     * @return
 //     */
-//    UserDto findByEmail(String email);
+    UserDto findByEmail(String email);
 
     /**
      * 接口的方式返回DTO
      * @param address
      * @return
      */
-    UserOnlyName findByAddress(String address);
+//    UserOnlyName findByAddress(String address);
 
 //    /**
 //     * constructor expression:
