@@ -1,9 +1,12 @@
 package com.example.jpa.example1;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -12,25 +15,21 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(exclude = "address")
-//@JsonIgnoreProperties(value={"hibernateLazyInitializer","handler","fieldHandler"})
-//@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long id;
 	private String name;
 	private String email;
-	private String sex;
-//	@JsonIgnore
-	@OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
-//	@JsonBackReference
+	@Enumerated(EnumType.STRING)
+	private SexEnum sex;
+	private Integer age;
+	private Instant createDate;
+	private Date updateDate;
+	@OneToMany(mappedBy = "user",fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
+	@JsonIgnore
 	private List<UserAddress> address;
-//	@OneToOne(mappedBy = "user",fetch = FetchType.LAZY,optional = true)
-//	private UserInfo userInfo;
-//	@OneToMany(mappedBy = "user")
-//	@JsonBackReference
-//	private List<UserRoomRelation> userRoomRelations;
-//	@ManyToMany(mappedBy = "users")
-//	private List<Room> rooms;
 }
-
+enum SexEnum {
+	BOY,GIRL
+}

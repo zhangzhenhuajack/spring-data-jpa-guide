@@ -17,14 +17,7 @@ public class Alo7CacheInterceptor extends CacheInterceptor {
     }
     @Nullable
     protected Object execute(CacheOperationInvoker invoker, Object target, Method method, Object[] args) {
-        // Check whether aspect is enabled (to cope with cases where the AJ is pulled in automatically)
-//        this.errorHandler.get().handleCacheGetError(new RuntimeException(),this.getCacheResolver(),"key");
-        System.out.println("dddddddddddddddddddddddd");
-        //获得parent执行的缓存结果
-        Object result =  super.execute(invoker,target,method,args);
-
         try {
-
             if (LinkedHashMap.class.isInstance(result)) {
                 return objectMapper.convertValue(result,method.getReturnType());
             }
