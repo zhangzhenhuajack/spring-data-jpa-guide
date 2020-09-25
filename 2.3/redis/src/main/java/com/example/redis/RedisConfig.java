@@ -122,13 +122,12 @@ public class RedisConfig implements InitializingBean, ApplicationContextAware {
     public void afterPropertiesSet() {
         BeanFactoryCacheOperationSourceAdvisor beanFactoryCacheOperationSourceAdvisor = applicationContext.getBean(BeanFactoryCacheOperationSourceAdvisor.class);
 
-        CacheInterceptor advice = (CacheInterceptor) beanFactoryCacheOperationSourceAdvisor.getAdvice();
+//        CacheInterceptor advice = (CacheInterceptor) beanFactoryCacheOperationSourceAdvisor.getAdvice();
 
-        CacheInterceptor interceptor = new Alo7CacheInterceptor(objectMapper);
-        interceptor.configure(advice::getErrorHandler, advice::getKeyGenerator, advice::getCacheResolver, this::getCacheManager);
-        interceptor.setCacheOperationSource(advice.getCacheOperationSource());
-//        return interceptor;
-//        System.out.println(proxyCachingConfiguration);
+//        CacheInterceptor interceptor = new Alo7CacheInterceptor(objectMapper);
+//        interceptor.configure(advice::getErrorHandler, advice::getKeyGenerator, advice::getCacheResolver, this::getCacheManager);
+//        interceptor.setCacheOperationSource(advice.getCacheOperationSource());
+
         beanFactoryCacheOperationSourceAdvisor.setAdvice(getCacheInterceptor(this::getCacheManager,beanFactoryCacheOperationSourceAdvisor));
     }
 
