@@ -23,7 +23,7 @@
 3. [SpringDataJpa之Hibernate5.0的Entity判断Dirty的过程
 ](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/SpringDataJpa%E4%B9%8BHibernate5.0%E7%9A%84Entity%E5%88%A4%E6%96%ADDirty%E7%9A%84%E8%BF%87%E7%A8%8B)
 4. [SpringDataJPA之Hibernate加载过程](https://github.com/zhangzhenhuajack/spring-data-jpa-guide/wiki/SpringDataJPA%E4%B9%8BHibernate%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B)
-
+5. 高级用法学习资料： https://github.com/eugenp/tutorials/tree/master/spring-rest-query-language 
 ## 源码说明：
 > 源码太分散不利于大家查找，所以就给大家放在一起了，可以根据需要自取。
 
