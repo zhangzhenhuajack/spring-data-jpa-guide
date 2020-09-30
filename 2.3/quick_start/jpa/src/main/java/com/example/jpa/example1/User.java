@@ -1,5 +1,6 @@
 package com.example.jpa.example1;
 
+import com.example.jpa.example1.customized.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
@@ -15,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(exclude = "addresses")
-public class User implements Serializable {
+public class User extends BaseEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long id;
@@ -29,6 +30,7 @@ public class User implements Serializable {
 	@OneToMany(mappedBy = "user")
 	@JsonIgnore
 	private List<UserAddress> addresses;
+	private Boolean deleted;
 }
 enum SexEnum {
 	BOY,GIRL

@@ -1,26 +1,27 @@
 package com.example.jpa.example1;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.test.annotation.Rollback;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.time.Instant;
 import java.util.Date;
+import java.util.List;
 
 @DataJpaTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UserRepositoryTest {
+    @PersistenceContext
+    private EntityManager entityManager;
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -37,46 +38,44 @@ public class UserRepositoryTest {
                 .age(20)
                 .createDate(Instant.now())
                 .updateDate(now)
-//                .address(Lists.newArrayList(UserAddress.builder().address("shanghai").build(),UserAddress.builder().address("beijing").build()))
                 .build();
-//        userRepository.save(user);由于关联关系维护方在UserAddress所以，此处级联Insert没有用
         userAddressRepository.saveAll(Lists.newArrayList(UserAddress.builder().user(user).address("shanghai").build(),
                 UserAddress.builder().user(user).address("beijing").build()));
 
     }
+
     @Test
-    @Rollback(false)
-    public void testQBE2() throws JsonProcessingException {
-        User request = User.builder()
-                .name("jack").age(20).email("12345")
-//                .address(Lists.newArrayList(UserAddress.builder().address("shang").build()))
-                .build();
-        UserAddress address = UserAddress.builder().address("shang").user(request).build();
+    public void testCustomizedUserRepository() {
+        User user = userRepository.findById(2L).get();
+//        userRepository.logicallyDelete(user);
+//
+//        List<User> users = userRepository.findAll();
+//        Assertions.assertEquals(users.get(0).getDeleted(),Boolean.TRUE);
 
-        ExampleMatcher exampleMatcher = ExampleMatcher.matching()
-                .withMatcher("user.email", ExampleMatcher.GenericPropertyMatchers.startsWith())
-                .withMatcher("address", ExampleMatcher.GenericPropertyMatchers.startsWith());
-
-        Page<UserAddress> u = userAddressRepository.findAll(Example.of(address,exampleMatcher), PageRequest.of(0,2));
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        System.out.println(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(u));
+        userRepository.delete(user);
+        List<User> users = userRepository.findAll();
+        Assertions.assertEquals(users.get(0).getDeleted(),Boolean.TRUE);
     }
+
+
+    /**
+     * 测试entityManager用法
+     *
+     * @throws JsonProcessingException
+     */
     @Test
     @Rollback(false)
-    public void testQBE() throws JsonProcessingException {
-        User request = User.builder()
-                .name("jack").age(20).email("12345").updateDate(now).sex(null)
-                .addresses(Lists.newArrayList(UserAddress.builder().address("shang").build()))
-                .build();
+    public void testEntityManager() throws JsonProcessingException {
+        User user = entityManager.find(User.class,2L);
+        System.out.println(user.getAddresses());
 
-        ExampleMatcher exampleMatcher = ExampleMatcher.matching()
-                .withMatcher("email", ExampleMatcher.GenericPropertyMatchers.startsWith())
-                .withMatcher("address.address", ExampleMatcher.GenericPropertyMatchers.startsWith());
+        user.setDeleted(true);
+        entityManager.merge(user);
+        entityManager.flush();
 
-        Page<User> u = userRepository.findAll(Example.of(request,exampleMatcher), PageRequest.of(0,2));
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        System.out.println(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(u));
+        List<User> users =  entityManager.createQuery("select u From User u where u.name=?1")
+                .setParameter(1,"jack")
+                .getResultList();
+        System.out.println(users.get(0).getDeleted());
     }
 }
