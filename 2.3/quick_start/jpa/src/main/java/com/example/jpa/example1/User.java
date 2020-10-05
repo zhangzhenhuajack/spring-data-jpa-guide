@@ -12,7 +12,8 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(exclude = "addresses")
+@ToString(exclude = "addresses",callSuper = true)
+@EqualsAndHashCode(callSuper=false)
 public class User extends BaseEntity {// implements Auditable<Integer,Long, Instant> {
 	private String name;
 	private String email;
@@ -23,50 +24,22 @@ public class User extends BaseEntity {// implements Auditable<Integer,Long, Inst
 	@JsonIgnore
 	private List<UserAddress> addresses;
 	private Boolean deleted;
-//	@CreatedBy
-//	private Integer createUserId;
-//	@CreatedDate
-//	private Instant createTime;
-//	@LastModifiedBy
-//	private Integer lastModifiedUserId;
-//	@LastModifiedDate
-//	private Instant lastModifiedTime;
-//	@Override
-//	public Optional<Integer> getCreatedBy() {
-//		return Optional.ofNullable(this.createUserId);
-//	}
-//	@Override
-//	public void setCreatedBy(Integer createdBy) {
-//		this.createUserId = createdBy;
-//	}
-//	@Override
-//	public Optional<Instant> getCreatedDate() {
-//		return Optional.ofNullable(this.createTime);
-//	}
-//	@Override
-//	public void setCreatedDate(Instant creationDate) {
-//		this.createTime = creationDate;
-//	}
-//	@Override
-//	public Optional<Integer> getLastModifiedBy() {
-//		return Optional.ofNullable(this.lastModifiedUserId);
-//	}
-//	@Override
-//	public void setLastModifiedBy(Integer lastModifiedBy) {
-//		this.lastModifiedUserId = lastModifiedBy;
-//	}
-//	@Override
-//	public void setLastModifiedDate(Instant lastModifiedDate) {
-//		this.lastModifiedTime = lastModifiedDate;
-//	}
-//	@Override
-//	public Optional<Instant> getLastModifiedDate() {
-//		return Optional.ofNullable(this.lastModifiedTime);
-//	}
-//	@Override
-//	public boolean isNew() {
-//		return id==null;
-//	}
+
+	@PrePersist
+	private void prePersist() {
+		System.out.println("prePersist::"+this.getVersion());
+		System.out.println("prePersist::"+this.getCreateTime());
+		this.setVersion(1);
+	}
+
+	@PostPersist
+	public void postPersist() {
+		System.out.println("postPersist::"+this.getVersion());
+		System.out.println("postPersist::"+this.getCreateTime());
+		this.setVersion(2);
+//		throw new RuntimeException("dddd");
+	}
+
 }
 enum SexEnum {
 	BOY,GIRL

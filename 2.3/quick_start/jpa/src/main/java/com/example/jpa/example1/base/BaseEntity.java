@@ -26,4 +26,32 @@ public class BaseEntity {
 	private Instant lastModifiedTime;
 	@Version
 	private Integer version;
+
+	@PreUpdate
+	public void preUpdate() {
+		System.out.println("preUpdate::"+this.toString());
+		this.setCreateUserId(200);
+	}
+
+	@PostUpdate
+	public void postUpdate() {
+		System.out.println("postUpdate::"+this.toString());
+		this.setCreateUserId(300);
+	}
+
+	@PreRemove
+	public void preRemove() {
+		System.out.println("preRemove::"+this.toString());
+	}
+
+	@PostRemove
+	public void postRemove() {
+		System.out.println("postRemove::"+this.toString());
+	}
+
+
+	@PostLoad
+	public void postLoad() {
+		System.out.println("postLoad::"+this.toString());
+	}
 }

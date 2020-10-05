@@ -31,6 +31,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testRuntimeOnly 'com.h2database:h2'
+    implementation 'org.jetbrains:annotations:15.0'
 }
 
 test {
