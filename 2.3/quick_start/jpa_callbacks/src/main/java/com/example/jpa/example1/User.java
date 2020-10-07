@@ -16,7 +16,13 @@ import java.util.List;
 @NoArgsConstructor
 @ToString(exclude = "addresses",callSuper = true)
 @EqualsAndHashCode(callSuper=false)
-public class User extends BaseEntity {
+@EntityListeners(UserListener.class)
+public class User extends BaseEntity {// implements Auditable<Integer,Long, Instant> {
+	@Transient
+	public void calculationAge() {
+		//通过一些逻辑计算年龄；
+		this.age=10;
+	}
 	private String name;
 	private String email;
 	@Enumerated(EnumType.STRING)
@@ -26,6 +32,7 @@ public class User extends BaseEntity {
 	@JsonIgnore
 	private List<UserAddress> addresses;
 	private Boolean deleted;
+
 }
 enum SexEnum {
 	BOY,GIRL

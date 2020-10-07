@@ -1,0 +1,18 @@
+POST /api/v1/user HTTP/1.1
+Host: 127.0.0.1:8080
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"name":"jack","email":"123@126.com"}
+
+#######
+
+GET http://127.0.0.1:8080/api/v1/users?size=3&page=0
+
+###
+GET /users?search=name:jack,age>0
+Host: localhost:8089
+Content-Type: application/json
+
+###
+
