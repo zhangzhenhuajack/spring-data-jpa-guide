@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString(exclude = "addresses",callSuper = true)
 @EqualsAndHashCode(callSuper=false)
-public class User extends BaseEntity {// implements Auditable<Integer,Long, Instant> {
+public class User extends BaseEntity {
 	private String name;
 	private String email;
 	@Enumerated(EnumType.STRING)
@@ -24,22 +24,6 @@ public class User extends BaseEntity {// implements Auditable<Integer,Long, Inst
 	@JsonIgnore
 	private List<UserAddress> addresses;
 	private Boolean deleted;
-
-	@PrePersist
-	private void prePersist() {
-		System.out.println("prePersist::"+this.getVersion());
-		System.out.println("prePersist::"+this.getCreateTime());
-		this.setVersion(1);
-	}
-
-	@PostPersist
-	public void postPersist() {
-		System.out.println("postPersist::"+this.getVersion());
-		System.out.println("postPersist::"+this.getCreateTime());
-		this.setVersion(2);
-//		throw new RuntimeException("dddd");
-	}
-
 }
 enum SexEnum {
 	BOY,GIRL
