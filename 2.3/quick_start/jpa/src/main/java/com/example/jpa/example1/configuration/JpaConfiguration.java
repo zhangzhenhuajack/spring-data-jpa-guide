@@ -1,5 +1,6 @@
-package com.example.jpa.example1;
+package com.example.jpa.example1.configuration;
 
+import com.example.jpa.example1.MyAuditorAware;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
