@@ -1,5 +1,7 @@
 package com.example.jpa.example1;
 
+import com.example.jpa.example1.db2.UserInfo;
+import com.example.jpa.example1.db2.UserInfoRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

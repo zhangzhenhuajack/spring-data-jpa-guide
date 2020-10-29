@@ -1,10 +1,12 @@
 package com.example.jpa.example1.common;
 
+import com.example.jpa.example1.web.DataSourceInterceptor;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 
@@ -16,6 +18,14 @@ import java.util.List;
  */
 @Configuration
 public class MyWebMvcConfigurer implements WebMvcConfigurer {
+	@Autowired
+	private DataSourceInterceptor dataSourceInterceptor;
+	//添加自定义拦截器
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(dataSourceInterceptor).addPathPatterns("/**");
+		WebMvcConfigurer.super.addInterceptors(registry);
+	}
 	@Autowired
 	private MyPageableHandlerMethodArgumentResolver myPageableHandlerMethodArgumentResolver;
 //	@Autowired

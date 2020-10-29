@@ -1,8 +1,8 @@
 package com.example.jpa.example1.web;
 
-import com.example.jpa.example1.UserInfo;
+import com.example.jpa.example1.db2.UserInfo;
 import com.example.jpa.example1.UserInfoInterface;
-import com.example.jpa.example1.UserInfoRepository;
+import com.example.jpa.example1.db2.UserInfoRepository;
 import com.example.jpa.example1.common.MyPageRequest;
 import com.example.jpa.example1.common.WarpWithData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class UserInfoController {
 	@Autowired
 	private UserInfoRepository userInfoRepository;
 
-	@GetMapping("/user2/{id}")
+	@GetMapping("/user/info/{id}")
 	@WarpWithData
 	public UserInfo getUserInfoFromPath(@PathVariable("id") Long id) {
 		return userInfoRepository.getOne(id);

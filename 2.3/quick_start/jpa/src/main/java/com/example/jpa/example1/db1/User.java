@@ -1,4 +1,4 @@
-package com.example.jpa.example1;
+package com.example.jpa.example1.db1;
 
 import com.example.jpa.example1.base.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -31,7 +31,4 @@ public class User extends BaseEntity {
 	@JsonIgnore
 	private List<UserAddress> addresses;
 	private Boolean deleted;
-}
-enum SexEnum {
-	BOY,GIRL
 }

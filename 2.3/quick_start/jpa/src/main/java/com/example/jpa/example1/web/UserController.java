@@ -1,11 +1,9 @@
 package com.example.jpa.example1.web;
 
-import com.example.jpa.example1.User;
-import com.example.jpa.example1.UserRepository;
+import com.example.jpa.example1.db1.User;
+import com.example.jpa.example1.db1.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -19,4 +17,9 @@ public class UserController {
 	public User saveUser(@RequestBody User user) {
 		return userRepository.save(user);
 	}
+	@GetMapping("/user/{id}")
+	public User getUser(@PathVariable Long id) {
+		return userRepository.getOne(id);
+	}
+
 }

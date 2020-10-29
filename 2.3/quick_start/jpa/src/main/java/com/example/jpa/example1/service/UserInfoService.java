@@ -1,6 +1,6 @@
 package com.example.jpa.example1.service;
 
-import com.example.jpa.example1.UserInfo;
+import com.example.jpa.example1.db2.UserInfo;
 
 public interface UserInfoService {
 	/**

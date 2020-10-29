@@ -1,4 +1,4 @@
-package com.example.jpa.example1;
+package com.example.jpa.example1.db1;
 
 import lombok.*;
 

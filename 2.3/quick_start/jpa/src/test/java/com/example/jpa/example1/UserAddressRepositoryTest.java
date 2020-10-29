@@ -1,4 +1,8 @@
 package com.example.jpa.example1;
+import com.example.jpa.example1.db1.SexEnum;
+import com.example.jpa.example1.db1.User;
+import com.example.jpa.example1.db1.UserAddress;
+import com.example.jpa.example1.db1.UserAddressRepository;
 import com.google.common.collect.Lists;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.TestInstance;

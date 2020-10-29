@@ -1,4 +1,4 @@
-package com.example.jpa.example1;
+package com.example.jpa.example1.db2;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;

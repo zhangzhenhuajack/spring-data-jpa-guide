@@ -1,6 +1,9 @@
 package com.example.jpa.example1;
 
 import com.example.jpa.example1.configuration.JpaConfiguration;
+import com.example.jpa.example1.db1.SexEnum;
+import com.example.jpa.example1.db1.User;
+import com.example.jpa.example1.db1.UserRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.TestInstance;

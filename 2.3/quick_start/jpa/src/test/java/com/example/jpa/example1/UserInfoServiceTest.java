@@ -1,5 +1,7 @@
 package com.example.jpa.example1;
 
+import com.example.jpa.example1.db2.UserInfo;
+import com.example.jpa.example1.db2.UserInfoRepository;
 import com.example.jpa.example1.service.UserInfoService;
 import com.example.jpa.example1.service.UserInfoServiceImpl;
 import org.junit.jupiter.api.Assertions;

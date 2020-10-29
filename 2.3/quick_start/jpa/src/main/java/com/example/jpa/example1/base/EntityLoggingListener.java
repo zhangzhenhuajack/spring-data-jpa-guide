@@ -1,6 +1,6 @@
 package com.example.jpa.example1.base;
 
-import com.example.jpa.example1.User;
+import com.example.jpa.example1.db1.User;
 import lombok.extern.log4j.Log4j2;
 
 import javax.persistence.*;

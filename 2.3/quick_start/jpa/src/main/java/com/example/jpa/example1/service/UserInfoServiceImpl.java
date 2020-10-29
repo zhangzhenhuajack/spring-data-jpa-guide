@@ -1,7 +1,7 @@
 package com.example.jpa.example1.service;
 
-import com.example.jpa.example1.UserInfo;
-import com.example.jpa.example1.UserInfoRepository;
+import com.example.jpa.example1.db2.UserInfo;
+import com.example.jpa.example1.db2.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.retry.annotation.Backoff;
@@ -23,7 +23,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 	 * @return
 	 */
 	@Override
-	@Transactional
+	@Transactional(transactionManager = "db2TransactionManager")
 	@Retryable(value = ObjectOptimisticLockingFailureException.class,backoff = @Backoff(multiplier = 1.5,random = true))
 	public UserInfo calculate(Long userId) {
 //		//不带悲观锁的方法
