@@ -1,0 +1,62 @@
+#### insert
+POST /user HTTP/1.1
+Host: 127.0.0.1:8089
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: 56d8dc02-7f3e-7b95-7ff1-572a4bb7d102
+
+{"ages":10,"name":"jack"}
+###
+GET http://127.0.0.1:8089/user2/1
+#### update
+POST /user HTTP/1.1
+Host: 127.0.0.1:8089
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: 56d8dc02-7f3e-7b95-7ff1-572a4bb7d102
+
+{"ages":10,"name":"jack1","id":1,"version":1}
+#### insert
+POST /user/info HTTP/1.1
+Host: 127.0.0.1:8089
+Content-Type: application/json
+db-routing: DB2
+Cache-Control: no-cache
+Postman-Token: 56d8dc02-7f3e-7b95-7ff1-572a4bb7d102
+
+{"ages":10}
+
+#### update
+POST /user/info HTTP/1.1
+Host: 127.0.0.1:8089
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: 56d8dc02-7f3e-7b95-7ff1-572a4bb7d102
+
+{"ages":10,"id":3,"version":0}
+
+###
+GET http://127.0.0.1:8089/user/dsl?size=2&page=0&ages=10&sort=id,desc&ages=10
+###
+GET http://127.0.0.1:8089/users?page[size]=2&page[number]=0&ages=10&sort=id,desc
+###
+GET http://127.0.0.1:8089/users?size=2&page=0&ages=10&sort=id,desc
+###
+GET http://127.0.0.1:8089/users/mypage?page[size]=2&page[number]=0&ages=10&sort=id,desc
+###
+GET http://127.0.0.1:8089/users/mypage?size=2&page=0&ages=10&sort=id,desc
+###
+GET http://127.0.0.1:8089/users/sort?ages=10&sort=id,desc&ages=10&telephone=11111
+
+###
+
+
+POST /users HTTP/1.1
+Host: 127.0.0.1:8089
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: 56d8dc02-7f3e-7b95-7ff1-572a4bb7d102
+
+{"ages":10,"telephone":"123456789"}
+
+###
