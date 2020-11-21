@@ -12,9 +12,9 @@ import javax.persistence.Table;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(callSuper = true)
 @Table
 public class UserInfo extends BaseEntity {
+	private String name;
 	private Integer ages;
 	private String lastName;
 	private String emailAddress;

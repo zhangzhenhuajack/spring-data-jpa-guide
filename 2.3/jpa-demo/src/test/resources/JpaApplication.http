@@ -21,3 +21,8 @@ Content-Type: application/json
 Cache-Control: no-cache
 
 ###
+POST http://127.0.0.1:8087/test/async/user?name=jack HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+###
