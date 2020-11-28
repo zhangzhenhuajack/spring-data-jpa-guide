@@ -26,7 +26,8 @@ public class UserInfoController {
 	public UserInfo getUserInfoFromPath(@PathVariable("id") Long id) {
 //		UserInfo u1 =  userInfoRepository.getOne(id);
 		UserInfo u1 =  userInfoRepository.findById(id).get();
-		System.out.println(u1.getAddressList().get(0).getCity());
+//		UserInfo u1 =  userInfoService.getUserInfoAndAddress(id);
+//		System.out.println(u1.getAddressList().get(0).getCity());
 
 //		UserInfo u2 = userInfoService.loadOne(id).orElse(null);
 //		System.out.println(u2.getAddressList().get(0).getCity());
