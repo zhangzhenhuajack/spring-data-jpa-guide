@@ -7,10 +7,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table
@@ -21,7 +21,9 @@ import javax.persistence.Table;
 @ToString(exclude = "userInfo")
 public class Address extends BaseEntity {
 	private String city;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.PERSIST,fetch = FetchType.LAZY)
 	@JsonBackReference
+//	@BatchSize(size = 30)
+	@Fetch(value = FetchMode.JOIN)
 	private UserInfo userInfo;
 }

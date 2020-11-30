@@ -6,17 +6,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
-import javax.persistence.PersistenceProperty;
 import javax.transaction.Transactional;
-import java.util.Optional;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DataJpaTest
@@ -117,7 +113,7 @@ public class UserInfoRepositoryTest {
         entityManager.remove(u3);
         UserInfo userInfo = UserInfo.builder().lastName("jack").build();
         entityManager.persist(userInfo);
-        userInfoRepository.queryByFlushTest();//是操作JPQL的，这个就会先触发flush操作；
+//        userInfoRepository.queryByFlushTest();//是操作JPQL的，这个就会先触发flush操作；
 
 
     }
@@ -131,7 +127,7 @@ public class UserInfoRepositoryTest {
 //        entityManager.persist(userInfo);//是直接操作Entity的，不会触发flush操作
         System.out.println("没有执行 flush()方法，产生insert sql");
 //        UserInfo userInfo2 = entityManager.find(UserInfo.class,2L);//是直接操作Entity的，这个就不会触发flush操作
-        userInfoRepository.queryByFlushTest();//是操作JPQL的，这个就会先触发flush操作；
+//        userInfoRepository.queryByFlushTest();//是操作JPQL的，这个就会先触发flush操作；
         System.out.println("flush()方法，产生insert sql");
 
         //通过contains方法可以验证对象是否在PersistenceContext里面，此时在
