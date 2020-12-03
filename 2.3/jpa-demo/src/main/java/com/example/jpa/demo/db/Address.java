@@ -7,8 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 
@@ -19,11 +17,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(exclude = "userInfo")
+//@JsonIgnoreProperties("userInfo")
+@NamedEntityGraph(name = "getAllUserInfo",attributeNodes = @NamedAttributeNode(value = "userInfo"))
 public class Address extends BaseEntity {
 	private String city;
-	@ManyToOne(cascade = CascadeType.PERSIST,fetch = FetchType.LAZY)
+
+////	@BatchSize(size = 30)
+//	@Fetch(value = FetchMode.JOIN)
+//	@Transient
 	@JsonBackReference
-//	@BatchSize(size = 30)
-	@Fetch(value = FetchMode.JOIN)
+	@ManyToOne(cascade = CascadeType.PERSIST,fetch = FetchType.LAZY)
 	private UserInfo userInfo;
+//	private Long userId;
 }

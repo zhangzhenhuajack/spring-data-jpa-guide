@@ -19,6 +19,11 @@ Host: 127.0.0.1:8087
 Content-Type: application/json
 Cache-Control: no-cache
 ### get
+GET /user/addresses HTTP/1.1
+Host: 127.0.0.1:8087
+Content-Type: application/json
+Cache-Control: no-cache
+### get
 GET /user/info/1 HTTP/1.1
 Host: 127.0.0.1:8087
 Content-Type: application/json

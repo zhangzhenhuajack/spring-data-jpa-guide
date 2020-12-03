@@ -15,4 +15,6 @@ public interface UserInfoService {
      */
 //    UserInfo getUserInfoAndAddress(Long id);
     UserInfoDto getUserInfoAndAddress(Long id);
+
+    List<UserInfo> getAllUserWithAddress();
 }
