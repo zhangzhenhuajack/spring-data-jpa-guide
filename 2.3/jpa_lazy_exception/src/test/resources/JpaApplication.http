@@ -1,0 +1,28 @@
+#### insert
+POST /user/info HTTP/1.1
+Host: 127.0.0.1:8087
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"ages":10}
+
+#### update
+POST /user/info HTTP/1.1
+Host: 127.0.0.1:8087
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"ages":10,"id":3,"version":0}
+
+### get
+GET /user/info/22 HTTP/1.1
+Host: 127.0.0.1:8087
+Content-Type: application/json
+Cache-Control: no-cache
+
+###
+POST http://127.0.0.1:8087/test/async/user?name=jack HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+###
