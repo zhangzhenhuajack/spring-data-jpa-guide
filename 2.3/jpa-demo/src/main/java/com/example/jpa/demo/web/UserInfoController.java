@@ -7,6 +7,7 @@ import com.example.jpa.demo.db.UserInfoRepository;
 import com.example.jpa.demo.service.UserInfoService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@RestController
+@RestController()
 @Log4j2
 public class UserInfoController {
 	@Autowired
@@ -26,7 +27,13 @@ public class UserInfoController {
 
 	@GetMapping("/users")
 	public List<UserInfo> getUserInfos() {
-		return userInfoRepository.findAll();
+		UserInfo curruentUser = UserInfo.builder().name("currentUser").build();
+		//应用上下文中设置登录用户信息,此时Authentication类型为User
+		userInfoRepository.findByNameWithSpelExpression("jack");
+		userInfoRepository.findContainingEscaped("JK");
+
+		return userInfoRepository.findAllByEntityName();
+//		return userInfoRepository.findAll();
 	}
 	@GetMapping("/user/info/{id}")
 	public UserInfo getUserInfo(@PathVariable("id") Long id) {
