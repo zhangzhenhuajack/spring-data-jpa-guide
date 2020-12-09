@@ -1,17 +1,21 @@
 package com.example.jpa.demo.config;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Data
+@Getter
+@Setter
 @ToString
-@Component
+@Component //通过@Value使用SpEL的地方，一定要此对象交由Spring进行管理
 public class DemoProperties {
+//第一：逻辑运算操作
     @Value("#{19 + 1}") // 20
     private double add;
-
     @Value("#{'String1 ' + 'string2'}") // "String1 string2"
     private String addString;
 
@@ -38,6 +42,7 @@ public class DemoProperties {
 
     @Value("#{(2 + 2) * 2 + 9}") // 17
     private double brackets;
+// 第二：  逻辑比较符号
     @Value("#{1 == 1}") // true
     private boolean equal;
 
@@ -73,6 +78,7 @@ public class DemoProperties {
 
     @Value("#{1 ge 1}") // true
     private boolean greaterThanOrEqualAlphabetic;
+//第三：逻辑关系运算符
     @Value("#{250 > 200 && 200 < 4000}") // true
     private boolean and;
 
@@ -97,7 +103,7 @@ public class DemoProperties {
     private String ternaryProperty;
 
     /**
-     * 如果someProperty为null则返回default值。
+     * 如果someProperty为null则返回default值。Elvis运算符是三元表达式简写
      */
     @Value("#{demoProperties.someProperty ?: 'default'}")
     private String elvis;
@@ -113,7 +119,7 @@ public class DemoProperties {
      */
 //    @Value("#{demoPropertiesx?:someProperty}") // 如果someBean不为null则返回someProperty值。
     private String someProperty;
-
+//第四部分：正则表达式的支持
     @Value("#{'100' matches '\\d+' }") // true
     private boolean validNumericStringResult;
 
@@ -130,4 +136,5 @@ public class DemoProperties {
     private boolean validNumericValue;
 
     private String someValue="";
+    private String rootUser="root";
 }

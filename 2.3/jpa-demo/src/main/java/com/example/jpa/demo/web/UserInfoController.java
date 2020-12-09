@@ -7,7 +7,6 @@ import com.example.jpa.demo.db.UserInfoRepository;
 import com.example.jpa.demo.service.UserInfoService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -27,6 +26,8 @@ public class UserInfoController {
 
 	@GetMapping("/users")
 	public List<UserInfo> getUserInfos() {
+//		userInfoRepository.findByRootUser();
+		userInfoRepository.findBySystemUser();
 		UserInfo curruentUser = UserInfo.builder().name("currentUser").build();
 		//应用上下文中设置登录用户信息,此时Authentication类型为User
 		userInfoRepository.findByNameWithSpelExpression("jack");
