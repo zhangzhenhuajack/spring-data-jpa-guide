@@ -59,4 +59,6 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {
 
 	@Query(value = "select * from :#{#table}",nativeQuery = true)
 	List<UserInfo> findByTable(String table);
+
+
 }

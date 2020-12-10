@@ -20,10 +20,12 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.retry:spring-retry'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //集成spring security
     implementation 'org.springframework.boot:spring-boot-starter-security'
+    // 集成spring security data对JPA的支持
     implementation 'org.springframework.security:spring-security-data'
     implementation 'org.apache.commons:commons-lang3:3.8.1'
     compileOnly 'org.projectlombok:lombok'
