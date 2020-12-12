@@ -7,9 +7,11 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.time.Instant;
 import java.util.List;
 
 public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {
+	List<UserInfo> findByNameAndCreateTimeBetween(String name, Instant begin, Instant endTime);
 	//我们这里直接读取demoProperties实体bean中的rootUser,实现取当然root用户信息的目的
 	@Query("select u from UserInfo u where u.name= :#{#demoProperties.rootUser}")
 	List<UserInfo> findByRootUser();

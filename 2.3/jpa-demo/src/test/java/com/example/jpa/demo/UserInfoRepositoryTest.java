@@ -14,7 +14,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.Rollback;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
+import javax.persistence.PersistenceProperty;
 import javax.transaction.Transactional;
+import java.time.Instant;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DataJpaTest
@@ -25,12 +30,12 @@ public class UserInfoRepositoryTest {
 
     @Autowired
     private UserInfoRepository userInfoRepository;
-//    @PersistenceContext//(type = PersistenceContextType.EXTENDED)
-////            (properties = {@PersistenceProperty(
-////            name = "org.hibernate.flushMode",
-////            value = "MANUAL"//手动flush
-////    )})
-//    private EntityManager entityManager;
+    @PersistenceContext//(type = PersistenceContextType.EXTENDED)
+            (properties = {@PersistenceProperty(
+            name = "org.hibernate.flushMode",
+            value = "MANUAL"//手动flush
+    )})
+    private EntityManager entityManager;
 
 
     @BeforeAll
@@ -46,18 +51,41 @@ public class UserInfoRepositoryTest {
             System.out.println("************************");
         }
     }
+
+    @Test
+    @Transactional
+    public void testLife() {
+        UserInfo userInfo = UserInfo.builder().name("new name").build();
+        //新增一个对象userInfo交给PersistenceContext管理，既一级缓存
+        entityManager.persist(userInfo);
+        //此时没有detach和clear之前，flush的时候还会产生更新SQL
+        userInfo.setName("old name");
+        entityManager.flush();
+        entityManager.clear();
+//        entityManager.detach(userInfo);
+        // entityManager已经clear，此时已经不会对UserInfo进行更新了
+        userInfo.setName("new name 11");
+        entityManager.flush();
+
+        //由于有cache机制，相同的对象查询只会触发一次查询SQL
+        UserInfo u1 = userInfoRepository.findById(1L).get();
+        //to do some thing
+        UserInfo u2 = userInfoRepository.findById(1L).get();
+    }
+
     @Test
     public void testEntityName() {
-        userInfoRepository.findByTable("user_info");
+        userInfoRepository.findByNameAndCreateTimeBetween("aaaa", Instant.now(),Instant.now());
+//        userInfoRepository.findByTable("user_info");
 //        userInfoRepository.findBySystemUser();
 //        userInfoRepository.findByRootUser();
-        userInfoRepository.findUsersByFirstnameForSpELExpressionWithParameterIndexOnlyWithEntityExpression("1","2");
-        userInfoRepository.findByNameWithSpelExpression("J");
-        userInfoRepository.findOliverBySpELExpressionWithoutArgumentsWithQuestionmark();
-        userInfoRepository.findUsersByCustomersFirstname(UserInfo.builder().name("kk").build());
+//        userInfoRepository.findUsersByFirstnameForSpELExpressionWithParameterIndexOnlyWithEntityExpression("1","2");
+//        userInfoRepository.findByNameWithSpelExpression("J");
+//        userInfoRepository.findOliverBySpELExpressionWithoutArgumentsWithQuestionmark();
+//        userInfoRepository.findUsersByCustomersFirstname(UserInfo.builder().name("kk").build());
         userInfoRepository.findAllByEntityName();
-        userInfoRepository.findContainingEscaped("jack");
-        userInfoRepository.findByNameWithSpelExpression("JK");
+//        userInfoRepository.findContainingEscaped("jack");
+//        userInfoRepository.findByNameWithSpelExpression("JK");
     }
     @TestConfiguration
     static class TestConfig {
