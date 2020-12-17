@@ -1,6 +1,5 @@
 package com.example.jpa.demo;
 
-import com.example.jpa.demo.config.DemoProperties;
 import com.example.jpa.demo.db.UserInfo;
 import com.example.jpa.demo.db.UserInfoRepository;
 import org.junit.jupiter.api.BeforeAll;
@@ -9,17 +8,14 @@ import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.Rollback;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
 import javax.persistence.PersistenceProperty;
 import javax.transaction.Transactional;
-import java.time.Instant;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DataJpaTest
@@ -73,25 +69,11 @@ public class UserInfoRepositoryTest {
         UserInfo u2 = userInfoRepository.findById(1L).get();
     }
 
-    @Test
-    public void testEntityName() {
-        userInfoRepository.findByNameAndCreateTimeBetween("aaaa", Instant.now(),Instant.now());
-//        userInfoRepository.findByTable("user_info");
-//        userInfoRepository.findBySystemUser();
-//        userInfoRepository.findByRootUser();
-//        userInfoRepository.findUsersByFirstnameForSpELExpressionWithParameterIndexOnlyWithEntityExpression("1","2");
-//        userInfoRepository.findByNameWithSpelExpression("J");
-//        userInfoRepository.findOliverBySpELExpressionWithoutArgumentsWithQuestionmark();
-//        userInfoRepository.findUsersByCustomersFirstname(UserInfo.builder().name("kk").build());
-        userInfoRepository.findAllByEntityName();
-//        userInfoRepository.findContainingEscaped("jack");
-//        userInfoRepository.findByNameWithSpelExpression("JK");
-    }
     @TestConfiguration
     static class TestConfig {
-        @Bean
-        public DemoProperties demoProperties () {
-            return new DemoProperties();
-        }
+//        @Bean
+//        public DemoProperties demoProperties () {
+//            return new DemoProperties();
+//        }
     }
 }
