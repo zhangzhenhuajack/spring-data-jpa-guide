@@ -23,7 +23,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.retry:spring-retry'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile('com.fasterxml.jackson.datatype:jackson-datatype-hibernate5')
     implementation 'com.google.guava:guava:19.0'
+    //为了引入cache和redis机制需要引入如下两个jar包
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis' //redis的依赖
+    implementation 'org.springframework.boot:spring-boot-starter-cache' //cache 的依赖
     //集成spring security
 //    implementation 'org.springframework.boot:spring-boot-starter-security'
     // 集成spring security data对JPA的支持

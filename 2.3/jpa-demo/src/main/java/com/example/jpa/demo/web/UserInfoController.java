@@ -8,6 +8,7 @@ import com.example.jpa.demo.service.UserInfoService;
 import com.google.common.collect.Lists;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -39,6 +40,7 @@ public class UserInfoController {
 		return userInfoRepository.findAll();
 	}
 	@GetMapping("/user/info/{id}")
+	@Cacheable(value = "userInfo", key = "{#root.methodName, #id}", unless = "#result == null") //利用默认key值生成规则value加key生成一个redis的key值，result==null的时候不进行缓存
 	public UserInfo getUserInfo(@PathVariable("id") Long id) {
 		return userInfoRepository.findById(id).get();
 	}
