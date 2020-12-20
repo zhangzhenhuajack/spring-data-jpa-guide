@@ -1,0 +1,4 @@
+com/example/jpa/JpaApplicationTests.java
+ com.example.jpa.JpaApplicationTests
+com/example/jpa/example1/UserRepositoryTest.java
+ com.example.jpa.example1.UserRepositoryTest

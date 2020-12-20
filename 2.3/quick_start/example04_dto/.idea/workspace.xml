@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f159bf4b-4093-4fae-af80-728ee92ef06f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../jpa/src/test/java/com/example/jpa/example1/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa/src/test/java/com/example/jpa/example1/UserRepositoryTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1gRmtiS4RFN5hApzxLlHfKjbRxd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="910" />
+    <property name="RequestMappingsPanelWidth1" value="910" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.42068964" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.jpa.example1" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8080/api/v1/users" />
+          <option name="urlPath" value="" />
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="size" />
+                <option name="value" value="3" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="page" />
+                <option name="value" value="0" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8080/api/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Host" />
+                <option name="value" value="127.0.0.1:8080" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;name&quot;:&quot;jack&quot;,&quot;email&quot;:&quot;123@126.com&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.UserRepositoryTest.testSaveUser">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.testProjections" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.example.jpa.example1.UserRepositoryTest.testProjections&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserRepositoryTest.testSaveUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.example.jpa.example1.UserRepositoryTest.testSaveUser&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="jpa [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="All in JpaApplication" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/resources/JpaApplication.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="JpaApplication#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/resources/JpaApplication.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jpa.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.jpa.JpaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.UserRepositoryTest.testSaveUser" />
+        <item itemvalue="Gradle.UserRepositoryTest.testProjections" />
+        <item itemvalue="Gradle.jpa [test]" />
+        <item itemvalue="HTTP Request.All in JpaApplication" />
+        <item itemvalue="HTTP Request.JpaApplication#2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INTERFACES,ALPHA_COMPARATOR,SHOW_ANONYMOUS,SHOW_LAMBDA,SHOW_PROPERTIES,SHOW_NON_PUBLIC" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f159bf4b-4093-4fae-af80-728ee92ef06f" name="Default Changelist" comment="" />
+      <created>1598085995461</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598085995461</updated>
+      <workItem from="1598085999970" duration="7282000" />
+      <workItem from="1598252785265" duration="29522000" />
+      <workItem from="1601285830945" duration="157000" />
+      <workItem from="1601287411821" duration="1681000" />
+      <workItem from="1601348923295" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1360" y="290" key="#Notifications" timestamp="1601285892188">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1360" y="290" key="#Notifications/0.23.1876.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601285892188" />
+    <state x="-1496" y="288" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598774072891">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1496" y="288" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598774072891" />
+    <state x="-1147" y="335" key="#com.intellij.ide.util.MemberChooser" timestamp="1598782167061">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1147" y="335" key="#com.intellij.ide.util.MemberChooser/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598782167061" />
+    <state width="1360" height="596" key="DebuggerActiveHint" timestamp="1601289107426">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1360" height="596" key="DebuggerActiveHint/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601289107426" />
+    <state width="1360" height="596" key="DebuggerActiveHint/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598779472933" />
+    <state width="1878" height="426" key="GridCell.Tab.0.bottom" timestamp="1601348910230">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.0.bottom/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348910230" />
+    <state width="1878" height="314" key="GridCell.Tab.0.bottom/0.23.1873.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598234752504" />
+    <state width="1878" height="314" key="GridCell.Tab.0.bottom/0.23.1876.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598174268276" />
+    <state width="1878" height="523" key="GridCell.Tab.0.bottom/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598088950256" />
+    <state width="1878" height="408" key="GridCell.Tab.0.bottom/0.23.1879.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598686918646" />
+    <state width="1878" height="352" key="GridCell.Tab.0.bottom/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598782959247" />
+    <state width="1878" height="426" key="GridCell.Tab.0.center" timestamp="1601348910230">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.0.center/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348910230" />
+    <state width="1878" height="314" key="GridCell.Tab.0.center/0.23.1873.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598234752503" />
+    <state width="1878" height="314" key="GridCell.Tab.0.center/0.23.1876.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598174268273" />
+    <state width="1878" height="523" key="GridCell.Tab.0.center/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598088950255" />
+    <state width="1878" height="408" key="GridCell.Tab.0.center/0.23.1879.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598686918645" />
+    <state width="1878" height="352" key="GridCell.Tab.0.center/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598782959246" />
+    <state width="1878" height="426" key="GridCell.Tab.0.left" timestamp="1601348910229">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.0.left/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348910229" />
+    <state width="1878" height="314" key="GridCell.Tab.0.left/0.23.1873.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598234752502" />
+    <state width="1878" height="314" key="GridCell.Tab.0.left/0.23.1876.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598174268271" />
+    <state width="1878" height="523" key="GridCell.Tab.0.left/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598088950254" />
+    <state width="1878" height="408" key="GridCell.Tab.0.left/0.23.1879.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598686918645" />
+    <state width="1878" height="352" key="GridCell.Tab.0.left/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598782959245" />
+    <state width="1878" height="426" key="GridCell.Tab.0.right" timestamp="1601348910230">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.0.right/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348910230" />
+    <state width="1878" height="314" key="GridCell.Tab.0.right/0.23.1873.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598234752504" />
+    <state width="1878" height="314" key="GridCell.Tab.0.right/0.23.1876.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598174268274" />
+    <state width="1878" height="523" key="GridCell.Tab.0.right/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598088950255" />
+    <state width="1878" height="408" key="GridCell.Tab.0.right/0.23.1879.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598686918646" />
+    <state width="1878" height="352" key="GridCell.Tab.0.right/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598782959246" />
+    <state width="1878" height="426" key="GridCell.Tab.1.bottom" timestamp="1601348910232">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.1.bottom/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348910232" />
+    <state width="1878" height="498" key="GridCell.Tab.1.bottom/0.23.1873.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598234752494" />
+    <state width="1878" height="498" key="GridCell.Tab.1.bottom/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598087240509" />
+    <state width="1878" height="408" key="GridCell.Tab.1.bottom/0.23.1879.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598686918648" />
+    <state width="1878" height="327" key="GridCell.Tab.1.bottom/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598781101400" />
+    <state width="1878" height="426" key="GridCell.Tab.1.center" timestamp="1601348910231">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.1.center/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348910231" />
+    <state width="1878" height="498" key="GridCell.Tab.1.center/0.23.1873.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598234752492" />
+    <state width="1878" height="498" key="GridCell.Tab.1.center/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598087240508" />
+    <state width="1878" height="408" key="GridCell.Tab.1.center/0.23.1879.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598686918647" />
+    <state width="1878" height="327" key="GridCell.Tab.1.center/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598781101399" />
+    <state width="1878" height="426" key="GridCell.Tab.1.left" timestamp="1601348910231">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.1.left/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348910231" />
+    <state width="1878" height="498" key="GridCell.Tab.1.left/0.23.1873.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598234752490" />
+    <state width="1878" height="498" key="GridCell.Tab.1.left/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598087240508" />
+    <state width="1878" height="408" key="GridCell.Tab.1.left/0.23.1879.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598686918647" />
+    <state width="1878" height="327" key="GridCell.Tab.1.left/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598781101399" />
+    <state width="1878" height="426" key="GridCell.Tab.1.right" timestamp="1601348910231">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.1.right/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348910231" />
+    <state width="1878" height="498" key="GridCell.Tab.1.right/0.23.1873.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598234752493" />
+    <state width="1878" height="498" key="GridCell.Tab.1.right/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598087240509" />
+    <state width="1878" height="408" key="GridCell.Tab.1.right/0.23.1879.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598686918648" />
+    <state width="1878" height="327" key="GridCell.Tab.1.right/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598781101400" />
+    <state x="-1372" y="342" key="RollbackChangesDialog" timestamp="1601348957027">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1372" y="342" key="RollbackChangesDialog/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601348957027" />
+    <state x="-1451" y="263" key="SettingsEditor" timestamp="1601285922920">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1451" y="263" key="SettingsEditor/0.23.1876.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601285922920" />
+    <state x="-1451" y="263" key="SettingsEditor/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598087325387" />
+    <state x="-1407" y="140" width="1038" height="963" key="StructurePopup" timestamp="1598760386354">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1407" y="140" width="1038" height="963" key="StructurePopup/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598760386354" />
+    <state x="-1227" y="582" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1598086800620">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1227" y="582" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598086800620" />
+    <state x="-1447" y="369" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601289063480">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1447" y="369" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601289063480" />
+    <state x="-1447" y="369" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598614503283" />
+    <state x="-1548" y="96" width="1532" height="961" key="find.popup" timestamp="1598778084965">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1548" y="96" width="1532" height="961" key="find.popup/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598778084965" />
+    <state x="-1531" y="231" key="new project wizard" timestamp="1598761516107">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1531" y="231" key="new project wizard/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598761516107" />
+    <state x="-1295" y="292" width="670" height="675" key="run.anything.popup" timestamp="1598086757911">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1295" y="292" width="670" height="675" key="run.anything.popup/0.23.1878.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598086757911" />
+    <state x="-1182" y="243" key="scopes" timestamp="1598771721561">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1182" y="243" key="scopes/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598771721561" />
+    <state x="-1295" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1601289170275">
+      <screen x="-1920" y="96" width="1920" height="1057" />
+    </state>
+    <state x="-1295" y="331" width="670" height="676" key="search.everywhere.popup/0.23.1871.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1601289170275" />
+    <state x="-1295" y="331" width="670" height="676" key="search.everywhere.popup/0.23.1880.1057/-1920.96.1920.1057@-1920.96.1920.1057" timestamp="1598778024738" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/AbstractJpaQuery.java</url>
+          <line>153</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryExecution.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryExecution.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryExecution.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryExecution.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/internal/AbstractProducedQuery.java</url>
+          <line>1530</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/internal/AbstractProducedQuery.java</url>
+          <line>1563</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/internal/QueryImpl.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/internal/CollectionFilterImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/compile/CriteriaQueryTypeQueryAdapter.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/internal/NativeQueryImpl.java</url>
+          <line>155</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/internal/AbstractSharedSessionContract.java</url>
+          <line>633</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/internal/AbstractSharedSessionContract.java</url>
+          <line>713</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/5.2.8.RELEASE/9d993d0c3bf21b641261cb7f382b20be97279626/spring-orm-5.2.8.RELEASE-sources.jar!/org/springframework/orm/jpa/ExtendedEntityManagerCreator.java</url>
+          <line>365</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/SimpleJpaQuery.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/SimpleJpaQuery.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryLookupStrategy.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryLookupStrategy.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryLookupStrategy.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/NamedQuery.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/core/support/QueryExecutorMethodInterceptor.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/core/support/QueryExecutorMethodInterceptor.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/PartTreeJpaQuery.java</url>
+          <line>240</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/NamedQuery.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryExecution.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/AbstractJpaQuery.java</url>
+          <line>225</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/PartTreeJpaQuery.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/PartTreeJpaQuery.java</url>
+          <line>226</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/engine/spi/SessionDelegatorBaseImpl.java</url>
+          <line>585</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/internal/AbstractSharedSessionContract.java</url>
+          <line>739</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/5.2.8.RELEASE/9d993d0c3bf21b641261cb7f382b20be97279626/spring-orm-5.2.8.RELEASE-sources.jar!/org/springframework/orm/jpa/SharedEntityManagerCreator.java</url>
+          <line>273</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/5.2.8.RELEASE/9d993d0c3bf21b641261cb7f382b20be97279626/spring-orm-5.2.8.RELEASE-sources.jar!/org/springframework/orm/jpa/SharedEntityManagerCreator.java</url>
+          <line>314</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/compile/CriteriaCompiler.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/QueryStructure.java</url>
+          <line>233</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/QueryStructure.java</url>
+          <line>237</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/QueryStructure.java</url>
+          <line>252</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/expression/CompoundSelectionImpl.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/expression/CompoundSelectionImpl.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/expression/CompoundSelectionImpl.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/QueryStructure.java</url>
+          <line>256</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/QueryStructure.java</url>
+          <line>261</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/path/RootImpl.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/compile/CriteriaCompiler.java</url>
+          <line>164</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/CriteriaQueryImpl.java</url>
+          <line>302</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/CriteriaQueryImpl.java</url>
+          <line>256</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/CriteriaQueryImpl.java</url>
+          <line>279</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/CriteriaQueryImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/QueryStructure.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/QueryStructure.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryCreator.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryCreator.java</url>
+          <line>182</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryCreator.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/query/ReturnedType.java</url>
+          <line>310</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/mapping/model/PreferredConstructorDiscoverer.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/query/ReturnedType.java</url>
+          <line>280</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryCreator.java</url>
+          <line>168</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/query/ReturnedType.java</url>
+          <line>245</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/query/ReturnedType.java</url>
+          <line>298</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/mapping/model/PreferredConstructorDiscoverer.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/mapping/model/PreferredConstructorDiscoverer.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/core/support/QueryExecutionResultHandler.java</url>
+          <line>177</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/query/ResultProcessor.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/util/QueryExecutionConverters.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/core/support/QueryExecutorMethodInterceptor.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.3.RELEASE/354b350a3cfc1440c3c6a6c6b287ea72b105a252/spring-data-jpa-2.3.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/query/JpaQueryLookupStrategy.java</url>
+          <line>215</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/query/ResultProcessor.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.3.3.RELEASE/a3f9859456d205b73b138f2e48776a1d7e8aad59/spring-data-commons-2.3.3.RELEASE-sources.jar!/org/springframework/data/repository/query/ResultProcessor.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/example/jpa/example1/UserRepositoryTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.20.Final/31c3ae06f131ceec368a770596881102b1d0ac5e/hibernate-core-5.4.20.Final-sources.jar!/org/hibernate/query/criteria/internal/QueryStructure.java</url>
+          <line>57</line>
+          <properties field="distinct" class="org.hibernate.query.criteria.internal.QueryStructure" />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/jpa/example1/UserOnlyName.java</url>
+          <line>4</line>
+          <properties class="com.example.jpa.example1.UserOnlyName" method="getEmail" />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="(Renderable) getSelection()" language="JAVA" />
+        <watch expression="returnedType.needsCustomConstruction()" language="JAVA" />
+        <watch expression="tree.isExistsProjection()" language="JAVA" />
+        <watch expression="isDto()" language="JAVA" />
+        <watch expression="rawOwningType.getDeclaredConstructors()" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jpa$UserRepositoryTest_testSaveUser.ic" NAME="UserRepositoryTest.testSaveUser Coverage Results" MODIFIED="1598602104466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

@@ -1,0 +1,34 @@
+GET http://127.0.0.1:8080/api/v1/users?size=3&page=0
+
+<> 2020-08-22T051201-1.200.json
+
+###
+
+POST http://127.0.0.1:8080/api/v1/user
+Host: 127.0.0.1:8080
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"name":"jack","email":"123@126.com"}
+
+<> 2020-08-22T051201.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/v1/users?size=3&page=0
+
+<> 2020-08-22T050727.200.json
+
+###
+
+POST http://127.0.0.1:8080/api/v1/user
+Host: 127.0.0.1:8080
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"name":"jack","email":"123@126.com"}
+
+<> 2020-08-22T050721.200.json
+
+###
+

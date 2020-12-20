@@ -1,0 +1,22 @@
+com/example/jpa/example1/UserOnlyNameEmailEntityRepository.java
+ com.example.jpa.example1.UserOnlyNameEmailEntityRepository
+com/example/jpa/example1/User.java
+ com.example.jpa.example1.User
+ com.example.jpa.example1.User$UserBuilder
+com/example/jpa/example1/UserDto.java
+ com.example.jpa.example1.UserDto
+ com.example.jpa.example1.UserDto$UserDtoBuilder
+com/example/jpa/example1/UserOnlyNameEmailDto.java
+ com.example.jpa.example1.UserOnlyNameEmailDto
+ com.example.jpa.example1.UserOnlyNameEmailDto$UserOnlyNameEmailDtoBuilder
+com/example/jpa/example1/UserOnlyName.java
+ com.example.jpa.example1.UserOnlyName
+com/example/jpa/example1/UserOnlyNameEmailEntity.java
+ com.example.jpa.example1.UserOnlyNameEmailEntity
+ com.example.jpa.example1.UserOnlyNameEmailEntity$UserOnlyNameEmailEntityBuilder
+com/example/jpa/example1/UserController.java
+ com.example.jpa.example1.UserController
+com/example/jpa/example1/UserRepository.java
+ com.example.jpa.example1.UserRepository
+com/example/jpa/JpaApplication.java
+ com.example.jpa.JpaApplication
