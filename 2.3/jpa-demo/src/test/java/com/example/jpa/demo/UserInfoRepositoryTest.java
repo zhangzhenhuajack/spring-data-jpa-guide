@@ -20,17 +20,16 @@ import javax.transaction.Transactional;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DataJpaTest
 @Import(TestConfiguration.class)
-@ComponentScan(value = "com.example.jpa.demo.config.DemoProperties")
-//@AutoConfigureTestDatabase
 public class UserInfoRepositoryTest {
 
     @Autowired
     private UserInfoRepository userInfoRepository;
-    @PersistenceContext//(type = PersistenceContextType.EXTENDED)
+    //测试一些手动flush的机制
+    @PersistenceContext
             (properties = {@PersistenceProperty(
-            name = "org.hibernate.flushMode",
-            value = "MANUAL"//手动flush
-    )})
+                    name = "org.hibernate.flushMode",
+                    value = "MANUAL"//手动flush
+            )})
     private EntityManager entityManager;
 
 
@@ -38,14 +37,9 @@ public class UserInfoRepositoryTest {
     @Rollback(false)
     @Transactional
     public void init() {
-
+        //提前准备一些数据方便我们测试
         UserInfo u1 = UserInfo.builder().id(1L).lastName("jack").version(1).build();
-
-        try {
-            userInfoRepository.save(u1);
-        } catch (Exception e) {
-            System.out.println("************************");
-        }
+        userInfoRepository.save(u1);
     }
 
     @Test
@@ -67,13 +61,5 @@ public class UserInfoRepositoryTest {
         UserInfo u1 = userInfoRepository.findById(1L).get();
         //to do some thing
         UserInfo u2 = userInfoRepository.findById(1L).get();
-    }
-
-    @TestConfiguration
-    static class TestConfig {
-//        @Bean
-//        public DemoProperties demoProperties () {
-//            return new DemoProperties();
-//        }
     }
 }

@@ -26,7 +26,14 @@ public class Address extends BaseEntity {
 	private String city;
 	@JsonIgnore //JSON解析的时候忽略某个属性
 	private String address;
-////	@BatchSize(size = 30)
+	@Transient
+	private String addressAndCity;
+
+	public String getAddressAndCity() {
+		return address+"一些简单逻辑"+city;
+	}
+
+	////	@BatchSize(size = 30)
 //	@Fetch(value = FetchMode.JOIN)
 //	@Transient
 	@JsonBackReference

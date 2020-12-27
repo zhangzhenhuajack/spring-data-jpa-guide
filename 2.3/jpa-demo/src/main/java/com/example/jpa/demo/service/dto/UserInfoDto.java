@@ -10,5 +10,6 @@ import java.util.List;
 @Builder
 public class UserInfoDto {
     private String name;
+    private Long id;
     private List<Address> addressList;
 }

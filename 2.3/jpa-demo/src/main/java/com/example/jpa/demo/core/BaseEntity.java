@@ -34,4 +34,5 @@ public class BaseEntity {
 	private Integer lastModifiedUserId;
 	@LastModifiedDate
 	private Instant lastModifiedTime;
+	private Boolean deleted;
 }
