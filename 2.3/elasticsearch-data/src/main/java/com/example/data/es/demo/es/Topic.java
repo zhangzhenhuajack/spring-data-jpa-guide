@@ -1,8 +1,6 @@
 package com.example.data.es.demo.es;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -14,6 +12,8 @@ import java.util.List;
 @Builder
 @Document(indexName = "topic")
 @ToString(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Topic {
     @Id
     private Long id;
@@ -21,3 +21,4 @@ public class Topic {
     @Field(type = FieldType.Nested, includeInParent = true)
     private List<Author> authors;
 }
+
