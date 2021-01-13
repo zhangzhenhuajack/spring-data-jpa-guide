@@ -6,20 +6,25 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceProperty;
 import javax.transaction.Transactional;
+import java.time.Instant;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DataJpaTest
-@Import(TestConfiguration.class)
+@ActiveProfiles("test")
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class UserInfoRepositoryTest {
 
     @Autowired
@@ -33,33 +38,16 @@ public class UserInfoRepositoryTest {
     private EntityManager entityManager;
 
 
-    @BeforeAll
-    @Rollback(false)
-    @Transactional
-    public void init() {
-        //提前准备一些数据方便我们测试
-        UserInfo u1 = UserInfo.builder().id(1L).lastName("jack").version(1).build();
-        userInfoRepository.save(u1);
-    }
-
     @Test
     @Transactional
+    @Rollback(value = false)
     public void testLife() {
         UserInfo userInfo = UserInfo.builder().name("new name").build();
-        //新增一个对象userInfo交给PersistenceContext管理，既一级缓存
         entityManager.persist(userInfo);
-        //此时没有detach和clear之前，flush的时候还会产生更新SQL
         userInfo.setName("old name");
         entityManager.flush();
-        entityManager.clear();
-//        entityManager.detach(userInfo);
-        // entityManager已经clear，此时已经不会对UserInfo进行更新了
         userInfo.setName("new name 11");
         entityManager.flush();
-
-        //由于有cache机制，相同的对象查询只会触发一次查询SQL
-        UserInfo u1 = userInfoRepository.findById(1L).get();
-        //to do some thing
-        UserInfo u2 = userInfoRepository.findById(1L).get();
+//        Instant instant = Instant.from()
     }
 }
