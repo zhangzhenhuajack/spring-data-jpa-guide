@@ -10,6 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.beans.Transient;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.time.Clock;
@@ -28,12 +29,16 @@ public class TimeTestRepositoryTest {
 
     @Test
     @Rollback(value = false)
+    @Transient
     public void testSaveTime() {
+        timeTestRepository.findByNameAbc("abc");
+        timeTestRepository.findByNameAbc("def");
+        timeTestRepository.findByNameAbc("123");
 //        timeTestRepository.save(TimeTest.builder().dateType(Instant.now()).dateTimeType(Instant.now()).timeStampType(Instant.now()).timeType(Instant.now()).build());
-        Iterable<TimeTest> r = timeTestRepository.findAll();
-        r.forEach(timeTest -> {
-            System.out.println(timeTest);
-        });
+//        Iterable<TimeTest> r = timeTestRepository.findAll();
+//        r.forEach(timeTest -> {
+//            System.out.println(timeTest);
+//        });
     }
 
     public static void main(String[] args) {
@@ -45,19 +50,20 @@ public class TimeTestRepositoryTest {
         Instant now = Clock.system(TimeZone.getTimeZone("Asia/Shanghai").toZoneId()).instant();
         System.out.println(now);
         now.atZone(TimeZone.getTimeZone("Asia/Shanghai").toZoneId());
-        Timestamp stamp = new Timestamp(now.getEpochSecond() * MILLIS_PER_SECOND);
-//        stamp.nanos = instant.getNano();
-        System.out.println(stamp);
-
-
-        Instant now2 = Clock.system(TimeZone.getTimeZone("UTC").toZoneId()).instant();
-        System.out.println(now2);
-        now2.atZone(TimeZone.getTimeZone("UTC").toZoneId());
-        Timestamp stamp2 = new Timestamp(now2.getEpochSecond() * MILLIS_PER_SECOND);
-//        stamp.nanos = instant.getNano();
-        System.out.println(stamp2);
-
-        System.currentTimeMillis();
+        System.out.println(now.getEpochSecond());
+//        Timestamp stamp = new Timestamp(now.getEpochSecond() * MILLIS_PER_SECOND);
+////        stamp.nanos = instant.getNano();
+//        System.out.println(stamp);
+//
+//
+//        Instant now2 = Clock.system(TimeZone.getTimeZone("UTC").toZoneId()).instant();
+//        System.out.println(now2);
+//        now2.atZone(TimeZone.getTimeZone("UTC").toZoneId());
+//        Timestamp stamp2 = new Timestamp(now2.getEpochSecond() * MILLIS_PER_SECOND);
+////        stamp.nanos = instant.getNano();
+//        System.out.println(stamp2);
+//
+//        System.currentTimeMillis();
 
     }
 }
