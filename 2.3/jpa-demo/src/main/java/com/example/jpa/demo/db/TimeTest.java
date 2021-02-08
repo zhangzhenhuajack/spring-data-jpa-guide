@@ -21,6 +21,7 @@ public class TimeTest {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private  Long id;
+    private String name;
     private  Instant dateType;
     private Instant dateTimeType;
     private Instant timeStampType;
