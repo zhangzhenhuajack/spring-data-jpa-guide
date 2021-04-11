@@ -1,5 +1,6 @@
 package com.example.jpa.demo.web;
 
+import com.example.jpa.demo.core.UserInfoQuerydslBinderCustomer;
 import com.example.jpa.demo.db.UserInfo;
 import com.example.jpa.demo.db.UserInfoRepository;
 import com.querydsl.core.types.Predicate;
@@ -10,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.querydsl.binding.QuerydslPredicate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -20,12 +22,17 @@ public class UserInfoController {
 	private UserInfoRepository userInfoRepository;
 
 	@GetMapping("users/query/dsl")
-	public Page<UserInfo> query(@QuerydslPredicate(root = UserInfo.class)Predicate predicate, Pageable pageable) {
-		return userInfoRepository.findAll(predicate,pageable);
+	public Page<UserInfo> query(@QuerydslPredicate(root = UserInfo.class, bindings = UserInfoQuerydslBinderCustomer.class) Predicate predicate, Pageable pageable) {
+		return userInfoRepository.findAll(predicate, pageable);
+	}
+
+	@GetMapping("users/query/dsl2")
+	public Page<UserInfo> query2(@QuerydslPredicate(root = UserInfo.class) Predicate predicate, Pageable pageable) {
+		return userInfoRepository.findAll(predicate, pageable);
 	}
 
 	@PostMapping("users")
-	public UserInfo save(UserInfo userInfo){
+	public UserInfo save(@RequestBody UserInfo userInfo) {
 		return userInfoRepository.save(userInfo);
 	}
 
