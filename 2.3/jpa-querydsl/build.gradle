@@ -1,0 +1,85 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+//    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
+}
+
+group = 'com.example.jpa'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+//configurations {
+//    compileOnly {
+//        extendsFrom annotationProcessor
+//    }
+//}
+repositories {
+    mavenCentral()
+}
+//querydsl {
+//    querydslSourcesDir = 'build/generated/sources/annotationProcessor/java/main'
+//    jpa = true
+//}
+//configurations {
+//    querydsl.extendsFrom implementation
+//}
+//compileQuerydsl {
+//    options.annotationProcessorPath = configurations.querydsl
+//}
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.retry:spring-retry'
+    compile('com.fasterxml.jackson.datatype:jackson-datatype-hibernate5')
+    implementation 'com.google.guava:guava:19.0'
+    //为了引入cache和redis机制需要引入如下两个jar包
+//    implementation 'org.springframework.boot:spring-boot-starter-data-redis' //redis的依赖
+//    implementation 'org.springframework.boot:spring-boot-starter-cache' //cache 的依赖
+    // spring data jpa的依赖
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    // spring data rest的依赖，由于我们使用的是spring boot 所以只需要添加starter即可
+//    implementation("org.springframework.boot:spring-boot-starter-data-rest")
+    //我们添加 swagger方便看得出来，生成了哪些api接口
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    // swagger 对spring data reset支持需要天添加 springfox-data-rest
+//    implementation 'io.springfox:springfox-data-rest:3.0.0'
+    //集成spring security
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+    // 集成spring security data对JPA的支持
+//    implementation 'org.springframework.security:spring-security-data'
+
+    //QueryDSL
+//    compile 'com.querydsl:querydsl-core'
+//    compile 'com.querydsl:querydsl-jpa'
+//    compile 'com.querydsl:querydsl-apt' //编译器生成实体querydsl的文件
+
+    implementation 'com.querydsl:querydsl-apt'
+    implementation 'com.querydsl:querydsl-jpa'
+    annotationProcessor("com.querydsl:querydsl-apt:4.3.1:jpa",
+            "org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final",
+            "javax.annotation:javax.annotation-api:1.3.2",
+            "org.projectlombok:lombok")
+    annotationProcessor("org.springframework.boot:spring-boot-starter-data-jpa")
+    annotationProcessor 'org.projectlombok:lombok'
+
+
+    implementation 'org.apache.commons:commons-lang3:3.8.1'
+    implementation 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly('mysql:mysql-connector-java')
+    implementation 'com.h2database:h2'
+//    annotationProcessor ('org.springframework.boot:spring-boot-configuration-processor'
+//    ,'com.querydsl:querydsl-apt:4.3.1:jpa','org.projectlombok:lombok','jakarta.persistence:jakarta.persistence-api',
+//            'jakarta.annotation:jakarta.annotation-api',)
+
+
+    testImplementation 'com.h2database:h2'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
