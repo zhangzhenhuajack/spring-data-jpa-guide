@@ -5,12 +5,7 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 
 public class UserInfoQuerydslBinderCustomer implements QuerydslBinderCustomizer<QUserInfo> {
-	/**
-	 * Customize the {@link QuerydslBindings} for the given root.
-	 *
-	 * @param bindings the {@link QuerydslBindings} to customize, will never be {@literal null}.
-	 * @param root     the entity root, will never be {@literal null}.
-	 */
+	//直接实现这个接口，自定义
 	@Override
 	public void customize(QuerydslBindings bindings, QUserInfo root) {
 		bindings.bind(root.lastName).first((path,value)-> path.startsWith(value));
