@@ -66,7 +66,7 @@
 5. https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/doc/JavaPersistence2.2.0.pdf 
 6. https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/doc/SpringDataJPA%E5%85%A8%E9%9D%A2%E8%AE%A4%E8%AF%86.key
 
-## 如果大家觉得有用欢迎支持:
+## 如果大家觉得有用欢迎请老师喝瓶水或者喝杯咖啡:
 ![](images/IMG_4559(20200804-084753).JPG)
 
 ## QQ交流群：559701472
