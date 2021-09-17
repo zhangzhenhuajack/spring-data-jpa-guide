@@ -69,4 +69,7 @@
 ## 如果大家觉得有用欢迎请老师喝瓶水或者喝杯咖啡:
 ![](images/IMG_4559(20200804-084753).JPG)
 
+## 常见ISSUE
+Spring Data JPA利用@EntityGraph解决N+1的SQL查询问题： @OnetoOne @OneToMany  https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/36  
+
 ## QQ交流群：559701472
