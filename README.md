@@ -30,6 +30,7 @@
 1. 1.5.9对应的文件夹 是《Spring Data JPA入门到精通》书上对应的源码
 2. 2.0.0对应的文件夹是《Spring Data JPA实战》书上对应的源码
 3. Java并发编程入门到精通是《Java并发编程入门到精通》书上对应的源码
+4. 2.3 对应的是《Spring Data JPA：入门、实战与进阶》书上的源码，预计2021-10 JD能上架出售
 
 ## 欢迎大家一起修改和提交
 1. 提issue或者mr都可以 [https://github.com/zhangzhenhuajack/spring-data-jpa-guide](https://github.com/zhangzhenhuajack/spring-data-jpa-guide)
