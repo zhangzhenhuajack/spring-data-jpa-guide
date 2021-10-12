@@ -71,6 +71,7 @@
 ![](images/IMG_4559(20200804-084753).JPG)
 
 ## 常见ISSUE
-Spring Data JPA利用@EntityGraph解决N+1的SQL查询问题： @OnetoOne @OneToMany  https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/36  
+1. Spring Data JPA利用@EntityGraph解决N+1的SQL查询问题： @OnetoOne @OneToMany  https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/36  
+2. 禁用spring.jpa.show-sql=true ；原因：https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/39 
 
 ## QQ交流群：559701472
