@@ -15,6 +15,16 @@
 - [11：Spring Data Jpa的配置之SpringBoot2.0加载详解](./《SpringDataJpa实战》书/11.md)										
 - [12：DataSource的配置与事务详解、多数据源		](./《SpringDataJpa实战》书/12.md)								
 - [13：Spring Data Jpa之QueryDSL支持	](./《SpringDataJpa实战》书/13.md)				
+## Spring Data Redis 正确使用姿势
+
+- [01: Redis 介绍](./SpringDataRedis用法/0.md)
+- [02: Jedis 客户端用法](./SpringDataRedis用法/1.md)
+- [03: Spring Data Redis 的配置方法](./SpringDataRedis用法/2.md)
+- [04: Spring Cache 用法](./SpringDataRedis用法/3.md)
+- [05: Cache 和 Spring Data Redis 结合](./SpringDataRedis用法/4.md)
+- [06: 实际工作中 Redis 常用的一些工具和命令](./SpringDataRedis用法/5.md)
+- [07: 分布式和高并发环境下在使用 Redis 的时候，我们需要考虑的东西](./SpringDataRedis用法/6.md)
+- [08: Redis 服务端和客户端的原理](./SpringDataRedis用法/7.md)
 
 ## Spring DATA JPA 扩展阅读
 1. [Spring Data JPA 晋级提升篇：复杂场景实战用法与优化](./SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md)  
@@ -73,5 +83,10 @@
 ## 常见ISSUE
 1. Spring Data JPA利用@EntityGraph解决N+1的SQL查询问题： @OnetoOne @OneToMany  https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/36  
 2. 禁用spring.jpa.show-sql=true ；原因：https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/39 
+3. spring data jpa在保存数据的时候，会有缓存问题吗 https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/38  
+4. 如果在Dirty判断的时候，当前session中缓存对比数据库来讲已经不是最新的。那么JPA会如何进行处理？https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/34  
+5. 解决save的时候不产生select语句，直接insert，提高批量操作是提升insert的效率 https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/31   
+
+
 
 ## QQ交流群：559701472
