@@ -1,25 +1,20 @@
 package com.example.jpa.demo.db;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.data.rest.core.annotation.Description;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.time.Instant;
 import java.util.Collection;
 import java.util.List;
-@RepositoryRestResource(
-		exported = true,
-		path = "users",
-		collectionResourceRel = "userInfo",
-		collectionResourceDescription = @Description("用户资源"),
-		itemResourceRel = "userDetail",
-		itemResourceDescription = @Description("用户详情")
-)
+//@RepositoryRestResource(
+//		exported = true,
+//		path = "users",
+//		collectionResourceRel = "userInfo",
+//		collectionResourceDescription = @Description("用户资源"),
+//		itemResourceRel = "userDetail",
+//		itemResourceDescription = @Description("用户详情")
+//)
 public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {
 	//没用用@Query，直接使用method name defining query
 	List<UserInfo> findByNameAndCreateTimeBetween(String name, Instant begin, Instant endTime);

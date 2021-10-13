@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(schema = "test5",name = "j_address",catalog = "test3")
 @Data
 @SuperBuilder
 @AllArgsConstructor

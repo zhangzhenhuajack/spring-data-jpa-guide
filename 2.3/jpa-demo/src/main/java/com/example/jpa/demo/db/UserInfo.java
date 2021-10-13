@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
+@Table(schema = "test4",name="j_user_info",catalog = "test2")
 //@ToString(exclude = "addressList")
 //@JsonIgnoreProperties("addressList")
 //@BatchSize(size = 2)
