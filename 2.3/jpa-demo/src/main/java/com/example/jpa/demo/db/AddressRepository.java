@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 public interface AddressRepository extends JpaRepository<Address, Long>{
     //通过@Query注解自定的JPQL或是Navicat SQL
 //    @Query(value = "FROM Address where deleted=false ")
-    Page<Address> findAll(Pageable pageable);
-    //自定义query method defined
-    Page<Address> findByAddress(@Param("address") String address, Pageable pageable);
+//    Page<Address> findAll(Pageable pageable);
+//    @Query(value = "From Address where address= :address")
+//    Page<Address> findByAddress(@Param("address") String address, Pageable pageable);
 }

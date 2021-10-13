@@ -42,8 +42,13 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.8.1'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+<<<<<<< HEAD
     runtimeOnly('mysql:mysql-connector-java')
 //    runtimeOnly 'com.h2database:h2'
+=======
+    implementation('mysql:mysql-connector-java')
+    runtimeOnly 'com.h2database:h2'
+>>>>>>> 11899e64a2861c290c93fb0243556bd288c2f3d6
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'com.h2database:h2'

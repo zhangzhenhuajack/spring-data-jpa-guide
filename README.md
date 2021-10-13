@@ -30,6 +30,7 @@
 1. 1.5.9对应的文件夹 是《Spring Data JPA入门到精通》书上对应的源码
 2. 2.0.0对应的文件夹是《Spring Data JPA实战》书上对应的源码
 3. Java并发编程入门到精通是《Java并发编程入门到精通》书上对应的源码
+4. 2.3 对应的是《Spring Data JPA：入门、实战与进阶》书上的源码，预计2021-10 JD能上架出售
 
 ## 欢迎大家一起修改和提交
 1. 提issue或者mr都可以 [https://github.com/zhangzhenhuajack/spring-data-jpa-guide](https://github.com/zhangzhenhuajack/spring-data-jpa-guide)
@@ -66,7 +67,11 @@
 5. https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/doc/JavaPersistence2.2.0.pdf 
 6. https://github.com/zhangzhenhuajack/spring-data-jpa-guide/blob/master/doc/SpringDataJPA%E5%85%A8%E9%9D%A2%E8%AE%A4%E8%AF%86.key
 
-## 如果大家觉得有用欢迎支持:
+## 如果大家觉得有用欢迎请老师喝瓶水或者喝杯咖啡:
 ![](images/IMG_4559(20200804-084753).JPG)
+
+## 常见ISSUE
+1. Spring Data JPA利用@EntityGraph解决N+1的SQL查询问题： @OnetoOne @OneToMany  https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/36  
+2. 禁用spring.jpa.show-sql=true ；原因：https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/39 
 
 ## QQ交流群：559701472
