@@ -1,0 +1,61 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+}
+
+group = 'com.example.jpa'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+compileJava {
+    options.annotationProcessorPath = configurations.annotationProcessor
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // spring data rest的依赖，由于我们使用的是spring boot 所以只需要添加starter即可
+    implementation("org.springframework.boot:spring-boot-starter-data-rest")
+    //我们添加 swagger方便看得出来，生成了哪些api接口
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    // swagger 对spring data reset支持需要天添加 springfox-data-rest
+    implementation 'io.springfox:springfox-data-rest:3.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.retry:spring-retry'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5'
+    implementation 'com.google.guava:guava:29.0-jre'
+    implementation 'com.querydsl:querydsl-apt'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+    implementation 'com.querydsl:querydsl-jpa'
+    implementation 'com.jayway.jsonpath:json-path'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly('mysql:mysql-connector-java')
+    runtimeOnly 'com.h2database:h2'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'com.querydsl:querydsl-apt'
+    implementation 'com.querydsl:querydsl-jpa'
+    annotationProcessor("com.querydsl:querydsl-apt:4.3.1:jpa",
+            "org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final",
+            "javax.annotation:javax.annotation-api:1.3.2",
+            "org.projectlombok:lombok")
+    annotationProcessor("org.springframework.boot:spring-boot-starter-data-jpa")
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testRuntimeOnly 'com.h2database:h2'
+    implementation 'org.jetbrains:annotations:15.0'
+}
+
+test {
+    useJUnitPlatform()
+}

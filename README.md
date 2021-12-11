@@ -1,4 +1,4 @@
-# spring-data-jpa-guide
+## spring-data-jpa-guide
 > [http://www.jackzhang.cn/spring-data-jpa-guide/](http://www.jackzhang.cn/spring-data-jpa-guide/)
 
 ## Spring Data Jpa 实战					
@@ -26,6 +26,8 @@
 - [07: 分布式和高并发环境下在使用 Redis 的时候，我们需要考虑的东西](./SpringDataRedis用法/6.md)
 - [08: Redis 服务端和客户端的原理](./SpringDataRedis用法/7.md)
 
+## Spring Data JPA入门 实战与进阶
+[《Spring Data JPA入门 实战与进阶》现货正版包邮 Spring Data JPA：入门、实战与进阶  ](https://s.click.taobao.com/gHo2tcu)
 ## Spring DATA JPA 扩展阅读
 1. [Spring Data JPA 晋级提升篇：复杂场景实战用法与优化](./SpringDataJpa高级用法补充/SpringDataJPA的一些高级用法扩展.md)  
 
@@ -41,7 +43,7 @@
 2. 2.0.0对应的文件夹是《Spring Data JPA实战》书上对应的源码
 3. Java并发编程入门到精通是《Java并发编程入门到精通》书上对应的源码
 4. 2.3 对应的是《Spring Data JPA：入门、实战与进阶》书上的源码，预计2021-10 JD能上架出售
-
+5. 2.3/jpa_base_all_quick_start_rest  经典JPA脚手架项目，快速入门体验JPA能做到什么效果
 ## 欢迎大家一起修改和提交
 1. 提issue或者mr都可以 [https://github.com/zhangzhenhuajack/spring-data-jpa-guide](https://github.com/zhangzhenhuajack/spring-data-jpa-guide)
 2. 同时注意issue和wiki的更新 [https://github.com/zhangzhenhuajack/spring-data-jpa-guide](https://github.com/zhangzhenhuajack/spring-data-jpa-guide)
@@ -86,6 +88,7 @@
 3. spring data jpa在保存数据的时候，会有缓存问题吗 https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/38  
 4. 如果在Dirty判断的时候，当前session中缓存对比数据库来讲已经不是最新的。那么JPA会如何进行处理？https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/34  
 5. 解决save的时候不产生select语句，直接insert，提高批量操作是提升insert的效率 https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/31   
+
 
 
 

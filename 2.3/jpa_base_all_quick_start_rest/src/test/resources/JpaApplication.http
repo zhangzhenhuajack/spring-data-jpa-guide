@@ -1,0 +1,10 @@
+# curl -X POST "http://127.0.0.1:8091/rooms/save" -H "accept: */*" -H "Content-Type: application/json" -d "{\"createTime\":\"2021-12-01T07:25:43.597Z\",\"createUserId\":0,\"id\":0,\"lastModifiedTime\":\"2021-12-01T07:25:43.597Z\",\"lastModifiedUserId\":0,\"title\":\"string\",\"userId\":0,\"version\":0}"
+POST http://127.0.0.1:8091/rooms/save
+accept: */*
+Content-Type: application/json
+
+{"createTime":"2021-12-01T07:25:43.597Z","createUserId":0,"id":0,"lastModifiedTime":"2021-12-01T07:25:43.597Z","lastModifiedUserId":0,"title":"string","userId":0,"version":0}
+
+
+
+# convert from curl
