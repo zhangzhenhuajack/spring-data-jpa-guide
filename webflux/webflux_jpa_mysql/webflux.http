@@ -1,0 +1,19 @@
+GET /user/1 HTTP/1.1
+Host: 127.0.0.1:8080
+Accept: application/json
+
+###
+POST /user/save HTTP/1.1
+Host: 127.0.0.1:8080
+Content-Type: application/json
+{
+    "id": 3,
+    "name": "ee",
+    "age": 4
+}
+
+###
+GET /user/lists HTTP/1.1
+Host: 127.0.0.1:8080
+
+
