@@ -88,7 +88,9 @@
 3. spring data jpa在保存数据的时候，会有缓存问题吗 https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/38  
 4. 如果在Dirty判断的时候，当前session中缓存对比数据库来讲已经不是最新的。那么JPA会如何进行处理？https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/34  
 5. 解决save的时候不产生select语句，直接insert，提高批量操作是提升insert的效率 https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/31
-6. 返回Dto的projection  利用JPAL返回Dto的返回结果  https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/57 
+6. 返回Dto的projection  利用JPAL返回Dto的返回结果  https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/57
+7. JPA实体 某些 字段 映射mysql 字段 JSON类型 查询和保存使用实例 https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/58
+8. @Query实现动态查询的方法 https://github.com/zhangzhenhuajack/spring-data-jpa-guide/issues/60
 
 
 
